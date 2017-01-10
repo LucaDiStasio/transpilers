@@ -1,4 +1,4 @@
-function[]=writeABQelastic(filepath,dependencies,moduli,type,data,comment)
+function[]=writeABQelastic(filepath,compressionfactor,dependencies,moduli,type,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -42,6 +42,10 @@ fileId = fopen(filepath, 'a');
 fprintf(fileId,'**\n');
 
 line = '*ELASTIC';
+
+if ~strcmp(compressionfactor,'none') && ~strcmp(compressionfactor,'NONE') && ~strcmp(compressionfactor,'None')
+    line = strcat(line,', COMPRESSION FACTOR=',compressionfactor);
+end
 
 if ~strcmp(dependencies,'none') && ~strcmp(dependencies,'NONE') && ~strcmp(dependencies,'None')
     line = strcat(line,', DEPENDENCIES=',dependencies);
