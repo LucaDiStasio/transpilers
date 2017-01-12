@@ -1,4 +1,4 @@
-function[]=writeABQstatic(filepath,adiabatic,allsdtol,continue,direct,factor,fullyplastic,longterm,riks,stabilize,data,comment)
+function[]=writeABQstatic(filepath,adiabatic,allsdtol,continueStep,direct,factor,fullyplastic,longterm,riks,stabilize,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -51,8 +51,8 @@ if ~strcmp(allsdtol,'none') && ~strcmp(allsdtol,'NONE') && ~strcmp(allsdtol,'Non
     line = strcat(line,', ALLSDTOL=',allsdtol);
 end
 
-if ~strcmp(continue,'none') && ~strcmp(continue,'NONE') && ~strcmp(continue,'None')
-    line = strcat(line,', CONTINUE=',continue);
+if ~strcmp(continueStep,'none') && ~strcmp(continueStep,'NONE') && ~strcmp(continueStep,'None')
+    line = strcat(line,', CONTINUE=',continueStep);
 end
 
 if ~strcmp(direct,'none') && ~strcmp(direct,'NONE') && ~strcmp(direct,'None')

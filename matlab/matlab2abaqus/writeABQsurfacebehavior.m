@@ -1,4 +1,4 @@
-function[]=writeABQsurfacebehavior(filepath,augmentedlagrange,direct,penalty,noseparation,pressure-overclosure,data,comment)
+function[]=writeABQsurfacebehavior(filepath,augmentedlagrange,direct,penalty,noseparation,pressureoverclosure,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -59,8 +59,8 @@ if ~strcmp(noseparation,'none') && ~strcmp(noseparation,'NONE') && ~strcmp(nosep
     line = strcat(line,', NO SEPARATION=',noseparation);
 end
 
-if ~strcmp(pressure-overclosure,'none') && ~strcmp(pressure-overclosure,'NONE') && ~strcmp(pressure-overclosure,'None')
-    line = strcat(line,', PRESSURE-OVERCLOSURE=',pressure-overclosure);
+if ~strcmp(pressureoverclosure,'none') && ~strcmp(pressureoverclosure,'NONE') && ~strcmp(pressureoverclosure,'None')
+    line = strcat(line,', PRESSURE-OVERCLOSURE=',pressureoverclosure);
 end
 
 fprintf(fileId,strcat(line,'\n'));

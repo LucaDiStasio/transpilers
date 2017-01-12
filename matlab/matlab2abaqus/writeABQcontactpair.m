@@ -76,7 +76,7 @@ if ~strcmp(nothickness,'none') && ~strcmp(nothickness,'NONE') && ~strcmp(nothick
 end
 
 if ~strcmp(smallsliding,'none') && ~strcmp(smallsliding,'NONE') && ~strcmp(smallsliding,'None')
-    line = strcat(line,', SMALL SLIDING=',smallsliding);
+    line = strcat(line,', SMALL SLIDING');
 end
 
 if ~strcmp(smooth,'none') && ~strcmp(smooth,'NONE') && ~strcmp(smooth,'None')
