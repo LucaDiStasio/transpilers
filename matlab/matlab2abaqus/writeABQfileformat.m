@@ -44,11 +44,11 @@ fprintf(fileId,'**\n');
 line = '*FILE FORMAT';
 
 if ~strcmp(ascii,'none') && ~strcmp(ascii,'NONE') && ~strcmp(ascii,'None')
-    line = strcat(line,', ASCII=',ascii);
+    line = strcat(line,', ASCII');
 end
 
 if ~strcmp(zeroincrement,'none') && ~strcmp(zeroincrement,'NONE') && ~strcmp(zeroincrement,'None')
-    line = strcat(line,', ZERO INCREMENT=',zeroincrement);
+    line = strcat(line,', ZERO INCREMENT');
 end
 
 fprintf(fileId,strcat(line,'\n'));

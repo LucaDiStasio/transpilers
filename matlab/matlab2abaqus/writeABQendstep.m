@@ -1,4 +1,4 @@
-function[]=writeABQendstep(filepath,data,comment)
+function[]=writeABQendstep(filepath)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -44,14 +44,6 @@ fprintf(fileId,'**\n');
 line = '*END STEP';
 
 fprintf(fileId,strcat(line,'\n'));
-
-if ~strcmp(comment,'none') && ~strcmp(comment,'NONE') && ~strcmp(comment,'None')
-    fprintf(fileId,strcat('**',comment,'\n'));
-end
-
-for i=1:length(data)
-    fprintf(fileId,strcat(' ',data{i},'\n'));
-end
 
 fprintf(fileId,'**\n');
 

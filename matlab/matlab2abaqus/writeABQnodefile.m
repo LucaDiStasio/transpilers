@@ -1,4 +1,4 @@
-function[]=writeABQnodefile(filepath,frequency,global,lastmode,mode,nset,data,comment)
+function[]=writeABQnodefile(filepath,frequency,globalData,lastmode,mode,nset,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -47,8 +47,8 @@ if ~strcmp(frequency,'none') && ~strcmp(frequency,'NONE') && ~strcmp(frequency,'
     line = strcat(line,', FREQUENCY=',frequency);
 end
 
-if ~strcmp(global,'none') && ~strcmp(global,'NONE') && ~strcmp(global,'None')
-    line = strcat(line,', GLOBAL=',global);
+if ~strcmp(globalData,'none') && ~strcmp(globalData,'NONE') && ~strcmp(globalData,'None')
+    line = strcat(line,', GLOBAL=',globalData);
 end
 
 if ~strcmp(lastmode,'none') && ~strcmp(lastmode,'NONE') && ~strcmp(lastmode,'None')
