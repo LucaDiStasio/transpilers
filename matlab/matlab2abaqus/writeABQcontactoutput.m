@@ -1,4 +1,4 @@
-function[]=writeABQcontactoutput(filepath,cpset,nset,surface,secondsurface,cpset,generalcontact,surface,secondsurface,variable,master,nset,slave,variable,data,comment)
+function[]=writeABQcontactoutput(filepath,cpset,nset,surface,secondsurface,generalcontact,variable,master,slave,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -59,20 +59,8 @@ if ~strcmp(secondsurface,'none') && ~strcmp(secondsurface,'NONE') && ~strcmp(sec
     line = strcat(line,', SECOND SURFACE=',secondsurface);
 end
 
-if ~strcmp(cpset,'none') && ~strcmp(cpset,'NONE') && ~strcmp(cpset,'None')
-    line = strcat(line,', CPSET=',cpset);
-end
-
 if ~strcmp(generalcontact,'none') && ~strcmp(generalcontact,'NONE') && ~strcmp(generalcontact,'None')
     line = strcat(line,', GENERAL CONTACT=',generalcontact);
-end
-
-if ~strcmp(surface,'none') && ~strcmp(surface,'NONE') && ~strcmp(surface,'None')
-    line = strcat(line,', SURFACE=',surface);
-end
-
-if ~strcmp(secondsurface,'none') && ~strcmp(secondsurface,'NONE') && ~strcmp(secondsurface,'None')
-    line = strcat(line,', SECOND SURFACE=',secondsurface);
 end
 
 if ~strcmp(variable,'none') && ~strcmp(variable,'NONE') && ~strcmp(variable,'None')
@@ -83,16 +71,8 @@ if ~strcmp(master,'none') && ~strcmp(master,'NONE') && ~strcmp(master,'None')
     line = strcat(line,', MASTER=',master);
 end
 
-if ~strcmp(nset,'none') && ~strcmp(nset,'NONE') && ~strcmp(nset,'None')
-    line = strcat(line,', NSET=',nset);
-end
-
 if ~strcmp(slave,'none') && ~strcmp(slave,'NONE') && ~strcmp(slave,'None')
     line = strcat(line,', SLAVE=',slave);
-end
-
-if ~strcmp(variable,'none') && ~strcmp(variable,'NONE') && ~strcmp(variable,'None')
-    line = strcat(line,', VARIABLE=',variable);
 end
 
 fprintf(fileId,strcat(line,'\n'));

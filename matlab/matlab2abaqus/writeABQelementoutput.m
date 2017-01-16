@@ -1,4 +1,4 @@
-function[]=writeABQelementoutput(filepath,elset,tracerset,directions,elset,exterior,position,rebar,variable,data,comment)
+function[]=writeABQelementoutput(filepath,elset,tracerset,directions,exterior,position,rebar,variable,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -53,10 +53,6 @@ end
 
 if ~strcmp(directions,'none') && ~strcmp(directions,'NONE') && ~strcmp(directions,'None')
     line = strcat(line,', DIRECTIONS=',directions);
-end
-
-if ~strcmp(elset,'none') && ~strcmp(elset,'NONE') && ~strcmp(elset,'None')
-    line = strcat(line,', ELSET=',elset);
 end
 
 if ~strcmp(exterior,'none') && ~strcmp(exterior,'NONE') && ~strcmp(exterior,'None')

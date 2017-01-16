@@ -48,11 +48,11 @@ if ~strcmp(diagnostics,'none') && ~strcmp(diagnostics,'NONE') && ~strcmp(diagnos
 end
 
 if ~strcmp(field,'none') && ~strcmp(field,'NONE') && ~strcmp(field,'None')
-    line = strcat(line,', FIELD=',field);
+    line = strcat(line,', FIELD');
 end
 
 if ~strcmp(history,'none') && ~strcmp(history,'NONE') && ~strcmp(history,'None')
-    line = strcat(line,', HISTORY=',history);
+    line = strcat(line,', HISTORY');
 end
 
 if ~strcmp(frequency,'none') && ~strcmp(frequency,'NONE') && ~strcmp(frequency,'None')

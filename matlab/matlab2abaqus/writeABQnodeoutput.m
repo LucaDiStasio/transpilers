@@ -1,4 +1,4 @@
-function[]=writeABQnodeoutput(filepath,nset,tracerset,exterior,nset,tracerset,global,variable,data,comment)
+function[]=writeABQnodeoutput(filepath,nset,tracerset,exterior,globalData,variable,data,comment)
 %%
 %==============================================================================
 % Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
@@ -55,16 +55,8 @@ if ~strcmp(exterior,'none') && ~strcmp(exterior,'NONE') && ~strcmp(exterior,'Non
     line = strcat(line,', EXTERIOR=',exterior);
 end
 
-if ~strcmp(nset,'none') && ~strcmp(nset,'NONE') && ~strcmp(nset,'None')
-    line = strcat(line,', NSET=',nset);
-end
-
-if ~strcmp(tracerset,'none') && ~strcmp(tracerset,'NONE') && ~strcmp(tracerset,'None')
-    line = strcat(line,', TRACER SET=',tracerset);
-end
-
-if ~strcmp(global,'none') && ~strcmp(global,'NONE') && ~strcmp(global,'None')
-    line = strcat(line,', GLOBAL=',global);
+if ~strcmp(globalData,'none') && ~strcmp(globalData,'NONE') && ~strcmp(globalData,'None')
+    line = strcat(line,', GLOBAL=',globalData);
 end
 
 if ~strcmp(variable,'none') && ~strcmp(variable,'NONE') && ~strcmp(variable,'None')
