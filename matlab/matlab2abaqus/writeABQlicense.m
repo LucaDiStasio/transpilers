@@ -45,9 +45,9 @@ fprintf(fileId,'**----------------------------------------------------- LICENSE 
 fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 fprintf(fileId,'**\n');
 
-if varargin==3
+if nargin==3
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
-    fprintf(fileId, strcat('** Copyright (C) ', num2str(year(today)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
     fprintf(fileId, strcat('** Author: ', author, '\n'));
     fprintf(fileId,'**\n');
     fprintf(fileId,'** Redistribution and use in source and binary forms, with or without\n');
@@ -76,7 +76,7 @@ if varargin==3
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 elseif strcmp(license,'GNU-GPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
-    fprintf(fileId, strcat('** Copyright (C) ', num2str(year(today)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
     fprintf(fileId, strcat('** Author: ', author, '\n'));
     fprintf(fileId,'**\n');
     fprintf(fileId,'** This program is free software: you can redistribute it and/or modify\n');
@@ -94,7 +94,7 @@ elseif strcmp(license,'GNU-GPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 elseif strcmp(license,'Apache-License-2.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
-    fprintf(fileId, strcat('** Copyright (C) ', num2str(year(today)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
     fprintf(fileId, strcat('** Author: ', author, '\n'));
     fprintf(fileId,'**\n');
     fprintf(fileId,'** Licensed under the Apache License, Version 2.0 (the "License");\n');
@@ -112,7 +112,7 @@ elseif strcmp(license,'MIT')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId,'** MIT License\n');
     fprintf(fileId,'**\n');
-    fprintf(fileId, strcat('** Copyright (C) ', num2str(year(today)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
     fprintf(fileId, strcat('** Author: ', author, '\n'));
     fprintf(fileId,'**\n');
     fprintf(fileId,'** Permission is hereby granted, free of charge, to any person obtaining a copy\n');
@@ -162,7 +162,7 @@ elseif strcmp(license,'unlicense')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 elseif strcmp(license,'GNU-AGPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
-    fprintf(fileId, strcat('** Copyright (C) ', num2str(year(today)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
     fprintf(fileId, strcat('** Author: ', author, '\n'));
     fprintf(fileId,'**\n');
     fprintf(fileId,'** This program is free software: you can redistribute it and/or modify\n');
