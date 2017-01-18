@@ -54,9 +54,7 @@ if ~strcmp(comment,'none') && ~strcmp(comment,'NONE') && ~strcmp(comment,'None')
 end
 
 for i=1:length(data)
-    disp(i)
-    disp(strcat(' ',data{i},'\n'))
-    fprintf(fileId,strcat(' ',data{i},'\n'));
+    fprintf(fileId,'%s',strcat(' ',data{i},'\n'));
 end
 
 fprintf(fileId,'**\n');
