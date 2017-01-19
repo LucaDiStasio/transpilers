@@ -1,13 +1,10 @@
-function[]=writeABQbrittleshear(filepath,dependencies,type,data,comment)
 %%
 %==============================================================================
-% Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
-% Author: Luca Di Stasio <luca.distasio@gmail.com>
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet% Author: Luca Di Stasio <luca.distasio@gmail.com>
 %                        <luca.distasio@ingpec.eu>
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
@@ -58,7 +55,7 @@ if ~strcmp(comment,'none') && ~strcmp(comment,'NONE') && ~strcmp(comment,'None')
 end
 
 for i=1:length(data)
-    fprintf(fileId,'%s',strcat(' ',data{i},'\n'));
+    fprintf(fileId,'%s',strcat(' ',data{i}{1},'\n'));
 end
 
 fprintf(fileId,'**\n');

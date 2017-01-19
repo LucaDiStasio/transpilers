@@ -53,11 +53,16 @@ for file in targetFiles:
     with open(join(targetFolder, file),'r') as f:
         oldLines = f.readlines()
     for line in oldLines:
-        if "fprintf(fileId,strcat(\' \',data{i},\'\\n\'));" in line:
-            newLines.append("    fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
+        if "fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));" in line:
+            newLines.append("    fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));\n")
+        elif "Copyright (c) 2017" in line:
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet")
+        elif "Copyright (c) 2016" in line:
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet")
         else:
             newLines.append(line)
     with open(join(targetFolder, file),'w') as f:
-        for line in newLines:
-            f.write(line)
-            print line
+        for i,line in enumerate(newLines):
+            if i>0 and line!=newLines[i-1]:
+                f.write(line)
+                print line
