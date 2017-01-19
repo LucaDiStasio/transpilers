@@ -56,9 +56,12 @@ for file in targetFiles:
         if "fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));" in line:
             newLines.append("    fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));\n")
         elif "Copyright (c) 2017" in line:
-            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet")
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
         elif "Copyright (c) 2016" in line:
-            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet")
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+        elif "Copyright (c) 2016-2017" and "Author:" in line:
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+            newLines.append("% Author: Luca Di Stasio <luca.distasio@gmail.com>\n")
         else:
             newLines.append(line)
     with open(join(targetFolder, file),'w') as f:
