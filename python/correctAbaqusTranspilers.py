@@ -53,11 +53,46 @@ for file in targetFiles:
     with open(join(targetFolder, file),'r') as f:
         oldLines = f.readlines()
     for line in oldLines:
-        if "fprintf(fileId,strcat(\' \',data{i},\'\\n\'));" in line:
-            newLines.append("    fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
+        '''
+        if "fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));" in line:
+            newLines.append("    dims = size(data);\n")
+            newLines.append("    if dims(1)==1 && dims(2)==1\n")
+            newLines.append("       fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
+            newLines.append("    elseif dims(1)>1 && dims(2)==1\n")
+            newLines.append("       fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));\n")
+            newLines.append("    elseif dims(1)==1 && dims(2)>1\n")
+            newLines.append("       fprintf(fileId,\'%s\',strcat(\' \',data{1}{i},\'\\n\'));\n")
+            newLines.append("    else\n")
+            newLines.append("       fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
+            newLines.append("    end\n")
+        '''
+        if "fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));" in line:
+            #newLines.append("       try\n")
+            newLines.append("           fprintf(fileId,\'%s\',strcat(\' \',data{i}{1}));\n")
+            newLines.append("           fprintf(fileId,\'\\n\');\n")
+            #newLines.append("       catch exception\n")
+            #newLines.append("           fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
+            #newLines.append("       end\n")
+        elif "fprintf(fileId,\'%s\',strcat(\' \',data{1}{i},\'\\n\'));" in line:
+            #newLines.append("       try\n")
+            newLines.append("           fprintf(fileId,\'%s\',strcat(\' \',data{1}{i}));\n")
+            newLines.append("           fprintf(fileId,\'\\n\');\n")
+            #newLines.append("       catch exception\n")
+            #newLines.append("           fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
+            #newLines.append("       end\n")
+        elif "fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));" in line:
+            newLines.append("           fprintf(fileId,\'%s\',strcat(\' \',data{i}));\n")
+            newLines.append("           fprintf(fileId,\'\\n\');\n")
+        #elif "Copyright (c) 2017" in line:
+            #newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+        #elif "Copyright (c) 2016" in line:
+            #newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+        #elif "Copyright (c) 2016-2017" in line and "Author:" in line:
+            #newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+            #newLines.append("% Author: Luca Di Stasio <luca.distasio@gmail.com>\n")
         else:
             newLines.append(line)
     with open(join(targetFolder, file),'w') as f:
-        for line in newLines:
+        for i,line in enumerate(newLines):
             f.write(line)
-            print line
+            print line    

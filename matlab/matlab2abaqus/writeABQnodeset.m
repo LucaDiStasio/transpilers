@@ -1,7 +1,7 @@
 function[]=writeABQnodeset(filepath,inputType,nlabels,nset)
 %%
 %==============================================================================
-% Copyright (c) 2016 Université de Lorraine & Luleå tekniska universitet
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
 %                        <luca.distasio@ingpec.eu>
 %
@@ -47,8 +47,8 @@ switch inputType
     case 1
         idxs = size(nlabels,1);
         fprintf(fileId,strcat('*NSET, NSET = ',nset,'\n'));
+        line = '';
         for i=1:idxs
-            line = '';
             if(mod(i,nmax)==1)
                 line = strcat(line,' ',num2str(nlabels(i)));
             elseif(mod(i,nmax)==0)
@@ -59,11 +59,15 @@ switch inputType
                 line = strcat(line,', ',num2str(nlabels(i)));
             end
         end
+        if ~strcmp(line,'')
+            fprintf(fileId,line);
+            fprintf(fileId,'\n');
+        end
     case 2
         idxs = length(nlabels);
         fprintf(fileId,strcat('*NSET, NSET = ',nset,'\n'));
+        line = '';
         for i=1:idxs
-            line = '';
             if(mod(i,nmax)==1)
                 line = strcat(line,' ',num2str(nlabels{i}));
             elseif(mod(i,nmax)==0)
@@ -73,6 +77,10 @@ switch inputType
             else
                 line = strcat(line,', ',num2str(nlabels{i}));
             end
+        end
+        if ~strcmp(line,'')
+            fprintf(fileId,line);
+            fprintf(fileId,'\n');
         end
 end
 

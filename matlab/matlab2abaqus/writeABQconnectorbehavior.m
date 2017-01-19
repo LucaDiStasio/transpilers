@@ -1,7 +1,7 @@
 function[]=writeABQconnectorbehavior(filepath,name,extrapolation,integration,regularize,rtol,data,comment)
 %%
 %==============================================================================
-% Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
 %                        <luca.distasio@ingpec.eu>
 %
@@ -70,7 +70,30 @@ if ~strcmp(comment,'none') && ~strcmp(comment,'NONE') && ~strcmp(comment,'None')
 end
 
 for i=1:length(data)
-    fprintf(fileId,'%s',strcat(' ',data{i},'\n'));
+    dims = size(data);
+    if dims(1)==1 && dims(2)==1
+           fprintf(fileId,'%s',strcat(' ',data{i}));
+           fprintf(fileId,'\n');
+    elseif dims(1)>1 && dims(2)==1
+       try
+           fprintf(fileId,'%s',strcat(' ',data{i}{1}));
+           fprintf(fileId,'\n');
+       catch exception
+           fprintf(fileId,'%s',strcat(' ',data{i}));
+           fprintf(fileId,'\n');
+       end
+    elseif dims(1)==1 && dims(2)>1
+       try
+           fprintf(fileId,'%s',strcat(' ',data{1}{i}));
+           fprintf(fileId,'\n');
+       catch exception
+           fprintf(fileId,'%s',strcat(' ',data{i}));
+           fprintf(fileId,'\n');
+       end
+    else
+           fprintf(fileId,'%s',strcat(' ',data{i}));
+           fprintf(fileId,'\n');
+    end
 end
 
 fprintf(fileId,'**\n');

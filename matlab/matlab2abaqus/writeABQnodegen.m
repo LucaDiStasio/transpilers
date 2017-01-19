@@ -1,7 +1,7 @@
 function[]=writeABQnodegen(filepath,N0,deltaN,nodes,nset)
 %%
 %==============================================================================
-% Copyright (c) 2016 Université de Lorraine & Luleå tekniska universitet
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
 %                        <luca.distasio@ingpec.eu>
 %
