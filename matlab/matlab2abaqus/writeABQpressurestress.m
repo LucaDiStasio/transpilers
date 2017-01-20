@@ -1,5 +1,3 @@
-function[]=writeABQpressurestress(filepath,amplitude,input,op,file,bstep,binc,estep,einc,user,data,comment)
-%%
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -7,7 +5,6 @@ function[]=writeABQpressurestress(filepath,amplitude,input,op,file,bstep,binc,es
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.

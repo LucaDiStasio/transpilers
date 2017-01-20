@@ -53,6 +53,7 @@ for file in targetFiles:
     with open(join(targetFolder, file),'r') as f:
         oldLines = f.readlines()
     for line in oldLines:
+<<<<<<< HEAD
         '''
         if "fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));" in line:
             newLines.append("    dims = size(data);\n")
@@ -90,9 +91,26 @@ for file in targetFiles:
         #elif "Copyright (c) 2016-2017" in line and "Author:" in line:
             #newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
             #newLines.append("% Author: Luca Di Stasio <luca.distasio@gmail.com>\n")
+=======
+        if "fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));" in line:
+            newLines.append("    fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));\n")
+        elif "Copyright (c) 2017" in line:
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+        elif "Copyright (c) 2016" in line:
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+        elif "Copyright (c) 2016-2017" and "Author:" in line:
+            newLines.append("% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet\n")
+            newLines.append("% Author: Luca Di Stasio <luca.distasio@gmail.com>\n")
+>>>>>>> 5394d0b8eb6e1a7162a4995caa15432f52dad2b6
         else:
             newLines.append(line)
     with open(join(targetFolder, file),'w') as f:
         for i,line in enumerate(newLines):
+<<<<<<< HEAD
             f.write(line)
             print line    
+=======
+            if i>0 and line!=newLines[i-1]:
+                f.write(line)
+                print line
+>>>>>>> 5394d0b8eb6e1a7162a4995caa15432f52dad2b6

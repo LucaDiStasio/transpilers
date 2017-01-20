@@ -1,5 +1,3 @@
-function[]=writeABQlicense(filepath,holder,author,license)
-%%
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -7,7 +5,6 @@ function[]=writeABQlicense(filepath,holder,author,license)
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
@@ -48,7 +45,8 @@ fprintf(fileId,'**\n');
 if nargin==3
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
-    fprintf(fileId, strcat('** Author: ', author, '\n'));
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
+% Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
     fprintf(fileId,'** Redistribution and use in source and binary forms, with or without\n');
     fprintf(fileId,'** modification, are permitted provided that the following conditions are met:\n');
@@ -77,7 +75,8 @@ if nargin==3
 elseif strcmp(license,'GNU-GPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
-    fprintf(fileId, strcat('** Author: ', author, '\n'));
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
+% Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
     fprintf(fileId,'** This program is free software: you can redistribute it and/or modify\n');
     fprintf(fileId,'** it under the terms of the GNU General Public License as published by\n');
@@ -95,7 +94,8 @@ elseif strcmp(license,'GNU-GPL-v3.0')
 elseif strcmp(license,'Apache-License-2.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
-    fprintf(fileId, strcat('** Author: ', author, '\n'));
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
+% Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
     fprintf(fileId,'** Licensed under the Apache License, Version 2.0 (the "License");\n');
     fprintf(fileId,'** you may not use this file except in compliance with the License.\n');
@@ -113,7 +113,8 @@ elseif strcmp(license,'MIT')
     fprintf(fileId,'** MIT License\n');
     fprintf(fileId,'**\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
-    fprintf(fileId, strcat('** Author: ', author, '\n'));
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
+% Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
     fprintf(fileId,'** Permission is hereby granted, free of charge, to any person obtaining a copy\n');
     fprintf(fileId,'** of this software and associated documentation files (the "Software"), to deal\n');
@@ -163,7 +164,8 @@ elseif strcmp(license,'unlicense')
 elseif strcmp(license,'GNU-AGPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
-    fprintf(fileId, strcat('** Author: ', author, '\n'));
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
+% Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
     fprintf(fileId,'** This program is free software: you can redistribute it and/or modify\n');
     fprintf(fileId,'** it under the terms of the GNU Affero General Public License as published\n');
@@ -182,4 +184,4 @@ end
 
 fclose(fileId);
 
-return
+returnreturn

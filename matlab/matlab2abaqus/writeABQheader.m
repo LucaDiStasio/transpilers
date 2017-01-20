@@ -1,5 +1,3 @@
-function[]=writeABQheader(filepath,header)
-%%
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -7,7 +5,6 @@ function[]=writeABQheader(filepath,header)
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
@@ -41,14 +38,12 @@ fileId = fopen(filepath, 'a');
 
 fprintf(fileId,'**\n');
 fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
-fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 for i=1:length(header)
     fprintf(fileId, strcat('** ', header{i}, '\n'));
 end
-fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 fprintf(fileId,'**\n');
 
 fclose(fileId);
 
-return
+returnreturn

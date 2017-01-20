@@ -1,5 +1,3 @@
-function[]=writeABQnodegen(filepath,N0,deltaN,nodes,nset)
-%%
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -7,7 +5,6 @@ function[]=writeABQnodegen(filepath,N0,deltaN,nodes,nset)
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
@@ -57,4 +54,4 @@ fprintf(fileId,'**\n');
 
 fclose(fileId);
 
-return
+returnreturn

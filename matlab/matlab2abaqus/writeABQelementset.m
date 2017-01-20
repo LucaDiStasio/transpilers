@@ -1,5 +1,3 @@
-function[]=writeABQelementset(filepath,inputType,ellabels,elset)
-%%
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -7,7 +5,6 @@ function[]=writeABQelementset(filepath,inputType,ellabels,elset)
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
@@ -42,8 +39,6 @@ fileId = fopen(filepath, 'a');
 nmax = 16;
 
 fprintf(fileId,'**\n');
-
-
 
 switch inputType
     case 1
@@ -90,4 +85,4 @@ fprintf(fileId,'**\n');
 
 fclose(fileId);
 
-return
+returnreturn
