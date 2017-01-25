@@ -1,13 +1,12 @@
-function[]=writeLATEXdocumentclass(filepath,name,property,combine,crop,definition,filletradius,internal,regiontype,trim,type,maxratio,nooffset,nothick,scalethick,data,comment)
+function[]=writeLTXnonfrenchspacing(filepath,args,options)
 %%
 %==============================================================================
-% Copyright (c) 2017 Universite de Lorraine & Lulea tekniska universitet
+% Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
 %                        <luca.distasio@ingpec.eu>
 %
 % Redistribution and use in source and binary forms, with or without
 % modification, are permitted provided that the following conditions are met:
-% 
 % 
 % Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
@@ -33,15 +32,44 @@ function[]=writeLATEXdocumentclass(filepath,name,property,combine,crop,definitio
 %
 %  DESCRIPTION
 %  
-%  A function to write  to Abaqus .inp file format.
-%
+%  A function to create a Latex file.
+% Setting the command untoggles the command\frenchspacingand activates LaTeX standards to insert more space after a period (´.´) than after an ordinary character.%
 %%
 
 fileId = fopen(filepath, 'a');
 
-fprintf(fileId,'**\n');
+fprintf(fileId,'\n');
+line = '\nonfrenchspacing';
 
+if ~strcmp(options,'none') && ~strcmp(options,'NONE') && ~strcmp(options,'None')
+    line = strcat(line,'[',options,']');
+end
 
+if ~isempty(args)
+    line = strcat(line,'{');
+    for i=1:length(args)
+        dims = size(args);
+        if dims(1)==1 && dims(2)==1
+            line = strcat(line,args{i});
+        elseif dims(1)>1 && dims(2)==1
+            try
+                line = strcat(line,args{i}{1});
+            catch exception
+                line = strcat(line,args{i});
+            end
+        elseif dims(1)==1 && dims(2)>1
+            try
+                line = strcat(line,args{1}{i});
+            catch exception
+                line = strcat(line,args{i});
+            end
+        else
+            line = strcat(line,args{i});
+        end
+    end
+    line = strcat(line,'}');
+end
+fprintf(fileId,strcat(line,'\n'));
 
 fclose(fileId);
 
