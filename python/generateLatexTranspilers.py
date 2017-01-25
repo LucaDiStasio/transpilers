@@ -229,11 +229,74 @@ def write2matlab(folder,string,descr):
         print('<=========================================================================================================>')
         print('<=========================================================================================================>')
 
+def write2python(folder,string,descr):
+    if '[' in string and ']' in string:
+        string = re.sub('\[[^]]*\]','',string)
+    args = string[1:].count('{')
+    argsList = []
+    if args>0:
+        for arg in range(0,args):
+            if arg==0:
+                command = string[1:string.find('{')]
+            argsList.append(string[string.find('{')+1:string.find('}')])
+            string = string[string.find('}')+1:]
+    else:
+        command =  string[1:]
+    line = 'def writeLTX' + command  + '(filepath'
+    for i,arg in enumerate(argsList):
+        line += ',' + arg
+    line += ',args,options)\n'
+    filename = 'writeLTX' + command + '.m'
+    with codecs.open(join(folder,filename),'w','utf-8') as file:
+        print('')
+        print('<=========================================================================================================>')
+        print('<=========================================================================================================>')
+        print('')
+        print('                 CREATING FILE ' + filename + ' IN FOLDER ' + targetFolder)
+        print('')
+        print('<=========================================================================================================>')
+        print(line)
+            #!/usr/bin/python
+            # -*- coding: utf-8 -*-
+            
+            '''
+            =====================================================================================
+            
+            Copyright (c) 2016 Université de Lorraine & Luleå tekniska universitet
+            Author: Luca Di Stasio <luca.distasio@gmail.com>
+                                <luca.distasio@ingpec.eu>
+            
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+            
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+            
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+            
+            =====================================================================================
+            
+            DESCRIPTION
+            
+            
+            
+            Tested with Python 2.7 Anaconda 2.4.1 (64-bit) distribution in Windows 7.
+            
+            '''
+        file.write(line)
+        
 url = 'https://en.wikibooks.org/wiki/LaTeX/Command_Glossary#D'
 
 matlabFolder = 'D:\\OneDrive\\01_Luca\\07_DocMASE\\06_WD\\transpilers\\matlab\\matlab2latex'
+pythonFolder = 'D:\\OneDrive\\01_Luca\\07_DocMASE\\06_WD\\transpilers\\python\\py2latex'
+cppFolder    = 'D:\\OneDrive\\01_Luca\\07_DocMASE\\06_WD\\transpilers\\cpp\\cpp2latex'
 
-targetFolder = matlabFolder
+targetFolder = pythonFolder
 
 mech = mechanize.Browser()
 
