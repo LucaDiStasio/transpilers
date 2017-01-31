@@ -1,3 +1,4 @@
+function[]=writeABQfield(filepath,variable,amplitude,input,op,file,bstep,binc,estep,einc,outputvariable,interpolate,user,number,blocking,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

@@ -1,3 +1,4 @@
+function[]=writeABQfluidinflatorproperty(filepath,effectivearea,name,tankvolume,type,dischargecoefficient,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

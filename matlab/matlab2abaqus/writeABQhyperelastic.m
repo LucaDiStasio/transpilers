@@ -1,3 +1,4 @@
+function[]=writeABQhyperelastic(filepath,arruda-boyce,marlow,mooney-rivlin,neohooke,ogden,polynomial,reducedpolynomial,user,vanderwaals,yeoh,type,beta,moduli,n,poisson,properties,testdatainput,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

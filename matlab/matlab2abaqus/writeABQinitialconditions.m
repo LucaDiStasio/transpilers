@@ -1,3 +1,4 @@
+function[]=writeABQinitialconditions(filepath,type,absoluteexteriortolerance,definition,drivingelsets,exteriortolerance,file,fulltensor,geostatic,inc,input,interpolate,midside,normal,numberbackstresses,outputvariable,rebar,sectionpoints,step,unbalancedstress,user,variable,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

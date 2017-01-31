@@ -1,3 +1,4 @@
+function[]=writeABQfriction(filepath,elasticslip,lagrange,rough,sliptolerance,user,anisotropic,dependencies,depvar,exponentialdecay,properties,sheartractionslope,taumax,testdata,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

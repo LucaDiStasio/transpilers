@@ -41,7 +41,7 @@ targetFolder = matlabFolder
 
 targetFiles = [f for f in listdir(targetFolder)]
 
-
+'''
 for file in targetFiles:
     print ""
     print "==============================================================================================="
@@ -54,7 +54,6 @@ for file in targetFiles:
         oldLines = f.readlines()
     for line in oldLines:
 <<<<<<< HEAD
-        '''
         if "fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));" in line:
             newLines.append("    dims = size(data);\n")
             newLines.append("    if dims(1)==1 && dims(2)==1\n")
@@ -66,7 +65,7 @@ for file in targetFiles:
             newLines.append("    else\n")
             newLines.append("       fprintf(fileId,\'%s\',strcat(\' \',data{i},\'\\n\'));\n")
             newLines.append("    end\n")
-        '''
+
         if "fprintf(fileId,\'%s\',strcat(\' \',data{i}{1},\'\\n\'));" in line:
             #newLines.append("       try\n")
             newLines.append("           fprintf(fileId,\'%s\',strcat(\' \',data{i}{1}));\n")
@@ -114,3 +113,37 @@ for file in targetFiles:
                 f.write(line)
                 print line
 >>>>>>> 5394d0b8eb6e1a7162a4995caa15432f52dad2b6
+'''
+for file in targetFiles:
+    print("")
+    print("===============================================================================================")
+    print("")
+    print("                              FILE: " + file)
+    print("")
+    oldLines = []
+    with open(join(targetFolder, file),'r') as f:
+        oldLines = f.readlines()
+    if 'function[]=' not in oldLines[0]:
+        firstline = 'function[]=' + file[:-2] + '(filepath'
+        for line in oldLines:
+            if 'strcmp' in line and 'strcmp(comment,' not in line and 'strcmp(line' not in line:
+                keyword = line.split('&&')[2].replace(' ','').replace('(','').replace(')','').replace('~strcmp','').replace('\'','').replace('None','').replace(',','').replace('\n','')
+                firstline += ',' + keyword
+        firstline += ',' + 'data,comment)\n'
+        with open(join(targetFolder, file),'w') as f:
+            f.write(firstline)
+            for line in oldLines:
+                if 'returnreturn' in line:
+                    f.write('return\n')
+                else:
+                    f.write(line)
+        print("                                 Added first line:")
+        print('        ' + firstline)
+        print("")
+        print("===============================================================================================")
+    else:
+        print("                                 Nothing to do.")
+        print("")
+        print("===============================================================================================")
+        
+        

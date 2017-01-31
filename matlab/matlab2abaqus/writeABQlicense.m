@@ -1,3 +1,4 @@
+function[]=writeABQlicense(filepath,holder,author)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -45,6 +46,7 @@ fprintf(fileId,'**\n');
 if nargin==3
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Author: ', author, '\n'));
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
@@ -75,6 +77,7 @@ if nargin==3
 elseif strcmp(license,'GNU-GPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Author: ', author, '\n'));
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
@@ -94,6 +97,7 @@ elseif strcmp(license,'GNU-GPL-v3.0')
 elseif strcmp(license,'Apache-License-2.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Author: ', author, '\n'));
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
@@ -113,6 +117,7 @@ elseif strcmp(license,'MIT')
     fprintf(fileId,'** MIT License\n');
     fprintf(fileId,'**\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Author: ', author, '\n'));
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
@@ -164,6 +169,7 @@ elseif strcmp(license,'unlicense')
 elseif strcmp(license,'GNU-AGPL-v3.0')
     fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
     fprintf(fileId, strcat('** Copyright (C) ', num2str(datestr(now,10)), ' ', holder, '\n'));
+    fprintf(fileId, strcat('** Author: ', author, '\n'));
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
     fprintf(fileId,'**\n');
@@ -184,4 +190,4 @@ end
 
 fclose(fileId);
 
-returnreturn
+return

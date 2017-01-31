@@ -1,3 +1,4 @@
+function[]=writeABQfastener(filepath,interactionname,property,elset,referencenodeset,adjustorientation,attachmentmethod,coupling,numberoflayers,orientation,radiusofinfluence,searchradius,unsorted,weightingmethod,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
