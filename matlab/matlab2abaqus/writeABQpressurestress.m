@@ -1,3 +1,4 @@
+function[]=writeABQpressurestress(filepath,amplitude,input,op,file,bstep,binc,estep,einc,user,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

@@ -1,3 +1,4 @@
+function[]=writeABQpressurepenetration(filepath,master,slave,amplitude,op,penetrationtime,imaginary,real,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

@@ -1,3 +1,4 @@
+function[]=writeABQrestart(filepath,read,write,cycle,endstep,inc,iteration,step,frequency,numberinterval,timemarks,overlay,read,write,step,endstep,interval,numberinterval,timemarks,overlay,single,read,write,endstep,inc,step,frequency,numberinterval,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

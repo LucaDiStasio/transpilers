@@ -1,3 +1,4 @@
+function[]=writeABQradiationviewfactor(filepath,blocking,cavity,infinitesimal,integration,lumpedarea,off,range,reflection,symmetry,vtol,mdisp,nset,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

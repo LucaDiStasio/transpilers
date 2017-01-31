@@ -1,3 +1,4 @@
+function[]=writeABQshellgeneralsection(filepath,elset,density,bendingonly,controls,layup,membraneonly,offset,orientation,poisson,smearalllayers,stackdirection,symmetric,thicknessmodulus,zero,composite,material,user,nodalthickness,shellthickness,iproperties,properties,unsymm,variables,dependencies,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

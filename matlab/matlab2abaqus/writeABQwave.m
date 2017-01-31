@@ -1,3 +1,4 @@
+function[]=writeABQwave(filepath,input,type,waveperiod,datafile,minimum,quadratic,stochastic,properties,depvar,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

@@ -1,3 +1,4 @@
+function[]=writeABQINP(filepath,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
@@ -50,4 +51,4 @@ for i=1:length(C{2})
     end
 end
 
-returnreturn
+return

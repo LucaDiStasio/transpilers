@@ -1,3 +1,4 @@
+function[]=writeABQsolidsection(filepath,composite,elset,material,refnode,orientation,controls,layup,order,stackdirection,symmetric,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

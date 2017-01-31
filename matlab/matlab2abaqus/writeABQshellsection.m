@@ -1,3 +1,4 @@
+function[]=writeABQshellsection(filepath,elset,composite,material,controls,density,layup,nodalthickness,offset,orientation,poisson,sectionintegration,shellthickness,stackdirection,symmetric,temperature,thicknessmodulus,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

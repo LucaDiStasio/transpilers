@@ -1,3 +1,4 @@
+function[]=writeABQsteadystatedynamics(filepath,direct,subspaceprojection,dampingchange,frequencyscale,frictiondamping,interval,realonly,stiffnesschange,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

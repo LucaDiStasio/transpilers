@@ -1,3 +1,4 @@
+function[]=writeABQloadingdata(filepath,dependencies,direction,extrapolation,independentcomponents,regularize,rtol,type,ratedependent,rateinterpolation,damageonset,slopedrop,yieldonset,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

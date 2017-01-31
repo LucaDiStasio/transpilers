@@ -1,3 +1,4 @@
+function[]=writeABQrigidbody(filepath,refnode,analyticalsurface,elset,pinnset,tienset,isothermal,position,density,nodalthickness,offset,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

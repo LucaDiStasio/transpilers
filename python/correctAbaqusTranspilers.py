@@ -126,7 +126,7 @@ for file in targetFiles:
     if 'function[]=' not in oldLines[0]:
         firstline = 'function[]=' + file[:-2] + '(filepath'
         for line in oldLines:
-            if 'strcmp' in line and 'strcmp(comment,' not in line and 'strcmp(line' not in line:
+            if 'strcmp' in line and 'strcmp(comment,' not in line and 'strcmp(line' not in line and 'strcmp(model' not in line:
                 keyword = line.split('&&')[2].replace(' ','').replace('(','').replace(')','').replace('~strcmp','').replace('\'','').replace('None','').replace(',','').replace('\n','')
                 firstline += ',' + keyword
         firstline += ',' + 'data,comment)\n'

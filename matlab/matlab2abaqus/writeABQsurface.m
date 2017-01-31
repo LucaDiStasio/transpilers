@@ -1,3 +1,4 @@
+function[]=writeABQsurface(filepath,name,property,combine,crop,definition,filletradius,internal,regiontype,trim,type,maxratio,nooffset,nothick,scalethick,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

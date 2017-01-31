@@ -1,3 +1,4 @@
+function[]=writeABQsoils(filepath,allsdtol,cetol,consolidation,continue,deltmx,end,creep,factor,heat,stabilize,utol,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>

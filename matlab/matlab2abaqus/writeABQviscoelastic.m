@@ -1,3 +1,4 @@
+function[]=writeABQviscoelastic(filepath,frequency,nonlinear,time,law,networkid,sratio,dependencies,preload,type,errtol,nmax,data,comment)
 %==============================================================================
 % Copyright (c) 2016-2017 Universite de Lorraine & Lulea tekniska universitet
 % Author: Luca Di Stasio <luca.distasio@gmail.com>
