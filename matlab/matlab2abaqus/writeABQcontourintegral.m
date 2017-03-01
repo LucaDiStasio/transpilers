@@ -51,7 +51,7 @@ if ~strcmp(crackname,'none') && ~strcmp(crackname,'NONE') && ~strcmp(crackname,'
 end
 
 if ~strcmp(cracktipnodes,'none') && ~strcmp(cracktipnodes,'NONE') && ~strcmp(cracktipnodes,'None')
-    line = strcat(line,', CRACK TIP NODES=',cracktipnodes);
+    line = strcat(line,', CRACK TIP NODES');
 end
 
 if ~strcmp(direction,'none') && ~strcmp(direction,'NONE') && ~strcmp(direction,'None')
@@ -63,7 +63,7 @@ if ~strcmp(frequency,'none') && ~strcmp(frequency,'NONE') && ~strcmp(frequency,'
 end
 
 if ~strcmp(normal,'none') && ~strcmp(normal,'NONE') && ~strcmp(normal,'None')
-    line = strcat(line,', NORMAL=',normal);
+    line = strcat(line,', NORMAL');
 end
 
 if ~strcmp(output,'none') && ~strcmp(output,'NONE') && ~strcmp(output,'None')
@@ -75,7 +75,7 @@ if ~strcmp(residualstressstep,'none') && ~strcmp(residualstressstep,'NONE') && ~
 end
 
 if ~strcmp(symm,'none') && ~strcmp(symm,'NONE') && ~strcmp(symm,'None')
-    line = strcat(line,', SYMM=',symm);
+    line = strcat(line,', SYMM');
 end
 
 if ~strcmp(type,'none') && ~strcmp(type,'NONE') && ~strcmp(type,'None')
@@ -83,7 +83,7 @@ if ~strcmp(type,'none') && ~strcmp(type,'NONE') && ~strcmp(type,'None')
 end
 
 if ~strcmp(xfem,'none') && ~strcmp(xfem,'NONE') && ~strcmp(xfem,'None')
-    line = strcat(line,', XFEM=',xfem);
+    line = strcat(line,', XFEM');
 end
 
 fprintf(fileId,strcat(line,'\n'));
