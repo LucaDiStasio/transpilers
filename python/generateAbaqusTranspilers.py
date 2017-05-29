@@ -45,10 +45,10 @@ cppFolder = 'D:/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/cpp/cpp2abaqus'
 jsFolder = 'D:/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/js/js2abaqus'
 pythonFolder = 'D:/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/python/python2abaqus'
 '''
-matlabFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/matlab/matlab2abaqus'
-cppFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/cpp/cpp2abaqus'
-jsFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/js/js2abaqus'
-pythonFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/python/python2abaqus'
+matlabFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2abaqus'
+cppFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2abaqus'
+jsFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2abaqus'
+pythonFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2abaqus'
 
 sourcefiles = [f for f in listdir(sourceFolder) if isfile(join(sourceFolder, f)) and 'abk' in f and '.html' in f]
 
