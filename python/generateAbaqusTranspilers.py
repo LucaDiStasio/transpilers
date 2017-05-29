@@ -308,25 +308,31 @@ elif targetLang=='python':
                 line += ',' + parameter.lower().replace(' ','')
             line += ',data,comment):\n'
             file.write(line)
-            file.write('with open(filepath,\'a\') as abq:' + '\n')
+            file.write('    with open(filepath,\'a\') as abq:' + '\n')
             file.write('        abq.write(\'**\' + \'\\n\')' + '\n')
             line = ''
-            line = '    line = \'*' + keyword + '\';\n'
+            line = '        line = \'*' + keyword + '\';\n'
             file.write(line)
             for parameter in parametersDict[keyword]:
-                file.write('\n')
                 line = ''
-                line = '    if \'none\'!=' + parameter.lower().replace(' ','') +  ' and \'NONE\'!=' + parameter.lower().replace(' ','') +  ' and \'None\'!=' + parameter.lower().replace(' ','') +  ':\n'
+                line = '        if \'none\'!=' + parameter.lower().replace(' ','') +  ' and \'NONE\'!=' + parameter.lower().replace(' ','') +  ' and \'None\'!=' + parameter.lower().replace(' ','') +  ':\n'
                 file.write(line)
                 line = ''
-                line = '        line += \', ' + parameter + '=\' + ' + parameter.lower().replace(' ','') + '\n'
+                line = '            line += \', ' + parameter + '=\' + ' + parameter.lower().replace(' ','') + '\n'
                 file.write(line)
                 line = ''
-            file.write('    abq.write(line + \'\\n\')' + '\n')
-            file.write('    abq.write(\'** \' + str(comment) + \'\\n\')' + '\n')
-            file.write('    for item in data:\n')
-            file.write('        abq.write(str(item) + \'\\n\')' + '\n')
+            file.write('        abq.write(line + \'\\n\')' + '\n')
+            file.write('        abq.write(\'** \' + str(comment) + \'\\n\')' + '\n')
+            file.write('        for item in data:\n')
+            file.write('            abq.write(str(item) + \'\\n\')' + '\n')
             file.write('\n')
+    with open(join(targetFolder,fileName),'a') as file:
+        file.write('def main():' + '\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('if __name__ == \'__main__\':' + '\n')
+        file.write('    main()' + '\n')
+        
 # generate javascript files
 elif targetLang=='javascript':
     targetFolder = jsFolder
