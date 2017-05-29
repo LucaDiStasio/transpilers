@@ -35,9 +35,9 @@ from os import listdir
 from os.path import isfile, join
 from BeautifulSoup import BeautifulSoup
 
-targetLang = 'cpp'
+targetLang = 'python'
 
-%sourceFolder = 'C:/Simulia/Documentation/docs/v6.12/books/key'
+#sourceFolder = 'C:/Simulia/Documentation/docs/v6.12/books/key'
 sourceFolder = 'C:/Simulia/Documentation/docs/v2016/books/key'
 '''
 matlabFolder = 'D:/OneDrive/01_Luca/07_DocMASE/06_WD/io_manager/matlab/matlab2abaqus'
@@ -65,7 +65,7 @@ for file in sourcefiles:
     parametersDict[keyword] = parameters
 
 # generate matlab files    
-if targetLang = 'matlab'
+if targetLang == 'matlab':
     targetFolder = matlabFolder
     #targetFiles = [f for f in listdir(targetFolder) if isfile(join(sourceFolder, f)) and '.m' in f]
     for keyword in keywords:
@@ -308,20 +308,25 @@ elif targetLang=='python':
                 line += ',' + parameter.lower().replace(' ','')
             line += ',data,comment):\n'
             file.write(line)
-            file.write('\n')
+            file.write('with open(filepath,\'a\') as abq:' + '\n')
+            file.write('        abq.write(\'**\' + \'\\n\')' + '\n')
             line = ''
-            line = 'line = \'*' + keyword + '\';\n'
+            line = '    line = \'*' + keyword + '\';\n'
             file.write(line)
             for parameter in parametersDict[keyword]:
                 file.write('\n')
                 line = ''
-                line = 'if \'none\'!=' + parameter.lower().replace(' ','') +  ' and \'NONE\'!=' + parameter.lower().replace(' ','') +  ' and \'None\'!=' + parameter.lower().replace(' ','') +  ':\n'
+                line = '    if \'none\'!=' + parameter.lower().replace(' ','') +  ' and \'NONE\'!=' + parameter.lower().replace(' ','') +  ' and \'None\'!=' + parameter.lower().replace(' ','') +  ':\n'
                 file.write(line)
                 line = ''
-                line = '    line += \', ' + parameter + '=\' + ' + parameter.lower().replace(' ','') + '\n'
+                line = '        line += \', ' + parameter + '=\' + ' + parameter.lower().replace(' ','') + '\n'
                 file.write(line)
                 line = ''
-                file.write('end\n')
+            file.write('    abq.write(line + \'\\n\')' + '\n')
+            file.write('    abq.write(\'** \' + str(comment) + \'\\n\')' + '\n')
+            file.write('    for item in data:\n')
+            file.write('        abq.write(str(item) + \'\\n\')' + '\n')
+            file.write('\n')
 # generate javascript files
 elif targetLang=='javascript':
     targetFolder = jsFolder
