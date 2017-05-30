@@ -70,23 +70,20 @@ def init_browser(browser):
    
 targetLang = 'matlab'
 
+baseLink = 'http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/'
 sourceLink = 'http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node160.html'
 
+'''
 matlabABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2abaqus'
 cppABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2abaqus'
 jsABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2abaqus'
 pythonABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2abaqus'
+'''
 
 matlabCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2calculix'
 cppCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2calculix'
 jsCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2calculix'
 pythonCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2calculix'
-
-refFuncs = []
-
-for file in listdir(matlabABQfolder):
-    if file[-2:]=='.m':
-        refFuncs.append(file)
 
 keywords = []
 parametersDict = {}
@@ -104,20 +101,42 @@ found = 0.0
 for item in soup.body.ul.findAll('li'):
     if item.a.text.isupper():
         keyword = item.a.text.replace('*','').replace('\n','').replace(' ','').lower()
-        matlabTarget = 'writeABQ' + keyword + '.m'
         print('')
-        print('Searching for ABAQUS transpiler:')
-        print(matlabTarget)
-        print('')
-        tot += 1.0
-        if matlabTarget in refFuncs:
-            print('Found')
-            found += 1.0
-        else:
-            print('NOT found')
-        print('')
+        print('=================================================================')
         print('CALCULIX transpiler:')
         print('writeCCX' + keyword)
+        print('')
+        page = mech.open(baseLink + item.a['href'])
+        html = page.read()
+        pageSoup = BeautifulSoup(html)
+        params = []
+        for p in pageSoup.body.findAll('p'):
+            lines = p.text.split('.')
+            for line in lines:
+                if 'parameters' in line or 'parameter' in line:
+                    words = line.replace('\n','').replace(',',' ').replace(';',' ').replace('.',' ').replace(':',' ').replace('(',' ').replace(')',' ').split(' ')
+                    for w,word in enumerate(words):
+                        if '*' not in word and word.isupper() and '=' not in word and word not in params and len(word)>1:
+                            if w>0 and w<len(words)-1:
+                                if words[w-1].islower() and words[w+1].islower() and '=' not in word and word not in params:
+                                    params.append(word)
+                                elif words[w-1].isupper() and words[w+1].islower() and '*' not in words[w-1] + ' ' + word  and '=' not in words[w-1] + ' ' + word and words[w-1] + ' ' + word not in params:
+                                    params.append(words[w-1] + ' ' + word)
+                                elif words[w-1].islower() and words[w+1].isupper() and '*' not in word + ' ' + words[w+1]  and '=' not in word + ' ' + words[w+1] and word + ' ' + words[w+1] not in params:
+                                    params.append(word + ' ' + words[w+1])
+                            elif w==0:
+                                if words[w+1].islower() and '=' not in word and word not in params:
+                                    params.append(word)
+                                elif words[w+1].isupper() and '*' not in word + ' ' + words[w+1] and '=' not in word + ' ' + words[w+1] and word + ' ' + words[w+1] not in params:
+                                    params.append(word + ' ' + words[w+1])
+                            elif w==len(words)-1:
+                                if words[w-1].islower() and '=' not in word and word not in params:
+                                    params.append(word)
+                                elif words[w-1].isupper() and '*' not in words[w-1] + ' ' + word and '=' not in words[w-1] + ' ' + word and words[w-1] + ' ' + word not in params:
+                                    params.append(words[w-1] + ' ' + word)
+        print('keyword: ' + keyword.upper())
+        print('parameters:')
+        for param in params:
+            print(param)
 
-print('')        
-print('Found ' + str(found) + ' corresponding functions over a total of ' + str(tot) + ', or ' + str(100.0*found/tot) + '%')
+
