@@ -68,14 +68,25 @@ def init_browser(browser):
    #br.set_proxies({'http':'127.0.0.1:8120'})
    return mech
    
-targetLang = 'python'
+targetLang = 'matlab'
 
 sourceLink = 'http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node160.html'
 
-matlabFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2abaqus'
-cppFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2abaqus'
-jsFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2abaqus'
-pythonFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2abaqus'
+matlabABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2abaqus'
+cppABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2abaqus'
+jsABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2abaqus'
+pythonABQfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2abaqus'
+
+matlabCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2calculix'
+cppCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2calculix'
+jsCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2calculix'
+pythonCCXfolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2calculix'
+
+refFuncs = []
+
+for file in listdir(matlabABQfolder):
+    if file[-2:]=='.m':
+        refFuncs.append(file)
 
 keywords = []
 parametersDict = {}
@@ -87,4 +98,26 @@ main = mech.open(sourceLink)
 html = main.read()
 soup = BeautifulSoup(html)
 
-print(soup)
+tot = 0.0
+found = 0.0
+
+for item in soup.body.ul.findAll('li'):
+    if item.a.text.isupper():
+        keyword = item.a.text.replace('*','').replace('\n','').replace(' ','').lower()
+        matlabTarget = 'writeABQ' + keyword + '.m'
+        print('')
+        print('Searching for ABAQUS transpiler:')
+        print(matlabTarget)
+        print('')
+        tot += 1.0
+        if matlabTarget in refFuncs:
+            print('Found')
+            found += 1.0
+        else:
+            print('NOT found')
+        print('')
+        print('CALCULIX transpiler:')
+        print('writeCCX' + keyword)
+
+print('')        
+print('Found ' + str(found) + ' corresponding functions over a total of ' + str(tot) + ', or ' + str(100.0*found/tot) + '%')
