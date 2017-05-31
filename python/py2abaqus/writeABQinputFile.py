@@ -37,7 +37,7 @@ from os.path import join
 def writeABQacousticcontribution(filepath,acousticnodes,name,type,structuralnodes,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ACOUSTIC CONTRIBUTION';
+        line = '*ACOUSTIC CONTRIBUTION'
         if 'none'!=acousticnodes and 'NONE'!=acousticnodes and 'None'!=acousticnodes:
             line += ', ACOUSTIC NODES=' + acousticnodes
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -55,7 +55,7 @@ def writeABQacousticcontribution(filepath,acousticnodes,name,type,structuralnode
 def writeABQacousticflowvelocity(filepath,rotation,translation,amplitude,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ACOUSTIC FLOW VELOCITY';
+        line = '*ACOUSTIC FLOW VELOCITY'
         if 'none'!=rotation and 'NONE'!=rotation and 'None'!=rotation:
             line += ', ROTATION=' + rotation
         if 'none'!=translation and 'NONE'!=translation and 'None'!=translation:
@@ -71,7 +71,7 @@ def writeABQacousticflowvelocity(filepath,rotation,translation,amplitude,data,co
 def writeABQacousticmedium(filepath,bulkmodulus,cavitationlimit,complexbulkmodulus,complexdensity,porousmodel,volumetricdrag,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ACOUSTIC MEDIUM';
+        line = '*ACOUSTIC MEDIUM'
         if 'none'!=bulkmodulus and 'NONE'!=bulkmodulus and 'None'!=bulkmodulus:
             line += ', BULK MODULUS=' + bulkmodulus
         if 'none'!=cavitationlimit and 'NONE'!=cavitationlimit and 'None'!=cavitationlimit:
@@ -95,7 +95,7 @@ def writeABQacousticmedium(filepath,bulkmodulus,cavitationlimit,complexbulkmodul
 def writeABQacousticwaveformulation(filepath,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ACOUSTIC WAVE FORMULATION';
+        line = '*ACOUSTIC WAVE FORMULATION'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         abq.write(line + '\n')
@@ -107,7 +107,7 @@ def writeABQacousticwaveformulation(filepath,type,data,comment):
 def writeABQadaptivemesh(filepath,elset,op,controls,frequency,initialmeshsweeps,meshsweeps,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ADAPTIVE MESH';
+        line = '*ADAPTIVE MESH'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -129,7 +129,7 @@ def writeABQadaptivemesh(filepath,elset,op,controls,frequency,initialmeshsweeps,
 def writeABQadaptivemeshconstraint(filepath,amplitude,constrainttype,op,type,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ADAPTIVE MESH CONSTRAINT';
+        line = '*ADAPTIVE MESH CONSTRAINT'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=constrainttype and 'NONE'!=constrainttype and 'None'!=constrainttype:
@@ -149,7 +149,7 @@ def writeABQadaptivemeshconstraint(filepath,amplitude,constrainttype,op,type,use
 def writeABQadaptivemeshcontrols(filepath,name,advection,curvaturerefinement,geometricenhancement,initialfeatureangle,meshconstraintangle,meshingpredictor,momentumadvection,reset,smoothingobjective,transitionfeatureangle,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ADAPTIVE MESH CONTROLS';
+        line = '*ADAPTIVE MESH CONTROLS'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=advection and 'NONE'!=advection and 'None'!=advection:
@@ -181,7 +181,7 @@ def writeABQadaptivemeshcontrols(filepath,name,advection,curvaturerefinement,geo
 def writeABQadaptivemeshrefinement(filepath,elset,level,coarsening,ratio,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ADAPTIVE MESH REFINEMENT';
+        line = '*ADAPTIVE MESH REFINEMENT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=level and 'NONE'!=level and 'None'!=level:
@@ -199,7 +199,7 @@ def writeABQadaptivemeshrefinement(filepath,elset,level,coarsening,ratio,data,co
 def writeABQadjust(filepath,nodeset,surface,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ADJUST';
+        line = '*ADJUST'
         if 'none'!=nodeset and 'NONE'!=nodeset and 'None'!=nodeset:
             line += ', NODE SET=' + nodeset
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
@@ -215,7 +215,7 @@ def writeABQadjust(filepath,nodeset,surface,orientation,data,comment):
 def writeABQamplitude(filepath,name,definition,input,scalex,scaley,shiftx,shifty,time,value,fixedinterval,begin,smooth,properties,variables,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*AMPLITUDE';
+        line = '*AMPLITUDE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
@@ -253,7 +253,7 @@ def writeABQamplitude(filepath,name,definition,input,scalex,scaley,shiftx,shifty
 def writeABQanisotropichyperelastic(filepath,fung-anisotropic,fung-orthotropic,holzapfel,user,formulation,type,dependencies,localdirections,moduli,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ANISOTROPIC HYPERELASTIC';
+        line = '*ANISOTROPIC HYPERELASTIC'
         if 'none'!=fung-anisotropic and 'NONE'!=fung-anisotropic and 'None'!=fung-anisotropic:
             line += ', FUNG-ANISOTROPIC=' + fung-anisotropic
         if 'none'!=fung-orthotropic and 'NONE'!=fung-orthotropic and 'None'!=fung-orthotropic:
@@ -283,7 +283,7 @@ def writeABQanisotropichyperelastic(filepath,fung-anisotropic,fung-orthotropic,h
 def writeABQanneal(filepath,temperature,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ANNEAL';
+        line = '*ANNEAL'
         if 'none'!=temperature and 'NONE'!=temperature and 'None'!=temperature:
             line += ', TEMPERATURE=' + temperature
         abq.write(line + '\n')
@@ -295,7 +295,7 @@ def writeABQanneal(filepath,temperature,data,comment):
 def writeABQannealtemperature(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ANNEAL TEMPERATURE';
+        line = '*ANNEAL TEMPERATURE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -307,7 +307,7 @@ def writeABQannealtemperature(filepath,dependencies,data,comment):
 def writeABQaqua(filepath,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*AQUA';
+        line = '*AQUA'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         abq.write(line + '\n')
@@ -319,7 +319,7 @@ def writeABQaqua(filepath,input,data,comment):
 def writeABQassembly(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ASSEMBLY';
+        line = '*ASSEMBLY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -331,7 +331,7 @@ def writeABQassembly(filepath,name,data,comment):
 def writeABQasymmetric-axisymmetric(filepath,angle,mode,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ASYMMETRIC-AXISYMMETRIC';
+        line = '*ASYMMETRIC-AXISYMMETRIC'
         if 'none'!=angle and 'NONE'!=angle and 'None'!=angle:
             line += ', ANGLE=' + angle
         if 'none'!=mode and 'NONE'!=mode and 'None'!=mode:
@@ -345,7 +345,7 @@ def writeABQasymmetric-axisymmetric(filepath,angle,mode,data,comment):
 def writeABQaxial(filepath,dependencies,elastic,linear,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*AXIAL';
+        line = '*AXIAL'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elastic and 'NONE'!=elastic and 'None'!=elastic:
@@ -361,7 +361,7 @@ def writeABQaxial(filepath,dependencies,elastic,linear,data,comment):
 def writeABQbasemotion(filepath,dof,amplitude,basename,loadcase,scale,type,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BASE MOTION';
+        line = '*BASE MOTION'
         if 'none'!=dof and 'NONE'!=dof and 'None'!=dof:
             line += ', DOF=' + dof
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
@@ -387,7 +387,7 @@ def writeABQbasemotion(filepath,dof,amplitude,basename,loadcase,scale,type,imagi
 def writeABQbaselinecorrection(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BASELINE CORRECTION';
+        line = '*BASELINE CORRECTION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -397,7 +397,7 @@ def writeABQbaselinecorrection(filepath,data,comment):
 def writeABQbeamaddedinertia(filepath,alpha,composite,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BEAM ADDED INERTIA';
+        line = '*BEAM ADDED INERTIA'
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
             line += ', ALPHA=' + alpha
         if 'none'!=composite and 'NONE'!=composite and 'None'!=composite:
@@ -411,7 +411,7 @@ def writeABQbeamaddedinertia(filepath,alpha,composite,data,comment):
 def writeABQbeamfluidinertia(filepath,full,half,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BEAM FLUID INERTIA';
+        line = '*BEAM FLUID INERTIA'
         if 'none'!=full and 'NONE'!=full and 'None'!=full:
             line += ', FULL=' + full
         if 'none'!=half and 'NONE'!=half and 'None'!=half:
@@ -425,7 +425,7 @@ def writeABQbeamfluidinertia(filepath,full,half,data,comment):
 def writeABQbeamgeneralsection(filepath,elset,density,dependencies,lumped,poisson,rotaryinertia,section,taper,zero,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BEAM GENERAL SECTION';
+        line = '*BEAM GENERAL SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=density and 'NONE'!=density and 'None'!=density:
@@ -453,7 +453,7 @@ def writeABQbeamgeneralsection(filepath,elset,density,dependencies,lumped,poisso
 def writeABQbeamsection(filepath,elset,material,section,lumped,poisson,rotaryinertia,temperature,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BEAM SECTION';
+        line = '*BEAM SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -477,7 +477,7 @@ def writeABQbeamsection(filepath,elset,material,section,lumped,poisson,rotaryine
 def writeABQbeamsectiongenerate(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BEAM SECTION GENERATE';
+        line = '*BEAM SECTION GENERATE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -487,7 +487,7 @@ def writeABQbeamsectiongenerate(filepath,data,comment):
 def writeABQbeamsectionoffset(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BEAM SECTION OFFSET';
+        line = '*BEAM SECTION OFFSET'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -497,7 +497,7 @@ def writeABQbeamsectionoffset(filepath,data,comment):
 def writeABQbiaxialtestdata(filepath,smooth,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BIAXIAL TEST DATA';
+        line = '*BIAXIAL TEST DATA'
         if 'none'!=smooth and 'NONE'!=smooth and 'None'!=smooth:
             line += ', SMOOTH=' + smooth
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -511,7 +511,7 @@ def writeABQbiaxialtestdata(filepath,smooth,dependencies,data,comment):
 def writeABQblockage(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BLOCKAGE';
+        line = '*BLOCKAGE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -521,7 +521,7 @@ def writeABQblockage(filepath,data,comment):
 def writeABQbond(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BOND';
+        line = '*BOND'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -531,7 +531,7 @@ def writeABQbond(filepath,data,comment):
 def writeABQboundary(filepath,amplitude,blocking,fixed,loadcase,name,op,phantom,regiontype,type,user,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BOUNDARY';
+        line = '*BOUNDARY'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=blocking and 'NONE'!=blocking and 'None'!=blocking:
@@ -565,7 +565,7 @@ def writeABQboundary(filepath,amplitude,blocking,fixed,loadcase,name,op,phantom,
 def writeABQbrittlecracking(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BRITTLE CRACKING';
+        line = '*BRITTLE CRACKING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -579,7 +579,7 @@ def writeABQbrittlecracking(filepath,dependencies,type,data,comment):
 def writeABQbrittlefailure(filepath,cracks,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BRITTLE FAILURE';
+        line = '*BRITTLE FAILURE'
         if 'none'!=cracks and 'NONE'!=cracks and 'None'!=cracks:
             line += ', CRACKS=' + cracks
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -593,7 +593,7 @@ def writeABQbrittlefailure(filepath,cracks,dependencies,data,comment):
 def writeABQbrittleshear(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BRITTLE SHEAR';
+        line = '*BRITTLE SHEAR'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -607,7 +607,7 @@ def writeABQbrittleshear(filepath,dependencies,type,data,comment):
 def writeABQbuckle(filepath,eigensolver,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BUCKLE';
+        line = '*BUCKLE'
         if 'none'!=eigensolver and 'NONE'!=eigensolver and 'None'!=eigensolver:
             line += ', EIGENSOLVER=' + eigensolver
         abq.write(line + '\n')
@@ -619,7 +619,7 @@ def writeABQbuckle(filepath,eigensolver,data,comment):
 def writeABQbucklingenvelope(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BUCKLING ENVELOPE';
+        line = '*BUCKLING ENVELOPE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -629,7 +629,7 @@ def writeABQbucklingenvelope(filepath,data,comment):
 def writeABQbucklinglength(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BUCKLING LENGTH';
+        line = '*BUCKLING LENGTH'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -639,7 +639,7 @@ def writeABQbucklinglength(filepath,data,comment):
 def writeABQbucklingreductionfactors(filepath,axis1,axis2,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BUCKLING REDUCTION FACTORS';
+        line = '*BUCKLING REDUCTION FACTORS'
         if 'none'!=axis1 and 'NONE'!=axis1 and 'None'!=axis1:
             line += ', AXIS1=' + axis1
         if 'none'!=axis2 and 'NONE'!=axis2 and 'None'!=axis2:
@@ -653,7 +653,7 @@ def writeABQbucklingreductionfactors(filepath,axis1,axis2,data,comment):
 def writeABQbulkviscosity(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*BULK VISCOSITY';
+        line = '*BULK VISCOSITY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -663,7 +663,7 @@ def writeABQbulkviscosity(filepath,data,comment):
 def writeABQcaddedmass(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*C ADDED MASS';
+        line = '*C ADDED MASS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -673,7 +673,7 @@ def writeABQcaddedmass(filepath,data,comment):
 def writeABQcapcreep(filepath,dependencies,law,mechanism,time,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAP CREEP';
+        line = '*CAP CREEP'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
@@ -691,7 +691,7 @@ def writeABQcapcreep(filepath,dependencies,law,mechanism,time,data,comment):
 def writeABQcaphardening(filepath,dependencies,scalestress,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAP HARDENING';
+        line = '*CAP HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=scalestress and 'NONE'!=scalestress and 'None'!=scalestress:
@@ -705,7 +705,7 @@ def writeABQcaphardening(filepath,dependencies,scalestress,data,comment):
 def writeABQcapplasticity(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAP PLASTICITY';
+        line = '*CAP PLASTICITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -717,7 +717,7 @@ def writeABQcapplasticity(filepath,dependencies,data,comment):
 def writeABQcapacity(filepath,type,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAPACITY';
+        line = '*CAPACITY'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -731,7 +731,7 @@ def writeABQcapacity(filepath,type,dependencies,data,comment):
 def writeABQcastironcompressionhardening(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAST IRON COMPRESSION HARDENING';
+        line = '*CAST IRON COMPRESSION HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -743,7 +743,7 @@ def writeABQcastironcompressionhardening(filepath,dependencies,data,comment):
 def writeABQcastironplasticity(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAST IRON PLASTICITY';
+        line = '*CAST IRON PLASTICITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -755,7 +755,7 @@ def writeABQcastironplasticity(filepath,dependencies,data,comment):
 def writeABQcastirontensionhardening(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAST IRON TENSION HARDENING';
+        line = '*CAST IRON TENSION HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -767,7 +767,7 @@ def writeABQcastirontensionhardening(filepath,dependencies,data,comment):
 def writeABQcavitydefinition(filepath,name,ambienttemp,paralleldecomposition,setproperty,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CAVITY DEFINITION';
+        line = '*CAVITY DEFINITION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=ambienttemp and 'NONE'!=ambienttemp and 'None'!=ambienttemp:
@@ -785,7 +785,7 @@ def writeABQcavitydefinition(filepath,name,ambienttemp,paralleldecomposition,set
 def writeABQcecharge(filepath,amplitude,op,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CECHARGE';
+        line = '*CECHARGE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -803,7 +803,7 @@ def writeABQcecharge(filepath,amplitude,op,imaginary,real,data,comment):
 def writeABQcecurrent(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CECURRENT';
+        line = '*CECURRENT'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -817,7 +817,7 @@ def writeABQcecurrent(filepath,amplitude,op,data,comment):
 def writeABQcentroid(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CENTROID';
+        line = '*CENTROID'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -827,7 +827,7 @@ def writeABQcentroid(filepath,data,comment):
 def writeABQcfd(filepath,incompressiblenavierstokes,energyequation,incrementation,steadystate,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CFD';
+        line = '*CFD'
         if 'none'!=incompressiblenavierstokes and 'NONE'!=incompressiblenavierstokes and 'None'!=incompressiblenavierstokes:
             line += ', INCOMPRESSIBLE NAVIER STOKES=' + incompressiblenavierstokes
         if 'none'!=energyequation and 'NONE'!=energyequation and 'None'!=energyequation:
@@ -845,7 +845,7 @@ def writeABQcfd(filepath,incompressiblenavierstokes,energyequation,incrementatio
 def writeABQcfilm(filepath,amplitude,filmamplitude,op,regiontype,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CFILM';
+        line = '*CFILM'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=filmamplitude and 'NONE'!=filmamplitude and 'None'!=filmamplitude:
@@ -865,7 +865,7 @@ def writeABQcfilm(filepath,amplitude,filmamplitude,op,regiontype,user,data,comme
 def writeABQcflow(filepath,amplitude,op,phantom,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CFLOW';
+        line = '*CFLOW'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -881,7 +881,7 @@ def writeABQcflow(filepath,amplitude,op,phantom,data,comment):
 def writeABQcflux(filepath,file,amplitude,inc,op,regiontype,step,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CFLUX';
+        line = '*CFLUX'
         if 'none'!=file and 'NONE'!=file and 'None'!=file:
             line += ', FILE=' + file
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
@@ -903,7 +903,7 @@ def writeABQcflux(filepath,file,amplitude,inc,op,regiontype,step,data,comment):
 def writeABQchangefriction(filepath,elset,interaction,amplitude,reset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CHANGE FRICTION';
+        line = '*CHANGE FRICTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=interaction and 'NONE'!=interaction and 'None'!=interaction:
@@ -921,7 +921,7 @@ def writeABQchangefriction(filepath,elset,interaction,amplitude,reset,data,comme
 def writeABQcharacteristiclength(filepath,definition,components,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CHARACTERISTIC LENGTH';
+        line = '*CHARACTERISTIC LENGTH'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=components and 'NONE'!=components and 'None'!=components:
@@ -937,7 +937,7 @@ def writeABQcharacteristiclength(filepath,definition,components,properties,data,
 def writeABQclayhardening(filepath,dependencies,sr,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CLAY HARDENING';
+        line = '*CLAY HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=sr and 'NONE'!=sr and 'None'!=sr:
@@ -953,7 +953,7 @@ def writeABQclayhardening(filepath,dependencies,sr,type,data,comment):
 def writeABQclayplasticity(filepath,dependencies,hardening,intercept,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CLAY PLASTICITY';
+        line = '*CLAY PLASTICITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=hardening and 'NONE'!=hardening and 'None'!=hardening:
@@ -969,7 +969,7 @@ def writeABQclayplasticity(filepath,dependencies,hardening,intercept,data,commen
 def writeABQclearance(filepath,cpset,master,slave,tabular,value,bolt,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CLEARANCE';
+        line = '*CLEARANCE'
         if 'none'!=cpset and 'NONE'!=cpset and 'None'!=cpset:
             line += ', CPSET=' + cpset
         if 'none'!=master and 'NONE'!=master and 'None'!=master:
@@ -993,7 +993,7 @@ def writeABQclearance(filepath,cpset,master,slave,tabular,value,bolt,input,data,
 def writeABQcload(filepath,file,cyclicmode,amplitude,follower,inc,loadcase,op,regiontype,step,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CLOAD';
+        line = '*CLOAD'
         if 'none'!=file and 'NONE'!=file and 'None'!=file:
             line += ', FILE=' + file
         if 'none'!=cyclicmode and 'NONE'!=cyclicmode and 'None'!=cyclicmode:
@@ -1025,7 +1025,7 @@ def writeABQcload(filepath,file,cyclicmode,amplitude,follower,inc,loadcase,op,re
 def writeABQcohesivebehavior(filepath,dependencies,eligibility,repeatedcontacts,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COHESIVE BEHAVIOR';
+        line = '*COHESIVE BEHAVIOR'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=eligibility and 'NONE'!=eligibility and 'None'!=eligibility:
@@ -1043,7 +1043,7 @@ def writeABQcohesivebehavior(filepath,dependencies,eligibility,repeatedcontacts,
 def writeABQcohesivesection(filepath,elset,material,response,controls,orientation,stackdirection,thickness,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COHESIVE SECTION';
+        line = '*COHESIVE SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -1067,7 +1067,7 @@ def writeABQcohesivesection(filepath,elset,material,response,controls,orientatio
 def writeABQcombinedtestdata(filepath,shrinf,volinf,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COMBINED TEST DATA';
+        line = '*COMBINED TEST DATA'
         if 'none'!=shrinf and 'NONE'!=shrinf and 'None'!=shrinf:
             line += ', SHRINF=' + shrinf
         if 'none'!=volinf and 'NONE'!=volinf and 'None'!=volinf:
@@ -1081,7 +1081,7 @@ def writeABQcombinedtestdata(filepath,shrinf,volinf,data,comment):
 def writeABQcomplexfrequency(filepath,frictiondamping,normalization,propertyevaluation,unstablemodesonly,lefteigenvectors,righteigenvectors,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COMPLEX FREQUENCY';
+        line = '*COMPLEX FREQUENCY'
         if 'none'!=frictiondamping and 'NONE'!=frictiondamping and 'None'!=frictiondamping:
             line += ', FRICTION DAMPING=' + frictiondamping
         if 'none'!=normalization and 'NONE'!=normalization and 'None'!=normalization:
@@ -1103,7 +1103,7 @@ def writeABQcomplexfrequency(filepath,frictiondamping,normalization,propertyeval
 def writeABQcompositemodaldamping(filepath,massmatrixinput,stiffnessmatrixinput,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COMPOSITE MODAL DAMPING';
+        line = '*COMPOSITE MODAL DAMPING'
         if 'none'!=massmatrixinput and 'NONE'!=massmatrixinput and 'None'!=massmatrixinput:
             line += ', MASS MATRIX INPUT=' + massmatrixinput
         if 'none'!=stiffnessmatrixinput and 'NONE'!=stiffnessmatrixinput and 'None'!=stiffnessmatrixinput:
@@ -1117,7 +1117,7 @@ def writeABQcompositemodaldamping(filepath,massmatrixinput,stiffnessmatrixinput,
 def writeABQconcrete(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONCRETE';
+        line = '*CONCRETE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -1129,7 +1129,7 @@ def writeABQconcrete(filepath,dependencies,data,comment):
 def writeABQconcretecompressiondamage(filepath,dependencies,tensionrecovery,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONCRETE COMPRESSION DAMAGE';
+        line = '*CONCRETE COMPRESSION DAMAGE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=tensionrecovery and 'NONE'!=tensionrecovery and 'None'!=tensionrecovery:
@@ -1143,7 +1143,7 @@ def writeABQconcretecompressiondamage(filepath,dependencies,tensionrecovery,data
 def writeABQconcretecompressionhardening(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONCRETE COMPRESSION HARDENING';
+        line = '*CONCRETE COMPRESSION HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -1155,7 +1155,7 @@ def writeABQconcretecompressionhardening(filepath,dependencies,data,comment):
 def writeABQconcretedamagedplasticity(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONCRETE DAMAGED PLASTICITY';
+        line = '*CONCRETE DAMAGED PLASTICITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -1167,7 +1167,7 @@ def writeABQconcretedamagedplasticity(filepath,dependencies,data,comment):
 def writeABQconcretetensiondamage(filepath,compressionrecovery,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONCRETE TENSION DAMAGE';
+        line = '*CONCRETE TENSION DAMAGE'
         if 'none'!=compressionrecovery and 'NONE'!=compressionrecovery and 'None'!=compressionrecovery:
             line += ', COMPRESSION RECOVERY=' + compressionrecovery
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -1183,7 +1183,7 @@ def writeABQconcretetensiondamage(filepath,compressionrecovery,dependencies,type
 def writeABQconcretetensionstiffening(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONCRETE TENSION STIFFENING';
+        line = '*CONCRETE TENSION STIFFENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -1197,7 +1197,7 @@ def writeABQconcretetensionstiffening(filepath,dependencies,type,data,comment):
 def writeABQconductivity(filepath,dependencies,porefluid,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONDUCTIVITY';
+        line = '*CONDUCTIVITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=porefluid and 'NONE'!=porefluid and 'None'!=porefluid:
@@ -1213,7 +1213,7 @@ def writeABQconductivity(filepath,dependencies,porefluid,type,data,comment):
 def writeABQconnectorbehavior(filepath,name,extrapolation,integration,regularize,rtol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR BEHAVIOR';
+        line = '*CONNECTOR BEHAVIOR'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=extrapolation and 'NONE'!=extrapolation and 'None'!=extrapolation:
@@ -1233,7 +1233,7 @@ def writeABQconnectorbehavior(filepath,name,extrapolation,integration,regularize
 def writeABQconnectorconstitutivereference(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR CONSTITUTIVE REFERENCE';
+        line = '*CONNECTOR CONSTITUTIVE REFERENCE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -1243,7 +1243,7 @@ def writeABQconnectorconstitutivereference(filepath,data,comment):
 def writeABQconnectordamageevolution(filepath,type,affectedcomponents,degradation,dependencies,extrapolation,regularize,rtol,softening,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR DAMAGE EVOLUTION';
+        line = '*CONNECTOR DAMAGE EVOLUTION'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=affectedcomponents and 'NONE'!=affectedcomponents and 'None'!=affectedcomponents:
@@ -1269,7 +1269,7 @@ def writeABQconnectordamageevolution(filepath,type,affectedcomponents,degradatio
 def writeABQconnectordamageinitiation(filepath,component,criterion,dependencies,extrapolation,ratefilterfactor,rateinterpolation,regularize,rtol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR DAMAGE INITIATION';
+        line = '*CONNECTOR DAMAGE INITIATION'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         if 'none'!=criterion and 'NONE'!=criterion and 'None'!=criterion:
@@ -1295,7 +1295,7 @@ def writeABQconnectordamageinitiation(filepath,component,criterion,dependencies,
 def writeABQconnectordamping(filepath,component,type,dependencies,extrapolation,frequencydependence,independentcomponents,nonlinear,regularize,rtol,unsymm,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR DAMPING';
+        line = '*CONNECTOR DAMPING'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -1325,7 +1325,7 @@ def writeABQconnectordamping(filepath,component,type,dependencies,extrapolation,
 def writeABQconnectorderivedcomponent(filepath,name,dependencies,extrapolation,independentcomponents,operator,regularize,rtol,sign,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR DERIVED COMPONENT';
+        line = '*CONNECTOR DERIVED COMPONENT'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -1351,7 +1351,7 @@ def writeABQconnectorderivedcomponent(filepath,name,dependencies,extrapolation,i
 def writeABQconnectorelasticity(filepath,component,dependencies,extrapolation,frequencydependence,independentcomponents,nonlinear,regularize,rtol,rigid,unsymm,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR ELASTICITY';
+        line = '*CONNECTOR ELASTICITY'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -1381,7 +1381,7 @@ def writeABQconnectorelasticity(filepath,component,dependencies,extrapolation,fr
 def writeABQconnectorfailure(filepath,component,release,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR FAILURE';
+        line = '*CONNECTOR FAILURE'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         if 'none'!=release and 'NONE'!=release and 'None'!=release:
@@ -1395,7 +1395,7 @@ def writeABQconnectorfailure(filepath,component,release,data,comment):
 def writeABQconnectorfriction(filepath,predefined,stickstiffness,component,contactforce,dependencies,extrapolation,independentcomponents,regularize,rtol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR FRICTION';
+        line = '*CONNECTOR FRICTION'
         if 'none'!=predefined and 'NONE'!=predefined and 'None'!=predefined:
             line += ', PREDEFINED=' + predefined
         if 'none'!=stickstiffness and 'NONE'!=stickstiffness and 'None'!=stickstiffness:
@@ -1423,7 +1423,7 @@ def writeABQconnectorfriction(filepath,predefined,stickstiffness,component,conta
 def writeABQconnectorhardening(filepath,definition,dependencies,extrapolation,ratefilterfactor,rateinterpolation,regularize,rtol,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR HARDENING';
+        line = '*CONNECTOR HARDENING'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -1449,7 +1449,7 @@ def writeABQconnectorhardening(filepath,definition,dependencies,extrapolation,ra
 def writeABQconnectorload(filepath,amplitude,loadcase,op,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR LOAD';
+        line = '*CONNECTOR LOAD'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=loadcase and 'NONE'!=loadcase and 'None'!=loadcase:
@@ -1469,7 +1469,7 @@ def writeABQconnectorload(filepath,amplitude,loadcase,op,imaginary,real,data,com
 def writeABQconnectorlock(filepath,component,dependencies,extrapolation,lock,regularize,rtol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR LOCK';
+        line = '*CONNECTOR LOCK'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -1491,7 +1491,7 @@ def writeABQconnectorlock(filepath,component,dependencies,extrapolation,lock,reg
 def writeABQconnectormotion(filepath,amplitude,loadcase,op,fixed,type,user,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR MOTION';
+        line = '*CONNECTOR MOTION'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=loadcase and 'NONE'!=loadcase and 'None'!=loadcase:
@@ -1517,7 +1517,7 @@ def writeABQconnectormotion(filepath,amplitude,loadcase,op,fixed,type,user,imagi
 def writeABQconnectorplasticity(filepath,component,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR PLASTICITY';
+        line = '*CONNECTOR PLASTICITY'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         abq.write(line + '\n')
@@ -1529,7 +1529,7 @@ def writeABQconnectorplasticity(filepath,component,data,comment):
 def writeABQconnectorpotential(filepath,exponent,operator,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR POTENTIAL';
+        line = '*CONNECTOR POTENTIAL'
         if 'none'!=exponent and 'NONE'!=exponent and 'None'!=exponent:
             line += ', EXPONENT=' + exponent
         if 'none'!=operator and 'NONE'!=operator and 'None'!=operator:
@@ -1543,7 +1543,7 @@ def writeABQconnectorpotential(filepath,exponent,operator,data,comment):
 def writeABQconnectorsection(filepath,elset,behavior,controls,elimination,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR SECTION';
+        line = '*CONNECTOR SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=behavior and 'NONE'!=behavior and 'None'!=behavior:
@@ -1561,7 +1561,7 @@ def writeABQconnectorsection(filepath,elset,behavior,controls,elimination,data,c
 def writeABQconnectorstop(filepath,component,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR STOP';
+        line = '*CONNECTOR STOP'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         abq.write(line + '\n')
@@ -1573,7 +1573,7 @@ def writeABQconnectorstop(filepath,component,data,comment):
 def writeABQconnectoruniaxialbehavior(filepath,component,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONNECTOR UNIAXIAL BEHAVIOR';
+        line = '*CONNECTOR UNIAXIAL BEHAVIOR'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         abq.write(line + '\n')
@@ -1585,7 +1585,7 @@ def writeABQconnectoruniaxialbehavior(filepath,component,data,comment):
 def writeABQconstraintcontrols(filepath,deleteslave,nochanges,nochecks,print,checkfrequency,terminateanalysis,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONSTRAINT CONTROLS';
+        line = '*CONSTRAINT CONTROLS'
         if 'none'!=deleteslave and 'NONE'!=deleteslave and 'None'!=deleteslave:
             line += ', DELETE SLAVE=' + deleteslave
         if 'none'!=nochanges and 'NONE'!=nochanges and 'None'!=nochanges:
@@ -1607,7 +1607,7 @@ def writeABQconstraintcontrols(filepath,deleteslave,nochanges,nochecks,print,che
 def writeABQcontact(filepath,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT';
+        line = '*CONTACT'
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
             line += ', OP=' + op
         abq.write(line + '\n')
@@ -1619,7 +1619,7 @@ def writeABQcontact(filepath,op,data,comment):
 def writeABQcontactclearance(filepath,name,adjust,clearance,searchabove,searchbelow,searchnset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT CLEARANCE';
+        line = '*CONTACT CLEARANCE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=adjust and 'NONE'!=adjust and 'None'!=adjust:
@@ -1641,7 +1641,7 @@ def writeABQcontactclearance(filepath,name,adjust,clearance,searchabove,searchbe
 def writeABQcontactclearanceassignment(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT CLEARANCE ASSIGNMENT';
+        line = '*CONTACT CLEARANCE ASSIGNMENT'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -1651,7 +1651,7 @@ def writeABQcontactclearanceassignment(filepath,data,comment):
 def writeABQcontactcontrols(filepath,absolutepenetrationtolerance,relativepenetrationtolerance,master,perturbationtangentscalefactor,pressuredependentperturbation,reset,slave,stabilize,stiffnessscalefactor,tangentfraction,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT CONTROLS';
+        line = '*CONTACT CONTROLS'
         if 'none'!=absolutepenetrationtolerance and 'NONE'!=absolutepenetrationtolerance and 'None'!=absolutepenetrationtolerance:
             line += ', ABSOLUTE PENETRATION TOLERANCE=' + absolutepenetrationtolerance
         if 'none'!=relativepenetrationtolerance and 'NONE'!=relativepenetrationtolerance and 'None'!=relativepenetrationtolerance:
@@ -1681,7 +1681,7 @@ def writeABQcontactcontrols(filepath,absolutepenetrationtolerance,relativepenetr
 def writeABQcontactcontrolsassignment(filepath,automaticoverclosureresolution,contactthicknessreduction,nodalerosion,rotationalterms,type,seeding,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT CONTROLS ASSIGNMENT';
+        line = '*CONTACT CONTROLS ASSIGNMENT'
         if 'none'!=automaticoverclosureresolution and 'NONE'!=automaticoverclosureresolution and 'None'!=automaticoverclosureresolution:
             line += ', AUTOMATIC OVERCLOSURE RESOLUTION=' + automaticoverclosureresolution
         if 'none'!=contactthicknessreduction and 'NONE'!=contactthicknessreduction and 'None'!=contactthicknessreduction:
@@ -1703,7 +1703,7 @@ def writeABQcontactcontrolsassignment(filepath,automaticoverclosureresolution,co
 def writeABQcontactdamping(filepath,definition,tangentfraction,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT DAMPING';
+        line = '*CONTACT DAMPING'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=tangentfraction and 'NONE'!=tangentfraction and 'None'!=tangentfraction:
@@ -1717,7 +1717,7 @@ def writeABQcontactdamping(filepath,definition,tangentfraction,data,comment):
 def writeABQcontactexclusions(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT EXCLUSIONS';
+        line = '*CONTACT EXCLUSIONS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -1727,7 +1727,7 @@ def writeABQcontactexclusions(filepath,data,comment):
 def writeABQcontactfile(filepath,frequency,master,nset,slave,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT FILE';
+        line = '*CONTACT FILE'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         if 'none'!=master and 'NONE'!=master and 'None'!=master:
@@ -1745,7 +1745,7 @@ def writeABQcontactfile(filepath,frequency,master,nset,slave,data,comment):
 def writeABQcontactformulation(filepath,type,formulation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT FORMULATION';
+        line = '*CONTACT FORMULATION'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=formulation and 'NONE'!=formulation and 'None'!=formulation:
@@ -1759,7 +1759,7 @@ def writeABQcontactformulation(filepath,type,formulation,data,comment):
 def writeABQcontactinclusions(filepath,allexterior,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT INCLUSIONS';
+        line = '*CONTACT INCLUSIONS'
         if 'none'!=allexterior and 'NONE'!=allexterior and 'None'!=allexterior:
             line += ', ALL EXTERIOR=' + allexterior
         abq.write(line + '\n')
@@ -1771,7 +1771,7 @@ def writeABQcontactinclusions(filepath,allexterior,data,comment):
 def writeABQcontactinitializationassignment(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT INITIALIZATION ASSIGNMENT';
+        line = '*CONTACT INITIALIZATION ASSIGNMENT'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -1781,7 +1781,7 @@ def writeABQcontactinitializationassignment(filepath,data,comment):
 def writeABQcontactinitializationdata(filepath,name,initialclearance,interferencefit,minimumdistance,searchabove,searchbelow,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT INITIALIZATION DATA';
+        line = '*CONTACT INITIALIZATION DATA'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=initialclearance and 'NONE'!=initialclearance and 'None'!=initialclearance:
@@ -1803,7 +1803,7 @@ def writeABQcontactinitializationdata(filepath,name,initialclearance,interferenc
 def writeABQcontactinterference(filepath,amplitude,op,shrink,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT INTERFERENCE';
+        line = '*CONTACT INTERFERENCE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -1821,7 +1821,7 @@ def writeABQcontactinterference(filepath,amplitude,op,shrink,type,data,comment):
 def writeABQcontactoutput(filepath,cpset,nset,surface,secondsurface,cpset,generalcontact,surface,secondsurface,variable,master,nset,slave,surface,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT OUTPUT';
+        line = '*CONTACT OUTPUT'
         if 'none'!=cpset and 'NONE'!=cpset and 'None'!=cpset:
             line += ', CPSET=' + cpset
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
@@ -1859,7 +1859,7 @@ def writeABQcontactoutput(filepath,cpset,nset,surface,secondsurface,cpset,genera
 def writeABQcontactpair(filepath,interaction,adjust,extensionzone,geometriccorrection,hcrit,midfacenodes,minimumdistance,nothickness,smallsliding,smooth,slidingtransition,supplementaryconstraints,tied,tracking,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT PAIR';
+        line = '*CONTACT PAIR'
         if 'none'!=interaction and 'NONE'!=interaction and 'None'!=interaction:
             line += ', INTERACTION=' + interaction
         if 'none'!=adjust and 'NONE'!=adjust and 'None'!=adjust:
@@ -1899,7 +1899,7 @@ def writeABQcontactpair(filepath,interaction,adjust,extensionzone,geometriccorre
 def writeABQcontactpermeability(filepath,cutoffflowacross,cutoffgapfill,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT PERMEABILITY';
+        line = '*CONTACT PERMEABILITY'
         if 'none'!=cutoffflowacross and 'NONE'!=cutoffflowacross and 'None'!=cutoffflowacross:
             line += ', CUTOFF FLOW ACROSS=' + cutoffflowacross
         if 'none'!=cutoffgapfill and 'NONE'!=cutoffgapfill and 'None'!=cutoffgapfill:
@@ -1915,7 +1915,7 @@ def writeABQcontactpermeability(filepath,cutoffflowacross,cutoffgapfill,dependen
 def writeABQcontactprint(filepath,frequency,master,nset,slave,summary,totals,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT PRINT';
+        line = '*CONTACT PRINT'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         if 'none'!=master and 'NONE'!=master and 'None'!=master:
@@ -1937,7 +1937,7 @@ def writeABQcontactprint(filepath,frequency,master,nset,slave,summary,totals,dat
 def writeABQcontactpropertyassignment(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT PROPERTY ASSIGNMENT';
+        line = '*CONTACT PROPERTY ASSIGNMENT'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -1947,7 +1947,7 @@ def writeABQcontactpropertyassignment(filepath,data,comment):
 def writeABQcontactresponse(filepath,master,nset,slave,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT RESPONSE';
+        line = '*CONTACT RESPONSE'
         if 'none'!=master and 'NONE'!=master and 'None'!=master:
             line += ', MASTER=' + master
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
@@ -1963,7 +1963,7 @@ def writeABQcontactresponse(filepath,master,nset,slave,data,comment):
 def writeABQcontactstabilization(filepath,amplitude,range,reductionperincrement,reset,scalefactor,tangentfraction,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTACT STABILIZATION';
+        line = '*CONTACT STABILIZATION'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=range and 'NONE'!=range and 'None'!=range:
@@ -1985,7 +1985,7 @@ def writeABQcontactstabilization(filepath,amplitude,range,reductionperincrement,
 def writeABQcontourintegral(filepath,contours,crackname,cracktipnodes,direction,frequency,normal,output,residualstressstep,symm,type,xfem,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTOUR INTEGRAL';
+        line = '*CONTOUR INTEGRAL'
         if 'none'!=contours and 'NONE'!=contours and 'None'!=contours:
             line += ', CONTOURS=' + contours
         if 'none'!=crackname and 'NONE'!=crackname and 'None'!=crackname:
@@ -2017,7 +2017,7 @@ def writeABQcontourintegral(filepath,contours,crackname,cracktipnodes,direction,
 def writeABQcontrols(filepath,analysis,parameters,reset,type,distortioncontrol,field,meshsmoothing,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONTROLS';
+        line = '*CONTROLS'
         if 'none'!=analysis and 'NONE'!=analysis and 'None'!=analysis:
             line += ', ANALYSIS=' + analysis
         if 'none'!=parameters and 'NONE'!=parameters and 'None'!=parameters:
@@ -2041,7 +2041,7 @@ def writeABQcontrols(filepath,analysis,parameters,reset,type,distortioncontrol,f
 def writeABQconwepchargeproperty(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CONWEP CHARGE PROPERTY';
+        line = '*CONWEP CHARGE PROPERTY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2051,7 +2051,7 @@ def writeABQconwepchargeproperty(filepath,data,comment):
 def writeABQcorrelation(filepath,psd,complex,input,type,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CORRELATION';
+        line = '*CORRELATION'
         if 'none'!=psd and 'NONE'!=psd and 'None'!=psd:
             line += ', PSD=' + psd
         if 'none'!=complex and 'NONE'!=complex and 'None'!=complex:
@@ -2071,7 +2071,7 @@ def writeABQcorrelation(filepath,psd,complex,input,type,user,data,comment):
 def writeABQco-simulation(filepath,name,program,controls,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CO-SIMULATION';
+        line = '*CO-SIMULATION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=program and 'NONE'!=program and 'None'!=program:
@@ -2087,7 +2087,7 @@ def writeABQco-simulation(filepath,name,program,controls,data,comment):
 def writeABQco-simulationcontrols(filepath,name,factorizationfrequency,timeincrementation,name,stepsize,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CO-SIMULATION CONTROLS';
+        line = '*CO-SIMULATION CONTROLS'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=factorizationfrequency and 'NONE'!=factorizationfrequency and 'None'!=factorizationfrequency:
@@ -2107,7 +2107,7 @@ def writeABQco-simulationcontrols(filepath,name,factorizationfrequency,timeincre
 def writeABQco-simulationregion(filepath,export,import,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CO-SIMULATION REGION';
+        line = '*CO-SIMULATION REGION'
         if 'none'!=export and 'NONE'!=export and 'None'!=export:
             line += ', EXPORT=' + export
         if 'none'!=import and 'NONE'!=import and 'None'!=import:
@@ -2123,7 +2123,7 @@ def writeABQco-simulationregion(filepath,export,import,type,data,comment):
 def writeABQcoupledtemperature-displacement(filepath,allsdtol,continue,creep,electrical,factor,stabilize,steadystate,cetol,deltmx,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COUPLED TEMPERATURE-DISPLACEMENT';
+        line = '*COUPLED TEMPERATURE-DISPLACEMENT'
         if 'none'!=allsdtol and 'NONE'!=allsdtol and 'None'!=allsdtol:
             line += ', ALLSDTOL=' + allsdtol
         if 'none'!=continue and 'NONE'!=continue and 'None'!=continue:
@@ -2151,7 +2151,7 @@ def writeABQcoupledtemperature-displacement(filepath,allsdtol,continue,creep,ele
 def writeABQcoupledthermal-electrical(filepath,deltmx,end,mxdem,steadystate,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COUPLED THERMAL-ELECTRICAL';
+        line = '*COUPLED THERMAL-ELECTRICAL'
         if 'none'!=deltmx and 'NONE'!=deltmx and 'None'!=deltmx:
             line += ', DELTMX=' + deltmx
         if 'none'!=end and 'NONE'!=end and 'None'!=end:
@@ -2169,7 +2169,7 @@ def writeABQcoupledthermal-electrical(filepath,deltmx,end,mxdem,steadystate,data
 def writeABQcoupling(filepath,constraintname,refnode,surface,influenceradius,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*COUPLING';
+        line = '*COUPLING'
         if 'none'!=constraintname and 'NONE'!=constraintname and 'None'!=constraintname:
             line += ', CONSTRAINT NAME=' + constraintname
         if 'none'!=refnode and 'NONE'!=refnode and 'None'!=refnode:
@@ -2189,7 +2189,7 @@ def writeABQcoupling(filepath,constraintname,refnode,surface,influenceradius,ori
 def writeABQcradiate(filepath,amplitude,op,regiontype,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CRADIATE';
+        line = '*CRADIATE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2205,7 +2205,7 @@ def writeABQcradiate(filepath,amplitude,op,regiontype,data,comment):
 def writeABQcreep(filepath,dependencies,law,time,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CREEP';
+        line = '*CREEP'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
@@ -2221,7 +2221,7 @@ def writeABQcreep(filepath,dependencies,law,time,data,comment):
 def writeABQcreepstrainratecontrol(filepath,amplitude,elset,dependencies,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CREEP STRAIN RATE CONTROL';
+        line = '*CREEP STRAIN RATE CONTROL'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -2239,7 +2239,7 @@ def writeABQcreepstrainratecontrol(filepath,amplitude,elset,dependencies,op,data
 def writeABQcrushablefoam(filepath,dependencies,hardening,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CRUSHABLE FOAM';
+        line = '*CRUSHABLE FOAM'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=hardening and 'NONE'!=hardening and 'None'!=hardening:
@@ -2253,7 +2253,7 @@ def writeABQcrushablefoam(filepath,dependencies,hardening,data,comment):
 def writeABQcrushablefoamhardening(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CRUSHABLE FOAM HARDENING';
+        line = '*CRUSHABLE FOAM HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -2265,7 +2265,7 @@ def writeABQcrushablefoamhardening(filepath,dependencies,data,comment):
 def writeABQcycledplastic(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CYCLED PLASTIC';
+        line = '*CYCLED PLASTIC'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2275,7 +2275,7 @@ def writeABQcycledplastic(filepath,data,comment):
 def writeABQcyclic(filepath,nc,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CYCLIC';
+        line = '*CYCLIC'
         if 'none'!=nc and 'NONE'!=nc and 'None'!=nc:
             line += ', NC=' + nc
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -2289,7 +2289,7 @@ def writeABQcyclic(filepath,nc,type,data,comment):
 def writeABQcyclichardening(filepath,dependencies,parameters,user,properties,rate,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CYCLIC HARDENING';
+        line = '*CYCLIC HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=parameters and 'NONE'!=parameters and 'None'!=parameters:
@@ -2309,7 +2309,7 @@ def writeABQcyclichardening(filepath,dependencies,parameters,user,properties,rat
 def writeABQcyclicsymmetrymodel(filepath,n,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*CYCLIC SYMMETRY MODEL';
+        line = '*CYCLIC SYMMETRY MODEL'
         if 'none'!=n and 'NONE'!=n and 'None'!=n:
             line += ', N=' + n
         abq.write(line + '\n')
@@ -2321,7 +2321,7 @@ def writeABQcyclicsymmetrymodel(filepath,n,data,comment):
 def writeABQdaddedmass(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*D ADDED MASS';
+        line = '*D ADDED MASS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2331,7 +2331,7 @@ def writeABQdaddedmass(filepath,data,comment):
 def writeABQdempotential(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*D EM POTENTIAL';
+        line = '*D EM POTENTIAL'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2345,7 +2345,7 @@ def writeABQdempotential(filepath,amplitude,op,data,comment):
 def writeABQdamageevolution(filepath,type,degradation,dependencies,failureindex,mixedmodebehavior,modemixratio,power,softening,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DAMAGE EVOLUTION';
+        line = '*DAMAGE EVOLUTION'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=degradation and 'NONE'!=degradation and 'None'!=degradation:
@@ -2371,7 +2371,7 @@ def writeABQdamageevolution(filepath,type,degradation,dependencies,failureindex,
 def writeABQdamageinitiation(filepath,criterion,alpha,definition,dependencies,failuremechanisms,feq,fnn,fnt,frequency,ks,lodedependent,normaldirection,numberimperfections,omega,peinc,position,properties,rcrackdirection,smoothing,tolerance,weightingmethod,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DAMAGE INITIATION';
+        line = '*DAMAGE INITIATION'
         if 'none'!=criterion and 'NONE'!=criterion and 'None'!=criterion:
             line += ', CRITERION=' + criterion
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
@@ -2423,7 +2423,7 @@ def writeABQdamageinitiation(filepath,criterion,alpha,definition,dependencies,fa
 def writeABQdamagestabilization(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DAMAGE STABILIZATION';
+        line = '*DAMAGE STABILIZATION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2433,7 +2433,7 @@ def writeABQdamagestabilization(filepath,data,comment):
 def writeABQdamping(filepath,alpha,beta,composite,dependencies,structural,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DAMPING';
+        line = '*DAMPING'
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
             line += ', ALPHA=' + alpha
         if 'none'!=beta and 'NONE'!=beta and 'None'!=beta:
@@ -2453,7 +2453,7 @@ def writeABQdamping(filepath,alpha,beta,composite,dependencies,structural,data,c
 def writeABQdampingcontrols(filepath,lowfrequencycutoff,structural,viscous,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DAMPING CONTROLS';
+        line = '*DAMPING CONTROLS'
         if 'none'!=lowfrequencycutoff and 'NONE'!=lowfrequencycutoff and 'None'!=lowfrequencycutoff:
             line += ', LOW FREQUENCY CUTOFF=' + lowfrequencycutoff
         if 'none'!=structural and 'NONE'!=structural and 'None'!=structural:
@@ -2469,7 +2469,7 @@ def writeABQdampingcontrols(filepath,lowfrequencycutoff,structural,viscous,data,
 def writeABQdashpot(filepath,elset,dependencies,nonlinear,orientation,rtol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DASHPOT';
+        line = '*DASHPOT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -2489,7 +2489,7 @@ def writeABQdashpot(filepath,elset,dependencies,nonlinear,orientation,rtol,data,
 def writeABQdebond(filepath,master,slave,debondingforce,frequency,output,timeincrement,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DEBOND';
+        line = '*DEBOND'
         if 'none'!=master and 'NONE'!=master and 'None'!=master:
             line += ', MASTER=' + master
         if 'none'!=slave and 'NONE'!=slave and 'None'!=slave:
@@ -2511,7 +2511,7 @@ def writeABQdebond(filepath,master,slave,debondingforce,frequency,output,timeinc
 def writeABQdecharge(filepath,amplitude,op,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DECHARGE';
+        line = '*DECHARGE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2529,7 +2529,7 @@ def writeABQdecharge(filepath,amplitude,op,imaginary,real,data,comment):
 def writeABQdecurrent(filepath,amplitude,op,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DECURRENT';
+        line = '*DECURRENT'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2547,7 +2547,7 @@ def writeABQdecurrent(filepath,amplitude,op,imaginary,real,data,comment):
 def writeABQdeformationplasticity(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DEFORMATION PLASTICITY';
+        line = '*DEFORMATION PLASTICITY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2557,7 +2557,7 @@ def writeABQdeformationplasticity(filepath,data,comment):
 def writeABQdensity(filepath,dependencies,porefluid,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DENSITY';
+        line = '*DENSITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=porefluid and 'NONE'!=porefluid and 'None'!=porefluid:
@@ -2571,7 +2571,7 @@ def writeABQdensity(filepath,dependencies,porefluid,data,comment):
 def writeABQdepvar(filepath,convert,delete,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DEPVAR';
+        line = '*DEPVAR'
         if 'none'!=convert and 'NONE'!=convert and 'None'!=convert:
             line += ', CONVERT=' + convert
         if 'none'!=delete and 'NONE'!=delete and 'None'!=delete:
@@ -2585,7 +2585,7 @@ def writeABQdepvar(filepath,convert,delete,data,comment):
 def writeABQdesigngradient(filepath,dependent,independent,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DESIGN GRADIENT';
+        line = '*DESIGN GRADIENT'
         if 'none'!=dependent and 'NONE'!=dependent and 'None'!=dependent:
             line += ', DEPENDENT=' + dependent
         if 'none'!=independent and 'NONE'!=independent and 'None'!=independent:
@@ -2599,7 +2599,7 @@ def writeABQdesigngradient(filepath,dependent,independent,data,comment):
 def writeABQdesignparameter(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DESIGN PARAMETER';
+        line = '*DESIGN PARAMETER'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2609,7 +2609,7 @@ def writeABQdesignparameter(filepath,data,comment):
 def writeABQdesignresponse(filepath,frequency,modelist,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DESIGN RESPONSE';
+        line = '*DESIGN RESPONSE'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         if 'none'!=modelist and 'NONE'!=modelist and 'None'!=modelist:
@@ -2623,7 +2623,7 @@ def writeABQdesignresponse(filepath,frequency,modelist,data,comment):
 def writeABQdetonationpoint(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DETONATION POINT';
+        line = '*DETONATION POINT'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2633,7 +2633,7 @@ def writeABQdetonationpoint(filepath,data,comment):
 def writeABQdflow(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DFLOW';
+        line = '*DFLOW'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2647,7 +2647,7 @@ def writeABQdflow(filepath,amplitude,op,data,comment):
 def writeABQdflux(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DFLUX';
+        line = '*DFLUX'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2661,7 +2661,7 @@ def writeABQdflux(filepath,amplitude,op,data,comment):
 def writeABQdiagnostics(filepath,adaptivemesh,contactinitialoverclosure,criticalelements,cutoffratio,deeppenetrationfactor,deformationspeedcheck,detectcrossedsurfaces,plasticity,warningratio,warpedsurface,nonhybridincompressible,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DIAGNOSTICS';
+        line = '*DIAGNOSTICS'
         if 'none'!=adaptivemesh and 'NONE'!=adaptivemesh and 'None'!=adaptivemesh:
             line += ', ADAPTIVE MESH=' + adaptivemesh
         if 'none'!=contactinitialoverclosure and 'NONE'!=contactinitialoverclosure and 'None'!=contactinitialoverclosure:
@@ -2693,7 +2693,7 @@ def writeABQdiagnostics(filepath,adaptivemesh,contactinitialoverclosure,critical
 def writeABQdielectric(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DIELECTRIC';
+        line = '*DIELECTRIC'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -2707,7 +2707,7 @@ def writeABQdielectric(filepath,dependencies,type,data,comment):
 def writeABQdiffusivity(filepath,dependencies,law,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DIFFUSIVITY';
+        line = '*DIFFUSIVITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
@@ -2723,7 +2723,7 @@ def writeABQdiffusivity(filepath,dependencies,law,type,data,comment):
 def writeABQdirectcyclic(filepath,cetol,continue,deltmx,fatigue,timepoints,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DIRECT CYCLIC';
+        line = '*DIRECT CYCLIC'
         if 'none'!=cetol and 'NONE'!=cetol and 'None'!=cetol:
             line += ', CETOL=' + cetol
         if 'none'!=continue and 'NONE'!=continue and 'None'!=continue:
@@ -2743,7 +2743,7 @@ def writeABQdirectcyclic(filepath,cetol,continue,deltmx,fatigue,timepoints,data,
 def writeABQdiscreteelasticity(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISCRETE ELASTICITY';
+        line = '*DISCRETE ELASTICITY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -2753,7 +2753,7 @@ def writeABQdiscreteelasticity(filepath,data,comment):
 def writeABQdiscretesection(filepath,elset,density,shape,alpha,controls,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISCRETE SECTION';
+        line = '*DISCRETE SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=density and 'NONE'!=density and 'None'!=density:
@@ -2773,7 +2773,7 @@ def writeABQdiscretesection(filepath,elset,density,shape,alpha,controls,data,com
 def writeABQdisplaybody(filepath,instance,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISPLAY BODY';
+        line = '*DISPLAY BODY'
         if 'none'!=instance and 'NONE'!=instance and 'None'!=instance:
             line += ', INSTANCE=' + instance
         abq.write(line + '\n')
@@ -2785,7 +2785,7 @@ def writeABQdisplaybody(filepath,instance,data,comment):
 def writeABQdistributing(filepath,coupling,weightingmethod,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISTRIBUTING';
+        line = '*DISTRIBUTING'
         if 'none'!=coupling and 'NONE'!=coupling and 'None'!=coupling:
             line += ', COUPLING=' + coupling
         if 'none'!=weightingmethod and 'NONE'!=weightingmethod and 'None'!=weightingmethod:
@@ -2799,7 +2799,7 @@ def writeABQdistributing(filepath,coupling,weightingmethod,data,comment):
 def writeABQdistributingcoupling(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISTRIBUTING COUPLING';
+        line = '*DISTRIBUTING COUPLING'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -2811,7 +2811,7 @@ def writeABQdistributingcoupling(filepath,elset,data,comment):
 def writeABQdistribution(filepath,location,name,table,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISTRIBUTION';
+        line = '*DISTRIBUTION'
         if 'none'!=location and 'NONE'!=location and 'None'!=location:
             line += ', LOCATION=' + location
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -2829,7 +2829,7 @@ def writeABQdistribution(filepath,location,name,table,input,data,comment):
 def writeABQdistributiontable(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DISTRIBUTION TABLE';
+        line = '*DISTRIBUTION TABLE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -2841,7 +2841,7 @@ def writeABQdistributiontable(filepath,name,data,comment):
 def writeABQdload(filepath,cyclicmode,amplitude,constantresultant,follower,op,orientation,refnode,regiontype,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DLOAD';
+        line = '*DLOAD'
         if 'none'!=cyclicmode and 'NONE'!=cyclicmode and 'None'!=cyclicmode:
             line += ', CYCLIC MODE=' + cyclicmode
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
@@ -2871,7 +2871,7 @@ def writeABQdload(filepath,cyclicmode,amplitude,constantresultant,follower,op,or
 def writeABQdomaindecomposition(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DOMAIN DECOMPOSITION';
+        line = '*DOMAIN DECOMPOSITION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -2883,7 +2883,7 @@ def writeABQdomaindecomposition(filepath,elset,data,comment):
 def writeABQdragchain(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DRAG CHAIN';
+        line = '*DRAG CHAIN'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -2895,7 +2895,7 @@ def writeABQdragchain(filepath,elset,data,comment):
 def writeABQdruckerprager(filepath,dependencies,eccentricity,shearcriterion,testdata,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DRUCKER PRAGER';
+        line = '*DRUCKER PRAGER'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=eccentricity and 'NONE'!=eccentricity and 'None'!=eccentricity:
@@ -2913,7 +2913,7 @@ def writeABQdruckerprager(filepath,dependencies,eccentricity,shearcriterion,test
 def writeABQdruckerpragercreep(filepath,dependencies,law,time,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DRUCKER PRAGER CREEP';
+        line = '*DRUCKER PRAGER CREEP'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
@@ -2929,7 +2929,7 @@ def writeABQdruckerpragercreep(filepath,dependencies,law,time,data,comment):
 def writeABQdruckerpragerhardening(filepath,dependencies,rate,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DRUCKER PRAGER HARDENING';
+        line = '*DRUCKER PRAGER HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=rate and 'NONE'!=rate and 'None'!=rate:
@@ -2945,7 +2945,7 @@ def writeABQdruckerpragerhardening(filepath,dependencies,rate,type,data,comment)
 def writeABQdsacontrols(filepath,formulation,reset,sizingfrequency,tolerance,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DSA CONTROLS';
+        line = '*DSA CONTROLS'
         if 'none'!=formulation and 'NONE'!=formulation and 'None'!=formulation:
             line += ', FORMULATION=' + formulation
         if 'none'!=reset and 'NONE'!=reset and 'None'!=reset:
@@ -2963,7 +2963,7 @@ def writeABQdsacontrols(filepath,formulation,reset,sizingfrequency,tolerance,dat
 def writeABQdsecharge(filepath,amplitude,op,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DSECHARGE';
+        line = '*DSECHARGE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2981,7 +2981,7 @@ def writeABQdsecharge(filepath,amplitude,op,imaginary,real,data,comment):
 def writeABQdsecurrent(filepath,amplitude,op,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DSECURRENT';
+        line = '*DSECURRENT'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -2999,7 +2999,7 @@ def writeABQdsecurrent(filepath,amplitude,op,imaginary,real,data,comment):
 def writeABQdsflow(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DSFLOW';
+        line = '*DSFLOW'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -3013,7 +3013,7 @@ def writeABQdsflow(filepath,amplitude,op,data,comment):
 def writeABQdsflux(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DSFLUX';
+        line = '*DSFLUX'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -3027,7 +3027,7 @@ def writeABQdsflux(filepath,amplitude,op,data,comment):
 def writeABQdsload(filepath,cyclicmode,amplitude,constantresultant,follower,op,orientation,refnode,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DSLOAD';
+        line = '*DSLOAD'
         if 'none'!=cyclicmode and 'NONE'!=cyclicmode and 'None'!=cyclicmode:
             line += ', CYCLIC MODE=' + cyclicmode
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
@@ -3055,7 +3055,7 @@ def writeABQdsload(filepath,cyclicmode,amplitude,constantresultant,follower,op,o
 def writeABQdynamic(filepath,subspace,adiabatic,alpha,application,beta,direct,gamma,haftol,halfincscalefactor,impact,incrementation,initial,nohaf,singularmass,timeintegrator,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DYNAMIC';
+        line = '*DYNAMIC'
         if 'none'!=subspace and 'NONE'!=subspace and 'None'!=subspace:
             line += ', SUBSPACE=' + subspace
         if 'none'!=adiabatic and 'NONE'!=adiabatic and 'None'!=adiabatic:
@@ -3095,7 +3095,7 @@ def writeABQdynamic(filepath,subspace,adiabatic,alpha,application,beta,direct,ga
 def writeABQdynamictemperature-displacement(filepath,explicit,directusercontrol,elementbyelement,fixedtimeincrementation,improveddtmethod,scalefactor,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*DYNAMIC TEMPERATURE-DISPLACEMENT';
+        line = '*DYNAMIC TEMPERATURE-DISPLACEMENT'
         if 'none'!=explicit and 'NONE'!=explicit and 'None'!=explicit:
             line += ', EXPLICIT=' + explicit
         if 'none'!=directusercontrol and 'NONE'!=directusercontrol and 'None'!=directusercontrol:
@@ -3117,7 +3117,7 @@ def writeABQdynamictemperature-displacement(filepath,explicit,directusercontrol,
 def writeABQelfile(filepath,directions,elset,frequency,lastmode,mode,position,rebar,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EL FILE';
+        line = '*EL FILE'
         if 'none'!=directions and 'NONE'!=directions and 'None'!=directions:
             line += ', DIRECTIONS=' + directions
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -3141,7 +3141,7 @@ def writeABQelfile(filepath,directions,elset,frequency,lastmode,mode,position,re
 def writeABQelprint(filepath,elset,frequency,lastmode,mode,position,rebar,summary,totals,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EL PRINT';
+        line = '*EL PRINT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
@@ -3167,7 +3167,7 @@ def writeABQelprint(filepath,elset,frequency,lastmode,mode,position,rebar,summar
 def writeABQelastic(filepath,compressionfactor,dependencies,moduli,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELASTIC';
+        line = '*ELASTIC'
         if 'none'!=compressionfactor and 'NONE'!=compressionfactor and 'None'!=compressionfactor:
             line += ', COMPRESSION FACTOR=' + compressionfactor
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -3185,7 +3185,7 @@ def writeABQelastic(filepath,compressionfactor,dependencies,moduli,type,data,com
 def writeABQelcopy(filepath,elementshift,oldset,shiftnodes,newset,reflect,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELCOPY';
+        line = '*ELCOPY'
         if 'none'!=elementshift and 'NONE'!=elementshift and 'None'!=elementshift:
             line += ', ELEMENT SHIFT=' + elementshift
         if 'none'!=oldset and 'NONE'!=oldset and 'None'!=oldset:
@@ -3205,7 +3205,7 @@ def writeABQelcopy(filepath,elementshift,oldset,shiftnodes,newset,reflect,data,c
 def writeABQelectricalconductivity(filepath,dependencies,frequency,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELECTRICAL CONDUCTIVITY';
+        line = '*ELECTRICAL CONDUCTIVITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
@@ -3221,7 +3221,7 @@ def writeABQelectricalconductivity(filepath,dependencies,frequency,type,data,com
 def writeABQelectromagnetic(filepath,lowfrequency,timeharmonic,transient,direct,stabilization,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELECTROMAGNETIC';
+        line = '*ELECTROMAGNETIC'
         if 'none'!=lowfrequency and 'NONE'!=lowfrequency and 'None'!=lowfrequency:
             line += ', LOW FREQUENCY=' + lowfrequency
         if 'none'!=timeharmonic and 'NONE'!=timeharmonic and 'None'!=timeharmonic:
@@ -3241,7 +3241,7 @@ def writeABQelectromagnetic(filepath,lowfrequency,timeharmonic,transient,direct,
 def writeABQelement(filepath,type,elset,file,input,offset,solidelementnumbering,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELEMENT';
+        line = '*ELEMENT'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -3263,7 +3263,7 @@ def writeABQelement(filepath,type,elset,file,input,offset,solidelementnumbering,
 def writeABQelementmatrixoutput(filepath,elset,dload,filename,frequency,mass,outputfile,stiffness,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELEMENT MATRIX OUTPUT';
+        line = '*ELEMENT MATRIX OUTPUT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=dload and 'NONE'!=dload and 'None'!=dload:
@@ -3287,7 +3287,7 @@ def writeABQelementmatrixoutput(filepath,elset,dload,filename,frequency,mass,out
 def writeABQelementoperatoroutput(filepath,assemble,damping,elset,frequency,load,loadtype,stiffness,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELEMENT OPERATOR OUTPUT';
+        line = '*ELEMENT OPERATOR OUTPUT'
         if 'none'!=assemble and 'NONE'!=assemble and 'None'!=assemble:
             line += ', ASSEMBLE=' + assemble
         if 'none'!=damping and 'NONE'!=damping and 'None'!=damping:
@@ -3311,7 +3311,7 @@ def writeABQelementoperatoroutput(filepath,assemble,damping,elset,frequency,load
 def writeABQelementoutput(filepath,elset,tracerset,allsectionpts,directions,elset,exterior,position,rebar,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELEMENT OUTPUT';
+        line = '*ELEMENT OUTPUT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=tracerset and 'NONE'!=tracerset and 'None'!=tracerset:
@@ -3339,7 +3339,7 @@ def writeABQelementoutput(filepath,elset,tracerset,allsectionpts,directions,else
 def writeABQelementresponse(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELEMENT RESPONSE';
+        line = '*ELEMENT RESPONSE'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -3351,7 +3351,7 @@ def writeABQelementresponse(filepath,elset,data,comment):
 def writeABQelgen(filepath,allnodes,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELGEN';
+        line = '*ELGEN'
         if 'none'!=allnodes and 'NONE'!=allnodes and 'None'!=allnodes:
             line += ', ALL NODES=' + allnodes
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -3365,7 +3365,7 @@ def writeABQelgen(filepath,allnodes,elset,data,comment):
 def writeABQelset(filepath,elset,generate,instance,internal,unsorted,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ELSET';
+        line = '*ELSET'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=generate and 'NONE'!=generate and 'None'!=generate:
@@ -3385,7 +3385,7 @@ def writeABQelset(filepath,elset,generate,instance,internal,unsorted,data,commen
 def writeABQembeddedelement(filepath,absoluteexteriortolerance,embednodes,exteriortolerance,hostelset,partialembed,roundofftolerance,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EMBEDDED ELEMENT';
+        line = '*EMBEDDED ELEMENT'
         if 'none'!=absoluteexteriortolerance and 'NONE'!=absoluteexteriortolerance and 'None'!=absoluteexteriortolerance:
             line += ', ABSOLUTE EXTERIOR TOLERANCE=' + absoluteexteriortolerance
         if 'none'!=embednodes and 'NONE'!=embednodes and 'None'!=embednodes:
@@ -3407,7 +3407,7 @@ def writeABQembeddedelement(filepath,absoluteexteriortolerance,embednodes,exteri
 def writeABQemissivity(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EMISSIVITY';
+        line = '*EMISSIVITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -3419,7 +3419,7 @@ def writeABQemissivity(filepath,dependencies,data,comment):
 def writeABQendassembly(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*END ASSEMBLY';
+        line = '*END ASSEMBLY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -3429,7 +3429,7 @@ def writeABQendassembly(filepath,data,comment):
 def writeABQendinstance(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*END INSTANCE';
+        line = '*END INSTANCE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -3439,7 +3439,7 @@ def writeABQendinstance(filepath,data,comment):
 def writeABQendloadcase(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*END LOAD CASE';
+        line = '*END LOAD CASE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -3449,7 +3449,7 @@ def writeABQendloadcase(filepath,data,comment):
 def writeABQendpart(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*END PART';
+        line = '*END PART'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -3459,7 +3459,7 @@ def writeABQendpart(filepath,data,comment):
 def writeABQendstep(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*END STEP';
+        line = '*END STEP'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -3469,7 +3469,7 @@ def writeABQendstep(filepath,data,comment):
 def writeABQenergyequationsolver(filepath,convergence,diagnostics,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ENERGY EQUATION SOLVER';
+        line = '*ENERGY EQUATION SOLVER'
         if 'none'!=convergence and 'NONE'!=convergence and 'None'!=convergence:
             line += ', CONVERGENCE=' + convergence
         if 'none'!=diagnostics and 'NONE'!=diagnostics and 'None'!=diagnostics:
@@ -3485,7 +3485,7 @@ def writeABQenergyequationsolver(filepath,convergence,diagnostics,type,data,comm
 def writeABQenergyfile(filepath,elset,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ENERGY FILE';
+        line = '*ENERGY FILE'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
@@ -3499,7 +3499,7 @@ def writeABQenergyfile(filepath,elset,frequency,data,comment):
 def writeABQenergyoutput(filepath,elset,variable,perelementset,persection,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ENERGY OUTPUT';
+        line = '*ENERGY OUTPUT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=variable and 'NONE'!=variable and 'None'!=variable:
@@ -3517,7 +3517,7 @@ def writeABQenergyoutput(filepath,elset,variable,perelementset,persection,data,c
 def writeABQenergyprint(filepath,elset,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ENERGY PRINT';
+        line = '*ENERGY PRINT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
@@ -3531,7 +3531,7 @@ def writeABQenergyprint(filepath,elset,frequency,data,comment):
 def writeABQenrichment(filepath,elset,name,enrichmentradius,interaction,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ENRICHMENT';
+        line = '*ENRICHMENT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -3551,7 +3551,7 @@ def writeABQenrichment(filepath,elset,name,enrichmentradius,interaction,type,dat
 def writeABQenrichmentactivation(filepath,name,activate,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ENRICHMENT ACTIVATION';
+        line = '*ENRICHMENT ACTIVATION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=activate and 'NONE'!=activate and 'None'!=activate:
@@ -3567,7 +3567,7 @@ def writeABQenrichmentactivation(filepath,name,activate,type,data,comment):
 def writeABQeos(filepath,type,detonationenergy,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EOS';
+        line = '*EOS'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=detonationenergy and 'NONE'!=detonationenergy and 'None'!=detonationenergy:
@@ -3583,7 +3583,7 @@ def writeABQeos(filepath,type,detonationenergy,properties,data,comment):
 def writeABQeoscompaction(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EOS COMPACTION';
+        line = '*EOS COMPACTION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -3593,7 +3593,7 @@ def writeABQeoscompaction(filepath,data,comment):
 def writeABQepjoint(filepath,elset,orientation,section,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EPJOINT';
+        line = '*EPJOINT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=orientation and 'NONE'!=orientation and 'None'!=orientation:
@@ -3609,7 +3609,7 @@ def writeABQepjoint(filepath,elset,orientation,section,data,comment):
 def writeABQequation(filepath,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EQUATION';
+        line = '*EQUATION'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         abq.write(line + '\n')
@@ -3621,7 +3621,7 @@ def writeABQequation(filepath,input,data,comment):
 def writeABQeulerianboundary(filepath,inflow,op,outflow,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EULERIAN BOUNDARY';
+        line = '*EULERIAN BOUNDARY'
         if 'none'!=inflow and 'NONE'!=inflow and 'None'!=inflow:
             line += ', INFLOW=' + inflow
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -3637,7 +3637,7 @@ def writeABQeulerianboundary(filepath,inflow,op,outflow,data,comment):
 def writeABQeulerianmeshmotion(filepath,elset,surface,aspectratiomax,buffer,center,contract,op,orientation,vmaxfactor,volfracmin,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EULERIAN MESH MOTION';
+        line = '*EULERIAN MESH MOTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
@@ -3667,7 +3667,7 @@ def writeABQeulerianmeshmotion(filepath,elset,surface,aspectratiomax,buffer,cent
 def writeABQeuleriansection(filepath,elset,advection,controls,fluxlimitratio,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EULERIAN SECTION';
+        line = '*EULERIAN SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=advection and 'NONE'!=advection and 'None'!=advection:
@@ -3685,7 +3685,7 @@ def writeABQeuleriansection(filepath,elset,advection,controls,fluxlimitratio,dat
 def writeABQexpansion(filepath,dependencies,field,porefluid,type,user,zero,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EXPANSION';
+        line = '*EXPANSION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=field and 'NONE'!=field and 'None'!=field:
@@ -3707,7 +3707,7 @@ def writeABQexpansion(filepath,dependencies,field,porefluid,type,user,zero,data,
 def writeABQextremeelementvalue(filepath,elset,abs,max,min,output,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EXTREME ELEMENT VALUE';
+        line = '*EXTREME ELEMENT VALUE'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=abs and 'NONE'!=abs and 'None'!=abs:
@@ -3727,7 +3727,7 @@ def writeABQextremeelementvalue(filepath,elset,abs,max,min,output,data,comment):
 def writeABQextremenodevalue(filepath,nset,abs,max,min,output,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EXTREME NODE VALUE';
+        line = '*EXTREME NODE VALUE'
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
             line += ', NSET=' + nset
         if 'none'!=abs and 'NONE'!=abs and 'None'!=abs:
@@ -3747,7 +3747,7 @@ def writeABQextremenodevalue(filepath,nset,abs,max,min,output,data,comment):
 def writeABQextremevalue(filepath,halt,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*EXTREME VALUE';
+        line = '*EXTREME VALUE'
         if 'none'!=halt and 'NONE'!=halt and 'None'!=halt:
             line += ', HALT=' + halt
         abq.write(line + '\n')
@@ -3759,7 +3759,7 @@ def writeABQextremevalue(filepath,halt,data,comment):
 def writeABQfabric(filepath,properties,stressfreeinitialslack,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FABRIC';
+        line = '*FABRIC'
         if 'none'!=properties and 'NONE'!=properties and 'None'!=properties:
             line += ', PROPERTIES=' + properties
         if 'none'!=stressfreeinitialslack and 'NONE'!=stressfreeinitialslack and 'None'!=stressfreeinitialslack:
@@ -3775,7 +3775,7 @@ def writeABQfabric(filepath,properties,stressfreeinitialslack,user,data,comment)
 def writeABQfailstrain(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FAIL STRAIN';
+        line = '*FAIL STRAIN'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -3787,7 +3787,7 @@ def writeABQfailstrain(filepath,dependencies,data,comment):
 def writeABQfailstress(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FAIL STRESS';
+        line = '*FAIL STRESS'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -3799,7 +3799,7 @@ def writeABQfailstress(filepath,dependencies,data,comment):
 def writeABQfailureratios(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FAILURE RATIOS';
+        line = '*FAILURE RATIOS'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -3811,7 +3811,7 @@ def writeABQfailureratios(filepath,dependencies,data,comment):
 def writeABQfastener(filepath,interactionname,property,elset,referencenodeset,adjustorientation,attachmentmethod,coupling,numberoflayers,orientation,radiusofinfluence,searchradius,unsorted,weightingmethod,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FASTENER';
+        line = '*FASTENER'
         if 'none'!=interactionname and 'NONE'!=interactionname and 'None'!=interactionname:
             line += ', INTERACTION NAME=' + interactionname
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
@@ -3847,7 +3847,7 @@ def writeABQfastener(filepath,interactionname,property,elset,referencenodeset,ad
 def writeABQfastenerproperty(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FASTENER PROPERTY';
+        line = '*FASTENER PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -3859,7 +3859,7 @@ def writeABQfastenerproperty(filepath,name,data,comment):
 def writeABQfield(filepath,variable,amplitude,input,op,file,bstep,binc,estep,einc,outputvariable,interpolate,user,number,blocking,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FIELD';
+        line = '*FIELD'
         if 'none'!=variable and 'NONE'!=variable and 'None'!=variable:
             line += ', VARIABLE=' + variable
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
@@ -3897,7 +3897,7 @@ def writeABQfield(filepath,variable,amplitude,input,op,file,bstep,binc,estep,ein
 def writeABQfileformat(filepath,ascii,zeroincrement,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FILE FORMAT';
+        line = '*FILE FORMAT'
         if 'none'!=ascii and 'NONE'!=ascii and 'None'!=ascii:
             line += ', ASCII=' + ascii
         if 'none'!=zeroincrement and 'NONE'!=zeroincrement and 'None'!=zeroincrement:
@@ -3911,7 +3911,7 @@ def writeABQfileformat(filepath,ascii,zeroincrement,data,comment):
 def writeABQfileoutput(filepath,numberinterval,timemarks,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FILE OUTPUT';
+        line = '*FILE OUTPUT'
         if 'none'!=numberinterval and 'NONE'!=numberinterval and 'None'!=numberinterval:
             line += ', NUMBER INTERVAL=' + numberinterval
         if 'none'!=timemarks and 'NONE'!=timemarks and 'None'!=timemarks:
@@ -3925,7 +3925,7 @@ def writeABQfileoutput(filepath,numberinterval,timemarks,data,comment):
 def writeABQfilm(filepath,amplitude,filmamplitude,op,regiontype,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FILM';
+        line = '*FILM'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=filmamplitude and 'NONE'!=filmamplitude and 'None'!=filmamplitude:
@@ -3943,7 +3943,7 @@ def writeABQfilm(filepath,amplitude,filmamplitude,op,regiontype,data,comment):
 def writeABQfilmproperty(filepath,name,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FILM PROPERTY';
+        line = '*FILM PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -3957,7 +3957,7 @@ def writeABQfilmproperty(filepath,name,dependencies,data,comment):
 def writeABQfilter(filepath,name,halt,invariant,limit,operator,startcondition,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FILTER';
+        line = '*FILTER'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=halt and 'NONE'!=halt and 'None'!=halt:
@@ -3981,7 +3981,7 @@ def writeABQfilter(filepath,name,halt,invariant,limit,operator,startcondition,ty
 def writeABQfixedmassscaling(filepath,dt,elset,factor,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FIXED MASS SCALING';
+        line = '*FIXED MASS SCALING'
         if 'none'!=dt and 'NONE'!=dt and 'None'!=dt:
             line += ', DT=' + dt
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -3999,7 +3999,7 @@ def writeABQfixedmassscaling(filepath,dt,elset,factor,type,data,comment):
 def writeABQflexiblebody(filepath,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLEXIBLE BODY';
+        line = '*FLEXIBLE BODY'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         abq.write(line + '\n')
@@ -4011,7 +4011,7 @@ def writeABQflexiblebody(filepath,type,data,comment):
 def writeABQflow(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLOW';
+        line = '*FLOW'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -4025,7 +4025,7 @@ def writeABQflow(filepath,amplitude,op,data,comment):
 def writeABQfluidbehavior(filepath,name,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID BEHAVIOR';
+        line = '*FLUID BEHAVIOR'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=user and 'NONE'!=user and 'None'!=user:
@@ -4039,7 +4039,7 @@ def writeABQfluidbehavior(filepath,name,user,data,comment):
 def writeABQfluidboundary(filepath,surface,pressureoutlet,symmetric,velocityinlet,wall,op,slip,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID BOUNDARY';
+        line = '*FLUID BOUNDARY'
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
             line += ', SURFACE=' + surface
         if 'none'!=pressureoutlet and 'NONE'!=pressureoutlet and 'None'!=pressureoutlet:
@@ -4063,7 +4063,7 @@ def writeABQfluidboundary(filepath,surface,pressureoutlet,symmetric,velocityinle
 def writeABQfluidbulkmodulus(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID BULK MODULUS';
+        line = '*FLUID BULK MODULUS'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -4075,7 +4075,7 @@ def writeABQfluidbulkmodulus(filepath,dependencies,data,comment):
 def writeABQfluidcavity(filepath,name,refnode,behavior,mixture,addedvolume,adiabatic,ambientpressure,ambienttemperature,checknormals,minimumvolume,surface,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID CAVITY';
+        line = '*FLUID CAVITY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=refnode and 'NONE'!=refnode and 'None'!=refnode:
@@ -4107,7 +4107,7 @@ def writeABQfluidcavity(filepath,name,refnode,behavior,mixture,addedvolume,adiab
 def writeABQfluiddensity(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID DENSITY';
+        line = '*FLUID DENSITY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4117,7 +4117,7 @@ def writeABQfluiddensity(filepath,data,comment):
 def writeABQfluidexchange(filepath,name,property,cavitypressure,constants,effectivearea,surface,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID EXCHANGE';
+        line = '*FLUID EXCHANGE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
@@ -4139,7 +4139,7 @@ def writeABQfluidexchange(filepath,name,property,cavitypressure,constants,effect
 def writeABQfluidexchangeactivation(filepath,amplitude,blockage,deltaleakagearea,op,outflowonly,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID EXCHANGE ACTIVATION';
+        line = '*FLUID EXCHANGE ACTIVATION'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=blockage and 'NONE'!=blockage and 'None'!=blockage:
@@ -4159,7 +4159,7 @@ def writeABQfluidexchangeactivation(filepath,amplitude,blockage,deltaleakagearea
 def writeABQfluidexchangeproperty(filepath,name,type,constants,dependencies,depvar,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID EXCHANGE PROPERTY';
+        line = '*FLUID EXCHANGE PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -4179,7 +4179,7 @@ def writeABQfluidexchangeproperty(filepath,name,type,constants,dependencies,depv
 def writeABQfluidexpansion(filepath,dependencies,zero,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID EXPANSION';
+        line = '*FLUID EXPANSION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=zero and 'NONE'!=zero and 'None'!=zero:
@@ -4193,7 +4193,7 @@ def writeABQfluidexpansion(filepath,dependencies,zero,data,comment):
 def writeABQfluidflux(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID FLUX';
+        line = '*FLUID FLUX'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -4207,7 +4207,7 @@ def writeABQfluidflux(filepath,amplitude,op,data,comment):
 def writeABQfluidinflator(filepath,name,property,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID INFLATOR';
+        line = '*FLUID INFLATOR'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
@@ -4221,7 +4221,7 @@ def writeABQfluidinflator(filepath,name,property,data,comment):
 def writeABQfluidinflatoractivation(filepath,inflationtimeamplitude,massflowamplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID INFLATOR ACTIVATION';
+        line = '*FLUID INFLATOR ACTIVATION'
         if 'none'!=inflationtimeamplitude and 'NONE'!=inflationtimeamplitude and 'None'!=inflationtimeamplitude:
             line += ', INFLATION TIME AMPLITUDE=' + inflationtimeamplitude
         if 'none'!=massflowamplitude and 'NONE'!=massflowamplitude and 'None'!=massflowamplitude:
@@ -4237,7 +4237,7 @@ def writeABQfluidinflatoractivation(filepath,inflationtimeamplitude,massflowampl
 def writeABQfluidinflatormixture(filepath,numberspecies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID INFLATOR MIXTURE';
+        line = '*FLUID INFLATOR MIXTURE'
         if 'none'!=numberspecies and 'NONE'!=numberspecies and 'None'!=numberspecies:
             line += ', NUMBER SPECIES=' + numberspecies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -4251,7 +4251,7 @@ def writeABQfluidinflatormixture(filepath,numberspecies,type,data,comment):
 def writeABQfluidinflatorproperty(filepath,effectivearea,name,tankvolume,type,dischargecoefficient,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID INFLATOR PROPERTY';
+        line = '*FLUID INFLATOR PROPERTY'
         if 'none'!=effectivearea and 'NONE'!=effectivearea and 'None'!=effectivearea:
             line += ', EFFECTIVE AREA=' + effectivearea
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -4271,7 +4271,7 @@ def writeABQfluidinflatorproperty(filepath,effectivearea,name,tankvolume,type,di
 def writeABQfluidleakoff(filepath,dependencies,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID LEAKOFF';
+        line = '*FLUID LEAKOFF'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=user and 'NONE'!=user and 'None'!=user:
@@ -4285,7 +4285,7 @@ def writeABQfluidleakoff(filepath,dependencies,user,data,comment):
 def writeABQfluidpipeconnectorloss(filepath,type,laminarflowtransition,valvecontrol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID PIPE CONNECTOR LOSS';
+        line = '*FLUID PIPE CONNECTOR LOSS'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=laminarflowtransition and 'NONE'!=laminarflowtransition and 'None'!=laminarflowtransition:
@@ -4301,7 +4301,7 @@ def writeABQfluidpipeconnectorloss(filepath,type,laminarflowtransition,valvecont
 def writeABQfluidpipeconnectorsection(filepath,elset,material,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID PIPE CONNECTOR SECTION';
+        line = '*FLUID PIPE CONNECTOR SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -4315,7 +4315,7 @@ def writeABQfluidpipeconnectorsection(filepath,elset,material,data,comment):
 def writeABQfluidpipeflowloss(filepath,type,laminarflowtransition,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID PIPE FLOW LOSS';
+        line = '*FLUID PIPE FLOW LOSS'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=laminarflowtransition and 'NONE'!=laminarflowtransition and 'None'!=laminarflowtransition:
@@ -4329,7 +4329,7 @@ def writeABQfluidpipeflowloss(filepath,type,laminarflowtransition,data,comment):
 def writeABQfluidpipesection(filepath,elset,material,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID PIPE SECTION';
+        line = '*FLUID PIPE SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -4343,7 +4343,7 @@ def writeABQfluidpipesection(filepath,elset,material,data,comment):
 def writeABQfluidsection(filepath,elset,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FLUID SECTION';
+        line = '*FLUID SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -4357,7 +4357,7 @@ def writeABQfluidsection(filepath,elset,type,data,comment):
 def writeABQfoundation(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FOUNDATION';
+        line = '*FOUNDATION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4367,7 +4367,7 @@ def writeABQfoundation(filepath,data,comment):
 def writeABQfracturecriterion(filepath,distance,nset,type,dependencies,mixedmodebehavior,nodalenergyrate,normaldirection,symmetry,unstablegrowthtolerance,tolerance,viscosity,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FRACTURE CRITERION';
+        line = '*FRACTURE CRITERION'
         if 'none'!=distance and 'NONE'!=distance and 'None'!=distance:
             line += ', DISTANCE=' + distance
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
@@ -4399,7 +4399,7 @@ def writeABQfracturecriterion(filepath,distance,nset,type,dependencies,mixedmode
 def writeABQframesection(filepath,elset,buckling,density,dependencies,pinned,plasticdefaults,section,yieldstress,zero,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FRAME SECTION';
+        line = '*FRAME SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=buckling and 'NONE'!=buckling and 'None'!=buckling:
@@ -4427,7 +4427,7 @@ def writeABQframesection(filepath,elset,buckling,density,dependencies,pinned,pla
 def writeABQfrequency(filepath,acousticcoupling,dampingprojection,eigensolver,normalization,propertyevaluation,residualmodes,sim,nset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FREQUENCY';
+        line = '*FREQUENCY'
         if 'none'!=acousticcoupling and 'NONE'!=acousticcoupling and 'None'!=acousticcoupling:
             line += ', ACOUSTIC COUPLING=' + acousticcoupling
         if 'none'!=dampingprojection and 'NONE'!=dampingprojection and 'None'!=dampingprojection:
@@ -4453,7 +4453,7 @@ def writeABQfrequency(filepath,acousticcoupling,dampingprojection,eigensolver,no
 def writeABQfriction(filepath,elasticslip,lagrange,rough,sliptolerance,user,anisotropic,dependencies,depvar,exponentialdecay,properties,sheartractionslope,taumax,testdata,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*FRICTION';
+        line = '*FRICTION'
         if 'none'!=elasticslip and 'NONE'!=elasticslip and 'None'!=elasticslip:
             line += ', ELASTIC SLIP=' + elasticslip
         if 'none'!=lagrange and 'NONE'!=lagrange and 'None'!=lagrange:
@@ -4489,7 +4489,7 @@ def writeABQfriction(filepath,elasticslip,lagrange,rough,sliptolerance,user,anis
 def writeABQgap(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAP';
+        line = '*GAP'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -4501,7 +4501,7 @@ def writeABQgap(filepath,elset,data,comment):
 def writeABQgapconductance(filepath,dependencies,pressure,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAP CONDUCTANCE';
+        line = '*GAP CONDUCTANCE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=pressure and 'NONE'!=pressure and 'None'!=pressure:
@@ -4517,7 +4517,7 @@ def writeABQgapconductance(filepath,dependencies,pressure,user,data,comment):
 def writeABQgapelectricalconductance(filepath,dependencies,pressure,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAP ELECTRICAL CONDUCTANCE';
+        line = '*GAP ELECTRICAL CONDUCTANCE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=pressure and 'NONE'!=pressure and 'None'!=pressure:
@@ -4533,7 +4533,7 @@ def writeABQgapelectricalconductance(filepath,dependencies,pressure,user,data,co
 def writeABQgapflow(filepath,dependencies,type,kmax,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAP FLOW';
+        line = '*GAP FLOW'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -4549,7 +4549,7 @@ def writeABQgapflow(filepath,dependencies,type,kmax,data,comment):
 def writeABQgapheatgeneration(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAP HEAT GENERATION';
+        line = '*GAP HEAT GENERATION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4559,7 +4559,7 @@ def writeABQgapheatgeneration(filepath,data,comment):
 def writeABQgapradiation(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAP RADIATION';
+        line = '*GAP RADIATION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4569,7 +4569,7 @@ def writeABQgapradiation(filepath,data,comment):
 def writeABQgasspecificheat(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GAS SPECIFIC HEAT';
+        line = '*GAS SPECIFIC HEAT'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -4581,7 +4581,7 @@ def writeABQgasspecificheat(filepath,dependencies,data,comment):
 def writeABQgasketbehavior(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GASKET BEHAVIOR';
+        line = '*GASKET BEHAVIOR'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -4593,7 +4593,7 @@ def writeABQgasketbehavior(filepath,name,data,comment):
 def writeABQgasketcontactarea(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GASKET CONTACT AREA';
+        line = '*GASKET CONTACT AREA'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -4605,7 +4605,7 @@ def writeABQgasketcontactarea(filepath,dependencies,data,comment):
 def writeABQgasketelasticity(filepath,component,dependencies,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GASKET ELASTICITY';
+        line = '*GASKET ELASTICITY'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -4621,7 +4621,7 @@ def writeABQgasketelasticity(filepath,component,dependencies,variable,data,comme
 def writeABQgasketsection(filepath,elset,behavior,material,orientation,stabilizationstiffness,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GASKET SECTION';
+        line = '*GASKET SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=behavior and 'NONE'!=behavior and 'None'!=behavior:
@@ -4641,7 +4641,7 @@ def writeABQgasketsection(filepath,elset,behavior,material,orientation,stabiliza
 def writeABQgasketthicknessbehavior(filepath,dependencies,direction,tensilestiffnessfactor,type,variable,slopedrop,yieldonset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GASKET THICKNESS BEHAVIOR';
+        line = '*GASKET THICKNESS BEHAVIOR'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=direction and 'NONE'!=direction and 'None'!=direction:
@@ -4665,7 +4665,7 @@ def writeABQgasketthicknessbehavior(filepath,dependencies,direction,tensilestiff
 def writeABQgel(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GEL';
+        line = '*GEL'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4675,7 +4675,7 @@ def writeABQgel(filepath,data,comment):
 def writeABQgeostatic(filepath,heat,utol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GEOSTATIC';
+        line = '*GEOSTATIC'
         if 'none'!=heat and 'NONE'!=heat and 'None'!=heat:
             line += ', HEAT=' + heat
         if 'none'!=utol and 'NONE'!=utol and 'None'!=utol:
@@ -4689,7 +4689,7 @@ def writeABQgeostatic(filepath,heat,utol,data,comment):
 def writeABQglobaldamping(filepath,alpha,beta,field,structural,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*GLOBAL DAMPING';
+        line = '*GLOBAL DAMPING'
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
             line += ', ALPHA=' + alpha
         if 'none'!=beta and 'NONE'!=beta and 'None'!=beta:
@@ -4707,7 +4707,7 @@ def writeABQglobaldamping(filepath,alpha,beta,field,structural,data,comment):
 def writeABQheading(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HEADING';
+        line = '*HEADING'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4717,7 +4717,7 @@ def writeABQheading(filepath,data,comment):
 def writeABQheatgeneration(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HEAT GENERATION';
+        line = '*HEAT GENERATION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4727,7 +4727,7 @@ def writeABQheatgeneration(filepath,data,comment):
 def writeABQheattransfer(filepath,centering,type,deltmx,end,steadystate,mxdem,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HEAT TRANSFER';
+        line = '*HEAT TRANSFER'
         if 'none'!=centering and 'NONE'!=centering and 'None'!=centering:
             line += ', CENTERING=' + centering
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -4749,7 +4749,7 @@ def writeABQheattransfer(filepath,centering,type,deltmx,end,steadystate,mxdem,da
 def writeABQheatcap(filepath,dependencies,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HEATCAP';
+        line = '*HEATCAP'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -4763,7 +4763,7 @@ def writeABQheatcap(filepath,dependencies,elset,data,comment):
 def writeABQhourglassstiffness(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HOURGLASS STIFFNESS';
+        line = '*HOURGLASS STIFFNESS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4773,7 +4773,7 @@ def writeABQhourglassstiffness(filepath,data,comment):
 def writeABQhyperelastic(filepath,arruda-boyce,marlow,mooney-rivlin,neohooke,ogden,polynomial,reducedpolynomial,user,vanderwaals,yeoh,type,beta,moduli,n,poisson,properties,testdatainput,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HYPERELASTIC';
+        line = '*HYPERELASTIC'
         if 'none'!=arruda-boyce and 'NONE'!=arruda-boyce and 'None'!=arruda-boyce:
             line += ', ARRUDA-BOYCE=' + arruda-boyce
         if 'none'!=marlow and 'NONE'!=marlow and 'None'!=marlow:
@@ -4817,7 +4817,7 @@ def writeABQhyperelastic(filepath,arruda-boyce,marlow,mooney-rivlin,neohooke,ogd
 def writeABQhyperfoam(filepath,moduli,n,poisson,testdatainput,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HYPERFOAM';
+        line = '*HYPERFOAM'
         if 'none'!=moduli and 'NONE'!=moduli and 'None'!=moduli:
             line += ', MODULI=' + moduli
         if 'none'!=n and 'NONE'!=n and 'None'!=n:
@@ -4835,7 +4835,7 @@ def writeABQhyperfoam(filepath,moduli,n,poisson,testdatainput,data,comment):
 def writeABQhypoelastic(filepath,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HYPOELASTIC';
+        line = '*HYPOELASTIC'
         if 'none'!=user and 'NONE'!=user and 'None'!=user:
             line += ', USER=' + user
         abq.write(line + '\n')
@@ -4847,7 +4847,7 @@ def writeABQhypoelastic(filepath,user,data,comment):
 def writeABQhysteresis(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*HYSTERESIS';
+        line = '*HYSTERESIS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -4857,7 +4857,7 @@ def writeABQhysteresis(filepath,data,comment):
 def writeABQimpedance(filepath,property,nonreflecting,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPEDANCE';
+        line = '*IMPEDANCE'
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
             line += ', PROPERTY=' + property
         if 'none'!=nonreflecting and 'NONE'!=nonreflecting and 'None'!=nonreflecting:
@@ -4873,7 +4873,7 @@ def writeABQimpedance(filepath,property,nonreflecting,op,data,comment):
 def writeABQimpedanceproperty(filepath,name,data,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPEDANCE PROPERTY';
+        line = '*IMPEDANCE PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=data and 'NONE'!=data and 'None'!=data:
@@ -4889,7 +4889,7 @@ def writeABQimpedanceproperty(filepath,name,data,input,data,comment):
 def writeABQimperfection(filepath,file,input,step,inc,nset,system,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPERFECTION';
+        line = '*IMPERFECTION'
         if 'none'!=file and 'NONE'!=file and 'None'!=file:
             line += ', FILE=' + file
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -4911,7 +4911,7 @@ def writeABQimperfection(filepath,file,input,step,inc,nset,system,data,comment):
 def writeABQimport(filepath,update,eoffset,noffset,rename,increment,interval,iteration,state,step,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPORT';
+        line = '*IMPORT'
         if 'none'!=update and 'NONE'!=update and 'None'!=update:
             line += ', UPDATE=' + update
         if 'none'!=eoffset and 'NONE'!=eoffset and 'None'!=eoffset:
@@ -4939,7 +4939,7 @@ def writeABQimport(filepath,update,eoffset,noffset,rename,increment,interval,ite
 def writeABQimportcontrols(filepath,normaltol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPORT CONTROLS';
+        line = '*IMPORT CONTROLS'
         if 'none'!=normaltol and 'NONE'!=normaltol and 'None'!=normaltol:
             line += ', NORMAL TOL=' + normaltol
         abq.write(line + '\n')
@@ -4951,7 +4951,7 @@ def writeABQimportcontrols(filepath,normaltol,data,comment):
 def writeABQimportelset(filepath,rename,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPORT ELSET';
+        line = '*IMPORT ELSET'
         if 'none'!=rename and 'NONE'!=rename and 'None'!=rename:
             line += ', RENAME=' + rename
         abq.write(line + '\n')
@@ -4963,7 +4963,7 @@ def writeABQimportelset(filepath,rename,data,comment):
 def writeABQimportnset(filepath,rename,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*IMPORT NSET';
+        line = '*IMPORT NSET'
         if 'none'!=rename and 'NONE'!=rename and 'None'!=rename:
             line += ', RENAME=' + rename
         abq.write(line + '\n')
@@ -4975,7 +4975,7 @@ def writeABQimportnset(filepath,rename,data,comment):
 def writeABQincidentwave(filepath,property,accelerationamplitude,pressureamplitude,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCIDENT WAVE';
+        line = '*INCIDENT WAVE'
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
             line += ', PROPERTY=' + property
         if 'none'!=accelerationamplitude and 'NONE'!=accelerationamplitude and 'None'!=accelerationamplitude:
@@ -4991,7 +4991,7 @@ def writeABQincidentwave(filepath,property,accelerationamplitude,pressureamplitu
 def writeABQincidentwavefluidproperty(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCIDENT WAVE FLUID PROPERTY';
+        line = '*INCIDENT WAVE FLUID PROPERTY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5001,7 +5001,7 @@ def writeABQincidentwavefluidproperty(filepath,data,comment):
 def writeABQincidentwaveinteraction(filepath,property,accelerationamplitude,conwep,pressureamplitude,undex,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCIDENT WAVE INTERACTION';
+        line = '*INCIDENT WAVE INTERACTION'
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
             line += ', PROPERTY=' + property
         if 'none'!=accelerationamplitude and 'NONE'!=accelerationamplitude and 'None'!=accelerationamplitude:
@@ -5025,7 +5025,7 @@ def writeABQincidentwaveinteraction(filepath,property,accelerationamplitude,conw
 def writeABQincidentwaveinteractionproperty(filepath,name,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCIDENT WAVE INTERACTION PROPERTY';
+        line = '*INCIDENT WAVE INTERACTION PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -5039,7 +5039,7 @@ def writeABQincidentwaveinteractionproperty(filepath,name,type,data,comment):
 def writeABQincidentwaveproperty(filepath,name,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCIDENT WAVE PROPERTY';
+        line = '*INCIDENT WAVE PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -5053,7 +5053,7 @@ def writeABQincidentwaveproperty(filepath,name,type,data,comment):
 def writeABQincidentwavereflection(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCIDENT WAVE REFLECTION';
+        line = '*INCIDENT WAVE REFLECTION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5063,7 +5063,7 @@ def writeABQincidentwavereflection(filepath,data,comment):
 def writeABQinclude(filepath,input,password,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCLUDE';
+        line = '*INCLUDE'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         if 'none'!=password and 'NONE'!=password and 'None'!=password:
@@ -5077,7 +5077,7 @@ def writeABQinclude(filepath,input,password,data,comment):
 def writeABQincrementationoutput(filepath,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INCREMENTATION OUTPUT';
+        line = '*INCREMENTATION OUTPUT'
         if 'none'!=variable and 'NONE'!=variable and 'None'!=variable:
             line += ', VARIABLE=' + variable
         abq.write(line + '\n')
@@ -5089,7 +5089,7 @@ def writeABQincrementationoutput(filepath,variable,data,comment):
 def writeABQinelasticheatfraction(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INELASTIC HEAT FRACTION';
+        line = '*INELASTIC HEAT FRACTION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5099,7 +5099,7 @@ def writeABQinelasticheatfraction(filepath,data,comment):
 def writeABQinertiarelief(filepath,orientation,fixed,remove,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INERTIA RELIEF';
+        line = '*INERTIA RELIEF'
         if 'none'!=orientation and 'NONE'!=orientation and 'None'!=orientation:
             line += ', ORIENTATION=' + orientation
         if 'none'!=fixed and 'NONE'!=fixed and 'None'!=fixed:
@@ -5115,7 +5115,7 @@ def writeABQinertiarelief(filepath,orientation,fixed,remove,data,comment):
 def writeABQinitialconditions(filepath,type,absoluteexteriortolerance,criterion,definition,drivingelsets,exteriortolerance,file,fulltensor,geostatic,inc,input,interpolate,midside,normal,numberbackstresses,outputvariable,rebar,sectionpoints,step,unbalancedstress,user,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INITIAL CONDITIONS';
+        line = '*INITIAL CONDITIONS'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=absoluteexteriortolerance and 'NONE'!=absoluteexteriortolerance and 'None'!=absoluteexteriortolerance:
@@ -5169,7 +5169,7 @@ def writeABQinitialconditions(filepath,type,absoluteexteriortolerance,criterion,
 def writeABQinstance(filepath,name,part,instance,name,instance,library,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INSTANCE';
+        line = '*INSTANCE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=part and 'NONE'!=part and 'None'!=part:
@@ -5191,7 +5191,7 @@ def writeABQinstance(filepath,name,part,instance,name,instance,library,data,comm
 def writeABQintegratedoutput(filepath,section,surface,elset,section,surface,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INTEGRATED OUTPUT';
+        line = '*INTEGRATED OUTPUT'
         if 'none'!=section and 'NONE'!=section and 'None'!=section:
             line += ', SECTION=' + section
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
@@ -5213,7 +5213,7 @@ def writeABQintegratedoutput(filepath,section,surface,elset,section,surface,vari
 def writeABQintegratedoutputsection(filepath,name,surface,orientation,position,projectorientation,refnode,refnodemotion,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INTEGRATED OUTPUT SECTION';
+        line = '*INTEGRATED OUTPUT SECTION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
@@ -5237,7 +5237,7 @@ def writeABQintegratedoutputsection(filepath,name,surface,orientation,position,p
 def writeABQinterface(filepath,elset,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*INTERFACE';
+        line = '*INTERFACE'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -5251,7 +5251,7 @@ def writeABQinterface(filepath,elset,name,data,comment):
 def writeABQits(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ITS';
+        line = '*ITS'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -5263,7 +5263,7 @@ def writeABQits(filepath,elset,data,comment):
 def writeABQjoint(filepath,elset,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*JOINT';
+        line = '*JOINT'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=orientation and 'NONE'!=orientation and 'None'!=orientation:
@@ -5277,7 +5277,7 @@ def writeABQjoint(filepath,elset,orientation,data,comment):
 def writeABQjointelasticity(filepath,moduli,ndim,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*JOINT ELASTICITY';
+        line = '*JOINT ELASTICITY'
         if 'none'!=moduli and 'NONE'!=moduli and 'None'!=moduli:
             line += ', MODULI=' + moduli
         if 'none'!=ndim and 'NONE'!=ndim and 'None'!=ndim:
@@ -5293,7 +5293,7 @@ def writeABQjointelasticity(filepath,moduli,ndim,dependencies,data,comment):
 def writeABQjointplasticity(filepath,type,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*JOINT PLASTICITY';
+        line = '*JOINT PLASTICITY'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -5307,7 +5307,7 @@ def writeABQjointplasticity(filepath,type,dependencies,data,comment):
 def writeABQjointedmaterial(filepath,dependencies,jointdirection,noseparation,shearretention,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*JOINTED MATERIAL';
+        line = '*JOINTED MATERIAL'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=jointdirection and 'NONE'!=jointdirection and 'None'!=jointdirection:
@@ -5325,7 +5325,7 @@ def writeABQjointedmaterial(filepath,dependencies,jointdirection,noseparation,sh
 def writeABQjouleheatfraction(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*JOULE HEAT FRACTION';
+        line = '*JOULE HEAT FRACTION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5335,7 +5335,7 @@ def writeABQjouleheatfraction(filepath,data,comment):
 def writeABQkappa(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*KAPPA';
+        line = '*KAPPA'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -5349,7 +5349,7 @@ def writeABQkappa(filepath,dependencies,type,data,comment):
 def writeABQkinematic(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*KINEMATIC';
+        line = '*KINEMATIC'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5359,7 +5359,7 @@ def writeABQkinematic(filepath,data,comment):
 def writeABQkinematiccoupling(filepath,refnode,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*KINEMATIC COUPLING';
+        line = '*KINEMATIC COUPLING'
         if 'none'!=refnode and 'NONE'!=refnode and 'None'!=refnode:
             line += ', REF NODE=' + refnode
         if 'none'!=orientation and 'NONE'!=orientation and 'None'!=orientation:
@@ -5373,7 +5373,7 @@ def writeABQkinematiccoupling(filepath,refnode,orientation,data,comment):
 def writeABQlatentheat(filepath,porefluid,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*LATENT HEAT';
+        line = '*LATENT HEAT'
         if 'none'!=porefluid and 'NONE'!=porefluid and 'None'!=porefluid:
             line += ', PORE FLUID=' + porefluid
         abq.write(line + '\n')
@@ -5385,7 +5385,7 @@ def writeABQlatentheat(filepath,porefluid,data,comment):
 def writeABQloadcase(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*LOAD CASE';
+        line = '*LOAD CASE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -5397,7 +5397,7 @@ def writeABQloadcase(filepath,name,data,comment):
 def writeABQloadingdata(filepath,dependencies,direction,extrapolation,independentcomponents,regularize,rtol,type,ratedependent,rateinterpolation,damageonset,slopedrop,yieldonset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*LOADING DATA';
+        line = '*LOADING DATA'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=direction and 'NONE'!=direction and 'None'!=direction:
@@ -5431,7 +5431,7 @@ def writeABQloadingdata(filepath,dependencies,direction,extrapolation,independen
 def writeABQlowdensityfoam(filepath,lateralstraindata,strainrate,rateextrapolation,tensioncutoff,fail,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*LOW DENSITY FOAM';
+        line = '*LOW DENSITY FOAM'
         if 'none'!=lateralstraindata and 'NONE'!=lateralstraindata and 'None'!=lateralstraindata:
             line += ', LATERAL STRAIN DATA=' + lateralstraindata
         if 'none'!=strainrate and 'NONE'!=strainrate and 'None'!=strainrate:
@@ -5451,7 +5451,7 @@ def writeABQlowdensityfoam(filepath,lateralstraindata,strainrate,rateextrapolati
 def writeABQmagneticpermeability(filepath,dependencies,frequency,nonlinear,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MAGNETIC PERMEABILITY';
+        line = '*MAGNETIC PERMEABILITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
@@ -5469,7 +5469,7 @@ def writeABQmagneticpermeability(filepath,dependencies,frequency,nonlinear,type,
 def writeABQmagnetostatic(filepath,direct,stabilization,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MAGNETOSTATIC';
+        line = '*MAGNETOSTATIC'
         if 'none'!=direct and 'NONE'!=direct and 'None'!=direct:
             line += ', DIRECT=' + direct
         if 'none'!=stabilization and 'NONE'!=stabilization and 'None'!=stabilization:
@@ -5483,7 +5483,7 @@ def writeABQmagnetostatic(filepath,direct,stabilization,data,comment):
 def writeABQmapsolution(filepath,inc,step,unbalancedstress,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MAP SOLUTION';
+        line = '*MAP SOLUTION'
         if 'none'!=inc and 'NONE'!=inc and 'None'!=inc:
             line += ', INC=' + inc
         if 'none'!=step and 'NONE'!=step and 'None'!=step:
@@ -5499,7 +5499,7 @@ def writeABQmapsolution(filepath,inc,step,unbalancedstress,data,comment):
 def writeABQmass(filepath,elset,alpha,composite,orientation,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MASS';
+        line = '*MASS'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
@@ -5519,7 +5519,7 @@ def writeABQmass(filepath,elset,alpha,composite,orientation,type,data,comment):
 def writeABQmassadjust(filepath,targetdt,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MASS ADJUST';
+        line = '*MASS ADJUST'
         if 'none'!=targetdt and 'NONE'!=targetdt and 'None'!=targetdt:
             line += ', TARGET DT=' + targetdt
         abq.write(line + '\n')
@@ -5531,7 +5531,7 @@ def writeABQmassadjust(filepath,targetdt,data,comment):
 def writeABQmassdiffusion(filepath,dcmax,end,steadystate,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MASS DIFFUSION';
+        line = '*MASS DIFFUSION'
         if 'none'!=dcmax and 'NONE'!=dcmax and 'None'!=dcmax:
             line += ', DCMAX=' + dcmax
         if 'none'!=end and 'NONE'!=end and 'None'!=end:
@@ -5547,7 +5547,7 @@ def writeABQmassdiffusion(filepath,dcmax,end,steadystate,data,comment):
 def writeABQmassflowrate(filepath,amplitude,input,op,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MASS FLOW RATE';
+        line = '*MASS FLOW RATE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -5565,7 +5565,7 @@ def writeABQmassflowrate(filepath,amplitude,input,op,user,data,comment):
 def writeABQmaterial(filepath,name,rtol,sratefactor,strainrateregularization,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATERIAL';
+        line = '*MATERIAL'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=rtol and 'NONE'!=rtol and 'None'!=rtol:
@@ -5583,7 +5583,7 @@ def writeABQmaterial(filepath,name,rtol,sratefactor,strainrateregularization,dat
 def writeABQmatrix(filepath,type,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATRIX';
+        line = '*MATRIX'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -5597,7 +5597,7 @@ def writeABQmatrix(filepath,type,input,data,comment):
 def writeABQmatrixassemble(filepath,mass,stiffness,structuraldamping,viscousdamping,nset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATRIX ASSEMBLE';
+        line = '*MATRIX ASSEMBLE'
         if 'none'!=mass and 'NONE'!=mass and 'None'!=mass:
             line += ', MASS=' + mass
         if 'none'!=stiffness and 'NONE'!=stiffness and 'None'!=stiffness:
@@ -5617,7 +5617,7 @@ def writeABQmatrixassemble(filepath,mass,stiffness,structuraldamping,viscousdamp
 def writeABQmatrixcheck(filepath,referencenode,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATRIX CHECK';
+        line = '*MATRIX CHECK'
         if 'none'!=referencenode and 'NONE'!=referencenode and 'None'!=referencenode:
             line += ', REFERENCE NODE=' + referencenode
         abq.write(line + '\n')
@@ -5629,7 +5629,7 @@ def writeABQmatrixcheck(filepath,referencenode,data,comment):
 def writeABQmatrixgenerate(filepath,stiffness,mass,viscousdamping,structuraldamping,load,solidinfiniteformulation,elementbyelement,elset,field,mpc,propertyevaluation,publicnodes,source,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATRIX GENERATE';
+        line = '*MATRIX GENERATE'
         if 'none'!=stiffness and 'NONE'!=stiffness and 'None'!=stiffness:
             line += ', STIFFNESS=' + stiffness
         if 'none'!=mass and 'NONE'!=mass and 'None'!=mass:
@@ -5665,7 +5665,7 @@ def writeABQmatrixgenerate(filepath,stiffness,mass,viscousdamping,structuraldamp
 def writeABQmatrixinput(filepath,name,input,matrix,scalefactor,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATRIX INPUT';
+        line = '*MATRIX INPUT'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -5685,7 +5685,7 @@ def writeABQmatrixinput(filepath,name,input,matrix,scalefactor,type,data,comment
 def writeABQmatrixoutput(filepath,stiffness,mass,viscousdamping,structuraldamping,load,format,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MATRIX OUTPUT';
+        line = '*MATRIX OUTPUT'
         if 'none'!=stiffness and 'NONE'!=stiffness and 'None'!=stiffness:
             line += ', STIFFNESS=' + stiffness
         if 'none'!=mass and 'NONE'!=mass and 'None'!=mass:
@@ -5707,7 +5707,7 @@ def writeABQmatrixoutput(filepath,stiffness,mass,viscousdamping,structuraldampin
 def writeABQmediatransport(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MEDIA TRANSPORT';
+        line = '*MEDIA TRANSPORT'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5717,7 +5717,7 @@ def writeABQmediatransport(filepath,data,comment):
 def writeABQmembranesection(filepath,elset,material,controls,density,membranethickness,nodalthickness,orientation,poisson,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MEMBRANE SECTION';
+        line = '*MEMBRANE SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -5743,7 +5743,7 @@ def writeABQmembranesection(filepath,elset,material,controls,density,membranethi
 def writeABQmodaldamping(filepath,structural,viscous,definition,field,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MODAL DAMPING';
+        line = '*MODAL DAMPING'
         if 'none'!=structural and 'NONE'!=structural and 'None'!=structural:
             line += ', STRUCTURAL=' + structural
         if 'none'!=viscous and 'NONE'!=viscous and 'None'!=viscous:
@@ -5761,7 +5761,7 @@ def writeABQmodaldamping(filepath,structural,viscous,definition,field,data,comme
 def writeABQmodaldynamic(filepath,continue,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MODAL DYNAMIC';
+        line = '*MODAL DYNAMIC'
         if 'none'!=continue and 'NONE'!=continue and 'None'!=continue:
             line += ', CONTINUE=' + continue
         abq.write(line + '\n')
@@ -5773,7 +5773,7 @@ def writeABQmodaldynamic(filepath,continue,data,comment):
 def writeABQmodalfile(filepath,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MODAL FILE';
+        line = '*MODAL FILE'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         abq.write(line + '\n')
@@ -5785,7 +5785,7 @@ def writeABQmodalfile(filepath,frequency,data,comment):
 def writeABQmodaloutput(filepath,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MODAL OUTPUT';
+        line = '*MODAL OUTPUT'
         if 'none'!=variable and 'NONE'!=variable and 'None'!=variable:
             line += ', VARIABLE=' + variable
         abq.write(line + '\n')
@@ -5797,7 +5797,7 @@ def writeABQmodaloutput(filepath,variable,data,comment):
 def writeABQmodalprint(filepath,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MODAL PRINT';
+        line = '*MODAL PRINT'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         abq.write(line + '\n')
@@ -5809,7 +5809,7 @@ def writeABQmodalprint(filepath,frequency,data,comment):
 def writeABQmodelchange(filepath,activate,add,remove,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MODEL CHANGE';
+        line = '*MODEL CHANGE'
         if 'none'!=activate and 'NONE'!=activate and 'None'!=activate:
             line += ', ACTIVATE=' + activate
         if 'none'!=add and 'NONE'!=add and 'None'!=add:
@@ -5827,7 +5827,7 @@ def writeABQmodelchange(filepath,activate,add,remove,type,data,comment):
 def writeABQmohrcoulomb(filepath,dependencies,deviatoriceccentricity,eccentricity,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MOHR COULOMB';
+        line = '*MOHR COULOMB'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=deviatoriceccentricity and 'NONE'!=deviatoriceccentricity and 'None'!=deviatoriceccentricity:
@@ -5843,7 +5843,7 @@ def writeABQmohrcoulomb(filepath,dependencies,deviatoriceccentricity,eccentricit
 def writeABQmohrcoulombhardening(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MOHR COULOMB HARDENING';
+        line = '*MOHR COULOMB HARDENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -5855,7 +5855,7 @@ def writeABQmohrcoulombhardening(filepath,dependencies,data,comment):
 def writeABQmoistureswelling(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MOISTURE SWELLING';
+        line = '*MOISTURE SWELLING'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5865,7 +5865,7 @@ def writeABQmoistureswelling(filepath,data,comment):
 def writeABQmolecularweight(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MOLECULAR WEIGHT';
+        line = '*MOLECULAR WEIGHT'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -5875,7 +5875,7 @@ def writeABQmolecularweight(filepath,data,comment):
 def writeABQmomentumequationsolver(filepath,convergence,diagnostics,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MOMENTUM EQUATION SOLVER';
+        line = '*MOMENTUM EQUATION SOLVER'
         if 'none'!=convergence and 'NONE'!=convergence and 'None'!=convergence:
             line += ', CONVERGENCE=' + convergence
         if 'none'!=diagnostics and 'NONE'!=diagnostics and 'None'!=diagnostics:
@@ -5891,7 +5891,7 @@ def writeABQmomentumequationsolver(filepath,convergence,diagnostics,type,data,co
 def writeABQmonitor(filepath,dof,node,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MONITOR';
+        line = '*MONITOR'
         if 'none'!=dof and 'NONE'!=dof and 'None'!=dof:
             line += ', DOF=' + dof
         if 'none'!=node and 'NONE'!=node and 'None'!=node:
@@ -5907,7 +5907,7 @@ def writeABQmonitor(filepath,dof,node,frequency,data,comment):
 def writeABQmotion(filepath,rotation,translation,user,amplitude,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MOTION';
+        line = '*MOTION'
         if 'none'!=rotation and 'NONE'!=rotation and 'None'!=rotation:
             line += ', ROTATION=' + rotation
         if 'none'!=translation and 'NONE'!=translation and 'None'!=translation:
@@ -5927,7 +5927,7 @@ def writeABQmotion(filepath,rotation,translation,user,amplitude,type,data,commen
 def writeABQmpc(filepath,input,mode,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MPC';
+        line = '*MPC'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         if 'none'!=mode and 'NONE'!=mode and 'None'!=mode:
@@ -5943,7 +5943,7 @@ def writeABQmpc(filepath,input,mode,user,data,comment):
 def writeABQmullinseffect(filepath,testdatainput,user,beta,dependencies,m,properties,r,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*MULLINS EFFECT';
+        line = '*MULLINS EFFECT'
         if 'none'!=testdatainput and 'NONE'!=testdatainput and 'None'!=testdatainput:
             line += ', TEST DATA INPUT=' + testdatainput
         if 'none'!=user and 'NONE'!=user and 'None'!=user:
@@ -5967,7 +5967,7 @@ def writeABQmullinseffect(filepath,testdatainput,user,beta,dependencies,m,proper
 def writeABQm1(filepath,dependencies,elastic,linear,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*M1';
+        line = '*M1'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elastic and 'NONE'!=elastic and 'None'!=elastic:
@@ -5983,7 +5983,7 @@ def writeABQm1(filepath,dependencies,elastic,linear,data,comment):
 def writeABQm2(filepath,dependencies,elastic,linear,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*M2';
+        line = '*M2'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elastic and 'NONE'!=elastic and 'None'!=elastic:
@@ -5999,7 +5999,7 @@ def writeABQm2(filepath,dependencies,elastic,linear,data,comment):
 def writeABQncopy(filepath,changenumber,oldset,pole,reflect,shift,multiple,newset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NCOPY';
+        line = '*NCOPY'
         if 'none'!=changenumber and 'NONE'!=changenumber and 'None'!=changenumber:
             line += ', CHANGE NUMBER=' + changenumber
         if 'none'!=oldset and 'NONE'!=oldset and 'None'!=oldset:
@@ -6023,7 +6023,7 @@ def writeABQncopy(filepath,changenumber,oldset,pole,reflect,shift,multiple,newse
 def writeABQnetworkstiffnessratio(filepath,n,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NETWORK STIFFNESS RATIO';
+        line = '*NETWORK STIFFNESS RATIO'
         if 'none'!=n and 'NONE'!=n and 'None'!=n:
             line += ', N=' + n
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -6037,7 +6037,7 @@ def writeABQnetworkstiffnessratio(filepath,n,dependencies,data,comment):
 def writeABQnfill(filepath,bias,nset,singular,twostep,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NFILL';
+        line = '*NFILL'
         if 'none'!=bias and 'NONE'!=bias and 'None'!=bias:
             line += ', BIAS=' + bias
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
@@ -6055,7 +6055,7 @@ def writeABQnfill(filepath,bias,nset,singular,twostep,data,comment):
 def writeABQngen(filepath,line,nset,system,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NGEN';
+        line = '*NGEN'
         if 'none'!=line and 'NONE'!=line and 'None'!=line:
             line += ', LINE=' + line
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
@@ -6071,7 +6071,7 @@ def writeABQngen(filepath,line,nset,system,data,comment):
 def writeABQnmap(filepath,nset,type,definition,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NMAP';
+        line = '*NMAP'
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
             line += ', NSET=' + nset
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -6087,7 +6087,7 @@ def writeABQnmap(filepath,nset,type,definition,data,comment):
 def writeABQnocompression(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NO COMPRESSION';
+        line = '*NO COMPRESSION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6097,7 +6097,7 @@ def writeABQnocompression(filepath,data,comment):
 def writeABQnotension(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NO TENSION';
+        line = '*NO TENSION'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6107,7 +6107,7 @@ def writeABQnotension(filepath,data,comment):
 def writeABQnodalenergyrate(filepath,generate,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODAL ENERGY RATE';
+        line = '*NODAL ENERGY RATE'
         if 'none'!=generate and 'NONE'!=generate and 'None'!=generate:
             line += ', GENERATE=' + generate
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -6121,7 +6121,7 @@ def writeABQnodalenergyrate(filepath,generate,input,data,comment):
 def writeABQnodalthickness(filepath,generate,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODAL THICKNESS';
+        line = '*NODAL THICKNESS'
         if 'none'!=generate and 'NONE'!=generate and 'None'!=generate:
             line += ', GENERATE=' + generate
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -6135,7 +6135,7 @@ def writeABQnodalthickness(filepath,generate,input,data,comment):
 def writeABQnode(filepath,input,nset,system,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODE';
+        line = '*NODE'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
@@ -6151,7 +6151,7 @@ def writeABQnode(filepath,input,nset,system,data,comment):
 def writeABQnodefile(filepath,frequency,global,lastmode,mode,nset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODE FILE';
+        line = '*NODE FILE'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         if 'none'!=global and 'NONE'!=global and 'None'!=global:
@@ -6171,7 +6171,7 @@ def writeABQnodefile(filepath,frequency,global,lastmode,mode,nset,data,comment):
 def writeABQnodeoutput(filepath,nset,tracerset,exterior,nset,tracerset,global,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODE OUTPUT';
+        line = '*NODE OUTPUT'
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
             line += ', NSET=' + nset
         if 'none'!=tracerset and 'NONE'!=tracerset and 'None'!=tracerset:
@@ -6195,7 +6195,7 @@ def writeABQnodeoutput(filepath,nset,tracerset,exterior,nset,tracerset,global,va
 def writeABQnodeprint(filepath,frequency,global,lastmode,mode,nset,summary,totals,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODE PRINT';
+        line = '*NODE PRINT'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         if 'none'!=global and 'NONE'!=global and 'None'!=global:
@@ -6219,7 +6219,7 @@ def writeABQnodeprint(filepath,frequency,global,lastmode,mode,nset,summary,total
 def writeABQnoderesponse(filepath,nset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NODE RESPONSE';
+        line = '*NODE RESPONSE'
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
             line += ', NSET=' + nset
         abq.write(line + '\n')
@@ -6231,7 +6231,7 @@ def writeABQnoderesponse(filepath,nset,data,comment):
 def writeABQnonlinearbh(filepath,dir,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NONLINEAR BH';
+        line = '*NONLINEAR BH'
         if 'none'!=dir and 'NONE'!=dir and 'None'!=dir:
             line += ', DIR=' + dir
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -6245,7 +6245,7 @@ def writeABQnonlinearbh(filepath,dir,dependencies,data,comment):
 def writeABQnonstructuralmass(filepath,elset,units,distribution,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NONSTRUCTURAL MASS';
+        line = '*NONSTRUCTURAL MASS'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=units and 'NONE'!=units and 'None'!=units:
@@ -6261,7 +6261,7 @@ def writeABQnonstructuralmass(filepath,elset,units,distribution,data,comment):
 def writeABQnormal(filepath,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NORMAL';
+        line = '*NORMAL'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         abq.write(line + '\n')
@@ -6273,7 +6273,7 @@ def writeABQnormal(filepath,type,data,comment):
 def writeABQnset(filepath,nset,elset,generate,instance,internal,unsorted,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*NSET';
+        line = '*NSET'
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
             line += ', NSET=' + nset
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -6295,7 +6295,7 @@ def writeABQnset(filepath,nset,elset,generate,instance,internal,unsorted,data,co
 def writeABQorientation(filepath,name,definition,localdirections,system,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ORIENTATION';
+        line = '*ORIENTATION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
@@ -6313,7 +6313,7 @@ def writeABQorientation(filepath,name,definition,localdirections,system,data,com
 def writeABQornl(filepath,a,h,material,reset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ORNL';
+        line = '*ORNL'
         if 'none'!=a and 'NONE'!=a and 'None'!=a:
             line += ', A=' + a
         if 'none'!=h and 'NONE'!=h and 'None'!=h:
@@ -6331,7 +6331,7 @@ def writeABQornl(filepath,a,h,material,reset,data,comment):
 def writeABQoutput(filepath,diagnostics,field,history,frequency,modelist,name,numberinterval,timemarks,timepoints,op,timeinterval,variable,sensor,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*OUTPUT';
+        line = '*OUTPUT'
         if 'none'!=diagnostics and 'NONE'!=diagnostics and 'None'!=diagnostics:
             line += ', DIAGNOSTICS=' + diagnostics
         if 'none'!=field and 'NONE'!=field and 'None'!=field:
@@ -6367,7 +6367,7 @@ def writeABQoutput(filepath,diagnostics,field,history,frequency,modelist,name,nu
 def writeABQparameter(filepath,dependent,independent,table,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARAMETER';
+        line = '*PARAMETER'
         if 'none'!=dependent and 'NONE'!=dependent and 'None'!=dependent:
             line += ', DEPENDENT=' + dependent
         if 'none'!=independent and 'NONE'!=independent and 'None'!=independent:
@@ -6383,7 +6383,7 @@ def writeABQparameter(filepath,dependent,independent,table,data,comment):
 def writeABQparameterdependence(filepath,numbervalues,table,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARAMETER DEPENDENCE';
+        line = '*PARAMETER DEPENDENCE'
         if 'none'!=numbervalues and 'NONE'!=numbervalues and 'None'!=numbervalues:
             line += ', NUMBER VALUES=' + numbervalues
         if 'none'!=table and 'NONE'!=table and 'None'!=table:
@@ -6397,7 +6397,7 @@ def writeABQparameterdependence(filepath,numbervalues,table,data,comment):
 def writeABQparametershapevariation(filepath,parameter,file,input,step,inc,mode,nset,system,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARAMETER SHAPE VARIATION';
+        line = '*PARAMETER SHAPE VARIATION'
         if 'none'!=parameter and 'NONE'!=parameter and 'None'!=parameter:
             line += ', PARAMETER=' + parameter
         if 'none'!=file and 'NONE'!=file and 'None'!=file:
@@ -6423,7 +6423,7 @@ def writeABQparametershapevariation(filepath,parameter,file,input,step,inc,mode,
 def writeABQpart(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PART';
+        line = '*PART'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -6435,7 +6435,7 @@ def writeABQpart(filepath,name,data,comment):
 def writeABQparticlegenerator(filepath,maximumnumberofparticles,name,type,maxattemptsperincrement,maxinsertionattempts,solidfraction,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARTICLE GENERATOR';
+        line = '*PARTICLE GENERATOR'
         if 'none'!=maximumnumberofparticles and 'NONE'!=maximumnumberofparticles and 'None'!=maximumnumberofparticles:
             line += ', MAXIMUM NUMBER OF PARTICLES=' + maximumnumberofparticles
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -6457,7 +6457,7 @@ def writeABQparticlegenerator(filepath,maximumnumberofparticles,name,type,maxatt
 def writeABQparticlegeneratorflow(filepath,generator,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARTICLE GENERATOR FLOW';
+        line = '*PARTICLE GENERATOR FLOW'
         if 'none'!=generator and 'NONE'!=generator and 'None'!=generator:
             line += ', GENERATOR=' + generator
         abq.write(line + '\n')
@@ -6469,7 +6469,7 @@ def writeABQparticlegeneratorflow(filepath,generator,data,comment):
 def writeABQparticlegeneratorinlet(filepath,surface,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARTICLE GENERATOR INLET';
+        line = '*PARTICLE GENERATOR INLET'
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
             line += ', SURFACE=' + surface
         abq.write(line + '\n')
@@ -6481,7 +6481,7 @@ def writeABQparticlegeneratorinlet(filepath,surface,data,comment):
 def writeABQparticlegeneratormixture(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PARTICLE GENERATOR MIXTURE';
+        line = '*PARTICLE GENERATOR MIXTURE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6491,7 +6491,7 @@ def writeABQparticlegeneratormixture(filepath,data,comment):
 def writeABQperfectlymatchedlayer(filepath,elset,name,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PERFECTLY MATCHED LAYER';
+        line = '*PERFECTLY MATCHED LAYER'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -6507,7 +6507,7 @@ def writeABQperfectlymatchedlayer(filepath,elset,name,type,data,comment):
 def writeABQperiodic(filepath,type,nr,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PERIODIC';
+        line = '*PERIODIC'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=nr and 'NONE'!=nr and 'None'!=nr:
@@ -6521,7 +6521,7 @@ def writeABQperiodic(filepath,type,nr,data,comment):
 def writeABQperiodicmedia(filepath,inletcontrolnode,name,orientation,outletcontrolnode,triggernode,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PERIODIC MEDIA';
+        line = '*PERIODIC MEDIA'
         if 'none'!=inletcontrolnode and 'NONE'!=inletcontrolnode and 'None'!=inletcontrolnode:
             line += ', INLET CONTROL NODE=' + inletcontrolnode
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -6541,7 +6541,7 @@ def writeABQperiodicmedia(filepath,inletcontrolnode,name,orientation,outletcontr
 def writeABQpermanentmagnetization(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PERMANENT MAGNETIZATION';
+        line = '*PERMANENT MAGNETIZATION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -6553,7 +6553,7 @@ def writeABQpermanentmagnetization(filepath,dependencies,data,comment):
 def writeABQpermeability(filepath,dependencies,type,specific,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PERMEABILITY';
+        line = '*PERMEABILITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -6569,7 +6569,7 @@ def writeABQpermeability(filepath,dependencies,type,specific,data,comment):
 def writeABQphysicalconstants(filepath,absolutezero,stefanboltzmann,universalgasconstant,splreferencepressure,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PHYSICAL CONSTANTS';
+        line = '*PHYSICAL CONSTANTS'
         if 'none'!=absolutezero and 'NONE'!=absolutezero and 'None'!=absolutezero:
             line += ', ABSOLUTE ZERO=' + absolutezero
         if 'none'!=stefanboltzmann and 'NONE'!=stefanboltzmann and 'None'!=stefanboltzmann:
@@ -6587,7 +6587,7 @@ def writeABQphysicalconstants(filepath,absolutezero,stefanboltzmann,universalgas
 def writeABQpiezoelectric(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PIEZOELECTRIC';
+        line = '*PIEZOELECTRIC'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -6601,7 +6601,7 @@ def writeABQpiezoelectric(filepath,dependencies,type,data,comment):
 def writeABQpipe-soilinteraction(filepath,elset,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PIPE-SOIL INTERACTION';
+        line = '*PIPE-SOIL INTERACTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=orientation and 'NONE'!=orientation and 'None'!=orientation:
@@ -6615,7 +6615,7 @@ def writeABQpipe-soilinteraction(filepath,elset,orientation,data,comment):
 def writeABQpipe-soilstiffness(filepath,dependencies,direction,type,properties,variables,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PIPE-SOIL STIFFNESS';
+        line = '*PIPE-SOIL STIFFNESS'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=direction and 'NONE'!=direction and 'None'!=direction:
@@ -6635,7 +6635,7 @@ def writeABQpipe-soilstiffness(filepath,dependencies,direction,type,properties,v
 def writeABQplanartestdata(filepath,smooth,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PLANAR TEST DATA';
+        line = '*PLANAR TEST DATA'
         if 'none'!=smooth and 'NONE'!=smooth and 'None'!=smooth:
             line += ', SMOOTH=' + smooth
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -6649,7 +6649,7 @@ def writeABQplanartestdata(filepath,smooth,dependencies,data,comment):
 def writeABQplastic(filepath,hardening,scalestress,dependencies,rate,datatype,numberbackstresses,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PLASTIC';
+        line = '*PLASTIC'
         if 'none'!=hardening and 'NONE'!=hardening and 'None'!=hardening:
             line += ', HARDENING=' + hardening
         if 'none'!=scalestress and 'NONE'!=scalestress and 'None'!=scalestress:
@@ -6673,7 +6673,7 @@ def writeABQplastic(filepath,hardening,scalestress,dependencies,rate,datatype,nu
 def writeABQplasticaxial(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PLASTIC AXIAL';
+        line = '*PLASTIC AXIAL'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6683,7 +6683,7 @@ def writeABQplasticaxial(filepath,data,comment):
 def writeABQplasticm1(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PLASTIC M1';
+        line = '*PLASTIC M1'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6693,7 +6693,7 @@ def writeABQplasticm1(filepath,data,comment):
 def writeABQplasticm2(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PLASTIC M2';
+        line = '*PLASTIC M2'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6703,7 +6703,7 @@ def writeABQplasticm2(filepath,data,comment):
 def writeABQplastictorque(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PLASTIC TORQUE';
+        line = '*PLASTIC TORQUE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6713,7 +6713,7 @@ def writeABQplastictorque(filepath,data,comment):
 def writeABQpmlcoefficient(filepath,variation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PML COEFFICIENT';
+        line = '*PML COEFFICIENT'
         if 'none'!=variation and 'NONE'!=variation and 'None'!=variation:
             line += ', VARIATION=' + variation
         abq.write(line + '\n')
@@ -6725,7 +6725,7 @@ def writeABQpmlcoefficient(filepath,variation,data,comment):
 def writeABQporousbulkmoduli(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*POROUS BULK MODULI';
+        line = '*POROUS BULK MODULI'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6735,7 +6735,7 @@ def writeABQporousbulkmoduli(filepath,data,comment):
 def writeABQporouselastic(filepath,dependencies,shear,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*POROUS ELASTIC';
+        line = '*POROUS ELASTIC'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=shear and 'NONE'!=shear and 'None'!=shear:
@@ -6749,7 +6749,7 @@ def writeABQporouselastic(filepath,dependencies,shear,data,comment):
 def writeABQporousfailurecriteria(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*POROUS FAILURE CRITERIA';
+        line = '*POROUS FAILURE CRITERIA'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6759,7 +6759,7 @@ def writeABQporousfailurecriteria(filepath,data,comment):
 def writeABQporousmetalplasticity(filepath,dependencies,relativedensity,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*POROUS METAL PLASTICITY';
+        line = '*POROUS METAL PLASTICITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=relativedensity and 'NONE'!=relativedensity and 'None'!=relativedensity:
@@ -6773,7 +6773,7 @@ def writeABQporousmetalplasticity(filepath,dependencies,relativedensity,data,com
 def writeABQpostoutput(filepath,step,cycle,iteration,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*POST OUTPUT';
+        line = '*POST OUTPUT'
         if 'none'!=step and 'NONE'!=step and 'None'!=step:
             line += ', STEP=' + step
         if 'none'!=cycle and 'NONE'!=cycle and 'None'!=cycle:
@@ -6789,7 +6789,7 @@ def writeABQpostoutput(filepath,step,cycle,iteration,data,comment):
 def writeABQpotential(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*POTENTIAL';
+        line = '*POTENTIAL'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -6801,7 +6801,7 @@ def writeABQpotential(filepath,dependencies,data,comment):
 def writeABQpreprint(filepath,contact,echo,history,model,parsubstitution,parvalues,massproperty,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PREPRINT';
+        line = '*PREPRINT'
         if 'none'!=contact and 'NONE'!=contact and 'None'!=contact:
             line += ', CONTACT=' + contact
         if 'none'!=echo and 'NONE'!=echo and 'None'!=echo:
@@ -6825,7 +6825,7 @@ def writeABQpreprint(filepath,contact,echo,history,model,parsubstitution,parvalu
 def writeABQpressureequationsolver(filepath,convergence,diagnostics,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PRESSURE EQUATION SOLVER';
+        line = '*PRESSURE EQUATION SOLVER'
         if 'none'!=convergence and 'NONE'!=convergence and 'None'!=convergence:
             line += ', CONVERGENCE=' + convergence
         if 'none'!=diagnostics and 'NONE'!=diagnostics and 'None'!=diagnostics:
@@ -6841,7 +6841,7 @@ def writeABQpressureequationsolver(filepath,convergence,diagnostics,type,data,co
 def writeABQpressurepenetration(filepath,master,slave,amplitude,op,penetrationtime,imaginary,real,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PRESSURE PENETRATION';
+        line = '*PRESSURE PENETRATION'
         if 'none'!=master and 'NONE'!=master and 'None'!=master:
             line += ', MASTER=' + master
         if 'none'!=slave and 'NONE'!=slave and 'None'!=slave:
@@ -6865,7 +6865,7 @@ def writeABQpressurepenetration(filepath,master,slave,amplitude,op,penetrationti
 def writeABQpressurestress(filepath,amplitude,input,op,file,bstep,binc,estep,einc,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PRESSURE STRESS';
+        line = '*PRESSURE STRESS'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -6893,7 +6893,7 @@ def writeABQpressurestress(filepath,amplitude,input,op,file,bstep,binc,estep,ein
 def writeABQprestresshold(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PRESTRESS HOLD';
+        line = '*PRESTRESS HOLD'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -6903,7 +6903,7 @@ def writeABQprestresshold(filepath,data,comment):
 def writeABQpre-tensionsection(filepath,node,element,surface,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PRE-TENSION SECTION';
+        line = '*PRE-TENSION SECTION'
         if 'none'!=node and 'NONE'!=node and 'None'!=node:
             line += ', NODE=' + node
         if 'none'!=element and 'NONE'!=element and 'None'!=element:
@@ -6919,7 +6919,7 @@ def writeABQpre-tensionsection(filepath,node,element,surface,data,comment):
 def writeABQprint(filepath,adaptivemesh,contact,frequency,modelchange,plasticity,residual,solve,allke,criticalelement,dmass,etotal,mass,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PRINT';
+        line = '*PRINT'
         if 'none'!=adaptivemesh and 'NONE'!=adaptivemesh and 'None'!=adaptivemesh:
             line += ', ADAPTIVE MESH=' + adaptivemesh
         if 'none'!=contact and 'NONE'!=contact and 'None'!=contact:
@@ -6953,7 +6953,7 @@ def writeABQprint(filepath,adaptivemesh,contact,frequency,modelchange,plasticity
 def writeABQprobabilitydensityfunction(filepath,name,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PROBABILITY DENSITY FUNCTION';
+        line = '*PROBABILITY DENSITY FUNCTION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -6967,7 +6967,7 @@ def writeABQprobabilitydensityfunction(filepath,name,type,data,comment):
 def writeABQpsd-definition(filepath,name,dbreference,g,input,type,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*PSD-DEFINITION';
+        line = '*PSD-DEFINITION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=dbreference and 'NONE'!=dbreference and 'None'!=dbreference:
@@ -6989,7 +6989,7 @@ def writeABQpsd-definition(filepath,name,dbreference,g,input,type,user,data,comm
 def writeABQradiate(filepath,amplitude,op,regiontype,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RADIATE';
+        line = '*RADIATE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -7005,7 +7005,7 @@ def writeABQradiate(filepath,amplitude,op,regiontype,data,comment):
 def writeABQradiationfile(filepath,cavity,elset,surface,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RADIATION FILE';
+        line = '*RADIATION FILE'
         if 'none'!=cavity and 'NONE'!=cavity and 'None'!=cavity:
             line += ', CAVITY=' + cavity
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -7023,7 +7023,7 @@ def writeABQradiationfile(filepath,cavity,elset,surface,frequency,data,comment):
 def writeABQradiationoutput(filepath,cavity,elset,surface,variable,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RADIATION OUTPUT';
+        line = '*RADIATION OUTPUT'
         if 'none'!=cavity and 'NONE'!=cavity and 'None'!=cavity:
             line += ', CAVITY=' + cavity
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -7041,7 +7041,7 @@ def writeABQradiationoutput(filepath,cavity,elset,surface,variable,data,comment)
 def writeABQradiationprint(filepath,cavity,elset,surface,frequency,summary,totals,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RADIATION PRINT';
+        line = '*RADIATION PRINT'
         if 'none'!=cavity and 'NONE'!=cavity and 'None'!=cavity:
             line += ', CAVITY=' + cavity
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -7063,7 +7063,7 @@ def writeABQradiationprint(filepath,cavity,elset,surface,frequency,summary,total
 def writeABQradiationsymmetry(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RADIATION SYMMETRY';
+        line = '*RADIATION SYMMETRY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -7075,7 +7075,7 @@ def writeABQradiationsymmetry(filepath,name,data,comment):
 def writeABQradiationviewfactor(filepath,blocking,cavity,infinitesimal,integration,lumpedarea,off,range,reflection,symmetry,vtol,mdisp,nset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RADIATION VIEW FACTOR';
+        line = '*RADIATION VIEW FACTOR'
         if 'none'!=blocking and 'NONE'!=blocking and 'None'!=blocking:
             line += ', BLOCKING=' + blocking
         if 'none'!=cavity and 'NONE'!=cavity and 'None'!=cavity:
@@ -7109,7 +7109,7 @@ def writeABQradiationviewfactor(filepath,blocking,cavity,infinitesimal,integrati
 def writeABQrandomresponse(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RANDOM RESPONSE';
+        line = '*RANDOM RESPONSE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -7119,7 +7119,7 @@ def writeABQrandomresponse(filepath,data,comment):
 def writeABQratedependent(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RATE DEPENDENT';
+        line = '*RATE DEPENDENT'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -7133,7 +7133,7 @@ def writeABQratedependent(filepath,dependencies,type,data,comment):
 def writeABQratios(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RATIOS';
+        line = '*RATIOS'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -7145,7 +7145,7 @@ def writeABQratios(filepath,dependencies,data,comment):
 def writeABQreactionrate(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*REACTION RATE';
+        line = '*REACTION RATE'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -7155,7 +7155,7 @@ def writeABQreactionrate(filepath,data,comment):
 def writeABQrebar(filepath,element,material,name,geometry,isodirection,orientation,single,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*REBAR';
+        line = '*REBAR'
         if 'none'!=element and 'NONE'!=element and 'None'!=element:
             line += ', ELEMENT=' + element
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -7179,7 +7179,7 @@ def writeABQrebar(filepath,element,material,name,geometry,isodirection,orientati
 def writeABQrebarlayer(filepath,geometry,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*REBAR LAYER';
+        line = '*REBAR LAYER'
         if 'none'!=geometry and 'NONE'!=geometry and 'None'!=geometry:
             line += ', GEOMETRY=' + geometry
         if 'none'!=orientation and 'NONE'!=orientation and 'None'!=orientation:
@@ -7193,7 +7193,7 @@ def writeABQrebarlayer(filepath,geometry,orientation,data,comment):
 def writeABQreflection(filepath,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*REFLECTION';
+        line = '*REFLECTION'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         abq.write(line + '\n')
@@ -7205,7 +7205,7 @@ def writeABQreflection(filepath,type,data,comment):
 def writeABQrelease(filepath,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RELEASE';
+        line = '*RELEASE'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         abq.write(line + '\n')
@@ -7217,7 +7217,7 @@ def writeABQrelease(filepath,input,data,comment):
 def writeABQresponsespectrum(filepath,comp,sum,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RESPONSE SPECTRUM';
+        line = '*RESPONSE SPECTRUM'
         if 'none'!=comp and 'NONE'!=comp and 'None'!=comp:
             line += ', COMP=' + comp
         if 'none'!=sum and 'NONE'!=sum and 'None'!=sum:
@@ -7231,7 +7231,7 @@ def writeABQresponsespectrum(filepath,comp,sum,data,comment):
 def writeABQrestart(filepath,read,write,cycle,endstep,inc,iteration,step,frequency,numberinterval,timemarks,overlay,read,write,step,endstep,interval,numberinterval,timemarks,overlay,single,read,write,endstep,inc,step,frequency,numberinterval,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RESTART';
+        line = '*RESTART'
         if 'none'!=read and 'NONE'!=read and 'None'!=read:
             line += ', READ=' + read
         if 'none'!=write and 'NONE'!=write and 'None'!=write:
@@ -7295,7 +7295,7 @@ def writeABQrestart(filepath,read,write,cycle,endstep,inc,iteration,step,frequen
 def writeABQretainednodaldofs(filepath,sorted,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RETAINED NODAL DOFS';
+        line = '*RETAINED NODAL DOFS'
         if 'none'!=sorted and 'NONE'!=sorted and 'None'!=sorted:
             line += ', SORTED=' + sorted
         abq.write(line + '\n')
@@ -7307,7 +7307,7 @@ def writeABQretainednodaldofs(filepath,sorted,data,comment):
 def writeABQrigidbody(filepath,refnode,analyticalsurface,elset,pinnset,tienset,isothermal,position,density,nodalthickness,offset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RIGID BODY';
+        line = '*RIGID BODY'
         if 'none'!=refnode and 'NONE'!=refnode and 'None'!=refnode:
             line += ', REF NODE=' + refnode
         if 'none'!=analyticalsurface and 'NONE'!=analyticalsurface and 'None'!=analyticalsurface:
@@ -7337,7 +7337,7 @@ def writeABQrigidbody(filepath,refnode,analyticalsurface,elset,pinnset,tienset,i
 def writeABQrigidsurface(filepath,elset,name,refnode,type,filletradius,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*RIGID SURFACE';
+        line = '*RIGID SURFACE'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
@@ -7357,7 +7357,7 @@ def writeABQrigidsurface(filepath,elset,name,refnode,type,filletradius,data,comm
 def writeABQrotaryinertia(filepath,elset,alpha,composite,orientation,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*ROTARY INERTIA';
+        line = '*ROTARY INERTIA'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
@@ -7375,7 +7375,7 @@ def writeABQrotaryinertia(filepath,elset,alpha,composite,orientation,data,commen
 def writeABQsectioncontrols(filepath,name,conversioncriterion,distortioncontrol,drillstiffness,elementconversion,elementdeletion,hourglass,initialgapopening,kernel,kinematicsplit,lengthratio,maxdegradation,particlethickness,perturbation,rampinitialstress,secondorderaccuracy,sphformulation,sphsmoothinglength,viscosity,weightfactor,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SECTION CONTROLS';
+        line = '*SECTION CONTROLS'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=conversioncriterion and 'NONE'!=conversioncriterion and 'None'!=conversioncriterion:
@@ -7425,7 +7425,7 @@ def writeABQsectioncontrols(filepath,name,conversioncriterion,distortioncontrol,
 def writeABQsectionfile(filepath,name,surface,axes,frequency,update,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SECTION FILE';
+        line = '*SECTION FILE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
@@ -7445,7 +7445,7 @@ def writeABQsectionfile(filepath,name,surface,axes,frequency,update,data,comment
 def writeABQsectionorigin(filepath,origin,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SECTION ORIGIN';
+        line = '*SECTION ORIGIN'
         if 'none'!=origin and 'NONE'!=origin and 'None'!=origin:
             line += ', ORIGIN=' + origin
         abq.write(line + '\n')
@@ -7457,7 +7457,7 @@ def writeABQsectionorigin(filepath,origin,data,comment):
 def writeABQsectionpoints(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SECTION POINTS';
+        line = '*SECTION POINTS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -7467,7 +7467,7 @@ def writeABQsectionpoints(filepath,data,comment):
 def writeABQsectionprint(filepath,name,surface,axes,frequency,update,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SECTION PRINT';
+        line = '*SECTION PRINT'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
@@ -7487,7 +7487,7 @@ def writeABQsectionprint(filepath,name,surface,axes,frequency,update,data,commen
 def writeABQselectcyclicsymmetrymodes(filepath,even,nmin,nmax,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SELECT CYCLIC SYMMETRY MODES';
+        line = '*SELECT CYCLIC SYMMETRY MODES'
         if 'none'!=even and 'NONE'!=even and 'None'!=even:
             line += ', EVEN=' + even
         if 'none'!=nmin and 'NONE'!=nmin and 'None'!=nmin:
@@ -7503,7 +7503,7 @@ def writeABQselectcyclicsymmetrymodes(filepath,even,nmin,nmax,data,comment):
 def writeABQselecteigenmodes(filepath,definition,generate,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SELECT EIGENMODES';
+        line = '*SELECT EIGENMODES'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=generate and 'NONE'!=generate and 'None'!=generate:
@@ -7517,7 +7517,7 @@ def writeABQselecteigenmodes(filepath,definition,generate,data,comment):
 def writeABQsfilm(filepath,amplitude,filmamplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SFILM';
+        line = '*SFILM'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=filmamplitude and 'NONE'!=filmamplitude and 'None'!=filmamplitude:
@@ -7533,7 +7533,7 @@ def writeABQsfilm(filepath,amplitude,filmamplitude,op,data,comment):
 def writeABQsflow(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SFLOW';
+        line = '*SFLOW'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -7547,7 +7547,7 @@ def writeABQsflow(filepath,amplitude,op,data,comment):
 def writeABQshearcenter(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHEAR CENTER';
+        line = '*SHEAR CENTER'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -7557,7 +7557,7 @@ def writeABQshearcenter(filepath,data,comment):
 def writeABQshearfailure(filepath,dependencies,elementdeletion,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHEAR FAILURE';
+        line = '*SHEAR FAILURE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elementdeletion and 'NONE'!=elementdeletion and 'None'!=elementdeletion:
@@ -7573,7 +7573,7 @@ def writeABQshearfailure(filepath,dependencies,elementdeletion,type,data,comment
 def writeABQshearretention(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHEAR RETENTION';
+        line = '*SHEAR RETENTION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -7585,7 +7585,7 @@ def writeABQshearretention(filepath,dependencies,data,comment):
 def writeABQsheartestdata(filepath,shrinf,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHEAR TEST DATA';
+        line = '*SHEAR TEST DATA'
         if 'none'!=shrinf and 'NONE'!=shrinf and 'None'!=shrinf:
             line += ', SHRINF=' + shrinf
         abq.write(line + '\n')
@@ -7597,7 +7597,7 @@ def writeABQsheartestdata(filepath,shrinf,data,comment):
 def writeABQshellgeneralsection(filepath,elset,density,bendingonly,controls,layup,membraneonly,offset,orientation,poisson,smearalllayers,stackdirection,symmetric,thicknessmodulus,zero,composite,material,user,nodalthickness,shellthickness,iproperties,properties,unsymm,variables,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHELL GENERAL SECTION';
+        line = '*SHELL GENERAL SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=density and 'NONE'!=density and 'None'!=density:
@@ -7655,7 +7655,7 @@ def writeABQshellgeneralsection(filepath,elset,density,bendingonly,controls,layu
 def writeABQshellsection(filepath,elset,composite,material,controls,density,layup,nodalthickness,offset,orientation,poisson,sectionintegration,shellthickness,stackdirection,symmetric,temperature,thicknessmodulus,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHELL SECTION';
+        line = '*SHELL SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=composite and 'NONE'!=composite and 'None'!=composite:
@@ -7697,7 +7697,7 @@ def writeABQshellsection(filepath,elset,composite,material,controls,density,layu
 def writeABQshelltosolidcoupling(filepath,constraintname,influencedistance,positiontolerance,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SHELL TO SOLID COUPLING';
+        line = '*SHELL TO SOLID COUPLING'
         if 'none'!=constraintname and 'NONE'!=constraintname and 'None'!=constraintname:
             line += ', CONSTRAINT NAME=' + constraintname
         if 'none'!=influencedistance and 'NONE'!=influencedistance and 'None'!=influencedistance:
@@ -7713,7 +7713,7 @@ def writeABQshelltosolidcoupling(filepath,constraintname,influencedistance,posit
 def writeABQsimpedance(filepath,property,nonreflecting,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SIMPEDANCE';
+        line = '*SIMPEDANCE'
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
             line += ', PROPERTY=' + property
         if 'none'!=nonreflecting and 'NONE'!=nonreflecting and 'None'!=nonreflecting:
@@ -7729,7 +7729,7 @@ def writeABQsimpedance(filepath,property,nonreflecting,op,data,comment):
 def writeABQsimplesheartestdata(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SIMPLE SHEAR TEST DATA';
+        line = '*SIMPLE SHEAR TEST DATA'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -7739,7 +7739,7 @@ def writeABQsimplesheartestdata(filepath,data,comment):
 def writeABQslideline(filepath,elset,type,extensionzone,generate,smooth,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SLIDE LINE';
+        line = '*SLIDE LINE'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -7759,7 +7759,7 @@ def writeABQslideline(filepath,elset,type,extensionzone,generate,smooth,data,com
 def writeABQsload(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SLOAD';
+        line = '*SLOAD'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -7773,7 +7773,7 @@ def writeABQsload(filepath,amplitude,op,data,comment):
 def writeABQsofteningregularization(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SOFTENING REGULARIZATION';
+        line = '*SOFTENING REGULARIZATION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -7787,7 +7787,7 @@ def writeABQsofteningregularization(filepath,dependencies,type,data,comment):
 def writeABQsoils(filepath,allsdtol,cetol,consolidation,continue,deltmx,end,creep,factor,heat,stabilize,utol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SOILS';
+        line = '*SOILS'
         if 'none'!=allsdtol and 'NONE'!=allsdtol and 'None'!=allsdtol:
             line += ', ALLSDTOL=' + allsdtol
         if 'none'!=cetol and 'NONE'!=cetol and 'None'!=cetol:
@@ -7819,7 +7819,7 @@ def writeABQsoils(filepath,allsdtol,cetol,consolidation,continue,deltmx,end,cree
 def writeABQsolidsection(filepath,composite,elset,material,refnode,orientation,controls,layup,order,stackdirection,symmetric,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SOLID SECTION';
+        line = '*SOLID SECTION'
         if 'none'!=composite and 'NONE'!=composite and 'None'!=composite:
             line += ', COMPOSITE=' + composite
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -7849,7 +7849,7 @@ def writeABQsolidsection(filepath,composite,elset,material,refnode,orientation,c
 def writeABQsolubility(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SOLUBILITY';
+        line = '*SOLUBILITY'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -7861,7 +7861,7 @@ def writeABQsolubility(filepath,dependencies,data,comment):
 def writeABQsolutiontechnique(filepath,type,reformkernel,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SOLUTION TECHNIQUE';
+        line = '*SOLUTION TECHNIQUE'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=reformkernel and 'NONE'!=reformkernel and 'None'!=reformkernel:
@@ -7875,7 +7875,7 @@ def writeABQsolutiontechnique(filepath,type,reformkernel,data,comment):
 def writeABQsolvercontrols(filepath,constraintoptimization,reset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SOLVER CONTROLS';
+        line = '*SOLVER CONTROLS'
         if 'none'!=constraintoptimization and 'NONE'!=constraintoptimization and 'None'!=constraintoptimization:
             line += ', CONSTRAINT OPTIMIZATION=' + constraintoptimization
         if 'none'!=reset and 'NONE'!=reset and 'None'!=reset:
@@ -7889,7 +7889,7 @@ def writeABQsolvercontrols(filepath,constraintoptimization,reset,data,comment):
 def writeABQsorption(filepath,law,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SORPTION';
+        line = '*SORPTION'
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
             line += ', LAW=' + law
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -7903,7 +7903,7 @@ def writeABQsorption(filepath,law,type,data,comment):
 def writeABQspecificheat(filepath,dependencies,porefluid,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SPECIFIC HEAT';
+        line = '*SPECIFIC HEAT'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=porefluid and 'NONE'!=porefluid and 'None'!=porefluid:
@@ -7919,7 +7919,7 @@ def writeABQspecificheat(filepath,dependencies,porefluid,type,data,comment):
 def writeABQspectrum(filepath,name,g,input,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SPECTRUM';
+        line = '*SPECTRUM'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=g and 'NONE'!=g and 'None'!=g:
@@ -7937,7 +7937,7 @@ def writeABQspectrum(filepath,name,g,input,type,data,comment):
 def writeABQsphsurfacebehavior(filepath,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SPH SURFACE BEHAVIOR';
+        line = '*SPH SURFACE BEHAVIOR'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         abq.write(line + '\n')
@@ -7949,7 +7949,7 @@ def writeABQsphsurfacebehavior(filepath,type,data,comment):
 def writeABQspring(filepath,elset,complexstiffness,dependencies,nonlinear,orientation,rtol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SPRING';
+        line = '*SPRING'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=complexstiffness and 'NONE'!=complexstiffness and 'None'!=complexstiffness:
@@ -7971,7 +7971,7 @@ def writeABQspring(filepath,elset,complexstiffness,dependencies,nonlinear,orient
 def writeABQsradiate(filepath,amplitude,op,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SRADIATE';
+        line = '*SRADIATE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=op and 'NONE'!=op and 'None'!=op:
@@ -7985,7 +7985,7 @@ def writeABQsradiate(filepath,amplitude,op,data,comment):
 def writeABQstatic(filepath,adiabatic,allsdtol,continue,direct,factor,fullyplastic,longterm,riks,stabilize,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*STATIC';
+        line = '*STATIC'
         if 'none'!=adiabatic and 'NONE'!=adiabatic and 'None'!=adiabatic:
             line += ', ADIABATIC=' + adiabatic
         if 'none'!=allsdtol and 'NONE'!=allsdtol and 'None'!=allsdtol:
@@ -8013,7 +8013,7 @@ def writeABQstatic(filepath,adiabatic,allsdtol,continue,direct,factor,fullyplast
 def writeABQsteadystatecriteria(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*STEADY STATE CRITERIA';
+        line = '*STEADY STATE CRITERIA'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -8023,7 +8023,7 @@ def writeABQsteadystatecriteria(filepath,data,comment):
 def writeABQsteadystatedetection(filepath,elset,sampling,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*STEADY STATE DETECTION';
+        line = '*STEADY STATE DETECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=sampling and 'NONE'!=sampling and 'None'!=sampling:
@@ -8037,7 +8037,7 @@ def writeABQsteadystatedetection(filepath,elset,sampling,data,comment):
 def writeABQsteadystatedynamics(filepath,direct,subspaceprojection,dampingchange,frequencyscale,frictiondamping,interval,realonly,stiffnesschange,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*STEADY STATE DYNAMICS';
+        line = '*STEADY STATE DYNAMICS'
         if 'none'!=direct and 'NONE'!=direct and 'None'!=direct:
             line += ', DIRECT=' + direct
         if 'none'!=subspaceprojection and 'NONE'!=subspaceprojection and 'None'!=subspaceprojection:
@@ -8063,7 +8063,7 @@ def writeABQsteadystatedynamics(filepath,direct,subspaceprojection,dampingchange
 def writeABQsteadystatetransport(filepath,allsdtol,continue,direct,elset,factor,inertia,longterm,mullins,passbypass,stabilize,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*STEADY STATE TRANSPORT';
+        line = '*STEADY STATE TRANSPORT'
         if 'none'!=allsdtol and 'NONE'!=allsdtol and 'None'!=allsdtol:
             line += ', ALLSDTOL=' + allsdtol
         if 'none'!=continue and 'NONE'!=continue and 'None'!=continue:
@@ -8093,7 +8093,7 @@ def writeABQsteadystatetransport(filepath,allsdtol,continue,direct,elset,factor,
 def writeABQstep(filepath,amplitude,convertsdi,dsa,extrapolation,inc,name,nlgeom,perturbation,solver,unsymm,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*STEP';
+        line = '*STEP'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=convertsdi and 'NONE'!=convertsdi and 'None'!=convertsdi:
@@ -8123,7 +8123,7 @@ def writeABQstep(filepath,amplitude,convertsdi,dsa,extrapolation,inc,name,nlgeom
 def writeABQsubcycling(filepath,elset,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBCYCLING';
+        line = '*SUBCYCLING'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         abq.write(line + '\n')
@@ -8135,7 +8135,7 @@ def writeABQsubcycling(filepath,elset,data,comment):
 def writeABQsubmodel(filepath,acoustictostructure,shelltosolid,shellthickness,absoluteexteriortolerance,exteriortolerance,globalelset,intersectiononly,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBMODEL';
+        line = '*SUBMODEL'
         if 'none'!=acoustictostructure and 'NONE'!=acoustictostructure and 'None'!=acoustictostructure:
             line += ', ACOUSTIC TO STRUCTURE=' + acoustictostructure
         if 'none'!=shelltosolid and 'NONE'!=shelltosolid and 'None'!=shelltosolid:
@@ -8161,7 +8161,7 @@ def writeABQsubmodel(filepath,acoustictostructure,shelltosolid,shellthickness,ab
 def writeABQsubstructurecopy(filepath,newtype,oldtype,newlibrary,oldlibrary,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE COPY';
+        line = '*SUBSTRUCTURE COPY'
         if 'none'!=newtype and 'NONE'!=newtype and 'None'!=newtype:
             line += ', NEW TYPE=' + newtype
         if 'none'!=oldtype and 'NONE'!=oldtype and 'None'!=oldtype:
@@ -8179,7 +8179,7 @@ def writeABQsubstructurecopy(filepath,newtype,oldtype,newlibrary,oldlibrary,data
 def writeABQsubstructuredamping(filepath,alpha,beta,structural,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE DAMPING';
+        line = '*SUBSTRUCTURE DAMPING'
         if 'none'!=alpha and 'NONE'!=alpha and 'None'!=alpha:
             line += ', ALPHA=' + alpha
         if 'none'!=beta and 'NONE'!=beta and 'None'!=beta:
@@ -8195,7 +8195,7 @@ def writeABQsubstructuredamping(filepath,alpha,beta,structural,data,comment):
 def writeABQsubstructuredampingcontrols(filepath,structural,viscous,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE DAMPING CONTROLS';
+        line = '*SUBSTRUCTURE DAMPING CONTROLS'
         if 'none'!=structural and 'NONE'!=structural and 'None'!=structural:
             line += ', STRUCTURAL=' + structural
         if 'none'!=viscous and 'NONE'!=viscous and 'None'!=viscous:
@@ -8209,7 +8209,7 @@ def writeABQsubstructuredampingcontrols(filepath,structural,viscous,data,comment
 def writeABQsubstructuredelete(filepath,type,library,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE DELETE';
+        line = '*SUBSTRUCTURE DELETE'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=library and 'NONE'!=library and 'None'!=library:
@@ -8223,7 +8223,7 @@ def writeABQsubstructuredelete(filepath,type,library,data,comment):
 def writeABQsubstructuredirectory(filepath,library,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE DIRECTORY';
+        line = '*SUBSTRUCTURE DIRECTORY'
         if 'none'!=library and 'NONE'!=library and 'None'!=library:
             line += ', LIBRARY=' + library
         abq.write(line + '\n')
@@ -8235,7 +8235,7 @@ def writeABQsubstructuredirectory(filepath,library,data,comment):
 def writeABQsubstructuregenerate(filepath,type,eigenproblem,elset,gravityload,library,massmatrix,nset,overwrite,propertyevaluation,recoverymatrix,structuraldampingmatrix,viscousdampingmatrix,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE GENERATE';
+        line = '*SUBSTRUCTURE GENERATE'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=eigenproblem and 'NONE'!=eigenproblem and 'None'!=eigenproblem:
@@ -8269,7 +8269,7 @@ def writeABQsubstructuregenerate(filepath,type,eigenproblem,elset,gravityload,li
 def writeABQsubstructureloadcase(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE LOAD CASE';
+        line = '*SUBSTRUCTURE LOAD CASE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -8281,7 +8281,7 @@ def writeABQsubstructureloadcase(filepath,name,data,comment):
 def writeABQsubstructurematrixoutput(filepath,filename,gravityload,mass,outputfile,recoverymatrix,sload,stiffness,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE MATRIX OUTPUT';
+        line = '*SUBSTRUCTURE MATRIX OUTPUT'
         if 'none'!=filename and 'NONE'!=filename and 'None'!=filename:
             line += ', FILE NAME=' + filename
         if 'none'!=gravityload and 'NONE'!=gravityload and 'None'!=gravityload:
@@ -8305,7 +8305,7 @@ def writeABQsubstructurematrixoutput(filepath,filename,gravityload,mass,outputfi
 def writeABQsubstructuremodaldamping(filepath,structural,viscous,definition,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE MODAL DAMPING';
+        line = '*SUBSTRUCTURE MODAL DAMPING'
         if 'none'!=structural and 'NONE'!=structural and 'None'!=structural:
             line += ', STRUCTURAL=' + structural
         if 'none'!=viscous and 'NONE'!=viscous and 'None'!=viscous:
@@ -8321,7 +8321,7 @@ def writeABQsubstructuremodaldamping(filepath,structural,viscous,definition,data
 def writeABQsubstructurepath(filepath,enterelement,leave,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE PATH';
+        line = '*SUBSTRUCTURE PATH'
         if 'none'!=enterelement and 'NONE'!=enterelement and 'None'!=enterelement:
             line += ', ENTER ELEMENT=' + enterelement
         if 'none'!=leave and 'NONE'!=leave and 'None'!=leave:
@@ -8335,7 +8335,7 @@ def writeABQsubstructurepath(filepath,enterelement,leave,data,comment):
 def writeABQsubstructureproperty(filepath,elset,positiontol,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SUBSTRUCTURE PROPERTY';
+        line = '*SUBSTRUCTURE PROPERTY'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=positiontol and 'NONE'!=positiontol and 'None'!=positiontol:
@@ -8349,7 +8349,7 @@ def writeABQsubstructureproperty(filepath,elset,positiontol,data,comment):
 def writeABQsurface(filepath,name,property,combine,crop,definition,filletradius,internal,regiontype,trim,type,maxratio,nooffset,nothick,scalethick,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE';
+        line = '*SURFACE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
@@ -8387,7 +8387,7 @@ def writeABQsurface(filepath,name,property,combine,crop,definition,filletradius,
 def writeABQsurfacebehavior(filepath,augmentedlagrange,direct,penalty,noseparation,pressure-overclosure,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE BEHAVIOR';
+        line = '*SURFACE BEHAVIOR'
         if 'none'!=augmentedlagrange and 'NONE'!=augmentedlagrange and 'None'!=augmentedlagrange:
             line += ', AUGMENTED LAGRANGE=' + augmentedlagrange
         if 'none'!=direct and 'NONE'!=direct and 'None'!=direct:
@@ -8407,7 +8407,7 @@ def writeABQsurfacebehavior(filepath,augmentedlagrange,direct,penalty,noseparati
 def writeABQsurfaceflaw(filepath,side,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE FLAW';
+        line = '*SURFACE FLAW'
         if 'none'!=side and 'NONE'!=side and 'None'!=side:
             line += ', SIDE=' + side
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -8421,7 +8421,7 @@ def writeABQsurfaceflaw(filepath,side,input,data,comment):
 def writeABQsurfaceinteraction(filepath,name,depvar,padthickness,properties,trackingthickness,unsymm,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE INTERACTION';
+        line = '*SURFACE INTERACTION'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=depvar and 'NONE'!=depvar and 'None'!=depvar:
@@ -8445,7 +8445,7 @@ def writeABQsurfaceinteraction(filepath,name,depvar,padthickness,properties,trac
 def writeABQsurfaceoutput(filepath,surface,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE OUTPUT';
+        line = '*SURFACE OUTPUT'
         if 'none'!=surface and 'NONE'!=surface and 'None'!=surface:
             line += ', SURFACE=' + surface
         abq.write(line + '\n')
@@ -8457,7 +8457,7 @@ def writeABQsurfaceoutput(filepath,surface,data,comment):
 def writeABQsurfaceproperty(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE PROPERTY';
+        line = '*SURFACE PROPERTY'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -8469,7 +8469,7 @@ def writeABQsurfaceproperty(filepath,name,data,comment):
 def writeABQsurfacepropertyassignment(filepath,property,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE PROPERTY ASSIGNMENT';
+        line = '*SURFACE PROPERTY ASSIGNMENT'
         if 'none'!=property and 'NONE'!=property and 'None'!=property:
             line += ', PROPERTY=' + property
         abq.write(line + '\n')
@@ -8481,7 +8481,7 @@ def writeABQsurfacepropertyassignment(filepath,property,data,comment):
 def writeABQsurfacesection(filepath,elset,aquavisualization,density,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE SECTION';
+        line = '*SURFACE SECTION'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=aquavisualization and 'NONE'!=aquavisualization and 'None'!=aquavisualization:
@@ -8497,7 +8497,7 @@ def writeABQsurfacesection(filepath,elset,aquavisualization,density,data,comment
 def writeABQsurfacesmoothing(filepath,name,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SURFACE SMOOTHING';
+        line = '*SURFACE SMOOTHING'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         abq.write(line + '\n')
@@ -8509,7 +8509,7 @@ def writeABQsurfacesmoothing(filepath,name,data,comment):
 def writeABQswelling(filepath,dependencies,law,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SWELLING';
+        line = '*SWELLING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
@@ -8523,7 +8523,7 @@ def writeABQswelling(filepath,dependencies,law,data,comment):
 def writeABQsymmetricmodelgeneration(filepath,periodic,reflect,revolve,elementoffset,filename,nodeoffset,tolerance,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SYMMETRIC MODEL GENERATION';
+        line = '*SYMMETRIC MODEL GENERATION'
         if 'none'!=periodic and 'NONE'!=periodic and 'None'!=periodic:
             line += ', PERIODIC=' + periodic
         if 'none'!=reflect and 'NONE'!=reflect and 'None'!=reflect:
@@ -8547,7 +8547,7 @@ def writeABQsymmetricmodelgeneration(filepath,periodic,reflect,revolve,elementof
 def writeABQsymmetricresultstransfer(filepath,step,inc,iteration,unbalancedstress,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SYMMETRIC RESULTS TRANSFER';
+        line = '*SYMMETRIC RESULTS TRANSFER'
         if 'none'!=step and 'NONE'!=step and 'None'!=step:
             line += ', STEP=' + step
         if 'none'!=inc and 'NONE'!=inc and 'None'!=inc:
@@ -8565,7 +8565,7 @@ def writeABQsymmetricresultstransfer(filepath,step,inc,iteration,unbalancedstres
 def writeABQsystem(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*SYSTEM';
+        line = '*SYSTEM'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -8575,7 +8575,7 @@ def writeABQsystem(filepath,data,comment):
 def writeABQtemperature(filepath,amplitude,input,op,file,absoluteexteriortolerance,exteriortolerance,bstep,binc,estep,einc,btramp,drivingelsets,interpolate,midside,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TEMPERATURE';
+        line = '*TEMPERATURE'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
@@ -8615,7 +8615,7 @@ def writeABQtemperature(filepath,amplitude,input,op,file,absoluteexteriortoleran
 def writeABQtensilefailure(filepath,dependencies,elementdeletion,pressure,shear,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TENSILE FAILURE';
+        line = '*TENSILE FAILURE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elementdeletion and 'NONE'!=elementdeletion and 'None'!=elementdeletion:
@@ -8633,7 +8633,7 @@ def writeABQtensilefailure(filepath,dependencies,elementdeletion,pressure,shear,
 def writeABQtensioncutoff(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TENSION CUTOFF';
+        line = '*TENSION CUTOFF'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -8645,7 +8645,7 @@ def writeABQtensioncutoff(filepath,dependencies,data,comment):
 def writeABQtensionstiffening(filepath,dependencies,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TENSION STIFFENING';
+        line = '*TENSION STIFFENING'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -8659,7 +8659,7 @@ def writeABQtensionstiffening(filepath,dependencies,type,data,comment):
 def writeABQthermalexpansion(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*THERMAL EXPANSION';
+        line = '*THERMAL EXPANSION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -8671,7 +8671,7 @@ def writeABQthermalexpansion(filepath,dependencies,data,comment):
 def writeABQtie(filepath,name,positiontolerance,tiednset,adjust,constraintratio,cyclicsymmetry,norotation,nothickness,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TIE';
+        line = '*TIE'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=positiontolerance and 'NONE'!=positiontolerance and 'None'!=positiontolerance:
@@ -8699,7 +8699,7 @@ def writeABQtie(filepath,name,positiontolerance,tiednset,adjust,constraintratio,
 def writeABQtimepoints(filepath,name,generate,input,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TIME POINTS';
+        line = '*TIME POINTS'
         if 'none'!=name and 'NONE'!=name and 'None'!=name:
             line += ', NAME=' + name
         if 'none'!=generate and 'NONE'!=generate and 'None'!=generate:
@@ -8715,7 +8715,7 @@ def writeABQtimepoints(filepath,name,generate,input,data,comment):
 def writeABQtorque(filepath,dependencies,elastic,linear,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TORQUE';
+        line = '*TORQUE'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=elastic and 'NONE'!=elastic and 'None'!=elastic:
@@ -8731,7 +8731,7 @@ def writeABQtorque(filepath,dependencies,elastic,linear,data,comment):
 def writeABQtorqueprint(filepath,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TORQUE PRINT';
+        line = '*TORQUE PRINT'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         abq.write(line + '\n')
@@ -8743,7 +8743,7 @@ def writeABQtorqueprint(filepath,frequency,data,comment):
 def writeABQtracerparticle(filepath,tracerset,particlebirthstages,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRACER PARTICLE';
+        line = '*TRACER PARTICLE'
         if 'none'!=tracerset and 'NONE'!=tracerset and 'None'!=tracerset:
             line += ', TRACER SET=' + tracerset
         if 'none'!=particlebirthstages and 'NONE'!=particlebirthstages and 'None'!=particlebirthstages:
@@ -8757,7 +8757,7 @@ def writeABQtracerparticle(filepath,tracerset,particlebirthstages,data,comment):
 def writeABQtransform(filepath,nset,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRANSFORM';
+        line = '*TRANSFORM'
         if 'none'!=nset and 'NONE'!=nset and 'None'!=nset:
             line += ', NSET=' + nset
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -8771,7 +8771,7 @@ def writeABQtransform(filepath,nset,type,data,comment):
 def writeABQtransportequationsolver(filepath,convergence,diagnostics,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRANSPORT EQUATION SOLVER';
+        line = '*TRANSPORT EQUATION SOLVER'
         if 'none'!=convergence and 'NONE'!=convergence and 'None'!=convergence:
             line += ', CONVERGENCE=' + convergence
         if 'none'!=diagnostics and 'NONE'!=diagnostics and 'None'!=diagnostics:
@@ -8787,7 +8787,7 @@ def writeABQtransportequationsolver(filepath,convergence,diagnostics,type,data,c
 def writeABQtransportvelocity(filepath,amplitude,user,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRANSPORT VELOCITY';
+        line = '*TRANSPORT VELOCITY'
         if 'none'!=amplitude and 'NONE'!=amplitude and 'None'!=amplitude:
             line += ', AMPLITUDE=' + amplitude
         if 'none'!=user and 'NONE'!=user and 'None'!=user:
@@ -8801,7 +8801,7 @@ def writeABQtransportvelocity(filepath,amplitude,user,data,comment):
 def writeABQtransverseshearstiffness(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRANSVERSE SHEAR STIFFNESS';
+        line = '*TRANSVERSE SHEAR STIFFNESS'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -8811,7 +8811,7 @@ def writeABQtransverseshearstiffness(filepath,data,comment):
 def writeABQtriaxialtestdata(filepath,a,b,pt,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRIAXIAL TEST DATA';
+        line = '*TRIAXIAL TEST DATA'
         if 'none'!=a and 'NONE'!=a and 'None'!=a:
             line += ', A=' + a
         if 'none'!=b and 'NONE'!=b and 'None'!=b:
@@ -8827,7 +8827,7 @@ def writeABQtriaxialtestdata(filepath,a,b,pt,data,comment):
 def writeABQtrs(filepath,definition,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TRS';
+        line = '*TRS'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=properties and 'NONE'!=properties and 'None'!=properties:
@@ -8841,7 +8841,7 @@ def writeABQtrs(filepath,definition,properties,data,comment):
 def writeABQturbulencemodel(filepath,type,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*TURBULENCE MODEL';
+        line = '*TURBULENCE MODEL'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         abq.write(line + '\n')
@@ -8853,7 +8853,7 @@ def writeABQturbulencemodel(filepath,type,data,comment):
 def writeABQuelproperty(filepath,elset,material,orientation,alpha,beta,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*UEL PROPERTY';
+        line = '*UEL PROPERTY'
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
             line += ', ELSET=' + elset
         if 'none'!=material and 'NONE'!=material and 'None'!=material:
@@ -8873,7 +8873,7 @@ def writeABQuelproperty(filepath,elset,material,orientation,alpha,beta,data,comm
 def writeABQundexchargeproperty(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*UNDEX CHARGE PROPERTY';
+        line = '*UNDEX CHARGE PROPERTY'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -8883,7 +8883,7 @@ def writeABQundexchargeproperty(filepath,data,comment):
 def writeABQuniaxial(filepath,component,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*UNIAXIAL';
+        line = '*UNIAXIAL'
         if 'none'!=component and 'NONE'!=component and 'None'!=component:
             line += ', COMPONENT=' + component
         abq.write(line + '\n')
@@ -8895,7 +8895,7 @@ def writeABQuniaxial(filepath,component,data,comment):
 def writeABQuniaxialtestdata(filepath,smooth,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*UNIAXIAL TEST DATA';
+        line = '*UNIAXIAL TEST DATA'
         if 'none'!=smooth and 'NONE'!=smooth and 'None'!=smooth:
             line += ', SMOOTH=' + smooth
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -8909,7 +8909,7 @@ def writeABQuniaxialtestdata(filepath,smooth,dependencies,data,comment):
 def writeABQunloadingdata(filepath,definition,ratedependent,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*UNLOADING DATA';
+        line = '*UNLOADING DATA'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=ratedependent and 'NONE'!=ratedependent and 'None'!=ratedependent:
@@ -8923,7 +8923,7 @@ def writeABQunloadingdata(filepath,definition,ratedependent,data,comment):
 def writeABQuserdefinedfield(filepath,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*USER DEFINED FIELD';
+        line = '*USER DEFINED FIELD'
         if 'none'!=properties and 'NONE'!=properties and 'None'!=properties:
             line += ', PROPERTIES=' + properties
         abq.write(line + '\n')
@@ -8935,7 +8935,7 @@ def writeABQuserdefinedfield(filepath,properties,data,comment):
 def writeABQuserelement(filepath,type,file,integration,tensor,oldelement,step,increment,linear,nodes,coordinates,unsymm,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*USER ELEMENT';
+        line = '*USER ELEMENT'
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
             line += ', TYPE=' + type
         if 'none'!=file and 'NONE'!=file and 'None'!=file:
@@ -8967,7 +8967,7 @@ def writeABQuserelement(filepath,type,file,integration,tensor,oldelement,step,in
 def writeABQusermaterial(filepath,constants,hybridformulation,type,unsymm,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*USER MATERIAL';
+        line = '*USER MATERIAL'
         if 'none'!=constants and 'NONE'!=constants and 'None'!=constants:
             line += ', CONSTANTS=' + constants
         if 'none'!=hybridformulation and 'NONE'!=hybridformulation and 'None'!=hybridformulation:
@@ -8985,7 +8985,7 @@ def writeABQusermaterial(filepath,constants,hybridformulation,type,unsymm,data,c
 def writeABQuseroutputvariables(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*USER OUTPUT VARIABLES';
+        line = '*USER OUTPUT VARIABLES'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:
@@ -8995,7 +8995,7 @@ def writeABQuseroutputvariables(filepath,data,comment):
 def writeABQvariablemassscaling(filepath,dt,elset,type,frequency,numberinterval,crosssectionnodes,extrudedlength,feedrate,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VARIABLE MASS SCALING';
+        line = '*VARIABLE MASS SCALING'
         if 'none'!=dt and 'NONE'!=dt and 'None'!=dt:
             line += ', DT=' + dt
         if 'none'!=elset and 'NONE'!=elset and 'None'!=elset:
@@ -9021,7 +9021,7 @@ def writeABQvariablemassscaling(filepath,dt,elset,type,frequency,numberinterval,
 def writeABQviewfactoroutput(filepath,cavity,frequency,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VIEW FACTOR OUTPUT';
+        line = '*VIEW FACTOR OUTPUT'
         if 'none'!=cavity and 'NONE'!=cavity and 'None'!=cavity:
             line += ', CAVITY=' + cavity
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
@@ -9035,7 +9035,7 @@ def writeABQviewfactoroutput(filepath,cavity,frequency,data,comment):
 def writeABQvisco(filepath,allsdtol,cetol,continue,creep,factor,stabilize,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VISCO';
+        line = '*VISCO'
         if 'none'!=allsdtol and 'NONE'!=allsdtol and 'None'!=allsdtol:
             line += ', ALLSDTOL=' + allsdtol
         if 'none'!=cetol and 'NONE'!=cetol and 'None'!=cetol:
@@ -9057,7 +9057,7 @@ def writeABQvisco(filepath,allsdtol,cetol,continue,creep,factor,stabilize,data,c
 def writeABQviscoelastic(filepath,frequency,nonlinear,time,law,networkid,sratio,dependencies,preload,properties,type,errtol,nmax,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VISCOELASTIC';
+        line = '*VISCOELASTIC'
         if 'none'!=frequency and 'NONE'!=frequency and 'None'!=frequency:
             line += ', FREQUENCY=' + frequency
         if 'none'!=nonlinear and 'NONE'!=nonlinear and 'None'!=nonlinear:
@@ -9091,7 +9091,7 @@ def writeABQviscoelastic(filepath,frequency,nonlinear,time,law,networkid,sratio,
 def writeABQviscosity(filepath,definition,dependencies,properties,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VISCOSITY';
+        line = '*VISCOSITY'
         if 'none'!=definition and 'NONE'!=definition and 'None'!=definition:
             line += ', DEFINITION=' + definition
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -9107,7 +9107,7 @@ def writeABQviscosity(filepath,definition,dependencies,properties,data,comment):
 def writeABQviscous(filepath,dependencies,law,time,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VISCOUS';
+        line = '*VISCOUS'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         if 'none'!=law and 'NONE'!=law and 'None'!=law:
@@ -9123,7 +9123,7 @@ def writeABQviscous(filepath,dependencies,law,time,data,comment):
 def writeABQvoidnucleation(filepath,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VOID NUCLEATION';
+        line = '*VOID NUCLEATION'
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
             line += ', DEPENDENCIES=' + dependencies
         abq.write(line + '\n')
@@ -9135,7 +9135,7 @@ def writeABQvoidnucleation(filepath,dependencies,data,comment):
 def writeABQvolumetrictestdata(filepath,smooth,dependencies,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*VOLUMETRIC TEST DATA';
+        line = '*VOLUMETRIC TEST DATA'
         if 'none'!=smooth and 'NONE'!=smooth and 'None'!=smooth:
             line += ', SMOOTH=' + smooth
         if 'none'!=dependencies and 'NONE'!=dependencies and 'None'!=dependencies:
@@ -9149,7 +9149,7 @@ def writeABQvolumetrictestdata(filepath,smooth,dependencies,data,comment):
 def writeABQwave(filepath,input,type,waveperiod,datafile,minimum,quadratic,stochastic,properties,depvar,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*WAVE';
+        line = '*WAVE'
         if 'none'!=input and 'NONE'!=input and 'None'!=input:
             line += ', INPUT=' + input
         if 'none'!=type and 'NONE'!=type and 'None'!=type:
@@ -9177,7 +9177,7 @@ def writeABQwave(filepath,input,type,waveperiod,datafile,minimum,quadratic,stoch
 def writeABQwind(filepath,data,comment):
     with open(filepath,'a') as abq:
         abq.write('**' + '\n')
-        line = '*WIND';
+        line = '*WIND'
         abq.write(line + '\n')
         abq.write('** ' + str(comment) + '\n')
         for item in data:

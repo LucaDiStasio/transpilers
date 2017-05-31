@@ -35,7 +35,7 @@ from os import listdir
 from os.path import isfile, join
 from BeautifulSoup import BeautifulSoup
 
-targetLang = 'python'
+targetLang = 'cpp'
 
 #sourceFolder = 'C:/Simulia/Documentation/docs/v6.12/books/key'
 sourceFolder = 'C:/Simulia/Documentation/docs/v2016/books/key'
@@ -285,24 +285,30 @@ elif targetLang=='cpp':
             file.write(line)
             file.write('    ofstream abq;' + '\n')
             file.write('    abq.open(filepath, ios::out, ios::app);' + '\n')
-            file.write('        abq.write(\'**\' + \'\\n\')' + '\n')
+            file.write('    abq << "**\\n"' + ';\n')
             line = ''
-            line = '        line = \'*' + keyword + '\';\n'
+            line = '    string line = "*' + keyword + '";\n'
             file.write(line)
             for parameter in parametersDict[keyword]:
                 line = ''
-                line = '        if \'none\'!=' + parameter.lower().replace(' ','') +  ' and \'NONE\'!=' + parameter.lower().replace(' ','') +  ' and \'None\'!=' + parameter.lower().replace(' ','') +  ':\n'
+                line = '    if("none"!=' + parameter.lower().replace(' ','') +  ' && "NONE"!=' + parameter.lower().replace(' ','') +  ' && "None"!=' + parameter.lower().replace(' ','') +  '){\n'
                 file.write(line)
                 line = ''
-                line = '            line += \', ' + parameter + '=\' + ' + parameter.lower().replace(' ','') + '\n'
+                line = '        line += ", ' + parameter + '=" + ' + parameter.lower().replace(' ','') + ';\n'
                 file.write(line)
+                file.write('    }\n')
                 line = ''
-            file.write('        abq.write(line + \'\\n\')' + '\n')
-            file.write('        abq.write(\'** \' + str(comment) + \'\\n\')' + '\n')
-            file.write('        for item in data:\n')
-            file.write('            abq.write(str(item) + \'\\n\')' + '\n')
+            file.write('    abq << line + "\\n"' + ';\n')
+            file.write('    abq << "** " + comment + "\\n"' + ';\n')
+            file.write('    for(int i=0;i<data.size;i++){\n')
+            file.write('        abq << data[i] + "\\n"' + ';\n')
+            file.write('    }\n')
+            file.write('    abq.close();\n')
             file.write('}\n')
             file.write('\n')
+    with open(join(targetFolder,headerFileName),'a') as file:
+        file.write('}\n')
+        file.write('\n')
 # generate python files
 elif targetLang=='python':
     targetFolder = pythonFolder
@@ -355,7 +361,7 @@ elif targetLang=='python':
             file.write('    with open(filepath,\'a\') as abq:' + '\n')
             file.write('        abq.write(\'**\' + \'\\n\')' + '\n')
             line = ''
-            line = '        line = \'*' + keyword + '\';\n'
+            line = '        line = \'*' + keyword + '\'\n'
             file.write(line)
             for parameter in parametersDict[keyword]:
                 line = ''
