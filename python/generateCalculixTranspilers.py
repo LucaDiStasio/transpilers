@@ -134,10 +134,10 @@ if targetLang == 'matlab':
     targetFolder = matlabFolder
     #targetFiles = [f for f in listdir(targetFolder) if isfile(join(sourceFolder, f)) and '.m' in f]
     for keyword in keywords:
-        fileName = 'writeABQ' + keyword.lower().replace(' ','') + '.m'
+        fileName = 'writeCCX' + keyword.lower().replace(' ','') + '.m'
         with open(join(targetFolder,fileName),'w') as file:
             line = ''
-            line = 'function[]=writeABQ' + keyword.lower().replace(' ','') + '(filepath'
+            line = 'function[]=writeCCX' + keyword.lower().replace(' ','') + '(filepath'
             for parameter in parametersDict[keyword]:
                 line += ',' + parameter.lower().replace(' ','')
             line += ',data,comment)\n'
@@ -236,8 +236,8 @@ if targetLang == 'matlab':
 # generate cpp files
 elif targetLang=='cpp':
     targetFolder = cppFolder
-    headerFileName = 'writeABQinputFile' + '.h'
-    bodyFileName = 'writeABQinputFile' + '.cpp'
+    headerFileName = 'writeCCXinputFile' + '.h'
+    bodyFileName = 'writeCCXinputFile' + '.cpp'
     with open(join(targetFolder,headerFileName),'w') as file:
         file.write('/*\n')
         file.write('* =====================================================================================\n')
@@ -296,7 +296,7 @@ elif targetLang=='cpp':
         file.write('//===================================================\n')
         file.write('//==================  HEADER  =======================\n')
         file.write('//===================================================\n')
-        file.write('class writeABQinputFile {\n')
+        file.write('class writeCCXinputFile {\n')
         file.write('//===================================================\n')  
         file.write('//                  Variables\n')
         file.write('//===================================================\n')
@@ -308,29 +308,29 @@ elif targetLang=='cpp':
         file.write('public:\n')
         file.write('\n')  
         file.write('  // Constructor (default)\n')
-        file.write('  writeABQinputFile();\n')
+        file.write('  writeCCXinputFile();\n')
         file.write('\n')  
         file.write('  //Destructor\n')
-        file.write('  ~writeABQinputFile();\n')
+        file.write('  ~writeCCXinputFile();\n')
         file.write('\n')  
         file.write('  // Constructor (init input file path)\n')
-        file.write('  writeABQinputFile(string abqInputFile);\n')
+        file.write('  writeCCXinputFile(string abqInputFile);\n')
     with open(join(targetFolder,bodyFileName),'w') as file:
-        file.write('#include "writeABQinputFile.h"\n')
+        file.write('#include "writeCCXinputFile.h"\n')
         file.write('\n')
         file.write('//=====================  BODY  ==========================\n')
         file.write('\n')
-        file.write('writeABQinputFile::writeABQinputFile(){}\n')
+        file.write('writeCCXinputFile::writeCCXinputFile(){}\n')
         file.write('\n')
-        file.write('writeABQinputFile::writeABQinputFile(string abqInputFile){\n')
+        file.write('writeCCXinputFile::writeCCXinputFile(string abqInputFile){\n')
         file.write('    filepath = abqInputFile;\n')
         file.write('}\n')
         file.write('\n')
-        file.write('writeABQinputFile::~writeABQinputFile(){}\n')
+        file.write('writeCCXinputFile::~writeCCXinputFile(){}\n')
 # generate python files
 elif targetLang=='python':
     targetFolder = pythonFolder
-    fileName = 'writeABQinputFile' + '.py'
+    fileName = 'writeCCXinputFile' + '.py'
     with open(join(targetFolder,fileName),'w') as file:
         file.write('# -*- coding: utf-8 -*-\n')
         file.write('\n')
@@ -374,7 +374,7 @@ elif targetLang=='python':
         with open(join(targetFolder,fileName),'a') as file:
             file.write('\n')
             line = ''
-            line = 'def writeABQ' + keyword.lower().replace(' ','') + '(filepath'
+            line = 'def writeCCX' + keyword.lower().replace(' ','') + '(filepath'
             for parameter in parametersDict[keyword]:
                 line += ',' + parameter.lower().replace(' ','')
             line += ',data,comment):\n'
@@ -407,7 +407,7 @@ elif targetLang=='python':
 # generate javascript files
 elif targetLang=='javascript':
     targetFolder = jsFolder
-    fileName = 'writeABQinputFile' + '.js'
+    fileName = 'writeCCXinputFile' + '.js'
     with open(join(targetFolder,fileName),'w') as file:
         file.write('/*\n')
         file.write('* =====================================================================================\n')
@@ -436,7 +436,7 @@ elif targetLang=='javascript':
         with open(join(targetFolder,fileName),'a') as file:
             file.write('\n')
             line = ''
-            line = 'function writeABQ' + keyword.lower().replace(' ','') + '(filepath'
+            line = 'function writeCCX' + keyword.lower().replace(' ','') + '(filepath'
             for parameter in parametersDict[keyword]:
                 line += ',' + parameter.lower().replace(' ','')
             line += ',data,comment){\n'

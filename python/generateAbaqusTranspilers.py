@@ -246,7 +246,7 @@ elif targetLang=='cpp':
         file.write('  ~writeABQinputFile();\n')
         file.write('\n')  
         file.write('  // Constructor (init input file path)\n')
-        file.write('  writeABQinputFile(string abqInputFile);\n')
+        file.write('  writeABQinputFile(string);\n')
     with open(join(targetFolder,bodyFileName),'w') as file:
         file.write('#include "writeABQinputFile.h"\n')
         file.write('\n')
@@ -256,9 +256,53 @@ elif targetLang=='cpp':
         file.write('\n')
         file.write('writeABQinputFile::writeABQinputFile(string abqInputFile){\n')
         file.write('    filepath = abqInputFile;\n')
+        file.write('    ofstream abq;\n')
+        file.write('    abq.open(filepath, ios::out);\n')
+        file.write('    abq.close();\n')
         file.write('}\n')
         file.write('\n')
         file.write('writeABQinputFile::~writeABQinputFile(){}\n')
+    for keyword in keywords:
+        with open(join(targetFolder,headerFileName),'a') as file:
+            file.write('\n')
+            line = ''
+            line = '  void writeABQ' + keyword.lower().replace(' ','') + '('
+            for p,parameter in enumerate(parametersDict[keyword]):
+                if p>0:
+                    line += ','
+                line += ',' + 'string'
+            line += ',vector<string>,string);\n'
+            file.write(line)
+        with open(join(targetFolder,bodyFileName),'a') as file:
+            file.write('\n')
+            line = ''
+            line = 'void writeABQinputFile::writeABQ' + keyword.lower().replace(' ','') + '('
+            for p,parameter in enumerate(parametersDict[keyword]):
+                if p>0:
+                    line += ','
+                line += ',' + 'string ' + parameter.lower().replace(' ','')
+            line += ',vector<string> data,string comment){\n'
+            file.write(line)
+            file.write('    ofstream abq;' + '\n')
+            file.write('    abq.open(filepath, ios::out, ios::app);' + '\n')
+            file.write('        abq.write(\'**\' + \'\\n\')' + '\n')
+            line = ''
+            line = '        line = \'*' + keyword + '\';\n'
+            file.write(line)
+            for parameter in parametersDict[keyword]:
+                line = ''
+                line = '        if \'none\'!=' + parameter.lower().replace(' ','') +  ' and \'NONE\'!=' + parameter.lower().replace(' ','') +  ' and \'None\'!=' + parameter.lower().replace(' ','') +  ':\n'
+                file.write(line)
+                line = ''
+                line = '            line += \', ' + parameter + '=\' + ' + parameter.lower().replace(' ','') + '\n'
+                file.write(line)
+                line = ''
+            file.write('        abq.write(line + \'\\n\')' + '\n')
+            file.write('        abq.write(\'** \' + str(comment) + \'\\n\')' + '\n')
+            file.write('        for item in data:\n')
+            file.write('            abq.write(str(item) + \'\\n\')' + '\n')
+            file.write('}\n')
+            file.write('\n')
 # generate python files
 elif targetLang=='python':
     targetFolder = pythonFolder

@@ -33,3 +33,18 @@ Tested with Python 2.7 Anaconda 2.4.1 (64-bit) distribution
 
 from os import listdir
 from os.path import isfile, join
+from pdfminer.pdfparser import PDFParser
+from pdfminer.pdfdocument import PDFDocument
+
+sourceFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python'
+sourceFile = 'ANSYSMechanicalAPDLCommandReference'
+
+# Open a PDF document.
+fp = open(join(sourceFolder,sourceFile + '.pdf'), 'rb')
+parser = PDFParser(fp)
+document = PDFDocument(parser)
+
+# Get the outlines of the document.
+outlines = document.get_outlines()
+for (level,title,dest,a,se) in outlines:
+    print (level, title)
