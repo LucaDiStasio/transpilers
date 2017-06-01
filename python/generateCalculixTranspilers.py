@@ -88,9 +88,6 @@ main = mech.open(sourceLink)
 html = main.read()
 soup = BeautifulSoup(html)
 
-tot = 0.0
-found = 0.0
-
 for item in soup.body.ul.findAll('li'):
     if item.a.text.isupper():
         keyword = item.a.text.replace('*','').replace('\n','').replace(' ','').lower()
