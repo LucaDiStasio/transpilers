@@ -116,6 +116,9 @@ for item in soup.body.findAll("dl"):
       page = mech.open(fullLink)
       descr = page.read()
       commandSoup = BeautifulSoup(descr)
-      print(commandSoup)
+      params = commandSoup.body.find("i").text[1:]
+      descr = str(commandSoup.body.find("p")).replace('\n','').replace('<p>','').replace('</p>','').replace('<b>','').replace('</b>','')
+      print(params)
+      print(descr)
    except Exception,error:
       print(error)
