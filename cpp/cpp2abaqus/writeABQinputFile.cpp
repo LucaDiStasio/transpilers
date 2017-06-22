@@ -13,7 +13,7 @@ writeABQinputFile::writeABQinputFile(string abqInputFile){
 
 writeABQinputFile::~writeABQinputFile(){}
 
-void writeABQinputFile::writeABQacousticcontribution(,string acousticnodes,,string name,,string type,,string structuralnodes,vector<string> data,string comment){
+void writeABQinputFile::writeABQacousticcontribution(string acousticnodes,string name,string type,string structuralnodes,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -39,7 +39,7 @@ void writeABQinputFile::writeABQacousticcontribution(,string acousticnodes,,stri
 }
 
 
-void writeABQinputFile::writeABQacousticflowvelocity(,string rotation,,string translation,,string amplitude,vector<string> data,string comment){
+void writeABQinputFile::writeABQacousticflowvelocity(string rotation,string translation,string amplitude,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -62,7 +62,7 @@ void writeABQinputFile::writeABQacousticflowvelocity(,string rotation,,string tr
 }
 
 
-void writeABQinputFile::writeABQacousticmedium(,string bulkmodulus,,string cavitationlimit,,string complexbulkmodulus,,string complexdensity,,string porousmodel,,string volumetricdrag,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQacousticmedium(string bulkmodulus,string cavitationlimit,string complexbulkmodulus,string complexdensity,string porousmodel,string volumetricdrag,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -97,7 +97,7 @@ void writeABQinputFile::writeABQacousticmedium(,string bulkmodulus,,string cavit
 }
 
 
-void writeABQinputFile::writeABQacousticwaveformulation(,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQacousticwaveformulation(string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -114,7 +114,7 @@ void writeABQinputFile::writeABQacousticwaveformulation(,string type,vector<stri
 }
 
 
-void writeABQinputFile::writeABQadaptivemesh(,string elset,,string op,,string controls,,string frequency,,string initialmeshsweeps,,string meshsweeps,vector<string> data,string comment){
+void writeABQinputFile::writeABQadaptivemesh(string elset,string op,string controls,string frequency,string initialmeshsweeps,string meshsweeps,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -146,7 +146,7 @@ void writeABQinputFile::writeABQadaptivemesh(,string elset,,string op,,string co
 }
 
 
-void writeABQinputFile::writeABQadaptivemeshconstraint(,string amplitude,,string constrainttype,,string op,,string type,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQadaptivemeshconstraint(string amplitude,string constrainttype,string op,string type,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -175,7 +175,7 @@ void writeABQinputFile::writeABQadaptivemeshconstraint(,string amplitude,,string
 }
 
 
-void writeABQinputFile::writeABQadaptivemeshcontrols(,string name,,string advection,,string curvaturerefinement,,string geometricenhancement,,string initialfeatureangle,,string meshconstraintangle,,string meshingpredictor,,string momentumadvection,,string reset,,string smoothingobjective,,string transitionfeatureangle,vector<string> data,string comment){
+void writeABQinputFile::writeABQadaptivemeshcontrols(string name,string advection,string curvaturerefinement,string geometricenhancement,string initialfeatureangle,string meshconstraintangle,string meshingpredictor,string momentumadvection,string reset,string smoothingobjective,string transitionfeatureangle,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -222,7 +222,7 @@ void writeABQinputFile::writeABQadaptivemeshcontrols(,string name,,string advect
 }
 
 
-void writeABQinputFile::writeABQadaptivemeshrefinement(,string elset,,string level,,string coarsening,,string ratio,vector<string> data,string comment){
+void writeABQinputFile::writeABQadaptivemeshrefinement(string elset,string level,string coarsening,string ratio,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -248,7 +248,7 @@ void writeABQinputFile::writeABQadaptivemeshrefinement(,string elset,,string lev
 }
 
 
-void writeABQinputFile::writeABQadjust(,string nodeset,,string surface,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQadjust(string nodeset,string surface,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -271,7 +271,7 @@ void writeABQinputFile::writeABQadjust(,string nodeset,,string surface,,string o
 }
 
 
-void writeABQinputFile::writeABQamplitude(,string name,,string definition,,string input,,string scalex,,string scaley,,string shiftx,,string shifty,,string time,,string value,,string fixedinterval,,string begin,,string smooth,,string properties,,string variables,vector<string> data,string comment){
+void writeABQinputFile::writeABQamplitude(string name,string definition,string input,string scalex,string scaley,string shiftx,string shifty,string time,string value,string fixedinterval,string begin,string smooth,string properties,string variables,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -327,7 +327,7 @@ void writeABQinputFile::writeABQamplitude(,string name,,string definition,,strin
 }
 
 
-void writeABQinputFile::writeABQanisotropichyperelastic(,string fung-anisotropic,,string fung-orthotropic,,string holzapfel,,string user,,string formulation,,string type,,string dependencies,,string localdirections,,string moduli,,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQanisotropichyperelastic(string fung-anisotropic,string fung-orthotropic,string holzapfel,string user,string formulation,string type,string dependencies,string localdirections,string moduli,string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -371,7 +371,7 @@ void writeABQinputFile::writeABQanisotropichyperelastic(,string fung-anisotropic
 }
 
 
-void writeABQinputFile::writeABQanneal(,string temperature,vector<string> data,string comment){
+void writeABQinputFile::writeABQanneal(string temperature,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -388,7 +388,7 @@ void writeABQinputFile::writeABQanneal(,string temperature,vector<string> data,s
 }
 
 
-void writeABQinputFile::writeABQannealtemperature(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQannealtemperature(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -405,7 +405,7 @@ void writeABQinputFile::writeABQannealtemperature(,string dependencies,vector<st
 }
 
 
-void writeABQinputFile::writeABQaqua(,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQaqua(string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -422,7 +422,7 @@ void writeABQinputFile::writeABQaqua(,string input,vector<string> data,string co
 }
 
 
-void writeABQinputFile::writeABQassembly(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQassembly(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -439,7 +439,7 @@ void writeABQinputFile::writeABQassembly(,string name,vector<string> data,string
 }
 
 
-void writeABQinputFile::writeABQasymmetric-axisymmetric(,string angle,,string mode,vector<string> data,string comment){
+void writeABQinputFile::writeABQasymmetric-axisymmetric(string angle,string mode,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -459,7 +459,7 @@ void writeABQinputFile::writeABQasymmetric-axisymmetric(,string angle,,string mo
 }
 
 
-void writeABQinputFile::writeABQaxial(,string dependencies,,string elastic,,string linear,vector<string> data,string comment){
+void writeABQinputFile::writeABQaxial(string dependencies,string elastic,string linear,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -482,7 +482,7 @@ void writeABQinputFile::writeABQaxial(,string dependencies,,string elastic,,stri
 }
 
 
-void writeABQinputFile::writeABQbasemotion(,string dof,,string amplitude,,string basename,,string loadcase,,string scale,,string type,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQbasemotion(string dof,string amplitude,string basename,string loadcase,string scale,string type,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -534,7 +534,7 @@ void writeABQinputFile::writeABQbaselinecorrection(,vector<string> data,string c
 }
 
 
-void writeABQinputFile::writeABQbeamaddedinertia(,string alpha,,string composite,vector<string> data,string comment){
+void writeABQinputFile::writeABQbeamaddedinertia(string alpha,string composite,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -554,7 +554,7 @@ void writeABQinputFile::writeABQbeamaddedinertia(,string alpha,,string composite
 }
 
 
-void writeABQinputFile::writeABQbeamfluidinertia(,string full,,string half,vector<string> data,string comment){
+void writeABQinputFile::writeABQbeamfluidinertia(string full,string half,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -574,7 +574,7 @@ void writeABQinputFile::writeABQbeamfluidinertia(,string full,,string half,vecto
 }
 
 
-void writeABQinputFile::writeABQbeamgeneralsection(,string elset,,string density,,string dependencies,,string lumped,,string poisson,,string rotaryinertia,,string section,,string taper,,string zero,vector<string> data,string comment){
+void writeABQinputFile::writeABQbeamgeneralsection(string elset,string density,string dependencies,string lumped,string poisson,string rotaryinertia,string section,string taper,string zero,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -615,7 +615,7 @@ void writeABQinputFile::writeABQbeamgeneralsection(,string elset,,string density
 }
 
 
-void writeABQinputFile::writeABQbeamsection(,string elset,,string material,,string section,,string lumped,,string poisson,,string rotaryinertia,,string temperature,vector<string> data,string comment){
+void writeABQinputFile::writeABQbeamsection(string elset,string material,string section,string lumped,string poisson,string rotaryinertia,string temperature,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -678,7 +678,7 @@ void writeABQinputFile::writeABQbeamsectionoffset(,vector<string> data,string co
 }
 
 
-void writeABQinputFile::writeABQbiaxialtestdata(,string smooth,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQbiaxialtestdata(string smooth,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -726,7 +726,7 @@ void writeABQinputFile::writeABQbond(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQboundary(,string amplitude,,string blocking,,string fixed,,string loadcase,,string name,,string op,,string phantom,,string regiontype,,string type,,string user,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQboundary(string amplitude,string blocking,string fixed,string loadcase,string name,string op,string phantom,string regiontype,string type,string user,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -776,7 +776,7 @@ void writeABQinputFile::writeABQboundary(,string amplitude,,string blocking,,str
 }
 
 
-void writeABQinputFile::writeABQbrittlecracking(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQbrittlecracking(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -796,7 +796,7 @@ void writeABQinputFile::writeABQbrittlecracking(,string dependencies,,string typ
 }
 
 
-void writeABQinputFile::writeABQbrittlefailure(,string cracks,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQbrittlefailure(string cracks,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -816,7 +816,7 @@ void writeABQinputFile::writeABQbrittlefailure(,string cracks,,string dependenci
 }
 
 
-void writeABQinputFile::writeABQbrittleshear(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQbrittleshear(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -836,7 +836,7 @@ void writeABQinputFile::writeABQbrittleshear(,string dependencies,,string type,v
 }
 
 
-void writeABQinputFile::writeABQbuckle(,string eigensolver,vector<string> data,string comment){
+void writeABQinputFile::writeABQbuckle(string eigensolver,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -881,7 +881,7 @@ void writeABQinputFile::writeABQbucklinglength(,vector<string> data,string comme
 }
 
 
-void writeABQinputFile::writeABQbucklingreductionfactors(,string axis1,,string axis2,vector<string> data,string comment){
+void writeABQinputFile::writeABQbucklingreductionfactors(string axis1,string axis2,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -929,7 +929,7 @@ void writeABQinputFile::writeABQcaddedmass(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQcapcreep(,string dependencies,,string law,,string mechanism,,string time,vector<string> data,string comment){
+void writeABQinputFile::writeABQcapcreep(string dependencies,string law,string mechanism,string time,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -955,7 +955,7 @@ void writeABQinputFile::writeABQcapcreep(,string dependencies,,string law,,strin
 }
 
 
-void writeABQinputFile::writeABQcaphardening(,string dependencies,,string scalestress,vector<string> data,string comment){
+void writeABQinputFile::writeABQcaphardening(string dependencies,string scalestress,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -975,7 +975,7 @@ void writeABQinputFile::writeABQcaphardening(,string dependencies,,string scales
 }
 
 
-void writeABQinputFile::writeABQcapplasticity(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcapplasticity(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -992,7 +992,7 @@ void writeABQinputFile::writeABQcapplasticity(,string dependencies,vector<string
 }
 
 
-void writeABQinputFile::writeABQcapacity(,string type,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcapacity(string type,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1012,7 +1012,7 @@ void writeABQinputFile::writeABQcapacity(,string type,,string dependencies,vecto
 }
 
 
-void writeABQinputFile::writeABQcastironcompressionhardening(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcastironcompressionhardening(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1029,7 +1029,7 @@ void writeABQinputFile::writeABQcastironcompressionhardening(,string dependencie
 }
 
 
-void writeABQinputFile::writeABQcastironplasticity(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcastironplasticity(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1046,7 +1046,7 @@ void writeABQinputFile::writeABQcastironplasticity(,string dependencies,vector<s
 }
 
 
-void writeABQinputFile::writeABQcastirontensionhardening(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcastirontensionhardening(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1063,7 +1063,7 @@ void writeABQinputFile::writeABQcastirontensionhardening(,string dependencies,ve
 }
 
 
-void writeABQinputFile::writeABQcavitydefinition(,string name,,string ambienttemp,,string paralleldecomposition,,string setproperty,vector<string> data,string comment){
+void writeABQinputFile::writeABQcavitydefinition(string name,string ambienttemp,string paralleldecomposition,string setproperty,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1089,7 +1089,7 @@ void writeABQinputFile::writeABQcavitydefinition(,string name,,string ambienttem
 }
 
 
-void writeABQinputFile::writeABQcecharge(,string amplitude,,string op,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQcecharge(string amplitude,string op,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1115,7 +1115,7 @@ void writeABQinputFile::writeABQcecharge(,string amplitude,,string op,,string im
 }
 
 
-void writeABQinputFile::writeABQcecurrent(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQcecurrent(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1149,7 +1149,7 @@ void writeABQinputFile::writeABQcentroid(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQcfd(,string incompressiblenavierstokes,,string energyequation,,string incrementation,,string steadystate,vector<string> data,string comment){
+void writeABQinputFile::writeABQcfd(string incompressiblenavierstokes,string energyequation,string incrementation,string steadystate,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1175,7 +1175,7 @@ void writeABQinputFile::writeABQcfd(,string incompressiblenavierstokes,,string e
 }
 
 
-void writeABQinputFile::writeABQcfilm(,string amplitude,,string filmamplitude,,string op,,string regiontype,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQcfilm(string amplitude,string filmamplitude,string op,string regiontype,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1204,7 +1204,7 @@ void writeABQinputFile::writeABQcfilm(,string amplitude,,string filmamplitude,,s
 }
 
 
-void writeABQinputFile::writeABQcflow(,string amplitude,,string op,,string phantom,vector<string> data,string comment){
+void writeABQinputFile::writeABQcflow(string amplitude,string op,string phantom,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1227,7 +1227,7 @@ void writeABQinputFile::writeABQcflow(,string amplitude,,string op,,string phant
 }
 
 
-void writeABQinputFile::writeABQcflux(,string file,,string amplitude,,string inc,,string op,,string regiontype,,string step,vector<string> data,string comment){
+void writeABQinputFile::writeABQcflux(string file,string amplitude,string inc,string op,string regiontype,string step,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1259,7 +1259,7 @@ void writeABQinputFile::writeABQcflux(,string file,,string amplitude,,string inc
 }
 
 
-void writeABQinputFile::writeABQchangefriction(,string elset,,string interaction,,string amplitude,,string reset,vector<string> data,string comment){
+void writeABQinputFile::writeABQchangefriction(string elset,string interaction,string amplitude,string reset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1285,7 +1285,7 @@ void writeABQinputFile::writeABQchangefriction(,string elset,,string interaction
 }
 
 
-void writeABQinputFile::writeABQcharacteristiclength(,string definition,,string components,,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQcharacteristiclength(string definition,string components,string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1308,7 +1308,7 @@ void writeABQinputFile::writeABQcharacteristiclength(,string definition,,string 
 }
 
 
-void writeABQinputFile::writeABQclayhardening(,string dependencies,,string sr,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQclayhardening(string dependencies,string sr,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1331,7 +1331,7 @@ void writeABQinputFile::writeABQclayhardening(,string dependencies,,string sr,,s
 }
 
 
-void writeABQinputFile::writeABQclayplasticity(,string dependencies,,string hardening,,string intercept,vector<string> data,string comment){
+void writeABQinputFile::writeABQclayplasticity(string dependencies,string hardening,string intercept,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1354,7 +1354,7 @@ void writeABQinputFile::writeABQclayplasticity(,string dependencies,,string hard
 }
 
 
-void writeABQinputFile::writeABQclearance(,string cpset,,string master,,string slave,,string tabular,,string value,,string bolt,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQclearance(string cpset,string master,string slave,string tabular,string value,string bolt,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1389,7 +1389,7 @@ void writeABQinputFile::writeABQclearance(,string cpset,,string master,,string s
 }
 
 
-void writeABQinputFile::writeABQcload(,string file,,string cyclicmode,,string amplitude,,string follower,,string inc,,string loadcase,,string op,,string regiontype,,string step,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQcload(string file,string cyclicmode,string amplitude,string follower,string inc,string loadcase,string op,string regiontype,string step,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1436,7 +1436,7 @@ void writeABQinputFile::writeABQcload(,string file,,string cyclicmode,,string am
 }
 
 
-void writeABQinputFile::writeABQcohesivebehavior(,string dependencies,,string eligibility,,string repeatedcontacts,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQcohesivebehavior(string dependencies,string eligibility,string repeatedcontacts,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1462,7 +1462,7 @@ void writeABQinputFile::writeABQcohesivebehavior(,string dependencies,,string el
 }
 
 
-void writeABQinputFile::writeABQcohesivesection(,string elset,,string material,,string response,,string controls,,string orientation,,string stackdirection,,string thickness,vector<string> data,string comment){
+void writeABQinputFile::writeABQcohesivesection(string elset,string material,string response,string controls,string orientation,string stackdirection,string thickness,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1497,7 +1497,7 @@ void writeABQinputFile::writeABQcohesivesection(,string elset,,string material,,
 }
 
 
-void writeABQinputFile::writeABQcombinedtestdata(,string shrinf,,string volinf,vector<string> data,string comment){
+void writeABQinputFile::writeABQcombinedtestdata(string shrinf,string volinf,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1517,7 +1517,7 @@ void writeABQinputFile::writeABQcombinedtestdata(,string shrinf,,string volinf,v
 }
 
 
-void writeABQinputFile::writeABQcomplexfrequency(,string frictiondamping,,string normalization,,string propertyevaluation,,string unstablemodesonly,,string lefteigenvectors,,string righteigenvectors,vector<string> data,string comment){
+void writeABQinputFile::writeABQcomplexfrequency(string frictiondamping,string normalization,string propertyevaluation,string unstablemodesonly,string lefteigenvectors,string righteigenvectors,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1549,7 +1549,7 @@ void writeABQinputFile::writeABQcomplexfrequency(,string frictiondamping,,string
 }
 
 
-void writeABQinputFile::writeABQcompositemodaldamping(,string massmatrixinput,,string stiffnessmatrixinput,vector<string> data,string comment){
+void writeABQinputFile::writeABQcompositemodaldamping(string massmatrixinput,string stiffnessmatrixinput,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1569,7 +1569,7 @@ void writeABQinputFile::writeABQcompositemodaldamping(,string massmatrixinput,,s
 }
 
 
-void writeABQinputFile::writeABQconcrete(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQconcrete(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1586,7 +1586,7 @@ void writeABQinputFile::writeABQconcrete(,string dependencies,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQconcretecompressiondamage(,string dependencies,,string tensionrecovery,vector<string> data,string comment){
+void writeABQinputFile::writeABQconcretecompressiondamage(string dependencies,string tensionrecovery,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1606,7 +1606,7 @@ void writeABQinputFile::writeABQconcretecompressiondamage(,string dependencies,,
 }
 
 
-void writeABQinputFile::writeABQconcretecompressionhardening(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQconcretecompressionhardening(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1623,7 +1623,7 @@ void writeABQinputFile::writeABQconcretecompressionhardening(,string dependencie
 }
 
 
-void writeABQinputFile::writeABQconcretedamagedplasticity(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQconcretedamagedplasticity(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1640,7 +1640,7 @@ void writeABQinputFile::writeABQconcretedamagedplasticity(,string dependencies,v
 }
 
 
-void writeABQinputFile::writeABQconcretetensiondamage(,string compressionrecovery,,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQconcretetensiondamage(string compressionrecovery,string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1663,7 +1663,7 @@ void writeABQinputFile::writeABQconcretetensiondamage(,string compressionrecover
 }
 
 
-void writeABQinputFile::writeABQconcretetensionstiffening(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQconcretetensionstiffening(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1683,7 +1683,7 @@ void writeABQinputFile::writeABQconcretetensionstiffening(,string dependencies,,
 }
 
 
-void writeABQinputFile::writeABQconductivity(,string dependencies,,string porefluid,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQconductivity(string dependencies,string porefluid,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1706,7 +1706,7 @@ void writeABQinputFile::writeABQconductivity(,string dependencies,,string porefl
 }
 
 
-void writeABQinputFile::writeABQconnectorbehavior(,string name,,string extrapolation,,string integration,,string regularize,,string rtol,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorbehavior(string name,string extrapolation,string integration,string regularize,string rtol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1749,7 +1749,7 @@ void writeABQinputFile::writeABQconnectorconstitutivereference(,vector<string> d
 }
 
 
-void writeABQinputFile::writeABQconnectordamageevolution(,string type,,string affectedcomponents,,string degradation,,string dependencies,,string extrapolation,,string regularize,,string rtol,,string softening,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectordamageevolution(string type,string affectedcomponents,string degradation,string dependencies,string extrapolation,string regularize,string rtol,string softening,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1787,7 +1787,7 @@ void writeABQinputFile::writeABQconnectordamageevolution(,string type,,string af
 }
 
 
-void writeABQinputFile::writeABQconnectordamageinitiation(,string component,,string criterion,,string dependencies,,string extrapolation,,string ratefilterfactor,,string rateinterpolation,,string regularize,,string rtol,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectordamageinitiation(string component,string criterion,string dependencies,string extrapolation,string ratefilterfactor,string rateinterpolation,string regularize,string rtol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1825,7 +1825,7 @@ void writeABQinputFile::writeABQconnectordamageinitiation(,string component,,str
 }
 
 
-void writeABQinputFile::writeABQconnectordamping(,string component,,string type,,string dependencies,,string extrapolation,,string frequencydependence,,string independentcomponents,,string nonlinear,,string regularize,,string rtol,,string unsymm,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectordamping(string component,string type,string dependencies,string extrapolation,string frequencydependence,string independentcomponents,string nonlinear,string regularize,string rtol,string unsymm,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1869,7 +1869,7 @@ void writeABQinputFile::writeABQconnectordamping(,string component,,string type,
 }
 
 
-void writeABQinputFile::writeABQconnectorderivedcomponent(,string name,,string dependencies,,string extrapolation,,string independentcomponents,,string operator,,string regularize,,string rtol,,string sign,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorderivedcomponent(string name,string dependencies,string extrapolation,string independentcomponents,string operator,string regularize,string rtol,string sign,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1907,7 +1907,7 @@ void writeABQinputFile::writeABQconnectorderivedcomponent(,string name,,string d
 }
 
 
-void writeABQinputFile::writeABQconnectorelasticity(,string component,,string dependencies,,string extrapolation,,string frequencydependence,,string independentcomponents,,string nonlinear,,string regularize,,string rtol,,string rigid,,string unsymm,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorelasticity(string component,string dependencies,string extrapolation,string frequencydependence,string independentcomponents,string nonlinear,string regularize,string rtol,string rigid,string unsymm,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1951,7 +1951,7 @@ void writeABQinputFile::writeABQconnectorelasticity(,string component,,string de
 }
 
 
-void writeABQinputFile::writeABQconnectorfailure(,string component,,string release,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorfailure(string component,string release,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -1971,7 +1971,7 @@ void writeABQinputFile::writeABQconnectorfailure(,string component,,string relea
 }
 
 
-void writeABQinputFile::writeABQconnectorfriction(,string predefined,,string stickstiffness,,string component,,string contactforce,,string dependencies,,string extrapolation,,string independentcomponents,,string regularize,,string rtol,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorfriction(string predefined,string stickstiffness,string component,string contactforce,string dependencies,string extrapolation,string independentcomponents,string regularize,string rtol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2012,7 +2012,7 @@ void writeABQinputFile::writeABQconnectorfriction(,string predefined,,string sti
 }
 
 
-void writeABQinputFile::writeABQconnectorhardening(,string definition,,string dependencies,,string extrapolation,,string ratefilterfactor,,string rateinterpolation,,string regularize,,string rtol,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorhardening(string definition,string dependencies,string extrapolation,string ratefilterfactor,string rateinterpolation,string regularize,string rtol,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2050,7 +2050,7 @@ void writeABQinputFile::writeABQconnectorhardening(,string definition,,string de
 }
 
 
-void writeABQinputFile::writeABQconnectorload(,string amplitude,,string loadcase,,string op,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorload(string amplitude,string loadcase,string op,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2079,7 +2079,7 @@ void writeABQinputFile::writeABQconnectorload(,string amplitude,,string loadcase
 }
 
 
-void writeABQinputFile::writeABQconnectorlock(,string component,,string dependencies,,string extrapolation,,string lock,,string regularize,,string rtol,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorlock(string component,string dependencies,string extrapolation,string lock,string regularize,string rtol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2111,7 +2111,7 @@ void writeABQinputFile::writeABQconnectorlock(,string component,,string dependen
 }
 
 
-void writeABQinputFile::writeABQconnectormotion(,string amplitude,,string loadcase,,string op,,string fixed,,string type,,string user,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectormotion(string amplitude,string loadcase,string op,string fixed,string type,string user,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2149,7 +2149,7 @@ void writeABQinputFile::writeABQconnectormotion(,string amplitude,,string loadca
 }
 
 
-void writeABQinputFile::writeABQconnectorplasticity(,string component,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorplasticity(string component,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2166,7 +2166,7 @@ void writeABQinputFile::writeABQconnectorplasticity(,string component,vector<str
 }
 
 
-void writeABQinputFile::writeABQconnectorpotential(,string exponent,,string operator,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorpotential(string exponent,string operator,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2186,7 +2186,7 @@ void writeABQinputFile::writeABQconnectorpotential(,string exponent,,string oper
 }
 
 
-void writeABQinputFile::writeABQconnectorsection(,string elset,,string behavior,,string controls,,string elimination,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorsection(string elset,string behavior,string controls,string elimination,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2212,7 +2212,7 @@ void writeABQinputFile::writeABQconnectorsection(,string elset,,string behavior,
 }
 
 
-void writeABQinputFile::writeABQconnectorstop(,string component,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectorstop(string component,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2229,7 +2229,7 @@ void writeABQinputFile::writeABQconnectorstop(,string component,vector<string> d
 }
 
 
-void writeABQinputFile::writeABQconnectoruniaxialbehavior(,string component,vector<string> data,string comment){
+void writeABQinputFile::writeABQconnectoruniaxialbehavior(string component,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2246,7 +2246,7 @@ void writeABQinputFile::writeABQconnectoruniaxialbehavior(,string component,vect
 }
 
 
-void writeABQinputFile::writeABQconstraintcontrols(,string deleteslave,,string nochanges,,string nochecks,,string print,,string checkfrequency,,string terminateanalysis,vector<string> data,string comment){
+void writeABQinputFile::writeABQconstraintcontrols(string deleteslave,string nochanges,string nochecks,string print,string checkfrequency,string terminateanalysis,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2278,7 +2278,7 @@ void writeABQinputFile::writeABQconstraintcontrols(,string deleteslave,,string n
 }
 
 
-void writeABQinputFile::writeABQcontact(,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontact(string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2295,7 +2295,7 @@ void writeABQinputFile::writeABQcontact(,string op,vector<string> data,string co
 }
 
 
-void writeABQinputFile::writeABQcontactclearance(,string name,,string adjust,,string clearance,,string searchabove,,string searchbelow,,string searchnset,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactclearance(string name,string adjust,string clearance,string searchabove,string searchbelow,string searchnset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2341,7 +2341,7 @@ void writeABQinputFile::writeABQcontactclearanceassignment(,vector<string> data,
 }
 
 
-void writeABQinputFile::writeABQcontactcontrols(,string absolutepenetrationtolerance,,string relativepenetrationtolerance,,string master,,string perturbationtangentscalefactor,,string pressuredependentperturbation,,string reset,,string slave,,string stabilize,,string stiffnessscalefactor,,string tangentfraction,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactcontrols(string absolutepenetrationtolerance,string relativepenetrationtolerance,string master,string perturbationtangentscalefactor,string pressuredependentperturbation,string reset,string slave,string stabilize,string stiffnessscalefactor,string tangentfraction,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2385,7 +2385,7 @@ void writeABQinputFile::writeABQcontactcontrols(,string absolutepenetrationtoler
 }
 
 
-void writeABQinputFile::writeABQcontactcontrolsassignment(,string automaticoverclosureresolution,,string contactthicknessreduction,,string nodalerosion,,string rotationalterms,,string type,,string seeding,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactcontrolsassignment(string automaticoverclosureresolution,string contactthicknessreduction,string nodalerosion,string rotationalterms,string type,string seeding,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2417,7 +2417,7 @@ void writeABQinputFile::writeABQcontactcontrolsassignment(,string automaticoverc
 }
 
 
-void writeABQinputFile::writeABQcontactdamping(,string definition,,string tangentfraction,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactdamping(string definition,string tangentfraction,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2451,7 +2451,7 @@ void writeABQinputFile::writeABQcontactexclusions(,vector<string> data,string co
 }
 
 
-void writeABQinputFile::writeABQcontactfile(,string frequency,,string master,,string nset,,string slave,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactfile(string frequency,string master,string nset,string slave,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2477,7 +2477,7 @@ void writeABQinputFile::writeABQcontactfile(,string frequency,,string master,,st
 }
 
 
-void writeABQinputFile::writeABQcontactformulation(,string type,,string formulation,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactformulation(string type,string formulation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2497,7 +2497,7 @@ void writeABQinputFile::writeABQcontactformulation(,string type,,string formulat
 }
 
 
-void writeABQinputFile::writeABQcontactinclusions(,string allexterior,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactinclusions(string allexterior,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2528,7 +2528,7 @@ void writeABQinputFile::writeABQcontactinitializationassignment(,vector<string> 
 }
 
 
-void writeABQinputFile::writeABQcontactinitializationdata(,string name,,string initialclearance,,string interferencefit,,string minimumdistance,,string searchabove,,string searchbelow,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactinitializationdata(string name,string initialclearance,string interferencefit,string minimumdistance,string searchabove,string searchbelow,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2560,7 +2560,7 @@ void writeABQinputFile::writeABQcontactinitializationdata(,string name,,string i
 }
 
 
-void writeABQinputFile::writeABQcontactinterference(,string amplitude,,string op,,string shrink,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactinterference(string amplitude,string op,string shrink,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2586,7 +2586,7 @@ void writeABQinputFile::writeABQcontactinterference(,string amplitude,,string op
 }
 
 
-void writeABQinputFile::writeABQcontactoutput(,string cpset,,string nset,,string surface,,string secondsurface,,string cpset,,string generalcontact,,string surface,,string secondsurface,,string variable,,string master,,string nset,,string slave,,string surface,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactoutput(string cpset,string nset,string surface,string secondsurface,string cpset,string generalcontact,string surface,string secondsurface,string variable,string master,string nset,string slave,string surface,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2642,7 +2642,7 @@ void writeABQinputFile::writeABQcontactoutput(,string cpset,,string nset,,string
 }
 
 
-void writeABQinputFile::writeABQcontactpair(,string interaction,,string adjust,,string extensionzone,,string geometriccorrection,,string hcrit,,string midfacenodes,,string minimumdistance,,string nothickness,,string smallsliding,,string smooth,,string slidingtransition,,string supplementaryconstraints,,string tied,,string tracking,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactpair(string interaction,string adjust,string extensionzone,string geometriccorrection,string hcrit,string midfacenodes,string minimumdistance,string nothickness,string smallsliding,string smooth,string slidingtransition,string supplementaryconstraints,string tied,string tracking,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2701,7 +2701,7 @@ void writeABQinputFile::writeABQcontactpair(,string interaction,,string adjust,,
 }
 
 
-void writeABQinputFile::writeABQcontactpermeability(,string cutoffflowacross,,string cutoffgapfill,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactpermeability(string cutoffflowacross,string cutoffgapfill,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2724,7 +2724,7 @@ void writeABQinputFile::writeABQcontactpermeability(,string cutoffflowacross,,st
 }
 
 
-void writeABQinputFile::writeABQcontactprint(,string frequency,,string master,,string nset,,string slave,,string summary,,string totals,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactprint(string frequency,string master,string nset,string slave,string summary,string totals,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2770,7 +2770,7 @@ void writeABQinputFile::writeABQcontactpropertyassignment(,vector<string> data,s
 }
 
 
-void writeABQinputFile::writeABQcontactresponse(,string master,,string nset,,string slave,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactresponse(string master,string nset,string slave,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2793,7 +2793,7 @@ void writeABQinputFile::writeABQcontactresponse(,string master,,string nset,,str
 }
 
 
-void writeABQinputFile::writeABQcontactstabilization(,string amplitude,,string range,,string reductionperincrement,,string reset,,string scalefactor,,string tangentfraction,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontactstabilization(string amplitude,string range,string reductionperincrement,string reset,string scalefactor,string tangentfraction,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2825,7 +2825,7 @@ void writeABQinputFile::writeABQcontactstabilization(,string amplitude,,string r
 }
 
 
-void writeABQinputFile::writeABQcontourintegral(,string contours,,string crackname,,string cracktipnodes,,string direction,,string frequency,,string normal,,string output,,string residualstressstep,,string symm,,string type,,string xfem,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontourintegral(string contours,string crackname,string cracktipnodes,string direction,string frequency,string normal,string output,string residualstressstep,string symm,string type,string xfem,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2872,7 +2872,7 @@ void writeABQinputFile::writeABQcontourintegral(,string contours,,string crackna
 }
 
 
-void writeABQinputFile::writeABQcontrols(,string analysis,,string parameters,,string reset,,string type,,string distortioncontrol,,string field,,string meshsmoothing,vector<string> data,string comment){
+void writeABQinputFile::writeABQcontrols(string analysis,string parameters,string reset,string type,string distortioncontrol,string field,string meshsmoothing,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2921,7 +2921,7 @@ void writeABQinputFile::writeABQconwepchargeproperty(,vector<string> data,string
 }
 
 
-void writeABQinputFile::writeABQcorrelation(,string psd,,string complex,,string input,,string type,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQcorrelation(string psd,string complex,string input,string type,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2950,7 +2950,7 @@ void writeABQinputFile::writeABQcorrelation(,string psd,,string complex,,string 
 }
 
 
-void writeABQinputFile::writeABQco-simulation(,string name,,string program,,string controls,vector<string> data,string comment){
+void writeABQinputFile::writeABQco-simulation(string name,string program,string controls,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -2973,7 +2973,7 @@ void writeABQinputFile::writeABQco-simulation(,string name,,string program,,stri
 }
 
 
-void writeABQinputFile::writeABQco-simulationcontrols(,string name,,string factorizationfrequency,,string timeincrementation,,string name,,string stepsize,vector<string> data,string comment){
+void writeABQinputFile::writeABQco-simulationcontrols(string name,string factorizationfrequency,string timeincrementation,string name,string stepsize,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3002,7 +3002,7 @@ void writeABQinputFile::writeABQco-simulationcontrols(,string name,,string facto
 }
 
 
-void writeABQinputFile::writeABQco-simulationregion(,string export,,string import,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQco-simulationregion(string export,string import,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3025,7 +3025,7 @@ void writeABQinputFile::writeABQco-simulationregion(,string export,,string impor
 }
 
 
-void writeABQinputFile::writeABQcoupledtemperature-displacement(,string allsdtol,,string continue,,string creep,,string electrical,,string factor,,string stabilize,,string steadystate,,string cetol,,string deltmx,vector<string> data,string comment){
+void writeABQinputFile::writeABQcoupledtemperature-displacement(string allsdtol,string continue,string creep,string electrical,string factor,string stabilize,string steadystate,string cetol,string deltmx,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3066,7 +3066,7 @@ void writeABQinputFile::writeABQcoupledtemperature-displacement(,string allsdtol
 }
 
 
-void writeABQinputFile::writeABQcoupledthermal-electrical(,string deltmx,,string end,,string mxdem,,string steadystate,vector<string> data,string comment){
+void writeABQinputFile::writeABQcoupledthermal-electrical(string deltmx,string end,string mxdem,string steadystate,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3092,7 +3092,7 @@ void writeABQinputFile::writeABQcoupledthermal-electrical(,string deltmx,,string
 }
 
 
-void writeABQinputFile::writeABQcoupling(,string constraintname,,string refnode,,string surface,,string influenceradius,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQcoupling(string constraintname,string refnode,string surface,string influenceradius,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3121,7 +3121,7 @@ void writeABQinputFile::writeABQcoupling(,string constraintname,,string refnode,
 }
 
 
-void writeABQinputFile::writeABQcradiate(,string amplitude,,string op,,string regiontype,vector<string> data,string comment){
+void writeABQinputFile::writeABQcradiate(string amplitude,string op,string regiontype,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3144,7 +3144,7 @@ void writeABQinputFile::writeABQcradiate(,string amplitude,,string op,,string re
 }
 
 
-void writeABQinputFile::writeABQcreep(,string dependencies,,string law,,string time,vector<string> data,string comment){
+void writeABQinputFile::writeABQcreep(string dependencies,string law,string time,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3167,7 +3167,7 @@ void writeABQinputFile::writeABQcreep(,string dependencies,,string law,,string t
 }
 
 
-void writeABQinputFile::writeABQcreepstrainratecontrol(,string amplitude,,string elset,,string dependencies,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQcreepstrainratecontrol(string amplitude,string elset,string dependencies,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3193,7 +3193,7 @@ void writeABQinputFile::writeABQcreepstrainratecontrol(,string amplitude,,string
 }
 
 
-void writeABQinputFile::writeABQcrushablefoam(,string dependencies,,string hardening,vector<string> data,string comment){
+void writeABQinputFile::writeABQcrushablefoam(string dependencies,string hardening,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3213,7 +3213,7 @@ void writeABQinputFile::writeABQcrushablefoam(,string dependencies,,string harde
 }
 
 
-void writeABQinputFile::writeABQcrushablefoamhardening(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQcrushablefoamhardening(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3244,7 +3244,7 @@ void writeABQinputFile::writeABQcycledplastic(,vector<string> data,string commen
 }
 
 
-void writeABQinputFile::writeABQcyclic(,string nc,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQcyclic(string nc,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3264,7 +3264,7 @@ void writeABQinputFile::writeABQcyclic(,string nc,,string type,vector<string> da
 }
 
 
-void writeABQinputFile::writeABQcyclichardening(,string dependencies,,string parameters,,string user,,string properties,,string rate,vector<string> data,string comment){
+void writeABQinputFile::writeABQcyclichardening(string dependencies,string parameters,string user,string properties,string rate,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3293,7 +3293,7 @@ void writeABQinputFile::writeABQcyclichardening(,string dependencies,,string par
 }
 
 
-void writeABQinputFile::writeABQcyclicsymmetrymodel(,string n,vector<string> data,string comment){
+void writeABQinputFile::writeABQcyclicsymmetrymodel(string n,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3324,7 +3324,7 @@ void writeABQinputFile::writeABQdaddedmass(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQdempotential(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQdempotential(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3344,7 +3344,7 @@ void writeABQinputFile::writeABQdempotential(,string amplitude,,string op,vector
 }
 
 
-void writeABQinputFile::writeABQdamageevolution(,string type,,string degradation,,string dependencies,,string failureindex,,string mixedmodebehavior,,string modemixratio,,string power,,string softening,vector<string> data,string comment){
+void writeABQinputFile::writeABQdamageevolution(string type,string degradation,string dependencies,string failureindex,string mixedmodebehavior,string modemixratio,string power,string softening,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3382,7 +3382,7 @@ void writeABQinputFile::writeABQdamageevolution(,string type,,string degradation
 }
 
 
-void writeABQinputFile::writeABQdamageinitiation(,string criterion,,string alpha,,string definition,,string dependencies,,string failuremechanisms,,string feq,,string fnn,,string fnt,,string frequency,,string ks,,string lodedependent,,string normaldirection,,string numberimperfections,,string omega,,string peinc,,string position,,string properties,,string rcrackdirection,,string smoothing,,string tolerance,,string weightingmethod,vector<string> data,string comment){
+void writeABQinputFile::writeABQdamageinitiation(string criterion,string alpha,string definition,string dependencies,string failuremechanisms,string feq,string fnn,string fnt,string frequency,string ks,string lodedependent,string normaldirection,string numberimperfections,string omega,string peinc,string position,string properties,string rcrackdirection,string smoothing,string tolerance,string weightingmethod,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3473,7 +3473,7 @@ void writeABQinputFile::writeABQdamagestabilization(,vector<string> data,string 
 }
 
 
-void writeABQinputFile::writeABQdamping(,string alpha,,string beta,,string composite,,string dependencies,,string structural,vector<string> data,string comment){
+void writeABQinputFile::writeABQdamping(string alpha,string beta,string composite,string dependencies,string structural,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3502,7 +3502,7 @@ void writeABQinputFile::writeABQdamping(,string alpha,,string beta,,string compo
 }
 
 
-void writeABQinputFile::writeABQdampingcontrols(,string lowfrequencycutoff,,string structural,,string viscous,vector<string> data,string comment){
+void writeABQinputFile::writeABQdampingcontrols(string lowfrequencycutoff,string structural,string viscous,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3525,7 +3525,7 @@ void writeABQinputFile::writeABQdampingcontrols(,string lowfrequencycutoff,,stri
 }
 
 
-void writeABQinputFile::writeABQdashpot(,string elset,,string dependencies,,string nonlinear,,string orientation,,string rtol,vector<string> data,string comment){
+void writeABQinputFile::writeABQdashpot(string elset,string dependencies,string nonlinear,string orientation,string rtol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3554,7 +3554,7 @@ void writeABQinputFile::writeABQdashpot(,string elset,,string dependencies,,stri
 }
 
 
-void writeABQinputFile::writeABQdebond(,string master,,string slave,,string debondingforce,,string frequency,,string output,,string timeincrement,vector<string> data,string comment){
+void writeABQinputFile::writeABQdebond(string master,string slave,string debondingforce,string frequency,string output,string timeincrement,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3586,7 +3586,7 @@ void writeABQinputFile::writeABQdebond(,string master,,string slave,,string debo
 }
 
 
-void writeABQinputFile::writeABQdecharge(,string amplitude,,string op,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQdecharge(string amplitude,string op,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3612,7 +3612,7 @@ void writeABQinputFile::writeABQdecharge(,string amplitude,,string op,,string im
 }
 
 
-void writeABQinputFile::writeABQdecurrent(,string amplitude,,string op,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQdecurrent(string amplitude,string op,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3652,7 +3652,7 @@ void writeABQinputFile::writeABQdeformationplasticity(,vector<string> data,strin
 }
 
 
-void writeABQinputFile::writeABQdensity(,string dependencies,,string porefluid,vector<string> data,string comment){
+void writeABQinputFile::writeABQdensity(string dependencies,string porefluid,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3672,7 +3672,7 @@ void writeABQinputFile::writeABQdensity(,string dependencies,,string porefluid,v
 }
 
 
-void writeABQinputFile::writeABQdepvar(,string convert,,string delete,vector<string> data,string comment){
+void writeABQinputFile::writeABQdepvar(string convert,string delete,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3692,7 +3692,7 @@ void writeABQinputFile::writeABQdepvar(,string convert,,string delete,vector<str
 }
 
 
-void writeABQinputFile::writeABQdesigngradient(,string dependent,,string independent,vector<string> data,string comment){
+void writeABQinputFile::writeABQdesigngradient(string dependent,string independent,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3726,7 +3726,7 @@ void writeABQinputFile::writeABQdesignparameter(,vector<string> data,string comm
 }
 
 
-void writeABQinputFile::writeABQdesignresponse(,string frequency,,string modelist,vector<string> data,string comment){
+void writeABQinputFile::writeABQdesignresponse(string frequency,string modelist,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3760,7 +3760,7 @@ void writeABQinputFile::writeABQdetonationpoint(,vector<string> data,string comm
 }
 
 
-void writeABQinputFile::writeABQdflow(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQdflow(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3780,7 +3780,7 @@ void writeABQinputFile::writeABQdflow(,string amplitude,,string op,vector<string
 }
 
 
-void writeABQinputFile::writeABQdflux(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQdflux(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3800,7 +3800,7 @@ void writeABQinputFile::writeABQdflux(,string amplitude,,string op,vector<string
 }
 
 
-void writeABQinputFile::writeABQdiagnostics(,string adaptivemesh,,string contactinitialoverclosure,,string criticalelements,,string cutoffratio,,string deeppenetrationfactor,,string deformationspeedcheck,,string detectcrossedsurfaces,,string plasticity,,string warningratio,,string warpedsurface,,string nonhybridincompressible,vector<string> data,string comment){
+void writeABQinputFile::writeABQdiagnostics(string adaptivemesh,string contactinitialoverclosure,string criticalelements,string cutoffratio,string deeppenetrationfactor,string deformationspeedcheck,string detectcrossedsurfaces,string plasticity,string warningratio,string warpedsurface,string nonhybridincompressible,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3847,7 +3847,7 @@ void writeABQinputFile::writeABQdiagnostics(,string adaptivemesh,,string contact
 }
 
 
-void writeABQinputFile::writeABQdielectric(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQdielectric(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3867,7 +3867,7 @@ void writeABQinputFile::writeABQdielectric(,string dependencies,,string type,vec
 }
 
 
-void writeABQinputFile::writeABQdiffusivity(,string dependencies,,string law,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQdiffusivity(string dependencies,string law,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3890,7 +3890,7 @@ void writeABQinputFile::writeABQdiffusivity(,string dependencies,,string law,,st
 }
 
 
-void writeABQinputFile::writeABQdirectcyclic(,string cetol,,string continue,,string deltmx,,string fatigue,,string timepoints,vector<string> data,string comment){
+void writeABQinputFile::writeABQdirectcyclic(string cetol,string continue,string deltmx,string fatigue,string timepoints,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3933,7 +3933,7 @@ void writeABQinputFile::writeABQdiscreteelasticity(,vector<string> data,string c
 }
 
 
-void writeABQinputFile::writeABQdiscretesection(,string elset,,string density,,string shape,,string alpha,,string controls,vector<string> data,string comment){
+void writeABQinputFile::writeABQdiscretesection(string elset,string density,string shape,string alpha,string controls,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3962,7 +3962,7 @@ void writeABQinputFile::writeABQdiscretesection(,string elset,,string density,,s
 }
 
 
-void writeABQinputFile::writeABQdisplaybody(,string instance,vector<string> data,string comment){
+void writeABQinputFile::writeABQdisplaybody(string instance,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3979,7 +3979,7 @@ void writeABQinputFile::writeABQdisplaybody(,string instance,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQdistributing(,string coupling,,string weightingmethod,vector<string> data,string comment){
+void writeABQinputFile::writeABQdistributing(string coupling,string weightingmethod,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -3999,7 +3999,7 @@ void writeABQinputFile::writeABQdistributing(,string coupling,,string weightingm
 }
 
 
-void writeABQinputFile::writeABQdistributingcoupling(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQdistributingcoupling(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4016,7 +4016,7 @@ void writeABQinputFile::writeABQdistributingcoupling(,string elset,vector<string
 }
 
 
-void writeABQinputFile::writeABQdistribution(,string location,,string name,,string table,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQdistribution(string location,string name,string table,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4042,7 +4042,7 @@ void writeABQinputFile::writeABQdistribution(,string location,,string name,,stri
 }
 
 
-void writeABQinputFile::writeABQdistributiontable(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQdistributiontable(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4059,7 +4059,7 @@ void writeABQinputFile::writeABQdistributiontable(,string name,vector<string> da
 }
 
 
-void writeABQinputFile::writeABQdload(,string cyclicmode,,string amplitude,,string constantresultant,,string follower,,string op,,string orientation,,string refnode,,string regiontype,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQdload(string cyclicmode,string amplitude,string constantresultant,string follower,string op,string orientation,string refnode,string regiontype,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4103,7 +4103,7 @@ void writeABQinputFile::writeABQdload(,string cyclicmode,,string amplitude,,stri
 }
 
 
-void writeABQinputFile::writeABQdomaindecomposition(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQdomaindecomposition(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4120,7 +4120,7 @@ void writeABQinputFile::writeABQdomaindecomposition(,string elset,vector<string>
 }
 
 
-void writeABQinputFile::writeABQdragchain(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQdragchain(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4137,7 +4137,7 @@ void writeABQinputFile::writeABQdragchain(,string elset,vector<string> data,stri
 }
 
 
-void writeABQinputFile::writeABQdruckerprager(,string dependencies,,string eccentricity,,string shearcriterion,,string testdata,vector<string> data,string comment){
+void writeABQinputFile::writeABQdruckerprager(string dependencies,string eccentricity,string shearcriterion,string testdata,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4163,7 +4163,7 @@ void writeABQinputFile::writeABQdruckerprager(,string dependencies,,string eccen
 }
 
 
-void writeABQinputFile::writeABQdruckerpragercreep(,string dependencies,,string law,,string time,vector<string> data,string comment){
+void writeABQinputFile::writeABQdruckerpragercreep(string dependencies,string law,string time,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4186,7 +4186,7 @@ void writeABQinputFile::writeABQdruckerpragercreep(,string dependencies,,string 
 }
 
 
-void writeABQinputFile::writeABQdruckerpragerhardening(,string dependencies,,string rate,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQdruckerpragerhardening(string dependencies,string rate,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4209,7 +4209,7 @@ void writeABQinputFile::writeABQdruckerpragerhardening(,string dependencies,,str
 }
 
 
-void writeABQinputFile::writeABQdsacontrols(,string formulation,,string reset,,string sizingfrequency,,string tolerance,vector<string> data,string comment){
+void writeABQinputFile::writeABQdsacontrols(string formulation,string reset,string sizingfrequency,string tolerance,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4235,7 +4235,7 @@ void writeABQinputFile::writeABQdsacontrols(,string formulation,,string reset,,s
 }
 
 
-void writeABQinputFile::writeABQdsecharge(,string amplitude,,string op,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQdsecharge(string amplitude,string op,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4261,7 +4261,7 @@ void writeABQinputFile::writeABQdsecharge(,string amplitude,,string op,,string i
 }
 
 
-void writeABQinputFile::writeABQdsecurrent(,string amplitude,,string op,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQdsecurrent(string amplitude,string op,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4287,7 +4287,7 @@ void writeABQinputFile::writeABQdsecurrent(,string amplitude,,string op,,string 
 }
 
 
-void writeABQinputFile::writeABQdsflow(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQdsflow(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4307,7 +4307,7 @@ void writeABQinputFile::writeABQdsflow(,string amplitude,,string op,vector<strin
 }
 
 
-void writeABQinputFile::writeABQdsflux(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQdsflux(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4327,7 +4327,7 @@ void writeABQinputFile::writeABQdsflux(,string amplitude,,string op,vector<strin
 }
 
 
-void writeABQinputFile::writeABQdsload(,string cyclicmode,,string amplitude,,string constantresultant,,string follower,,string op,,string orientation,,string refnode,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQdsload(string cyclicmode,string amplitude,string constantresultant,string follower,string op,string orientation,string refnode,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4368,7 +4368,7 @@ void writeABQinputFile::writeABQdsload(,string cyclicmode,,string amplitude,,str
 }
 
 
-void writeABQinputFile::writeABQdynamic(,string subspace,,string adiabatic,,string alpha,,string application,,string beta,,string direct,,string gamma,,string haftol,,string halfincscalefactor,,string impact,,string incrementation,,string initial,,string nohaf,,string singularmass,,string timeintegrator,vector<string> data,string comment){
+void writeABQinputFile::writeABQdynamic(string subspace,string adiabatic,string alpha,string application,string beta,string direct,string gamma,string haftol,string halfincscalefactor,string impact,string incrementation,string initial,string nohaf,string singularmass,string timeintegrator,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4427,7 +4427,7 @@ void writeABQinputFile::writeABQdynamic(,string subspace,,string adiabatic,,stri
 }
 
 
-void writeABQinputFile::writeABQdynamictemperature-displacement(,string explicit,,string directusercontrol,,string elementbyelement,,string fixedtimeincrementation,,string improveddtmethod,,string scalefactor,vector<string> data,string comment){
+void writeABQinputFile::writeABQdynamictemperature-displacement(string explicit,string directusercontrol,string elementbyelement,string fixedtimeincrementation,string improveddtmethod,string scalefactor,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4459,7 +4459,7 @@ void writeABQinputFile::writeABQdynamictemperature-displacement(,string explicit
 }
 
 
-void writeABQinputFile::writeABQelfile(,string directions,,string elset,,string frequency,,string lastmode,,string mode,,string position,,string rebar,vector<string> data,string comment){
+void writeABQinputFile::writeABQelfile(string directions,string elset,string frequency,string lastmode,string mode,string position,string rebar,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4494,7 +4494,7 @@ void writeABQinputFile::writeABQelfile(,string directions,,string elset,,string 
 }
 
 
-void writeABQinputFile::writeABQelprint(,string elset,,string frequency,,string lastmode,,string mode,,string position,,string rebar,,string summary,,string totals,vector<string> data,string comment){
+void writeABQinputFile::writeABQelprint(string elset,string frequency,string lastmode,string mode,string position,string rebar,string summary,string totals,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4532,7 +4532,7 @@ void writeABQinputFile::writeABQelprint(,string elset,,string frequency,,string 
 }
 
 
-void writeABQinputFile::writeABQelastic(,string compressionfactor,,string dependencies,,string moduli,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQelastic(string compressionfactor,string dependencies,string moduli,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4558,7 +4558,7 @@ void writeABQinputFile::writeABQelastic(,string compressionfactor,,string depend
 }
 
 
-void writeABQinputFile::writeABQelcopy(,string elementshift,,string oldset,,string shiftnodes,,string newset,,string reflect,vector<string> data,string comment){
+void writeABQinputFile::writeABQelcopy(string elementshift,string oldset,string shiftnodes,string newset,string reflect,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4587,7 +4587,7 @@ void writeABQinputFile::writeABQelcopy(,string elementshift,,string oldset,,stri
 }
 
 
-void writeABQinputFile::writeABQelectricalconductivity(,string dependencies,,string frequency,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQelectricalconductivity(string dependencies,string frequency,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4610,7 +4610,7 @@ void writeABQinputFile::writeABQelectricalconductivity(,string dependencies,,str
 }
 
 
-void writeABQinputFile::writeABQelectromagnetic(,string lowfrequency,,string timeharmonic,,string transient,,string direct,,string stabilization,vector<string> data,string comment){
+void writeABQinputFile::writeABQelectromagnetic(string lowfrequency,string timeharmonic,string transient,string direct,string stabilization,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4639,7 +4639,7 @@ void writeABQinputFile::writeABQelectromagnetic(,string lowfrequency,,string tim
 }
 
 
-void writeABQinputFile::writeABQelement(,string type,,string elset,,string file,,string input,,string offset,,string solidelementnumbering,vector<string> data,string comment){
+void writeABQinputFile::writeABQelement(string type,string elset,string file,string input,string offset,string solidelementnumbering,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4671,7 +4671,7 @@ void writeABQinputFile::writeABQelement(,string type,,string elset,,string file,
 }
 
 
-void writeABQinputFile::writeABQelementmatrixoutput(,string elset,,string dload,,string filename,,string frequency,,string mass,,string outputfile,,string stiffness,vector<string> data,string comment){
+void writeABQinputFile::writeABQelementmatrixoutput(string elset,string dload,string filename,string frequency,string mass,string outputfile,string stiffness,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4706,7 +4706,7 @@ void writeABQinputFile::writeABQelementmatrixoutput(,string elset,,string dload,
 }
 
 
-void writeABQinputFile::writeABQelementoperatoroutput(,string assemble,,string damping,,string elset,,string frequency,,string load,,string loadtype,,string stiffness,vector<string> data,string comment){
+void writeABQinputFile::writeABQelementoperatoroutput(string assemble,string damping,string elset,string frequency,string load,string loadtype,string stiffness,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4741,7 +4741,7 @@ void writeABQinputFile::writeABQelementoperatoroutput(,string assemble,,string d
 }
 
 
-void writeABQinputFile::writeABQelementoutput(,string elset,,string tracerset,,string allsectionpts,,string directions,,string elset,,string exterior,,string position,,string rebar,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQelementoutput(string elset,string tracerset,string allsectionpts,string directions,string elset,string exterior,string position,string rebar,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4782,7 +4782,7 @@ void writeABQinputFile::writeABQelementoutput(,string elset,,string tracerset,,s
 }
 
 
-void writeABQinputFile::writeABQelementresponse(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQelementresponse(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4799,7 +4799,7 @@ void writeABQinputFile::writeABQelementresponse(,string elset,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQelgen(,string allnodes,,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQelgen(string allnodes,string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4819,7 +4819,7 @@ void writeABQinputFile::writeABQelgen(,string allnodes,,string elset,vector<stri
 }
 
 
-void writeABQinputFile::writeABQelset(,string elset,,string generate,,string instance,,string internal,,string unsorted,vector<string> data,string comment){
+void writeABQinputFile::writeABQelset(string elset,string generate,string instance,string internal,string unsorted,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4848,7 +4848,7 @@ void writeABQinputFile::writeABQelset(,string elset,,string generate,,string ins
 }
 
 
-void writeABQinputFile::writeABQembeddedelement(,string absoluteexteriortolerance,,string embednodes,,string exteriortolerance,,string hostelset,,string partialembed,,string roundofftolerance,vector<string> data,string comment){
+void writeABQinputFile::writeABQembeddedelement(string absoluteexteriortolerance,string embednodes,string exteriortolerance,string hostelset,string partialembed,string roundofftolerance,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4880,7 +4880,7 @@ void writeABQinputFile::writeABQembeddedelement(,string absoluteexteriortoleranc
 }
 
 
-void writeABQinputFile::writeABQemissivity(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQemissivity(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4967,7 +4967,7 @@ void writeABQinputFile::writeABQendstep(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQenergyequationsolver(,string convergence,,string diagnostics,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQenergyequationsolver(string convergence,string diagnostics,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -4990,7 +4990,7 @@ void writeABQinputFile::writeABQenergyequationsolver(,string convergence,,string
 }
 
 
-void writeABQinputFile::writeABQenergyfile(,string elset,,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQenergyfile(string elset,string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5010,7 +5010,7 @@ void writeABQinputFile::writeABQenergyfile(,string elset,,string frequency,vecto
 }
 
 
-void writeABQinputFile::writeABQenergyoutput(,string elset,,string variable,,string perelementset,,string persection,vector<string> data,string comment){
+void writeABQinputFile::writeABQenergyoutput(string elset,string variable,string perelementset,string persection,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5036,7 +5036,7 @@ void writeABQinputFile::writeABQenergyoutput(,string elset,,string variable,,str
 }
 
 
-void writeABQinputFile::writeABQenergyprint(,string elset,,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQenergyprint(string elset,string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5056,7 +5056,7 @@ void writeABQinputFile::writeABQenergyprint(,string elset,,string frequency,vect
 }
 
 
-void writeABQinputFile::writeABQenrichment(,string elset,,string name,,string enrichmentradius,,string interaction,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQenrichment(string elset,string name,string enrichmentradius,string interaction,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5085,7 +5085,7 @@ void writeABQinputFile::writeABQenrichment(,string elset,,string name,,string en
 }
 
 
-void writeABQinputFile::writeABQenrichmentactivation(,string name,,string activate,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQenrichmentactivation(string name,string activate,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5108,7 +5108,7 @@ void writeABQinputFile::writeABQenrichmentactivation(,string name,,string activa
 }
 
 
-void writeABQinputFile::writeABQeos(,string type,,string detonationenergy,,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQeos(string type,string detonationenergy,string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5145,7 +5145,7 @@ void writeABQinputFile::writeABQeoscompaction(,vector<string> data,string commen
 }
 
 
-void writeABQinputFile::writeABQepjoint(,string elset,,string orientation,,string section,vector<string> data,string comment){
+void writeABQinputFile::writeABQepjoint(string elset,string orientation,string section,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5168,7 +5168,7 @@ void writeABQinputFile::writeABQepjoint(,string elset,,string orientation,,strin
 }
 
 
-void writeABQinputFile::writeABQequation(,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQequation(string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5185,7 +5185,7 @@ void writeABQinputFile::writeABQequation(,string input,vector<string> data,strin
 }
 
 
-void writeABQinputFile::writeABQeulerianboundary(,string inflow,,string op,,string outflow,vector<string> data,string comment){
+void writeABQinputFile::writeABQeulerianboundary(string inflow,string op,string outflow,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5208,7 +5208,7 @@ void writeABQinputFile::writeABQeulerianboundary(,string inflow,,string op,,stri
 }
 
 
-void writeABQinputFile::writeABQeulerianmeshmotion(,string elset,,string surface,,string aspectratiomax,,string buffer,,string center,,string contract,,string op,,string orientation,,string vmaxfactor,,string volfracmin,vector<string> data,string comment){
+void writeABQinputFile::writeABQeulerianmeshmotion(string elset,string surface,string aspectratiomax,string buffer,string center,string contract,string op,string orientation,string vmaxfactor,string volfracmin,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5252,7 +5252,7 @@ void writeABQinputFile::writeABQeulerianmeshmotion(,string elset,,string surface
 }
 
 
-void writeABQinputFile::writeABQeuleriansection(,string elset,,string advection,,string controls,,string fluxlimitratio,vector<string> data,string comment){
+void writeABQinputFile::writeABQeuleriansection(string elset,string advection,string controls,string fluxlimitratio,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5278,7 +5278,7 @@ void writeABQinputFile::writeABQeuleriansection(,string elset,,string advection,
 }
 
 
-void writeABQinputFile::writeABQexpansion(,string dependencies,,string field,,string porefluid,,string type,,string user,,string zero,vector<string> data,string comment){
+void writeABQinputFile::writeABQexpansion(string dependencies,string field,string porefluid,string type,string user,string zero,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5310,7 +5310,7 @@ void writeABQinputFile::writeABQexpansion(,string dependencies,,string field,,st
 }
 
 
-void writeABQinputFile::writeABQextremeelementvalue(,string elset,,string abs,,string max,,string min,,string output,vector<string> data,string comment){
+void writeABQinputFile::writeABQextremeelementvalue(string elset,string abs,string max,string min,string output,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5339,7 +5339,7 @@ void writeABQinputFile::writeABQextremeelementvalue(,string elset,,string abs,,s
 }
 
 
-void writeABQinputFile::writeABQextremenodevalue(,string nset,,string abs,,string max,,string min,,string output,vector<string> data,string comment){
+void writeABQinputFile::writeABQextremenodevalue(string nset,string abs,string max,string min,string output,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5368,7 +5368,7 @@ void writeABQinputFile::writeABQextremenodevalue(,string nset,,string abs,,strin
 }
 
 
-void writeABQinputFile::writeABQextremevalue(,string halt,vector<string> data,string comment){
+void writeABQinputFile::writeABQextremevalue(string halt,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5385,7 +5385,7 @@ void writeABQinputFile::writeABQextremevalue(,string halt,vector<string> data,st
 }
 
 
-void writeABQinputFile::writeABQfabric(,string properties,,string stressfreeinitialslack,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQfabric(string properties,string stressfreeinitialslack,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5408,7 +5408,7 @@ void writeABQinputFile::writeABQfabric(,string properties,,string stressfreeinit
 }
 
 
-void writeABQinputFile::writeABQfailstrain(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQfailstrain(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5425,7 +5425,7 @@ void writeABQinputFile::writeABQfailstrain(,string dependencies,vector<string> d
 }
 
 
-void writeABQinputFile::writeABQfailstress(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQfailstress(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5442,7 +5442,7 @@ void writeABQinputFile::writeABQfailstress(,string dependencies,vector<string> d
 }
 
 
-void writeABQinputFile::writeABQfailureratios(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQfailureratios(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5459,7 +5459,7 @@ void writeABQinputFile::writeABQfailureratios(,string dependencies,vector<string
 }
 
 
-void writeABQinputFile::writeABQfastener(,string interactionname,,string property,,string elset,,string referencenodeset,,string adjustorientation,,string attachmentmethod,,string coupling,,string numberoflayers,,string orientation,,string radiusofinfluence,,string searchradius,,string unsorted,,string weightingmethod,vector<string> data,string comment){
+void writeABQinputFile::writeABQfastener(string interactionname,string property,string elset,string referencenodeset,string adjustorientation,string attachmentmethod,string coupling,string numberoflayers,string orientation,string radiusofinfluence,string searchradius,string unsorted,string weightingmethod,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5512,7 +5512,7 @@ void writeABQinputFile::writeABQfastener(,string interactionname,,string propert
 }
 
 
-void writeABQinputFile::writeABQfastenerproperty(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQfastenerproperty(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5529,7 +5529,7 @@ void writeABQinputFile::writeABQfastenerproperty(,string name,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQfield(,string variable,,string amplitude,,string input,,string op,,string file,,string bstep,,string binc,,string estep,,string einc,,string outputvariable,,string interpolate,,string user,,string number,,string blocking,vector<string> data,string comment){
+void writeABQinputFile::writeABQfield(string variable,string amplitude,string input,string op,string file,string bstep,string binc,string estep,string einc,string outputvariable,string interpolate,string user,string number,string blocking,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5585,7 +5585,7 @@ void writeABQinputFile::writeABQfield(,string variable,,string amplitude,,string
 }
 
 
-void writeABQinputFile::writeABQfileformat(,string ascii,,string zeroincrement,vector<string> data,string comment){
+void writeABQinputFile::writeABQfileformat(string ascii,string zeroincrement,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5605,7 +5605,7 @@ void writeABQinputFile::writeABQfileformat(,string ascii,,string zeroincrement,v
 }
 
 
-void writeABQinputFile::writeABQfileoutput(,string numberinterval,,string timemarks,vector<string> data,string comment){
+void writeABQinputFile::writeABQfileoutput(string numberinterval,string timemarks,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5625,7 +5625,7 @@ void writeABQinputFile::writeABQfileoutput(,string numberinterval,,string timema
 }
 
 
-void writeABQinputFile::writeABQfilm(,string amplitude,,string filmamplitude,,string op,,string regiontype,vector<string> data,string comment){
+void writeABQinputFile::writeABQfilm(string amplitude,string filmamplitude,string op,string regiontype,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5651,7 +5651,7 @@ void writeABQinputFile::writeABQfilm(,string amplitude,,string filmamplitude,,st
 }
 
 
-void writeABQinputFile::writeABQfilmproperty(,string name,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQfilmproperty(string name,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5671,7 +5671,7 @@ void writeABQinputFile::writeABQfilmproperty(,string name,,string dependencies,v
 }
 
 
-void writeABQinputFile::writeABQfilter(,string name,,string halt,,string invariant,,string limit,,string operator,,string startcondition,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQfilter(string name,string halt,string invariant,string limit,string operator,string startcondition,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5706,7 +5706,7 @@ void writeABQinputFile::writeABQfilter(,string name,,string halt,,string invaria
 }
 
 
-void writeABQinputFile::writeABQfixedmassscaling(,string dt,,string elset,,string factor,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQfixedmassscaling(string dt,string elset,string factor,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5732,7 +5732,7 @@ void writeABQinputFile::writeABQfixedmassscaling(,string dt,,string elset,,strin
 }
 
 
-void writeABQinputFile::writeABQflexiblebody(,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQflexiblebody(string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5749,7 +5749,7 @@ void writeABQinputFile::writeABQflexiblebody(,string type,vector<string> data,st
 }
 
 
-void writeABQinputFile::writeABQflow(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQflow(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5769,7 +5769,7 @@ void writeABQinputFile::writeABQflow(,string amplitude,,string op,vector<string>
 }
 
 
-void writeABQinputFile::writeABQfluidbehavior(,string name,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidbehavior(string name,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5789,7 +5789,7 @@ void writeABQinputFile::writeABQfluidbehavior(,string name,,string user,vector<s
 }
 
 
-void writeABQinputFile::writeABQfluidboundary(,string surface,,string pressureoutlet,,string symmetric,,string velocityinlet,,string wall,,string op,,string slip,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidboundary(string surface,string pressureoutlet,string symmetric,string velocityinlet,string wall,string op,string slip,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5824,7 +5824,7 @@ void writeABQinputFile::writeABQfluidboundary(,string surface,,string pressureou
 }
 
 
-void writeABQinputFile::writeABQfluidbulkmodulus(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidbulkmodulus(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5841,7 +5841,7 @@ void writeABQinputFile::writeABQfluidbulkmodulus(,string dependencies,vector<str
 }
 
 
-void writeABQinputFile::writeABQfluidcavity(,string name,,string refnode,,string behavior,,string mixture,,string addedvolume,,string adiabatic,,string ambientpressure,,string ambienttemperature,,string checknormals,,string minimumvolume,,string surface,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidcavity(string name,string refnode,string behavior,string mixture,string addedvolume,string adiabatic,string ambientpressure,string ambienttemperature,string checknormals,string minimumvolume,string surface,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5902,7 +5902,7 @@ void writeABQinputFile::writeABQfluiddensity(,vector<string> data,string comment
 }
 
 
-void writeABQinputFile::writeABQfluidexchange(,string name,,string property,,string cavitypressure,,string constants,,string effectivearea,,string surface,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidexchange(string name,string property,string cavitypressure,string constants,string effectivearea,string surface,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5934,7 +5934,7 @@ void writeABQinputFile::writeABQfluidexchange(,string name,,string property,,str
 }
 
 
-void writeABQinputFile::writeABQfluidexchangeactivation(,string amplitude,,string blockage,,string deltaleakagearea,,string op,,string outflowonly,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidexchangeactivation(string amplitude,string blockage,string deltaleakagearea,string op,string outflowonly,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5963,7 +5963,7 @@ void writeABQinputFile::writeABQfluidexchangeactivation(,string amplitude,,strin
 }
 
 
-void writeABQinputFile::writeABQfluidexchangeproperty(,string name,,string type,,string constants,,string dependencies,,string depvar,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidexchangeproperty(string name,string type,string constants,string dependencies,string depvar,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -5992,7 +5992,7 @@ void writeABQinputFile::writeABQfluidexchangeproperty(,string name,,string type,
 }
 
 
-void writeABQinputFile::writeABQfluidexpansion(,string dependencies,,string zero,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidexpansion(string dependencies,string zero,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6012,7 +6012,7 @@ void writeABQinputFile::writeABQfluidexpansion(,string dependencies,,string zero
 }
 
 
-void writeABQinputFile::writeABQfluidflux(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidflux(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6032,7 +6032,7 @@ void writeABQinputFile::writeABQfluidflux(,string amplitude,,string op,vector<st
 }
 
 
-void writeABQinputFile::writeABQfluidinflator(,string name,,string property,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidinflator(string name,string property,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6052,7 +6052,7 @@ void writeABQinputFile::writeABQfluidinflator(,string name,,string property,vect
 }
 
 
-void writeABQinputFile::writeABQfluidinflatoractivation(,string inflationtimeamplitude,,string massflowamplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidinflatoractivation(string inflationtimeamplitude,string massflowamplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6075,7 +6075,7 @@ void writeABQinputFile::writeABQfluidinflatoractivation(,string inflationtimeamp
 }
 
 
-void writeABQinputFile::writeABQfluidinflatormixture(,string numberspecies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidinflatormixture(string numberspecies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6095,7 +6095,7 @@ void writeABQinputFile::writeABQfluidinflatormixture(,string numberspecies,,stri
 }
 
 
-void writeABQinputFile::writeABQfluidinflatorproperty(,string effectivearea,,string name,,string tankvolume,,string type,,string dischargecoefficient,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidinflatorproperty(string effectivearea,string name,string tankvolume,string type,string dischargecoefficient,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6124,7 +6124,7 @@ void writeABQinputFile::writeABQfluidinflatorproperty(,string effectivearea,,str
 }
 
 
-void writeABQinputFile::writeABQfluidleakoff(,string dependencies,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidleakoff(string dependencies,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6144,7 +6144,7 @@ void writeABQinputFile::writeABQfluidleakoff(,string dependencies,,string user,v
 }
 
 
-void writeABQinputFile::writeABQfluidpipeconnectorloss(,string type,,string laminarflowtransition,,string valvecontrol,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidpipeconnectorloss(string type,string laminarflowtransition,string valvecontrol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6167,7 +6167,7 @@ void writeABQinputFile::writeABQfluidpipeconnectorloss(,string type,,string lami
 }
 
 
-void writeABQinputFile::writeABQfluidpipeconnectorsection(,string elset,,string material,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidpipeconnectorsection(string elset,string material,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6187,7 +6187,7 @@ void writeABQinputFile::writeABQfluidpipeconnectorsection(,string elset,,string 
 }
 
 
-void writeABQinputFile::writeABQfluidpipeflowloss(,string type,,string laminarflowtransition,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidpipeflowloss(string type,string laminarflowtransition,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6207,7 +6207,7 @@ void writeABQinputFile::writeABQfluidpipeflowloss(,string type,,string laminarfl
 }
 
 
-void writeABQinputFile::writeABQfluidpipesection(,string elset,,string material,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidpipesection(string elset,string material,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6227,7 +6227,7 @@ void writeABQinputFile::writeABQfluidpipesection(,string elset,,string material,
 }
 
 
-void writeABQinputFile::writeABQfluidsection(,string elset,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQfluidsection(string elset,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6261,7 +6261,7 @@ void writeABQinputFile::writeABQfoundation(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQfracturecriterion(,string distance,,string nset,,string type,,string dependencies,,string mixedmodebehavior,,string nodalenergyrate,,string normaldirection,,string symmetry,,string unstablegrowthtolerance,,string tolerance,,string viscosity,vector<string> data,string comment){
+void writeABQinputFile::writeABQfracturecriterion(string distance,string nset,string type,string dependencies,string mixedmodebehavior,string nodalenergyrate,string normaldirection,string symmetry,string unstablegrowthtolerance,string tolerance,string viscosity,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6308,7 +6308,7 @@ void writeABQinputFile::writeABQfracturecriterion(,string distance,,string nset,
 }
 
 
-void writeABQinputFile::writeABQframesection(,string elset,,string buckling,,string density,,string dependencies,,string pinned,,string plasticdefaults,,string section,,string yieldstress,,string zero,vector<string> data,string comment){
+void writeABQinputFile::writeABQframesection(string elset,string buckling,string density,string dependencies,string pinned,string plasticdefaults,string section,string yieldstress,string zero,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6349,7 +6349,7 @@ void writeABQinputFile::writeABQframesection(,string elset,,string buckling,,str
 }
 
 
-void writeABQinputFile::writeABQfrequency(,string acousticcoupling,,string dampingprojection,,string eigensolver,,string normalization,,string propertyevaluation,,string residualmodes,,string sim,,string nset,vector<string> data,string comment){
+void writeABQinputFile::writeABQfrequency(string acousticcoupling,string dampingprojection,string eigensolver,string normalization,string propertyevaluation,string residualmodes,string sim,string nset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6387,7 +6387,7 @@ void writeABQinputFile::writeABQfrequency(,string acousticcoupling,,string dampi
 }
 
 
-void writeABQinputFile::writeABQfriction(,string elasticslip,,string lagrange,,string rough,,string sliptolerance,,string user,,string anisotropic,,string dependencies,,string depvar,,string exponentialdecay,,string properties,,string sheartractionslope,,string taumax,,string testdata,vector<string> data,string comment){
+void writeABQinputFile::writeABQfriction(string elasticslip,string lagrange,string rough,string sliptolerance,string user,string anisotropic,string dependencies,string depvar,string exponentialdecay,string properties,string sheartractionslope,string taumax,string testdata,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6440,7 +6440,7 @@ void writeABQinputFile::writeABQfriction(,string elasticslip,,string lagrange,,s
 }
 
 
-void writeABQinputFile::writeABQgap(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQgap(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6457,7 +6457,7 @@ void writeABQinputFile::writeABQgap(,string elset,vector<string> data,string com
 }
 
 
-void writeABQinputFile::writeABQgapconductance(,string dependencies,,string pressure,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQgapconductance(string dependencies,string pressure,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6480,7 +6480,7 @@ void writeABQinputFile::writeABQgapconductance(,string dependencies,,string pres
 }
 
 
-void writeABQinputFile::writeABQgapelectricalconductance(,string dependencies,,string pressure,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQgapelectricalconductance(string dependencies,string pressure,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6503,7 +6503,7 @@ void writeABQinputFile::writeABQgapelectricalconductance(,string dependencies,,s
 }
 
 
-void writeABQinputFile::writeABQgapflow(,string dependencies,,string type,,string kmax,vector<string> data,string comment){
+void writeABQinputFile::writeABQgapflow(string dependencies,string type,string kmax,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6554,7 +6554,7 @@ void writeABQinputFile::writeABQgapradiation(,vector<string> data,string comment
 }
 
 
-void writeABQinputFile::writeABQgasspecificheat(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQgasspecificheat(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6571,7 +6571,7 @@ void writeABQinputFile::writeABQgasspecificheat(,string dependencies,vector<stri
 }
 
 
-void writeABQinputFile::writeABQgasketbehavior(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQgasketbehavior(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6588,7 +6588,7 @@ void writeABQinputFile::writeABQgasketbehavior(,string name,vector<string> data,
 }
 
 
-void writeABQinputFile::writeABQgasketcontactarea(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQgasketcontactarea(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6605,7 +6605,7 @@ void writeABQinputFile::writeABQgasketcontactarea(,string dependencies,vector<st
 }
 
 
-void writeABQinputFile::writeABQgasketelasticity(,string component,,string dependencies,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQgasketelasticity(string component,string dependencies,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6628,7 +6628,7 @@ void writeABQinputFile::writeABQgasketelasticity(,string component,,string depen
 }
 
 
-void writeABQinputFile::writeABQgasketsection(,string elset,,string behavior,,string material,,string orientation,,string stabilizationstiffness,vector<string> data,string comment){
+void writeABQinputFile::writeABQgasketsection(string elset,string behavior,string material,string orientation,string stabilizationstiffness,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6657,7 +6657,7 @@ void writeABQinputFile::writeABQgasketsection(,string elset,,string behavior,,st
 }
 
 
-void writeABQinputFile::writeABQgasketthicknessbehavior(,string dependencies,,string direction,,string tensilestiffnessfactor,,string type,,string variable,,string slopedrop,,string yieldonset,vector<string> data,string comment){
+void writeABQinputFile::writeABQgasketthicknessbehavior(string dependencies,string direction,string tensilestiffnessfactor,string type,string variable,string slopedrop,string yieldonset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6706,7 +6706,7 @@ void writeABQinputFile::writeABQgel(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQgeostatic(,string heat,,string utol,vector<string> data,string comment){
+void writeABQinputFile::writeABQgeostatic(string heat,string utol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6726,7 +6726,7 @@ void writeABQinputFile::writeABQgeostatic(,string heat,,string utol,vector<strin
 }
 
 
-void writeABQinputFile::writeABQglobaldamping(,string alpha,,string beta,,string field,,string structural,vector<string> data,string comment){
+void writeABQinputFile::writeABQglobaldamping(string alpha,string beta,string field,string structural,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6780,7 +6780,7 @@ void writeABQinputFile::writeABQheatgeneration(,vector<string> data,string comme
 }
 
 
-void writeABQinputFile::writeABQheattransfer(,string centering,,string type,,string deltmx,,string end,,string steadystate,,string mxdem,vector<string> data,string comment){
+void writeABQinputFile::writeABQheattransfer(string centering,string type,string deltmx,string end,string steadystate,string mxdem,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6812,7 +6812,7 @@ void writeABQinputFile::writeABQheattransfer(,string centering,,string type,,str
 }
 
 
-void writeABQinputFile::writeABQheatcap(,string dependencies,,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQheatcap(string dependencies,string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6846,7 +6846,7 @@ void writeABQinputFile::writeABQhourglassstiffness(,vector<string> data,string c
 }
 
 
-void writeABQinputFile::writeABQhyperelastic(,string arruda-boyce,,string marlow,,string mooney-rivlin,,string neohooke,,string ogden,,string polynomial,,string reducedpolynomial,,string user,,string vanderwaals,,string yeoh,,string type,,string beta,,string moduli,,string n,,string poisson,,string properties,,string testdatainput,vector<string> data,string comment){
+void writeABQinputFile::writeABQhyperelastic(string arruda-boyce,string marlow,string mooney-rivlin,string neohooke,string ogden,string polynomial,string reducedpolynomial,string user,string vanderwaals,string yeoh,string type,string beta,string moduli,string n,string poisson,string properties,string testdatainput,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6911,7 +6911,7 @@ void writeABQinputFile::writeABQhyperelastic(,string arruda-boyce,,string marlow
 }
 
 
-void writeABQinputFile::writeABQhyperfoam(,string moduli,,string n,,string poisson,,string testdatainput,vector<string> data,string comment){
+void writeABQinputFile::writeABQhyperfoam(string moduli,string n,string poisson,string testdatainput,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6937,7 +6937,7 @@ void writeABQinputFile::writeABQhyperfoam(,string moduli,,string n,,string poiss
 }
 
 
-void writeABQinputFile::writeABQhypoelastic(,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQhypoelastic(string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6968,7 +6968,7 @@ void writeABQinputFile::writeABQhysteresis(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQimpedance(,string property,,string nonreflecting,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQimpedance(string property,string nonreflecting,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -6991,7 +6991,7 @@ void writeABQinputFile::writeABQimpedance(,string property,,string nonreflecting
 }
 
 
-void writeABQinputFile::writeABQimpedanceproperty(,string name,,string data,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQimpedanceproperty(string name,string data,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7014,7 +7014,7 @@ void writeABQinputFile::writeABQimpedanceproperty(,string name,,string data,,str
 }
 
 
-void writeABQinputFile::writeABQimperfection(,string file,,string input,,string step,,string inc,,string nset,,string system,vector<string> data,string comment){
+void writeABQinputFile::writeABQimperfection(string file,string input,string step,string inc,string nset,string system,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7046,7 +7046,7 @@ void writeABQinputFile::writeABQimperfection(,string file,,string input,,string 
 }
 
 
-void writeABQinputFile::writeABQimport(,string update,,string eoffset,,string noffset,,string rename,,string increment,,string interval,,string iteration,,string state,,string step,vector<string> data,string comment){
+void writeABQinputFile::writeABQimport(string update,string eoffset,string noffset,string rename,string increment,string interval,string iteration,string state,string step,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7087,7 +7087,7 @@ void writeABQinputFile::writeABQimport(,string update,,string eoffset,,string no
 }
 
 
-void writeABQinputFile::writeABQimportcontrols(,string normaltol,vector<string> data,string comment){
+void writeABQinputFile::writeABQimportcontrols(string normaltol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7104,7 +7104,7 @@ void writeABQinputFile::writeABQimportcontrols(,string normaltol,vector<string> 
 }
 
 
-void writeABQinputFile::writeABQimportelset(,string rename,vector<string> data,string comment){
+void writeABQinputFile::writeABQimportelset(string rename,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7121,7 +7121,7 @@ void writeABQinputFile::writeABQimportelset(,string rename,vector<string> data,s
 }
 
 
-void writeABQinputFile::writeABQimportnset(,string rename,vector<string> data,string comment){
+void writeABQinputFile::writeABQimportnset(string rename,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7138,7 +7138,7 @@ void writeABQinputFile::writeABQimportnset(,string rename,vector<string> data,st
 }
 
 
-void writeABQinputFile::writeABQincidentwave(,string property,,string accelerationamplitude,,string pressureamplitude,vector<string> data,string comment){
+void writeABQinputFile::writeABQincidentwave(string property,string accelerationamplitude,string pressureamplitude,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7175,7 +7175,7 @@ void writeABQinputFile::writeABQincidentwavefluidproperty(,vector<string> data,s
 }
 
 
-void writeABQinputFile::writeABQincidentwaveinteraction(,string property,,string accelerationamplitude,,string conwep,,string pressureamplitude,,string undex,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQincidentwaveinteraction(string property,string accelerationamplitude,string conwep,string pressureamplitude,string undex,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7210,7 +7210,7 @@ void writeABQinputFile::writeABQincidentwaveinteraction(,string property,,string
 }
 
 
-void writeABQinputFile::writeABQincidentwaveinteractionproperty(,string name,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQincidentwaveinteractionproperty(string name,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7230,7 +7230,7 @@ void writeABQinputFile::writeABQincidentwaveinteractionproperty(,string name,,st
 }
 
 
-void writeABQinputFile::writeABQincidentwaveproperty(,string name,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQincidentwaveproperty(string name,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7264,7 +7264,7 @@ void writeABQinputFile::writeABQincidentwavereflection(,vector<string> data,stri
 }
 
 
-void writeABQinputFile::writeABQinclude(,string input,,string password,vector<string> data,string comment){
+void writeABQinputFile::writeABQinclude(string input,string password,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7284,7 +7284,7 @@ void writeABQinputFile::writeABQinclude(,string input,,string password,vector<st
 }
 
 
-void writeABQinputFile::writeABQincrementationoutput(,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQincrementationoutput(string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7315,7 +7315,7 @@ void writeABQinputFile::writeABQinelasticheatfraction(,vector<string> data,strin
 }
 
 
-void writeABQinputFile::writeABQinertiarelief(,string orientation,,string fixed,,string remove,vector<string> data,string comment){
+void writeABQinputFile::writeABQinertiarelief(string orientation,string fixed,string remove,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7338,7 +7338,7 @@ void writeABQinputFile::writeABQinertiarelief(,string orientation,,string fixed,
 }
 
 
-void writeABQinputFile::writeABQinitialconditions(,string type,,string absoluteexteriortolerance,,string criterion,,string definition,,string drivingelsets,,string exteriortolerance,,string file,,string fulltensor,,string geostatic,,string inc,,string input,,string interpolate,,string midside,,string normal,,string numberbackstresses,,string outputvariable,,string rebar,,string sectionpoints,,string step,,string unbalancedstress,,string user,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQinitialconditions(string type,string absoluteexteriortolerance,string criterion,string definition,string drivingelsets,string exteriortolerance,string file,string fulltensor,string geostatic,string inc,string input,string interpolate,string midside,string normal,string numberbackstresses,string outputvariable,string rebar,string sectionpoints,string step,string unbalancedstress,string user,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7418,7 +7418,7 @@ void writeABQinputFile::writeABQinitialconditions(,string type,,string absolutee
 }
 
 
-void writeABQinputFile::writeABQinstance(,string name,,string part,,string instance,,string name,,string instance,,string library,vector<string> data,string comment){
+void writeABQinputFile::writeABQinstance(string name,string part,string instance,string name,string instance,string library,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7450,7 +7450,7 @@ void writeABQinputFile::writeABQinstance(,string name,,string part,,string insta
 }
 
 
-void writeABQinputFile::writeABQintegratedoutput(,string section,,string surface,,string elset,,string section,,string surface,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQintegratedoutput(string section,string surface,string elset,string section,string surface,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7482,7 +7482,7 @@ void writeABQinputFile::writeABQintegratedoutput(,string section,,string surface
 }
 
 
-void writeABQinputFile::writeABQintegratedoutputsection(,string name,,string surface,,string orientation,,string position,,string projectorientation,,string refnode,,string refnodemotion,vector<string> data,string comment){
+void writeABQinputFile::writeABQintegratedoutputsection(string name,string surface,string orientation,string position,string projectorientation,string refnode,string refnodemotion,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7517,7 +7517,7 @@ void writeABQinputFile::writeABQintegratedoutputsection(,string name,,string sur
 }
 
 
-void writeABQinputFile::writeABQinterface(,string elset,,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQinterface(string elset,string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7537,7 +7537,7 @@ void writeABQinputFile::writeABQinterface(,string elset,,string name,vector<stri
 }
 
 
-void writeABQinputFile::writeABQits(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQits(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7554,7 +7554,7 @@ void writeABQinputFile::writeABQits(,string elset,vector<string> data,string com
 }
 
 
-void writeABQinputFile::writeABQjoint(,string elset,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQjoint(string elset,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7574,7 +7574,7 @@ void writeABQinputFile::writeABQjoint(,string elset,,string orientation,vector<s
 }
 
 
-void writeABQinputFile::writeABQjointelasticity(,string moduli,,string ndim,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQjointelasticity(string moduli,string ndim,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7597,7 +7597,7 @@ void writeABQinputFile::writeABQjointelasticity(,string moduli,,string ndim,,str
 }
 
 
-void writeABQinputFile::writeABQjointplasticity(,string type,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQjointplasticity(string type,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7617,7 +7617,7 @@ void writeABQinputFile::writeABQjointplasticity(,string type,,string dependencie
 }
 
 
-void writeABQinputFile::writeABQjointedmaterial(,string dependencies,,string jointdirection,,string noseparation,,string shearretention,vector<string> data,string comment){
+void writeABQinputFile::writeABQjointedmaterial(string dependencies,string jointdirection,string noseparation,string shearretention,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7657,7 +7657,7 @@ void writeABQinputFile::writeABQjouleheatfraction(,vector<string> data,string co
 }
 
 
-void writeABQinputFile::writeABQkappa(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQkappa(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7691,7 +7691,7 @@ void writeABQinputFile::writeABQkinematic(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQkinematiccoupling(,string refnode,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQkinematiccoupling(string refnode,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7711,7 +7711,7 @@ void writeABQinputFile::writeABQkinematiccoupling(,string refnode,,string orient
 }
 
 
-void writeABQinputFile::writeABQlatentheat(,string porefluid,vector<string> data,string comment){
+void writeABQinputFile::writeABQlatentheat(string porefluid,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7728,7 +7728,7 @@ void writeABQinputFile::writeABQlatentheat(,string porefluid,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQloadcase(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQloadcase(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7745,7 +7745,7 @@ void writeABQinputFile::writeABQloadcase(,string name,vector<string> data,string
 }
 
 
-void writeABQinputFile::writeABQloadingdata(,string dependencies,,string direction,,string extrapolation,,string independentcomponents,,string regularize,,string rtol,,string type,,string ratedependent,,string rateinterpolation,,string damageonset,,string slopedrop,,string yieldonset,vector<string> data,string comment){
+void writeABQinputFile::writeABQloadingdata(string dependencies,string direction,string extrapolation,string independentcomponents,string regularize,string rtol,string type,string ratedependent,string rateinterpolation,string damageonset,string slopedrop,string yieldonset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7795,7 +7795,7 @@ void writeABQinputFile::writeABQloadingdata(,string dependencies,,string directi
 }
 
 
-void writeABQinputFile::writeABQlowdensityfoam(,string lateralstraindata,,string strainrate,,string rateextrapolation,,string tensioncutoff,,string fail,vector<string> data,string comment){
+void writeABQinputFile::writeABQlowdensityfoam(string lateralstraindata,string strainrate,string rateextrapolation,string tensioncutoff,string fail,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7824,7 +7824,7 @@ void writeABQinputFile::writeABQlowdensityfoam(,string lateralstraindata,,string
 }
 
 
-void writeABQinputFile::writeABQmagneticpermeability(,string dependencies,,string frequency,,string nonlinear,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQmagneticpermeability(string dependencies,string frequency,string nonlinear,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7850,7 +7850,7 @@ void writeABQinputFile::writeABQmagneticpermeability(,string dependencies,,strin
 }
 
 
-void writeABQinputFile::writeABQmagnetostatic(,string direct,,string stabilization,vector<string> data,string comment){
+void writeABQinputFile::writeABQmagnetostatic(string direct,string stabilization,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7870,7 +7870,7 @@ void writeABQinputFile::writeABQmagnetostatic(,string direct,,string stabilizati
 }
 
 
-void writeABQinputFile::writeABQmapsolution(,string inc,,string step,,string unbalancedstress,vector<string> data,string comment){
+void writeABQinputFile::writeABQmapsolution(string inc,string step,string unbalancedstress,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7893,7 +7893,7 @@ void writeABQinputFile::writeABQmapsolution(,string inc,,string step,,string unb
 }
 
 
-void writeABQinputFile::writeABQmass(,string elset,,string alpha,,string composite,,string orientation,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQmass(string elset,string alpha,string composite,string orientation,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7922,7 +7922,7 @@ void writeABQinputFile::writeABQmass(,string elset,,string alpha,,string composi
 }
 
 
-void writeABQinputFile::writeABQmassadjust(,string targetdt,vector<string> data,string comment){
+void writeABQinputFile::writeABQmassadjust(string targetdt,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7939,7 +7939,7 @@ void writeABQinputFile::writeABQmassadjust(,string targetdt,vector<string> data,
 }
 
 
-void writeABQinputFile::writeABQmassdiffusion(,string dcmax,,string end,,string steadystate,vector<string> data,string comment){
+void writeABQinputFile::writeABQmassdiffusion(string dcmax,string end,string steadystate,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7962,7 +7962,7 @@ void writeABQinputFile::writeABQmassdiffusion(,string dcmax,,string end,,string 
 }
 
 
-void writeABQinputFile::writeABQmassflowrate(,string amplitude,,string input,,string op,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQmassflowrate(string amplitude,string input,string op,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -7988,7 +7988,7 @@ void writeABQinputFile::writeABQmassflowrate(,string amplitude,,string input,,st
 }
 
 
-void writeABQinputFile::writeABQmaterial(,string name,,string rtol,,string sratefactor,,string strainrateregularization,vector<string> data,string comment){
+void writeABQinputFile::writeABQmaterial(string name,string rtol,string sratefactor,string strainrateregularization,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8014,7 +8014,7 @@ void writeABQinputFile::writeABQmaterial(,string name,,string rtol,,string srate
 }
 
 
-void writeABQinputFile::writeABQmatrix(,string type,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQmatrix(string type,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8034,7 +8034,7 @@ void writeABQinputFile::writeABQmatrix(,string type,,string input,vector<string>
 }
 
 
-void writeABQinputFile::writeABQmatrixassemble(,string mass,,string stiffness,,string structuraldamping,,string viscousdamping,,string nset,vector<string> data,string comment){
+void writeABQinputFile::writeABQmatrixassemble(string mass,string stiffness,string structuraldamping,string viscousdamping,string nset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8063,7 +8063,7 @@ void writeABQinputFile::writeABQmatrixassemble(,string mass,,string stiffness,,s
 }
 
 
-void writeABQinputFile::writeABQmatrixcheck(,string referencenode,vector<string> data,string comment){
+void writeABQinputFile::writeABQmatrixcheck(string referencenode,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8080,7 +8080,7 @@ void writeABQinputFile::writeABQmatrixcheck(,string referencenode,vector<string>
 }
 
 
-void writeABQinputFile::writeABQmatrixgenerate(,string stiffness,,string mass,,string viscousdamping,,string structuraldamping,,string load,,string solidinfiniteformulation,,string elementbyelement,,string elset,,string field,,string mpc,,string propertyevaluation,,string publicnodes,,string source,vector<string> data,string comment){
+void writeABQinputFile::writeABQmatrixgenerate(string stiffness,string mass,string viscousdamping,string structuraldamping,string load,string solidinfiniteformulation,string elementbyelement,string elset,string field,string mpc,string propertyevaluation,string publicnodes,string source,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8133,7 +8133,7 @@ void writeABQinputFile::writeABQmatrixgenerate(,string stiffness,,string mass,,s
 }
 
 
-void writeABQinputFile::writeABQmatrixinput(,string name,,string input,,string matrix,,string scalefactor,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQmatrixinput(string name,string input,string matrix,string scalefactor,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8162,7 +8162,7 @@ void writeABQinputFile::writeABQmatrixinput(,string name,,string input,,string m
 }
 
 
-void writeABQinputFile::writeABQmatrixoutput(,string stiffness,,string mass,,string viscousdamping,,string structuraldamping,,string load,,string format,vector<string> data,string comment){
+void writeABQinputFile::writeABQmatrixoutput(string stiffness,string mass,string viscousdamping,string structuraldamping,string load,string format,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8208,7 +8208,7 @@ void writeABQinputFile::writeABQmediatransport(,vector<string> data,string comme
 }
 
 
-void writeABQinputFile::writeABQmembranesection(,string elset,,string material,,string controls,,string density,,string membranethickness,,string nodalthickness,,string orientation,,string poisson,vector<string> data,string comment){
+void writeABQinputFile::writeABQmembranesection(string elset,string material,string controls,string density,string membranethickness,string nodalthickness,string orientation,string poisson,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8246,7 +8246,7 @@ void writeABQinputFile::writeABQmembranesection(,string elset,,string material,,
 }
 
 
-void writeABQinputFile::writeABQmodaldamping(,string structural,,string viscous,,string definition,,string field,vector<string> data,string comment){
+void writeABQinputFile::writeABQmodaldamping(string structural,string viscous,string definition,string field,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8272,7 +8272,7 @@ void writeABQinputFile::writeABQmodaldamping(,string structural,,string viscous,
 }
 
 
-void writeABQinputFile::writeABQmodaldynamic(,string continue,vector<string> data,string comment){
+void writeABQinputFile::writeABQmodaldynamic(string continue,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8289,7 +8289,7 @@ void writeABQinputFile::writeABQmodaldynamic(,string continue,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQmodalfile(,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQmodalfile(string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8306,7 +8306,7 @@ void writeABQinputFile::writeABQmodalfile(,string frequency,vector<string> data,
 }
 
 
-void writeABQinputFile::writeABQmodaloutput(,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQmodaloutput(string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8323,7 +8323,7 @@ void writeABQinputFile::writeABQmodaloutput(,string variable,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQmodalprint(,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQmodalprint(string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8340,7 +8340,7 @@ void writeABQinputFile::writeABQmodalprint(,string frequency,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQmodelchange(,string activate,,string add,,string remove,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQmodelchange(string activate,string add,string remove,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8366,7 +8366,7 @@ void writeABQinputFile::writeABQmodelchange(,string activate,,string add,,string
 }
 
 
-void writeABQinputFile::writeABQmohrcoulomb(,string dependencies,,string deviatoriceccentricity,,string eccentricity,vector<string> data,string comment){
+void writeABQinputFile::writeABQmohrcoulomb(string dependencies,string deviatoriceccentricity,string eccentricity,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8389,7 +8389,7 @@ void writeABQinputFile::writeABQmohrcoulomb(,string dependencies,,string deviato
 }
 
 
-void writeABQinputFile::writeABQmohrcoulombhardening(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQmohrcoulombhardening(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8434,7 +8434,7 @@ void writeABQinputFile::writeABQmolecularweight(,vector<string> data,string comm
 }
 
 
-void writeABQinputFile::writeABQmomentumequationsolver(,string convergence,,string diagnostics,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQmomentumequationsolver(string convergence,string diagnostics,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8457,7 +8457,7 @@ void writeABQinputFile::writeABQmomentumequationsolver(,string convergence,,stri
 }
 
 
-void writeABQinputFile::writeABQmonitor(,string dof,,string node,,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQmonitor(string dof,string node,string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8480,7 +8480,7 @@ void writeABQinputFile::writeABQmonitor(,string dof,,string node,,string frequen
 }
 
 
-void writeABQinputFile::writeABQmotion(,string rotation,,string translation,,string user,,string amplitude,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQmotion(string rotation,string translation,string user,string amplitude,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8509,7 +8509,7 @@ void writeABQinputFile::writeABQmotion(,string rotation,,string translation,,str
 }
 
 
-void writeABQinputFile::writeABQmpc(,string input,,string mode,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQmpc(string input,string mode,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8532,7 +8532,7 @@ void writeABQinputFile::writeABQmpc(,string input,,string mode,,string user,vect
 }
 
 
-void writeABQinputFile::writeABQmullinseffect(,string testdatainput,,string user,,string beta,,string dependencies,,string m,,string properties,,string r,vector<string> data,string comment){
+void writeABQinputFile::writeABQmullinseffect(string testdatainput,string user,string beta,string dependencies,string m,string properties,string r,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8567,7 +8567,7 @@ void writeABQinputFile::writeABQmullinseffect(,string testdatainput,,string user
 }
 
 
-void writeABQinputFile::writeABQm1(,string dependencies,,string elastic,,string linear,vector<string> data,string comment){
+void writeABQinputFile::writeABQm1(string dependencies,string elastic,string linear,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8590,7 +8590,7 @@ void writeABQinputFile::writeABQm1(,string dependencies,,string elastic,,string 
 }
 
 
-void writeABQinputFile::writeABQm2(,string dependencies,,string elastic,,string linear,vector<string> data,string comment){
+void writeABQinputFile::writeABQm2(string dependencies,string elastic,string linear,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8613,7 +8613,7 @@ void writeABQinputFile::writeABQm2(,string dependencies,,string elastic,,string 
 }
 
 
-void writeABQinputFile::writeABQncopy(,string changenumber,,string oldset,,string pole,,string reflect,,string shift,,string multiple,,string newset,vector<string> data,string comment){
+void writeABQinputFile::writeABQncopy(string changenumber,string oldset,string pole,string reflect,string shift,string multiple,string newset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8648,7 +8648,7 @@ void writeABQinputFile::writeABQncopy(,string changenumber,,string oldset,,strin
 }
 
 
-void writeABQinputFile::writeABQnetworkstiffnessratio(,string n,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQnetworkstiffnessratio(string n,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8668,7 +8668,7 @@ void writeABQinputFile::writeABQnetworkstiffnessratio(,string n,,string dependen
 }
 
 
-void writeABQinputFile::writeABQnfill(,string bias,,string nset,,string singular,,string twostep,vector<string> data,string comment){
+void writeABQinputFile::writeABQnfill(string bias,string nset,string singular,string twostep,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8694,7 +8694,7 @@ void writeABQinputFile::writeABQnfill(,string bias,,string nset,,string singular
 }
 
 
-void writeABQinputFile::writeABQngen(,string line,,string nset,,string system,vector<string> data,string comment){
+void writeABQinputFile::writeABQngen(string line,string nset,string system,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8717,7 +8717,7 @@ void writeABQinputFile::writeABQngen(,string line,,string nset,,string system,ve
 }
 
 
-void writeABQinputFile::writeABQnmap(,string nset,,string type,,string definition,vector<string> data,string comment){
+void writeABQinputFile::writeABQnmap(string nset,string type,string definition,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8768,7 +8768,7 @@ void writeABQinputFile::writeABQnotension(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQnodalenergyrate(,string generate,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQnodalenergyrate(string generate,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8788,7 +8788,7 @@ void writeABQinputFile::writeABQnodalenergyrate(,string generate,,string input,v
 }
 
 
-void writeABQinputFile::writeABQnodalthickness(,string generate,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQnodalthickness(string generate,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8808,7 +8808,7 @@ void writeABQinputFile::writeABQnodalthickness(,string generate,,string input,ve
 }
 
 
-void writeABQinputFile::writeABQnode(,string input,,string nset,,string system,vector<string> data,string comment){
+void writeABQinputFile::writeABQnode(string input,string nset,string system,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8831,7 +8831,7 @@ void writeABQinputFile::writeABQnode(,string input,,string nset,,string system,v
 }
 
 
-void writeABQinputFile::writeABQnodefile(,string frequency,,string global,,string lastmode,,string mode,,string nset,vector<string> data,string comment){
+void writeABQinputFile::writeABQnodefile(string frequency,string global,string lastmode,string mode,string nset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8860,7 +8860,7 @@ void writeABQinputFile::writeABQnodefile(,string frequency,,string global,,strin
 }
 
 
-void writeABQinputFile::writeABQnodeoutput(,string nset,,string tracerset,,string exterior,,string nset,,string tracerset,,string global,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQnodeoutput(string nset,string tracerset,string exterior,string nset,string tracerset,string global,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8895,7 +8895,7 @@ void writeABQinputFile::writeABQnodeoutput(,string nset,,string tracerset,,strin
 }
 
 
-void writeABQinputFile::writeABQnodeprint(,string frequency,,string global,,string lastmode,,string mode,,string nset,,string summary,,string totals,vector<string> data,string comment){
+void writeABQinputFile::writeABQnodeprint(string frequency,string global,string lastmode,string mode,string nset,string summary,string totals,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8930,7 +8930,7 @@ void writeABQinputFile::writeABQnodeprint(,string frequency,,string global,,stri
 }
 
 
-void writeABQinputFile::writeABQnoderesponse(,string nset,vector<string> data,string comment){
+void writeABQinputFile::writeABQnoderesponse(string nset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8947,7 +8947,7 @@ void writeABQinputFile::writeABQnoderesponse(,string nset,vector<string> data,st
 }
 
 
-void writeABQinputFile::writeABQnonlinearbh(,string dir,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQnonlinearbh(string dir,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8967,7 +8967,7 @@ void writeABQinputFile::writeABQnonlinearbh(,string dir,,string dependencies,vec
 }
 
 
-void writeABQinputFile::writeABQnonstructuralmass(,string elset,,string units,,string distribution,vector<string> data,string comment){
+void writeABQinputFile::writeABQnonstructuralmass(string elset,string units,string distribution,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -8990,7 +8990,7 @@ void writeABQinputFile::writeABQnonstructuralmass(,string elset,,string units,,s
 }
 
 
-void writeABQinputFile::writeABQnormal(,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQnormal(string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9007,7 +9007,7 @@ void writeABQinputFile::writeABQnormal(,string type,vector<string> data,string c
 }
 
 
-void writeABQinputFile::writeABQnset(,string nset,,string elset,,string generate,,string instance,,string internal,,string unsorted,vector<string> data,string comment){
+void writeABQinputFile::writeABQnset(string nset,string elset,string generate,string instance,string internal,string unsorted,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9039,7 +9039,7 @@ void writeABQinputFile::writeABQnset(,string nset,,string elset,,string generate
 }
 
 
-void writeABQinputFile::writeABQorientation(,string name,,string definition,,string localdirections,,string system,vector<string> data,string comment){
+void writeABQinputFile::writeABQorientation(string name,string definition,string localdirections,string system,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9065,7 +9065,7 @@ void writeABQinputFile::writeABQorientation(,string name,,string definition,,str
 }
 
 
-void writeABQinputFile::writeABQornl(,string a,,string h,,string material,,string reset,vector<string> data,string comment){
+void writeABQinputFile::writeABQornl(string a,string h,string material,string reset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9091,7 +9091,7 @@ void writeABQinputFile::writeABQornl(,string a,,string h,,string material,,strin
 }
 
 
-void writeABQinputFile::writeABQoutput(,string diagnostics,,string field,,string history,,string frequency,,string modelist,,string name,,string numberinterval,,string timemarks,,string timepoints,,string op,,string timeinterval,,string variable,,string sensor,vector<string> data,string comment){
+void writeABQinputFile::writeABQoutput(string diagnostics,string field,string history,string frequency,string modelist,string name,string numberinterval,string timemarks,string timepoints,string op,string timeinterval,string variable,string sensor,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9144,7 +9144,7 @@ void writeABQinputFile::writeABQoutput(,string diagnostics,,string field,,string
 }
 
 
-void writeABQinputFile::writeABQparameter(,string dependent,,string independent,,string table,vector<string> data,string comment){
+void writeABQinputFile::writeABQparameter(string dependent,string independent,string table,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9167,7 +9167,7 @@ void writeABQinputFile::writeABQparameter(,string dependent,,string independent,
 }
 
 
-void writeABQinputFile::writeABQparameterdependence(,string numbervalues,,string table,vector<string> data,string comment){
+void writeABQinputFile::writeABQparameterdependence(string numbervalues,string table,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9187,7 +9187,7 @@ void writeABQinputFile::writeABQparameterdependence(,string numbervalues,,string
 }
 
 
-void writeABQinputFile::writeABQparametershapevariation(,string parameter,,string file,,string input,,string step,,string inc,,string mode,,string nset,,string system,vector<string> data,string comment){
+void writeABQinputFile::writeABQparametershapevariation(string parameter,string file,string input,string step,string inc,string mode,string nset,string system,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9225,7 +9225,7 @@ void writeABQinputFile::writeABQparametershapevariation(,string parameter,,strin
 }
 
 
-void writeABQinputFile::writeABQpart(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQpart(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9242,7 +9242,7 @@ void writeABQinputFile::writeABQpart(,string name,vector<string> data,string com
 }
 
 
-void writeABQinputFile::writeABQparticlegenerator(,string maximumnumberofparticles,,string name,,string type,,string maxattemptsperincrement,,string maxinsertionattempts,,string solidfraction,vector<string> data,string comment){
+void writeABQinputFile::writeABQparticlegenerator(string maximumnumberofparticles,string name,string type,string maxattemptsperincrement,string maxinsertionattempts,string solidfraction,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9274,7 +9274,7 @@ void writeABQinputFile::writeABQparticlegenerator(,string maximumnumberofparticl
 }
 
 
-void writeABQinputFile::writeABQparticlegeneratorflow(,string generator,vector<string> data,string comment){
+void writeABQinputFile::writeABQparticlegeneratorflow(string generator,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9291,7 +9291,7 @@ void writeABQinputFile::writeABQparticlegeneratorflow(,string generator,vector<s
 }
 
 
-void writeABQinputFile::writeABQparticlegeneratorinlet(,string surface,vector<string> data,string comment){
+void writeABQinputFile::writeABQparticlegeneratorinlet(string surface,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9322,7 +9322,7 @@ void writeABQinputFile::writeABQparticlegeneratormixture(,vector<string> data,st
 }
 
 
-void writeABQinputFile::writeABQperfectlymatchedlayer(,string elset,,string name,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQperfectlymatchedlayer(string elset,string name,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9345,7 +9345,7 @@ void writeABQinputFile::writeABQperfectlymatchedlayer(,string elset,,string name
 }
 
 
-void writeABQinputFile::writeABQperiodic(,string type,,string nr,vector<string> data,string comment){
+void writeABQinputFile::writeABQperiodic(string type,string nr,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9365,7 +9365,7 @@ void writeABQinputFile::writeABQperiodic(,string type,,string nr,vector<string> 
 }
 
 
-void writeABQinputFile::writeABQperiodicmedia(,string inletcontrolnode,,string name,,string orientation,,string outletcontrolnode,,string triggernode,vector<string> data,string comment){
+void writeABQinputFile::writeABQperiodicmedia(string inletcontrolnode,string name,string orientation,string outletcontrolnode,string triggernode,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9394,7 +9394,7 @@ void writeABQinputFile::writeABQperiodicmedia(,string inletcontrolnode,,string n
 }
 
 
-void writeABQinputFile::writeABQpermanentmagnetization(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQpermanentmagnetization(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9411,7 +9411,7 @@ void writeABQinputFile::writeABQpermanentmagnetization(,string dependencies,vect
 }
 
 
-void writeABQinputFile::writeABQpermeability(,string dependencies,,string type,,string specific,vector<string> data,string comment){
+void writeABQinputFile::writeABQpermeability(string dependencies,string type,string specific,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9434,7 +9434,7 @@ void writeABQinputFile::writeABQpermeability(,string dependencies,,string type,,
 }
 
 
-void writeABQinputFile::writeABQphysicalconstants(,string absolutezero,,string stefanboltzmann,,string universalgasconstant,,string splreferencepressure,vector<string> data,string comment){
+void writeABQinputFile::writeABQphysicalconstants(string absolutezero,string stefanboltzmann,string universalgasconstant,string splreferencepressure,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9460,7 +9460,7 @@ void writeABQinputFile::writeABQphysicalconstants(,string absolutezero,,string s
 }
 
 
-void writeABQinputFile::writeABQpiezoelectric(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQpiezoelectric(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9480,7 +9480,7 @@ void writeABQinputFile::writeABQpiezoelectric(,string dependencies,,string type,
 }
 
 
-void writeABQinputFile::writeABQpipe-soilinteraction(,string elset,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQpipe-soilinteraction(string elset,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9500,7 +9500,7 @@ void writeABQinputFile::writeABQpipe-soilinteraction(,string elset,,string orien
 }
 
 
-void writeABQinputFile::writeABQpipe-soilstiffness(,string dependencies,,string direction,,string type,,string properties,,string variables,vector<string> data,string comment){
+void writeABQinputFile::writeABQpipe-soilstiffness(string dependencies,string direction,string type,string properties,string variables,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9529,7 +9529,7 @@ void writeABQinputFile::writeABQpipe-soilstiffness(,string dependencies,,string 
 }
 
 
-void writeABQinputFile::writeABQplanartestdata(,string smooth,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQplanartestdata(string smooth,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9549,7 +9549,7 @@ void writeABQinputFile::writeABQplanartestdata(,string smooth,,string dependenci
 }
 
 
-void writeABQinputFile::writeABQplastic(,string hardening,,string scalestress,,string dependencies,,string rate,,string datatype,,string numberbackstresses,,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQplastic(string hardening,string scalestress,string dependencies,string rate,string datatype,string numberbackstresses,string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9640,7 +9640,7 @@ void writeABQinputFile::writeABQplastictorque(,vector<string> data,string commen
 }
 
 
-void writeABQinputFile::writeABQpmlcoefficient(,string variation,vector<string> data,string comment){
+void writeABQinputFile::writeABQpmlcoefficient(string variation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9671,7 +9671,7 @@ void writeABQinputFile::writeABQporousbulkmoduli(,vector<string> data,string com
 }
 
 
-void writeABQinputFile::writeABQporouselastic(,string dependencies,,string shear,vector<string> data,string comment){
+void writeABQinputFile::writeABQporouselastic(string dependencies,string shear,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9705,7 +9705,7 @@ void writeABQinputFile::writeABQporousfailurecriteria(,vector<string> data,strin
 }
 
 
-void writeABQinputFile::writeABQporousmetalplasticity(,string dependencies,,string relativedensity,vector<string> data,string comment){
+void writeABQinputFile::writeABQporousmetalplasticity(string dependencies,string relativedensity,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9725,7 +9725,7 @@ void writeABQinputFile::writeABQporousmetalplasticity(,string dependencies,,stri
 }
 
 
-void writeABQinputFile::writeABQpostoutput(,string step,,string cycle,,string iteration,vector<string> data,string comment){
+void writeABQinputFile::writeABQpostoutput(string step,string cycle,string iteration,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9748,7 +9748,7 @@ void writeABQinputFile::writeABQpostoutput(,string step,,string cycle,,string it
 }
 
 
-void writeABQinputFile::writeABQpotential(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQpotential(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9765,7 +9765,7 @@ void writeABQinputFile::writeABQpotential(,string dependencies,vector<string> da
 }
 
 
-void writeABQinputFile::writeABQpreprint(,string contact,,string echo,,string history,,string model,,string parsubstitution,,string parvalues,,string massproperty,vector<string> data,string comment){
+void writeABQinputFile::writeABQpreprint(string contact,string echo,string history,string model,string parsubstitution,string parvalues,string massproperty,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9800,7 +9800,7 @@ void writeABQinputFile::writeABQpreprint(,string contact,,string echo,,string hi
 }
 
 
-void writeABQinputFile::writeABQpressureequationsolver(,string convergence,,string diagnostics,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQpressureequationsolver(string convergence,string diagnostics,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9823,7 +9823,7 @@ void writeABQinputFile::writeABQpressureequationsolver(,string convergence,,stri
 }
 
 
-void writeABQinputFile::writeABQpressurepenetration(,string master,,string slave,,string amplitude,,string op,,string penetrationtime,,string imaginary,,string real,vector<string> data,string comment){
+void writeABQinputFile::writeABQpressurepenetration(string master,string slave,string amplitude,string op,string penetrationtime,string imaginary,string real,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9858,7 +9858,7 @@ void writeABQinputFile::writeABQpressurepenetration(,string master,,string slave
 }
 
 
-void writeABQinputFile::writeABQpressurestress(,string amplitude,,string input,,string op,,string file,,string bstep,,string binc,,string estep,,string einc,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQpressurestress(string amplitude,string input,string op,string file,string bstep,string binc,string estep,string einc,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9913,7 +9913,7 @@ void writeABQinputFile::writeABQprestresshold(,vector<string> data,string commen
 }
 
 
-void writeABQinputFile::writeABQpre-tensionsection(,string node,,string element,,string surface,vector<string> data,string comment){
+void writeABQinputFile::writeABQpre-tensionsection(string node,string element,string surface,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9936,7 +9936,7 @@ void writeABQinputFile::writeABQpre-tensionsection(,string node,,string element,
 }
 
 
-void writeABQinputFile::writeABQprint(,string adaptivemesh,,string contact,,string frequency,,string modelchange,,string plasticity,,string residual,,string solve,,string allke,,string criticalelement,,string dmass,,string etotal,,string mass,vector<string> data,string comment){
+void writeABQinputFile::writeABQprint(string adaptivemesh,string contact,string frequency,string modelchange,string plasticity,string residual,string solve,string allke,string criticalelement,string dmass,string etotal,string mass,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -9986,7 +9986,7 @@ void writeABQinputFile::writeABQprint(,string adaptivemesh,,string contact,,stri
 }
 
 
-void writeABQinputFile::writeABQprobabilitydensityfunction(,string name,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQprobabilitydensityfunction(string name,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10006,7 +10006,7 @@ void writeABQinputFile::writeABQprobabilitydensityfunction(,string name,,string 
 }
 
 
-void writeABQinputFile::writeABQpsd-definition(,string name,,string dbreference,,string g,,string input,,string type,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQpsd-definition(string name,string dbreference,string g,string input,string type,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10038,7 +10038,7 @@ void writeABQinputFile::writeABQpsd-definition(,string name,,string dbreference,
 }
 
 
-void writeABQinputFile::writeABQradiate(,string amplitude,,string op,,string regiontype,vector<string> data,string comment){
+void writeABQinputFile::writeABQradiate(string amplitude,string op,string regiontype,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10061,7 +10061,7 @@ void writeABQinputFile::writeABQradiate(,string amplitude,,string op,,string reg
 }
 
 
-void writeABQinputFile::writeABQradiationfile(,string cavity,,string elset,,string surface,,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQradiationfile(string cavity,string elset,string surface,string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10087,7 +10087,7 @@ void writeABQinputFile::writeABQradiationfile(,string cavity,,string elset,,stri
 }
 
 
-void writeABQinputFile::writeABQradiationoutput(,string cavity,,string elset,,string surface,,string variable,vector<string> data,string comment){
+void writeABQinputFile::writeABQradiationoutput(string cavity,string elset,string surface,string variable,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10113,7 +10113,7 @@ void writeABQinputFile::writeABQradiationoutput(,string cavity,,string elset,,st
 }
 
 
-void writeABQinputFile::writeABQradiationprint(,string cavity,,string elset,,string surface,,string frequency,,string summary,,string totals,vector<string> data,string comment){
+void writeABQinputFile::writeABQradiationprint(string cavity,string elset,string surface,string frequency,string summary,string totals,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10145,7 +10145,7 @@ void writeABQinputFile::writeABQradiationprint(,string cavity,,string elset,,str
 }
 
 
-void writeABQinputFile::writeABQradiationsymmetry(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQradiationsymmetry(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10162,7 +10162,7 @@ void writeABQinputFile::writeABQradiationsymmetry(,string name,vector<string> da
 }
 
 
-void writeABQinputFile::writeABQradiationviewfactor(,string blocking,,string cavity,,string infinitesimal,,string integration,,string lumpedarea,,string off,,string range,,string reflection,,string symmetry,,string vtol,,string mdisp,,string nset,vector<string> data,string comment){
+void writeABQinputFile::writeABQradiationviewfactor(string blocking,string cavity,string infinitesimal,string integration,string lumpedarea,string off,string range,string reflection,string symmetry,string vtol,string mdisp,string nset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10226,7 +10226,7 @@ void writeABQinputFile::writeABQrandomresponse(,vector<string> data,string comme
 }
 
 
-void writeABQinputFile::writeABQratedependent(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQratedependent(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10246,7 +10246,7 @@ void writeABQinputFile::writeABQratedependent(,string dependencies,,string type,
 }
 
 
-void writeABQinputFile::writeABQratios(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQratios(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10277,7 +10277,7 @@ void writeABQinputFile::writeABQreactionrate(,vector<string> data,string comment
 }
 
 
-void writeABQinputFile::writeABQrebar(,string element,,string material,,string name,,string geometry,,string isodirection,,string orientation,,string single,vector<string> data,string comment){
+void writeABQinputFile::writeABQrebar(string element,string material,string name,string geometry,string isodirection,string orientation,string single,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10312,7 +10312,7 @@ void writeABQinputFile::writeABQrebar(,string element,,string material,,string n
 }
 
 
-void writeABQinputFile::writeABQrebarlayer(,string geometry,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQrebarlayer(string geometry,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10332,7 +10332,7 @@ void writeABQinputFile::writeABQrebarlayer(,string geometry,,string orientation,
 }
 
 
-void writeABQinputFile::writeABQreflection(,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQreflection(string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10349,7 +10349,7 @@ void writeABQinputFile::writeABQreflection(,string type,vector<string> data,stri
 }
 
 
-void writeABQinputFile::writeABQrelease(,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQrelease(string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10366,7 +10366,7 @@ void writeABQinputFile::writeABQrelease(,string input,vector<string> data,string
 }
 
 
-void writeABQinputFile::writeABQresponsespectrum(,string comp,,string sum,vector<string> data,string comment){
+void writeABQinputFile::writeABQresponsespectrum(string comp,string sum,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10386,7 +10386,7 @@ void writeABQinputFile::writeABQresponsespectrum(,string comp,,string sum,vector
 }
 
 
-void writeABQinputFile::writeABQrestart(,string read,,string write,,string cycle,,string endstep,,string inc,,string iteration,,string step,,string frequency,,string numberinterval,,string timemarks,,string overlay,,string read,,string write,,string step,,string endstep,,string interval,,string numberinterval,,string timemarks,,string overlay,,string single,,string read,,string write,,string endstep,,string inc,,string step,,string frequency,,string numberinterval,vector<string> data,string comment){
+void writeABQinputFile::writeABQrestart(string read,string write,string cycle,string endstep,string inc,string iteration,string step,string frequency,string numberinterval,string timemarks,string overlay,string read,string write,string step,string endstep,string interval,string numberinterval,string timemarks,string overlay,string single,string read,string write,string endstep,string inc,string step,string frequency,string numberinterval,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10481,7 +10481,7 @@ void writeABQinputFile::writeABQrestart(,string read,,string write,,string cycle
 }
 
 
-void writeABQinputFile::writeABQretainednodaldofs(,string sorted,vector<string> data,string comment){
+void writeABQinputFile::writeABQretainednodaldofs(string sorted,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10498,7 +10498,7 @@ void writeABQinputFile::writeABQretainednodaldofs(,string sorted,vector<string> 
 }
 
 
-void writeABQinputFile::writeABQrigidbody(,string refnode,,string analyticalsurface,,string elset,,string pinnset,,string tienset,,string isothermal,,string position,,string density,,string nodalthickness,,string offset,vector<string> data,string comment){
+void writeABQinputFile::writeABQrigidbody(string refnode,string analyticalsurface,string elset,string pinnset,string tienset,string isothermal,string position,string density,string nodalthickness,string offset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10542,7 +10542,7 @@ void writeABQinputFile::writeABQrigidbody(,string refnode,,string analyticalsurf
 }
 
 
-void writeABQinputFile::writeABQrigidsurface(,string elset,,string name,,string refnode,,string type,,string filletradius,vector<string> data,string comment){
+void writeABQinputFile::writeABQrigidsurface(string elset,string name,string refnode,string type,string filletradius,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10571,7 +10571,7 @@ void writeABQinputFile::writeABQrigidsurface(,string elset,,string name,,string 
 }
 
 
-void writeABQinputFile::writeABQrotaryinertia(,string elset,,string alpha,,string composite,,string orientation,vector<string> data,string comment){
+void writeABQinputFile::writeABQrotaryinertia(string elset,string alpha,string composite,string orientation,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10597,7 +10597,7 @@ void writeABQinputFile::writeABQrotaryinertia(,string elset,,string alpha,,strin
 }
 
 
-void writeABQinputFile::writeABQsectioncontrols(,string name,,string conversioncriterion,,string distortioncontrol,,string drillstiffness,,string elementconversion,,string elementdeletion,,string hourglass,,string initialgapopening,,string kernel,,string kinematicsplit,,string lengthratio,,string maxdegradation,,string particlethickness,,string perturbation,,string rampinitialstress,,string secondorderaccuracy,,string sphformulation,,string sphsmoothinglength,,string viscosity,,string weightfactor,vector<string> data,string comment){
+void writeABQinputFile::writeABQsectioncontrols(string name,string conversioncriterion,string distortioncontrol,string drillstiffness,string elementconversion,string elementdeletion,string hourglass,string initialgapopening,string kernel,string kinematicsplit,string lengthratio,string maxdegradation,string particlethickness,string perturbation,string rampinitialstress,string secondorderaccuracy,string sphformulation,string sphsmoothinglength,string viscosity,string weightfactor,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10671,7 +10671,7 @@ void writeABQinputFile::writeABQsectioncontrols(,string name,,string conversionc
 }
 
 
-void writeABQinputFile::writeABQsectionfile(,string name,,string surface,,string axes,,string frequency,,string update,vector<string> data,string comment){
+void writeABQinputFile::writeABQsectionfile(string name,string surface,string axes,string frequency,string update,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10700,7 +10700,7 @@ void writeABQinputFile::writeABQsectionfile(,string name,,string surface,,string
 }
 
 
-void writeABQinputFile::writeABQsectionorigin(,string origin,vector<string> data,string comment){
+void writeABQinputFile::writeABQsectionorigin(string origin,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10731,7 +10731,7 @@ void writeABQinputFile::writeABQsectionpoints(,vector<string> data,string commen
 }
 
 
-void writeABQinputFile::writeABQsectionprint(,string name,,string surface,,string axes,,string frequency,,string update,vector<string> data,string comment){
+void writeABQinputFile::writeABQsectionprint(string name,string surface,string axes,string frequency,string update,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10760,7 +10760,7 @@ void writeABQinputFile::writeABQsectionprint(,string name,,string surface,,strin
 }
 
 
-void writeABQinputFile::writeABQselectcyclicsymmetrymodes(,string even,,string nmin,,string nmax,vector<string> data,string comment){
+void writeABQinputFile::writeABQselectcyclicsymmetrymodes(string even,string nmin,string nmax,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10783,7 +10783,7 @@ void writeABQinputFile::writeABQselectcyclicsymmetrymodes(,string even,,string n
 }
 
 
-void writeABQinputFile::writeABQselecteigenmodes(,string definition,,string generate,vector<string> data,string comment){
+void writeABQinputFile::writeABQselecteigenmodes(string definition,string generate,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10803,7 +10803,7 @@ void writeABQinputFile::writeABQselecteigenmodes(,string definition,,string gene
 }
 
 
-void writeABQinputFile::writeABQsfilm(,string amplitude,,string filmamplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQsfilm(string amplitude,string filmamplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10826,7 +10826,7 @@ void writeABQinputFile::writeABQsfilm(,string amplitude,,string filmamplitude,,s
 }
 
 
-void writeABQinputFile::writeABQsflow(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQsflow(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10860,7 +10860,7 @@ void writeABQinputFile::writeABQshearcenter(,vector<string> data,string comment)
 }
 
 
-void writeABQinputFile::writeABQshearfailure(,string dependencies,,string elementdeletion,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQshearfailure(string dependencies,string elementdeletion,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10883,7 +10883,7 @@ void writeABQinputFile::writeABQshearfailure(,string dependencies,,string elemen
 }
 
 
-void writeABQinputFile::writeABQshearretention(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQshearretention(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10900,7 +10900,7 @@ void writeABQinputFile::writeABQshearretention(,string dependencies,vector<strin
 }
 
 
-void writeABQinputFile::writeABQsheartestdata(,string shrinf,vector<string> data,string comment){
+void writeABQinputFile::writeABQsheartestdata(string shrinf,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -10917,7 +10917,7 @@ void writeABQinputFile::writeABQsheartestdata(,string shrinf,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQshellgeneralsection(,string elset,,string density,,string bendingonly,,string controls,,string layup,,string membraneonly,,string offset,,string orientation,,string poisson,,string smearalllayers,,string stackdirection,,string symmetric,,string thicknessmodulus,,string zero,,string composite,,string material,,string user,,string nodalthickness,,string shellthickness,,string iproperties,,string properties,,string unsymm,,string variables,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQshellgeneralsection(string elset,string density,string bendingonly,string controls,string layup,string membraneonly,string offset,string orientation,string poisson,string smearalllayers,string stackdirection,string symmetric,string thicknessmodulus,string zero,string composite,string material,string user,string nodalthickness,string shellthickness,string iproperties,string properties,string unsymm,string variables,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11003,7 +11003,7 @@ void writeABQinputFile::writeABQshellgeneralsection(,string elset,,string densit
 }
 
 
-void writeABQinputFile::writeABQshellsection(,string elset,,string composite,,string material,,string controls,,string density,,string layup,,string nodalthickness,,string offset,,string orientation,,string poisson,,string sectionintegration,,string shellthickness,,string stackdirection,,string symmetric,,string temperature,,string thicknessmodulus,vector<string> data,string comment){
+void writeABQinputFile::writeABQshellsection(string elset,string composite,string material,string controls,string density,string layup,string nodalthickness,string offset,string orientation,string poisson,string sectionintegration,string shellthickness,string stackdirection,string symmetric,string temperature,string thicknessmodulus,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11065,7 +11065,7 @@ void writeABQinputFile::writeABQshellsection(,string elset,,string composite,,st
 }
 
 
-void writeABQinputFile::writeABQshelltosolidcoupling(,string constraintname,,string influencedistance,,string positiontolerance,vector<string> data,string comment){
+void writeABQinputFile::writeABQshelltosolidcoupling(string constraintname,string influencedistance,string positiontolerance,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11088,7 +11088,7 @@ void writeABQinputFile::writeABQshelltosolidcoupling(,string constraintname,,str
 }
 
 
-void writeABQinputFile::writeABQsimpedance(,string property,,string nonreflecting,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQsimpedance(string property,string nonreflecting,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11125,7 +11125,7 @@ void writeABQinputFile::writeABQsimplesheartestdata(,vector<string> data,string 
 }
 
 
-void writeABQinputFile::writeABQslideline(,string elset,,string type,,string extensionzone,,string generate,,string smooth,vector<string> data,string comment){
+void writeABQinputFile::writeABQslideline(string elset,string type,string extensionzone,string generate,string smooth,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11154,7 +11154,7 @@ void writeABQinputFile::writeABQslideline(,string elset,,string type,,string ext
 }
 
 
-void writeABQinputFile::writeABQsload(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQsload(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11174,7 +11174,7 @@ void writeABQinputFile::writeABQsload(,string amplitude,,string op,vector<string
 }
 
 
-void writeABQinputFile::writeABQsofteningregularization(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQsofteningregularization(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11194,7 +11194,7 @@ void writeABQinputFile::writeABQsofteningregularization(,string dependencies,,st
 }
 
 
-void writeABQinputFile::writeABQsoils(,string allsdtol,,string cetol,,string consolidation,,string continue,,string deltmx,,string end,,string creep,,string factor,,string heat,,string stabilize,,string utol,vector<string> data,string comment){
+void writeABQinputFile::writeABQsoils(string allsdtol,string cetol,string consolidation,string continue,string deltmx,string end,string creep,string factor,string heat,string stabilize,string utol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11241,7 +11241,7 @@ void writeABQinputFile::writeABQsoils(,string allsdtol,,string cetol,,string con
 }
 
 
-void writeABQinputFile::writeABQsolidsection(,string composite,,string elset,,string material,,string refnode,,string orientation,,string controls,,string layup,,string order,,string stackdirection,,string symmetric,vector<string> data,string comment){
+void writeABQinputFile::writeABQsolidsection(string composite,string elset,string material,string refnode,string orientation,string controls,string layup,string order,string stackdirection,string symmetric,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11285,7 +11285,7 @@ void writeABQinputFile::writeABQsolidsection(,string composite,,string elset,,st
 }
 
 
-void writeABQinputFile::writeABQsolubility(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQsolubility(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11302,7 +11302,7 @@ void writeABQinputFile::writeABQsolubility(,string dependencies,vector<string> d
 }
 
 
-void writeABQinputFile::writeABQsolutiontechnique(,string type,,string reformkernel,vector<string> data,string comment){
+void writeABQinputFile::writeABQsolutiontechnique(string type,string reformkernel,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11322,7 +11322,7 @@ void writeABQinputFile::writeABQsolutiontechnique(,string type,,string reformker
 }
 
 
-void writeABQinputFile::writeABQsolvercontrols(,string constraintoptimization,,string reset,vector<string> data,string comment){
+void writeABQinputFile::writeABQsolvercontrols(string constraintoptimization,string reset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11342,7 +11342,7 @@ void writeABQinputFile::writeABQsolvercontrols(,string constraintoptimization,,s
 }
 
 
-void writeABQinputFile::writeABQsorption(,string law,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQsorption(string law,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11362,7 +11362,7 @@ void writeABQinputFile::writeABQsorption(,string law,,string type,vector<string>
 }
 
 
-void writeABQinputFile::writeABQspecificheat(,string dependencies,,string porefluid,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQspecificheat(string dependencies,string porefluid,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11385,7 +11385,7 @@ void writeABQinputFile::writeABQspecificheat(,string dependencies,,string porefl
 }
 
 
-void writeABQinputFile::writeABQspectrum(,string name,,string g,,string input,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQspectrum(string name,string g,string input,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11411,7 +11411,7 @@ void writeABQinputFile::writeABQspectrum(,string name,,string g,,string input,,s
 }
 
 
-void writeABQinputFile::writeABQsphsurfacebehavior(,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQsphsurfacebehavior(string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11428,7 +11428,7 @@ void writeABQinputFile::writeABQsphsurfacebehavior(,string type,vector<string> d
 }
 
 
-void writeABQinputFile::writeABQspring(,string elset,,string complexstiffness,,string dependencies,,string nonlinear,,string orientation,,string rtol,vector<string> data,string comment){
+void writeABQinputFile::writeABQspring(string elset,string complexstiffness,string dependencies,string nonlinear,string orientation,string rtol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11460,7 +11460,7 @@ void writeABQinputFile::writeABQspring(,string elset,,string complexstiffness,,s
 }
 
 
-void writeABQinputFile::writeABQsradiate(,string amplitude,,string op,vector<string> data,string comment){
+void writeABQinputFile::writeABQsradiate(string amplitude,string op,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11480,7 +11480,7 @@ void writeABQinputFile::writeABQsradiate(,string amplitude,,string op,vector<str
 }
 
 
-void writeABQinputFile::writeABQstatic(,string adiabatic,,string allsdtol,,string continue,,string direct,,string factor,,string fullyplastic,,string longterm,,string riks,,string stabilize,vector<string> data,string comment){
+void writeABQinputFile::writeABQstatic(string adiabatic,string allsdtol,string continue,string direct,string factor,string fullyplastic,string longterm,string riks,string stabilize,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11535,7 +11535,7 @@ void writeABQinputFile::writeABQsteadystatecriteria(,vector<string> data,string 
 }
 
 
-void writeABQinputFile::writeABQsteadystatedetection(,string elset,,string sampling,vector<string> data,string comment){
+void writeABQinputFile::writeABQsteadystatedetection(string elset,string sampling,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11555,7 +11555,7 @@ void writeABQinputFile::writeABQsteadystatedetection(,string elset,,string sampl
 }
 
 
-void writeABQinputFile::writeABQsteadystatedynamics(,string direct,,string subspaceprojection,,string dampingchange,,string frequencyscale,,string frictiondamping,,string interval,,string realonly,,string stiffnesschange,vector<string> data,string comment){
+void writeABQinputFile::writeABQsteadystatedynamics(string direct,string subspaceprojection,string dampingchange,string frequencyscale,string frictiondamping,string interval,string realonly,string stiffnesschange,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11593,7 +11593,7 @@ void writeABQinputFile::writeABQsteadystatedynamics(,string direct,,string subsp
 }
 
 
-void writeABQinputFile::writeABQsteadystatetransport(,string allsdtol,,string continue,,string direct,,string elset,,string factor,,string inertia,,string longterm,,string mullins,,string passbypass,,string stabilize,vector<string> data,string comment){
+void writeABQinputFile::writeABQsteadystatetransport(string allsdtol,string continue,string direct,string elset,string factor,string inertia,string longterm,string mullins,string passbypass,string stabilize,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11637,7 +11637,7 @@ void writeABQinputFile::writeABQsteadystatetransport(,string allsdtol,,string co
 }
 
 
-void writeABQinputFile::writeABQstep(,string amplitude,,string convertsdi,,string dsa,,string extrapolation,,string inc,,string name,,string nlgeom,,string perturbation,,string solver,,string unsymm,vector<string> data,string comment){
+void writeABQinputFile::writeABQstep(string amplitude,string convertsdi,string dsa,string extrapolation,string inc,string name,string nlgeom,string perturbation,string solver,string unsymm,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11681,7 +11681,7 @@ void writeABQinputFile::writeABQstep(,string amplitude,,string convertsdi,,strin
 }
 
 
-void writeABQinputFile::writeABQsubcycling(,string elset,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubcycling(string elset,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11698,7 +11698,7 @@ void writeABQinputFile::writeABQsubcycling(,string elset,vector<string> data,str
 }
 
 
-void writeABQinputFile::writeABQsubmodel(,string acoustictostructure,,string shelltosolid,,string shellthickness,,string absoluteexteriortolerance,,string exteriortolerance,,string globalelset,,string intersectiononly,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubmodel(string acoustictostructure,string shelltosolid,string shellthickness,string absoluteexteriortolerance,string exteriortolerance,string globalelset,string intersectiononly,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11736,7 +11736,7 @@ void writeABQinputFile::writeABQsubmodel(,string acoustictostructure,,string she
 }
 
 
-void writeABQinputFile::writeABQsubstructurecopy(,string newtype,,string oldtype,,string newlibrary,,string oldlibrary,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructurecopy(string newtype,string oldtype,string newlibrary,string oldlibrary,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11762,7 +11762,7 @@ void writeABQinputFile::writeABQsubstructurecopy(,string newtype,,string oldtype
 }
 
 
-void writeABQinputFile::writeABQsubstructuredamping(,string alpha,,string beta,,string structural,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructuredamping(string alpha,string beta,string structural,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11785,7 +11785,7 @@ void writeABQinputFile::writeABQsubstructuredamping(,string alpha,,string beta,,
 }
 
 
-void writeABQinputFile::writeABQsubstructuredampingcontrols(,string structural,,string viscous,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructuredampingcontrols(string structural,string viscous,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11805,7 +11805,7 @@ void writeABQinputFile::writeABQsubstructuredampingcontrols(,string structural,,
 }
 
 
-void writeABQinputFile::writeABQsubstructuredelete(,string type,,string library,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructuredelete(string type,string library,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11825,7 +11825,7 @@ void writeABQinputFile::writeABQsubstructuredelete(,string type,,string library,
 }
 
 
-void writeABQinputFile::writeABQsubstructuredirectory(,string library,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructuredirectory(string library,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11842,7 +11842,7 @@ void writeABQinputFile::writeABQsubstructuredirectory(,string library,vector<str
 }
 
 
-void writeABQinputFile::writeABQsubstructuregenerate(,string type,,string eigenproblem,,string elset,,string gravityload,,string library,,string massmatrix,,string nset,,string overwrite,,string propertyevaluation,,string recoverymatrix,,string structuraldampingmatrix,,string viscousdampingmatrix,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructuregenerate(string type,string eigenproblem,string elset,string gravityload,string library,string massmatrix,string nset,string overwrite,string propertyevaluation,string recoverymatrix,string structuraldampingmatrix,string viscousdampingmatrix,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11892,7 +11892,7 @@ void writeABQinputFile::writeABQsubstructuregenerate(,string type,,string eigenp
 }
 
 
-void writeABQinputFile::writeABQsubstructureloadcase(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructureloadcase(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11909,7 +11909,7 @@ void writeABQinputFile::writeABQsubstructureloadcase(,string name,vector<string>
 }
 
 
-void writeABQinputFile::writeABQsubstructurematrixoutput(,string filename,,string gravityload,,string mass,,string outputfile,,string recoverymatrix,,string sload,,string stiffness,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructurematrixoutput(string filename,string gravityload,string mass,string outputfile,string recoverymatrix,string sload,string stiffness,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11944,7 +11944,7 @@ void writeABQinputFile::writeABQsubstructurematrixoutput(,string filename,,strin
 }
 
 
-void writeABQinputFile::writeABQsubstructuremodaldamping(,string structural,,string viscous,,string definition,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructuremodaldamping(string structural,string viscous,string definition,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11967,7 +11967,7 @@ void writeABQinputFile::writeABQsubstructuremodaldamping(,string structural,,str
 }
 
 
-void writeABQinputFile::writeABQsubstructurepath(,string enterelement,,string leave,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructurepath(string enterelement,string leave,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -11987,7 +11987,7 @@ void writeABQinputFile::writeABQsubstructurepath(,string enterelement,,string le
 }
 
 
-void writeABQinputFile::writeABQsubstructureproperty(,string elset,,string positiontol,vector<string> data,string comment){
+void writeABQinputFile::writeABQsubstructureproperty(string elset,string positiontol,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12007,7 +12007,7 @@ void writeABQinputFile::writeABQsubstructureproperty(,string elset,,string posit
 }
 
 
-void writeABQinputFile::writeABQsurface(,string name,,string property,,string combine,,string crop,,string definition,,string filletradius,,string internal,,string regiontype,,string trim,,string type,,string maxratio,,string nooffset,,string nothick,,string scalethick,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurface(string name,string property,string combine,string crop,string definition,string filletradius,string internal,string regiontype,string trim,string type,string maxratio,string nooffset,string nothick,string scalethick,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12063,7 +12063,7 @@ void writeABQinputFile::writeABQsurface(,string name,,string property,,string co
 }
 
 
-void writeABQinputFile::writeABQsurfacebehavior(,string augmentedlagrange,,string direct,,string penalty,,string noseparation,,string pressure-overclosure,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfacebehavior(string augmentedlagrange,string direct,string penalty,string noseparation,string pressure-overclosure,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12092,7 +12092,7 @@ void writeABQinputFile::writeABQsurfacebehavior(,string augmentedlagrange,,strin
 }
 
 
-void writeABQinputFile::writeABQsurfaceflaw(,string side,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfaceflaw(string side,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12112,7 +12112,7 @@ void writeABQinputFile::writeABQsurfaceflaw(,string side,,string input,vector<st
 }
 
 
-void writeABQinputFile::writeABQsurfaceinteraction(,string name,,string depvar,,string padthickness,,string properties,,string trackingthickness,,string unsymm,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfaceinteraction(string name,string depvar,string padthickness,string properties,string trackingthickness,string unsymm,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12147,7 +12147,7 @@ void writeABQinputFile::writeABQsurfaceinteraction(,string name,,string depvar,,
 }
 
 
-void writeABQinputFile::writeABQsurfaceoutput(,string surface,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfaceoutput(string surface,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12164,7 +12164,7 @@ void writeABQinputFile::writeABQsurfaceoutput(,string surface,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQsurfaceproperty(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfaceproperty(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12181,7 +12181,7 @@ void writeABQinputFile::writeABQsurfaceproperty(,string name,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQsurfacepropertyassignment(,string property,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfacepropertyassignment(string property,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12198,7 +12198,7 @@ void writeABQinputFile::writeABQsurfacepropertyassignment(,string property,vecto
 }
 
 
-void writeABQinputFile::writeABQsurfacesection(,string elset,,string aquavisualization,,string density,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfacesection(string elset,string aquavisualization,string density,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12221,7 +12221,7 @@ void writeABQinputFile::writeABQsurfacesection(,string elset,,string aquavisuali
 }
 
 
-void writeABQinputFile::writeABQsurfacesmoothing(,string name,vector<string> data,string comment){
+void writeABQinputFile::writeABQsurfacesmoothing(string name,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12238,7 +12238,7 @@ void writeABQinputFile::writeABQsurfacesmoothing(,string name,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQswelling(,string dependencies,,string law,vector<string> data,string comment){
+void writeABQinputFile::writeABQswelling(string dependencies,string law,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12258,7 +12258,7 @@ void writeABQinputFile::writeABQswelling(,string dependencies,,string law,vector
 }
 
 
-void writeABQinputFile::writeABQsymmetricmodelgeneration(,string periodic,,string reflect,,string revolve,,string elementoffset,,string filename,,string nodeoffset,,string tolerance,vector<string> data,string comment){
+void writeABQinputFile::writeABQsymmetricmodelgeneration(string periodic,string reflect,string revolve,string elementoffset,string filename,string nodeoffset,string tolerance,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12293,7 +12293,7 @@ void writeABQinputFile::writeABQsymmetricmodelgeneration(,string periodic,,strin
 }
 
 
-void writeABQinputFile::writeABQsymmetricresultstransfer(,string step,,string inc,,string iteration,,string unbalancedstress,vector<string> data,string comment){
+void writeABQinputFile::writeABQsymmetricresultstransfer(string step,string inc,string iteration,string unbalancedstress,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12333,7 +12333,7 @@ void writeABQinputFile::writeABQsystem(,vector<string> data,string comment){
 }
 
 
-void writeABQinputFile::writeABQtemperature(,string amplitude,,string input,,string op,,string file,,string absoluteexteriortolerance,,string exteriortolerance,,string bstep,,string binc,,string estep,,string einc,,string btramp,,string drivingelsets,,string interpolate,,string midside,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQtemperature(string amplitude,string input,string op,string file,string absoluteexteriortolerance,string exteriortolerance,string bstep,string binc,string estep,string einc,string btramp,string drivingelsets,string interpolate,string midside,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12392,7 +12392,7 @@ void writeABQinputFile::writeABQtemperature(,string amplitude,,string input,,str
 }
 
 
-void writeABQinputFile::writeABQtensilefailure(,string dependencies,,string elementdeletion,,string pressure,,string shear,vector<string> data,string comment){
+void writeABQinputFile::writeABQtensilefailure(string dependencies,string elementdeletion,string pressure,string shear,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12418,7 +12418,7 @@ void writeABQinputFile::writeABQtensilefailure(,string dependencies,,string elem
 }
 
 
-void writeABQinputFile::writeABQtensioncutoff(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQtensioncutoff(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12435,7 +12435,7 @@ void writeABQinputFile::writeABQtensioncutoff(,string dependencies,vector<string
 }
 
 
-void writeABQinputFile::writeABQtensionstiffening(,string dependencies,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQtensionstiffening(string dependencies,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12455,7 +12455,7 @@ void writeABQinputFile::writeABQtensionstiffening(,string dependencies,,string t
 }
 
 
-void writeABQinputFile::writeABQthermalexpansion(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQthermalexpansion(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12472,7 +12472,7 @@ void writeABQinputFile::writeABQthermalexpansion(,string dependencies,vector<str
 }
 
 
-void writeABQinputFile::writeABQtie(,string name,,string positiontolerance,,string tiednset,,string adjust,,string constraintratio,,string cyclicsymmetry,,string norotation,,string nothickness,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQtie(string name,string positiontolerance,string tiednset,string adjust,string constraintratio,string cyclicsymmetry,string norotation,string nothickness,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12513,7 +12513,7 @@ void writeABQinputFile::writeABQtie(,string name,,string positiontolerance,,stri
 }
 
 
-void writeABQinputFile::writeABQtimepoints(,string name,,string generate,,string input,vector<string> data,string comment){
+void writeABQinputFile::writeABQtimepoints(string name,string generate,string input,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12536,7 +12536,7 @@ void writeABQinputFile::writeABQtimepoints(,string name,,string generate,,string
 }
 
 
-void writeABQinputFile::writeABQtorque(,string dependencies,,string elastic,,string linear,vector<string> data,string comment){
+void writeABQinputFile::writeABQtorque(string dependencies,string elastic,string linear,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12559,7 +12559,7 @@ void writeABQinputFile::writeABQtorque(,string dependencies,,string elastic,,str
 }
 
 
-void writeABQinputFile::writeABQtorqueprint(,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQtorqueprint(string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12576,7 +12576,7 @@ void writeABQinputFile::writeABQtorqueprint(,string frequency,vector<string> dat
 }
 
 
-void writeABQinputFile::writeABQtracerparticle(,string tracerset,,string particlebirthstages,vector<string> data,string comment){
+void writeABQinputFile::writeABQtracerparticle(string tracerset,string particlebirthstages,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12596,7 +12596,7 @@ void writeABQinputFile::writeABQtracerparticle(,string tracerset,,string particl
 }
 
 
-void writeABQinputFile::writeABQtransform(,string nset,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQtransform(string nset,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12616,7 +12616,7 @@ void writeABQinputFile::writeABQtransform(,string nset,,string type,vector<strin
 }
 
 
-void writeABQinputFile::writeABQtransportequationsolver(,string convergence,,string diagnostics,,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQtransportequationsolver(string convergence,string diagnostics,string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12639,7 +12639,7 @@ void writeABQinputFile::writeABQtransportequationsolver(,string convergence,,str
 }
 
 
-void writeABQinputFile::writeABQtransportvelocity(,string amplitude,,string user,vector<string> data,string comment){
+void writeABQinputFile::writeABQtransportvelocity(string amplitude,string user,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12673,7 +12673,7 @@ void writeABQinputFile::writeABQtransverseshearstiffness(,vector<string> data,st
 }
 
 
-void writeABQinputFile::writeABQtriaxialtestdata(,string a,,string b,,string pt,vector<string> data,string comment){
+void writeABQinputFile::writeABQtriaxialtestdata(string a,string b,string pt,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12696,7 +12696,7 @@ void writeABQinputFile::writeABQtriaxialtestdata(,string a,,string b,,string pt,
 }
 
 
-void writeABQinputFile::writeABQtrs(,string definition,,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQtrs(string definition,string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12716,7 +12716,7 @@ void writeABQinputFile::writeABQtrs(,string definition,,string properties,vector
 }
 
 
-void writeABQinputFile::writeABQturbulencemodel(,string type,vector<string> data,string comment){
+void writeABQinputFile::writeABQturbulencemodel(string type,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12733,7 +12733,7 @@ void writeABQinputFile::writeABQturbulencemodel(,string type,vector<string> data
 }
 
 
-void writeABQinputFile::writeABQuelproperty(,string elset,,string material,,string orientation,,string alpha,,string beta,vector<string> data,string comment){
+void writeABQinputFile::writeABQuelproperty(string elset,string material,string orientation,string alpha,string beta,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12776,7 +12776,7 @@ void writeABQinputFile::writeABQundexchargeproperty(,vector<string> data,string 
 }
 
 
-void writeABQinputFile::writeABQuniaxial(,string component,vector<string> data,string comment){
+void writeABQinputFile::writeABQuniaxial(string component,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12793,7 +12793,7 @@ void writeABQinputFile::writeABQuniaxial(,string component,vector<string> data,s
 }
 
 
-void writeABQinputFile::writeABQuniaxialtestdata(,string smooth,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQuniaxialtestdata(string smooth,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12813,7 +12813,7 @@ void writeABQinputFile::writeABQuniaxialtestdata(,string smooth,,string dependen
 }
 
 
-void writeABQinputFile::writeABQunloadingdata(,string definition,,string ratedependent,vector<string> data,string comment){
+void writeABQinputFile::writeABQunloadingdata(string definition,string ratedependent,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12833,7 +12833,7 @@ void writeABQinputFile::writeABQunloadingdata(,string definition,,string ratedep
 }
 
 
-void writeABQinputFile::writeABQuserdefinedfield(,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQuserdefinedfield(string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12850,7 +12850,7 @@ void writeABQinputFile::writeABQuserdefinedfield(,string properties,vector<strin
 }
 
 
-void writeABQinputFile::writeABQuserelement(,string type,,string file,,string integration,,string tensor,,string oldelement,,string step,,string increment,,string linear,,string nodes,,string coordinates,,string unsymm,vector<string> data,string comment){
+void writeABQinputFile::writeABQuserelement(string type,string file,string integration,string tensor,string oldelement,string step,string increment,string linear,string nodes,string coordinates,string unsymm,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12897,7 +12897,7 @@ void writeABQinputFile::writeABQuserelement(,string type,,string file,,string in
 }
 
 
-void writeABQinputFile::writeABQusermaterial(,string constants,,string hybridformulation,,string type,,string unsymm,vector<string> data,string comment){
+void writeABQinputFile::writeABQusermaterial(string constants,string hybridformulation,string type,string unsymm,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12937,7 +12937,7 @@ void writeABQinputFile::writeABQuseroutputvariables(,vector<string> data,string 
 }
 
 
-void writeABQinputFile::writeABQvariablemassscaling(,string dt,,string elset,,string type,,string frequency,,string numberinterval,,string crosssectionnodes,,string extrudedlength,,string feedrate,vector<string> data,string comment){
+void writeABQinputFile::writeABQvariablemassscaling(string dt,string elset,string type,string frequency,string numberinterval,string crosssectionnodes,string extrudedlength,string feedrate,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12975,7 +12975,7 @@ void writeABQinputFile::writeABQvariablemassscaling(,string dt,,string elset,,st
 }
 
 
-void writeABQinputFile::writeABQviewfactoroutput(,string cavity,,string frequency,vector<string> data,string comment){
+void writeABQinputFile::writeABQviewfactoroutput(string cavity,string frequency,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -12995,7 +12995,7 @@ void writeABQinputFile::writeABQviewfactoroutput(,string cavity,,string frequenc
 }
 
 
-void writeABQinputFile::writeABQvisco(,string allsdtol,,string cetol,,string continue,,string creep,,string factor,,string stabilize,vector<string> data,string comment){
+void writeABQinputFile::writeABQvisco(string allsdtol,string cetol,string continue,string creep,string factor,string stabilize,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -13027,7 +13027,7 @@ void writeABQinputFile::writeABQvisco(,string allsdtol,,string cetol,,string con
 }
 
 
-void writeABQinputFile::writeABQviscoelastic(,string frequency,,string nonlinear,,string time,,string law,,string networkid,,string sratio,,string dependencies,,string preload,,string properties,,string type,,string errtol,,string nmax,vector<string> data,string comment){
+void writeABQinputFile::writeABQviscoelastic(string frequency,string nonlinear,string time,string law,string networkid,string sratio,string dependencies,string preload,string properties,string type,string errtol,string nmax,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -13077,7 +13077,7 @@ void writeABQinputFile::writeABQviscoelastic(,string frequency,,string nonlinear
 }
 
 
-void writeABQinputFile::writeABQviscosity(,string definition,,string dependencies,,string properties,vector<string> data,string comment){
+void writeABQinputFile::writeABQviscosity(string definition,string dependencies,string properties,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -13100,7 +13100,7 @@ void writeABQinputFile::writeABQviscosity(,string definition,,string dependencie
 }
 
 
-void writeABQinputFile::writeABQviscous(,string dependencies,,string law,,string time,vector<string> data,string comment){
+void writeABQinputFile::writeABQviscous(string dependencies,string law,string time,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -13123,7 +13123,7 @@ void writeABQinputFile::writeABQviscous(,string dependencies,,string law,,string
 }
 
 
-void writeABQinputFile::writeABQvoidnucleation(,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQvoidnucleation(string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -13140,7 +13140,7 @@ void writeABQinputFile::writeABQvoidnucleation(,string dependencies,vector<strin
 }
 
 
-void writeABQinputFile::writeABQvolumetrictestdata(,string smooth,,string dependencies,vector<string> data,string comment){
+void writeABQinputFile::writeABQvolumetrictestdata(string smooth,string dependencies,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";
@@ -13160,7 +13160,7 @@ void writeABQinputFile::writeABQvolumetrictestdata(,string smooth,,string depend
 }
 
 
-void writeABQinputFile::writeABQwave(,string input,,string type,,string waveperiod,,string datafile,,string minimum,,string quadratic,,string stochastic,,string properties,,string depvar,vector<string> data,string comment){
+void writeABQinputFile::writeABQwave(string input,string type,string waveperiod,string datafile,string minimum,string quadratic,string stochastic,string properties,string depvar,vector<string> data,string comment){
     ofstream abq;
     abq.open(filepath, ios::out, ios::app);
     abq << "**\n";

@@ -35,6 +35,9 @@ from os import listdir
 from os.path import isfile, join
 from pdfminer.pdfparser import PDFParser
 from pdfminer.pdfdocument import PDFDocument
+import mechanize
+from BeautifulSoup import BeautifulSoup
+import cookielib
 
 '''
 sourceFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python'
@@ -88,10 +91,10 @@ targetLang = 'matlab'
 baseLink = 'http://www.ansys.stuba.sk/html/'
 sourceLink = 'http://www.ansys.stuba.sk/html/c-index.htm'
 
-matlabFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2calculix'
-cppFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2calculix'
-jsFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2calculix'
-pythonFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2calculix'
+matlabFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/matlab/matlab2ansys'
+cppFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/cpp/cpp2ansys'
+jsFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/js/js2ansys'
+pythonFolder = 'C:/01_Backup-folder/OneDrive/01_Luca/07_DocMASE/06_WD/transpilers/python/py2ansys'
 
 keywords = []
 parametersDict = {}
@@ -102,3 +105,17 @@ mech = init_browser('chrome')
 main = mech.open(sourceLink)
 html = main.read()
 soup = BeautifulSoup(html)
+
+for item in soup.body.findAll("dl"):
+   try:
+      link = item.find("dt").find("a")['href']
+      fullLink = baseLink + link
+      commandName = str(link.replace('\n','').split('#')[-1])
+      print('Command ' + commandName)
+      print(fullLink)
+      page = mech.open(fullLink)
+      descr = page.read()
+      commandSoup = BeautifulSoup(descr)
+      print(commandSoup)
+   except Exception,error:
+      print(error)

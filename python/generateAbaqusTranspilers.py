@@ -270,7 +270,7 @@ elif targetLang=='cpp':
             for p,parameter in enumerate(parametersDict[keyword]):
                 if p>0:
                     line += ','
-                line += ',' + 'string'
+                line += 'string'
             line += ',vector<string>,string);\n'
             file.write(line)
         with open(join(targetFolder,bodyFileName),'a') as file:
@@ -280,7 +280,7 @@ elif targetLang=='cpp':
             for p,parameter in enumerate(parametersDict[keyword]):
                 if p>0:
                     line += ','
-                line += ',' + 'string ' + parameter.lower().replace(' ','')
+                line += 'string ' + parameter.lower().replace(' ','')
             line += ',vector<string> data,string comment){\n'
             file.write(line)
             file.write('    ofstream abq;' + '\n')
