@@ -44,13 +44,13 @@ fileId = fopen(filepath, 'a');
 fprintf(fileId,['COORD_3D',' NOM=',name,'\n']);
 fprintf(fileId,['        ',' AUTEUR=',author,' DATE=',date,'\n']);
 fprintf(fileId,'\n');
-fprintf(fileId,'%FORMAT=(1*NOM_DE_NOEUD,3*COORD)\n');
+fprintf(fileId,['%','FORMAT=','(1*NOM_DE_NOEUD,3*COORD)\n']);
 for i=1:rows
     line = [' ',num2str(N0+(i-1)*deltaN)];
     for j=1:columns
         line = [line,', ',num2str(nodes(i,j))];
     end
-    fprintf(fileId,[line,'\n')];
+    fprintf(fileId,[line,'\n']);
 end
 
 fclose(fileId);
