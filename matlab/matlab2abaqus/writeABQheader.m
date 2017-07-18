@@ -48,10 +48,10 @@ fprintf(fileId,'**--\n');
 fprintf(fileId,'**---------------------------------------------------------------------------------------------------------------------------------\n');
 fprintf(fileId,'**--\n');
 for i=1:length(headerDict)
-    if ischar(headerDict{i}(2))
-        fprintf(fileId, strcat('** ',headerDict{i}(1),': ',headerDict{i}(2),'\n'));
+    if ischar(headerDict{i}{2})
+        fprintf(fileId, strcat('** ',headerDict{i}{1},': ',headerDict{i}{2},'\n'));
     else
-        fprintf(fileId, strcat('** ',headerDict{i}(1),': ',num2str(headerDict{i}(2)),'\n'));
+        fprintf(fileId, strcat('** ',headerDict{i}{1},': ',num2str(headerDict{i}{2}),'\n'));
     end
 end
 fprintf(fileId,'**--\n');
