@@ -76,11 +76,11 @@ writeToLogFile(logfullfile,['... done.','\n']);
 
 if length(edges(1,:))>2
   for i=1:length(edges)
-    %body
+    writeTIKZthreepointscurve(latexFullpath,nodes(edges(i,1),:),nodes(edges(i,2),:),nodes(edges(i,3),:))
   end
 else
   for i=1:length(edges)
-    %body
+    writeTIKZtwopointline(latexFullpath,nodes(edges(i,1),:),nodes(edges(i,2),:))
   end
 end
 

@@ -1,4 +1,4 @@
-function[]=writeTIKZtwopointline(latexFullpath,string)
+function[]=writeTIKZtwopointline(latexFullpath,p1,p2)
 %%
 %==============================================================================
 % Copyright (c) 2016 Universit� de Lorraine & Lule� tekniska universitet
@@ -41,7 +41,7 @@ start = tic;
 writeToLogFile(logfullfile,['Appending to file ',latexFullpath,'\n'])
 try
   fileID = fopen(latexFullpath,'a');
-  fprintf(fileID,['% ',string,'\n']);
+  fprintf(fileID,['\\draw[dashed,line width=0.5mm] (',p1(1),',',p1(2),') -- (',p2(1),',',p2(2),');','\n']);
   fclose(fileID);
 catch ME
   writeToLogFile(logfullfile,['An error occurred: ', ME.identifier,'\n'])

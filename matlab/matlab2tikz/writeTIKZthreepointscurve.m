@@ -1,4 +1,4 @@
-function[]=writeTIKZthreepointscurve(latexFullpath,string)
+function[]=writeTIKZthreepointscurve(latexFullpath,p1,p2,p3)
 %%
 %==============================================================================
 % Copyright (c) 2016 Universit� de Lorraine & Lule� tekniska universitet
@@ -41,7 +41,7 @@ start = tic;
 writeToLogFile(logfullfile,['Appending to file ',latexFullpath,'\n'])
 try
   fileID = fopen(latexFullpath,'a');
-  fprintf(fileID,['% ',string,'\n']);
+  fprintf(fileID,['\\draw [dashed,line width=0.5mm] plot [smooth, tension=1] coordinates { (',p1(1),',',p1(2),') (',p2(1),',',p2(2),') (',p3(1),',',p3(2),') };','\n']);
   fclose(fileID);
 catch ME
   writeToLogFile(logfullfile,['An error occurred: ', ME.identifier,'\n'])
